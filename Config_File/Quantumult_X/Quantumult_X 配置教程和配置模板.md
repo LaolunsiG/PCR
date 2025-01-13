@@ -4,7 +4,7 @@
 
 | 作者/项目地址                                                      | 配置链接                                                                                                                                      | 介绍  |
 | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| XiaoE                                                        | [XiaoE_Quantumult_X](https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/Config_File/Quantumult_X/XiaoE_Quantumult_X.yaml)         |     |
+| XiaoE                                                        | [Quantumult_X](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Quantumult_X/Config/Quantumult_X.yaml)         |     |
 | [Profiles4limbo](https://github.com/limbopro/Profiles4limbo) | [full.conf](https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/full.conf)                                                     |     |
 | 奇心                                                           | [qixin.conf](https://raw.githubusercontent.com/zwf234/rules/master/QuantumultX/qixin.conf)                                                |     |
 | whatshub.top                                                 | [qx.conf](https://whatshub.top/config/qx.conf)                                                                                            |     |
