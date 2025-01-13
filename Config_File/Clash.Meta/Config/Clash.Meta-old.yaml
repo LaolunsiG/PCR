@@ -1,17 +1,18 @@
-# XiaoE_Clash.Meta-test
-# ps: 此配置文件无加密DNS，优选节点, 使用IP规则，可能存在DNS泄露问题.Clash_verge更新后编辑配置文件变得更加容易了。
-# 配置来源
+# Name: Clash.Meta-old MadedByXiaoE
+# 参考的配置
 # 1. https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml
 # 2. https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-ClashVerge.yaml
 # 3. https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Clash/Config
 # 4. https://github.com/Moli-X/Resources/raw/main/Clash/Clash.yml
-# updata：2024-10-27
-# updata_log(更新日志)：
-# updata_url: https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/Config_File/Clash_Meta/XiaoE_Clash_Meta_Old.yaml
+# Updata：2025-01-13
+# Updata_log：
+# Updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/main/Config_File/Clash_Meta/Clash.Meta-old.yaml
+# Repo: hhttps://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash.Meta/Config
 # 图标备用: 📮✉️📪📬💫💬💥🔨🥼🚫🔰🙈🍎🎬📺🎱🍐🐝🦁💡🌵🐯🎸💻📽🌏🕹📡🦑🌟🐷🦒🐳🚦📵🎧💊🔓🚦🚥🐼⛔️🈲🌐🎯🖲️🐦🔞🎵📱🚀💳♻️🙈🍱🔂📦🔀⏱
 
-#代理集
+# 代理集
 proxy-providers:
+  
   机场1:
     type: http
     # 机场订阅链接，使用 Clash 链接
@@ -25,98 +26,108 @@ proxy-providers:
       lazy: true
       url: "http://www.google.com/generate_204"
       interval: 600
-  机场2:
-    type: http
-    url: ""
-    path: ./proxies/airport2.yaml
-    interval: 43200
-    health-check:
-      enable: true
-      lazy: true
-      url: "http://www.google.com/generate_204"
-      interval: 600
-  机场3:
-    type: http
-    url: ""
-    path: ./proxies/airport3.yaml
-    interval: 43200
-    health-check:
-      enable: true
-      lazy: true
-      url: "http://www.google.com/generate_204"
-      interval: 600
-  机场4:
-    type: http
-    url: ""
-    path: ./proxies/airport4.yaml
-    interval: 43200
-    health-check:
-      enable: true
-      lazy: true
-      url: "http://www.google.com/generate_204"
-      interval: 600
-  机场5:
-    type: http
-    url: ""
-    path: ./proxies/airport5.yaml
-    interval: 43200
-    health-check:
-      enable: true
-      lazy: true
-      url: "http://www.google.com/generate_204"
-      interval: 600
-  机场6:
-    type: http
-    # 机场订阅链接，使用 Clash 链接
-    url: ""
-    path: ./proxies/airport6.yaml
-    interval: 43200
-    # 初步筛选需要的节点，可有效减轻路由器压力，支持正则表达式，不筛选可删除此配置项
-    health-check:
-      enable: true
-      # 未选择到当前代理集合时，不会进行测试，有多个代理集合时可使用
-      lazy: true
-      url: "http://www.google.com/generate_204"
-      interval: 600
-  机场7:
-    type: http
-    url: ""
-    path: ./proxies/airport7.yaml
-    interval: 43200
-    health-check:
-      enable: true
-      lazy: true
-      url: "http://www.google.com/generate_204"
-      interval: 600
-  机场8:
-    type: http
-    url: ""
-    path: ./proxies/airport8.yaml
-    interval: 43200
-    health-check:
-      enable: true
-      lazy: true
-      url: "http://www.google.com/generate_204"
-      interval: 600
-  机场9:
-    type: http
-    url: ""
-    path: ./proxies/airport9.yaml
-    interval: 43200
-    health-check:
-      enable: true
-      lazy: true
-      url: "http://www.google.com/generate_204"
-      interval: 600
-  机场10:
-    type: http
-    url: ""
-    path: ./proxies/airport10.yaml
-    interval: 43200
-    health-check:
-      enable: true
-      lazy: true
-      url: "http://www.google.com/generate_204"
+  
+  # 机场2:
+  #   type: http
+  #   url: ""
+  #   path: ./proxies/airport2.yaml
+  #   interval: 43200
+  #   health-check:
+  #     enable: true
+  #     lazy: true
+  #     url: "http://www.google.com/generate_204"
+  #     interval: 600
+  
+  # 机场3:
+  #   type: http
+  #   url: ""
+  #   path: ./proxies/airport3.yaml
+  #   interval: 43200
+  #   health-check:
+  #     enable: true
+  #     lazy: true
+  #     url: "http://www.google.com/generate_204"
+  #     interval: 600
+  
+  # 机场4:
+  #   type: http
+  #   url: ""
+  #   path: ./proxies/airport4.yaml
+  #   interval: 43200
+  #   health-check:
+  #     enable: true
+  #     lazy: true
+  #     url: "http://www.google.com/generate_204"
+  #     interval: 600
+  
+  # 机场5:
+  #   type: http
+  #   url: ""
+  #   path: ./proxies/airport5.yaml
+  #   interval: 43200
+  #   health-check:
+  #     enable: true
+  #     lazy: true
+  #     url: "http://www.google.com/generate_204"
+  #     interval: 600
+  
+  # 机场6:
+  #   type: http
+  #   # 机场订阅链接，使用 Clash 链接
+  #   url: ""
+  #   path: ./proxies/airport6.yaml
+  #   interval: 43200
+  #   # 初步筛选需要的节点，可有效减轻路由器压力，支持正则表达式，不筛选可删除此配置项
+  #   health-check:
+  #     enable: true
+  #     # 未选择到当前代理集合时，不会进行测试，有多个代理集合时可使用
+  #     lazy: true
+  #     url: "http://www.google.com/generate_204"
+  #     interval: 600
+  
+  # 机场7:
+  #   type: http
+  #   url: ""
+  #   path: ./proxies/airport7.yaml
+  #   interval: 43200
+  #   health-check:
+  #     enable: true
+  #     lazy: true
+  #     url: "http://www.google.com/generate_204"
+  #     interval: 600
+  
+  # 机场8:
+  #   type: http
+  #   url: ""
+  #   path: ./proxies/airport8.yaml
+  #   interval: 43200
+  #   health-check:
+  #     enable: true
+  #     lazy: true
+  #     url: "http://www.google.com/generate_204"
+  #     interval: 600
+  
+  # 机场9:
+  #   type: http
+  #   url: ""
+  #   path: ./proxies/airport9.yaml
+  #   interval: 43200
+  #   health-check:
+  #     enable: true
+  #     lazy: true
+  #     url: "http://www.google.com/generate_204"
+  #     interval: 600
+  
+  # 机场10:
+  #   type: http
+  #   url: ""
+  #   path: ./proxies/airport10.yaml
+  #   interval: 43200
+  #   health-check:
+  #     enable: true
+  #     lazy: true
+  #     url: "http://www.google.com/generate_204"
+
 mixed-port: 7890
 allow-lan: true
 bind-address: "*"
@@ -130,10 +141,12 @@ secret: "xiaoe" #访问密码
 unified-delay: false #统一延迟
 tcp-concurrent: true #TCP并发
 profile: {store-selected: true, store-fake-ip: true} #存储节点选择和DNS映射
+
 sniffer: #域名嗅探
   enable: true
   sniff: {HTTP: {ports: [80, 8080-8880], override-destination: true}, TLS: {ports: [443, 8443]}, QUIC: {ports: [443, 8443]}}
   skip-domain: ['Mijia Cloud']
+
 tun:
   enable: true
   stack: mixed
@@ -142,6 +155,7 @@ tun:
   auto-detect-interface: true
   #严格路由，可防止地址泄漏，启用后你的设备将无法被其他设备访问
   strict-route: true
+
 dns:
   enable: true
   prefer-h3: true
@@ -280,8 +294,11 @@ dns:
 #    'rule-set:microsoft-cn,apple-cn,google-cn,games-cn': [https://dns.alidns.com/dns-query, https://doh.pub/dns-query]
 #    'rule-set:cn1,cn2': [https://dns.alidns.com/dns-query, https://doh.pub/dns-query]
 #    'rule-set:proxy': ['https://dns.google/dns-query#🪜 代理域名', 'https://cloudflare-dns.com/dns-query#🪜 代理域名']
+
 proxies: null
+
 #策略组
+
 proxy-groups:
   # 手动选择国家或地区节点；根据“国家或地区策略组”名称对 `proxies` 值进行增删改，须一一对应
   - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动选择, 🤣 手动选择, 机场1, 机场2, 机场3, 机场4, 机场5, 机场6, 机场7, 机场8, 机场9, 机场10, 香港, 台湾, 日本, 新加坡, 美国, 加拿大, 德国, 英国]}
@@ -350,6 +367,7 @@ proxy-groups:
   - {name: 德国, type: url-test, tolerance: 50, lazy: true, use: [机场1, 机场2, 机场3, 机场4, 机场5, 机场6, 机场7, 机场8, 机场9, 机场10], filter: "(?i)🇩🇪|德国|DEU|DE|柏林|慕尼黑|汉堡|科隆|Germany"}
   - {name: 加拿大, type: url-test, tolerance: 50, lazy: true, use: [机场1, 机场2, 机场3, 机场4, 机场5, 机场6, 机场7, 机场8, 机场9, 机场10], filter: "(?i)🇨🇦|加拿大|CA|渥太华"}
   - {name: 印度, type: url-test, tolerance: 50, lazy: true, use: [机场1, 机场2, 机场3, 机场4, 机场5, 机场6, 机场7, 机场8, 机场9, 机场10], filter: "(?i)🇮🇳|印度|IN|IND|孟买|新德里|高知|Republic of India|India"}
+
 #规则集（yaml 文件每天自动更新）
 rule-providers:
 #网络测试
@@ -359,6 +377,7 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/networktest.yaml"
     path: ./ruleset/networktest.yaml
     interval: 86400
+
 #下载网络
   Download:
     type: http
@@ -366,6 +385,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download_No_Resolve.yaml"
     path: ./ruleset/Download.yaml
     interval: 86400
+
 #广告拦截
 #  ads:
 #    type: http
@@ -373,6 +393,7 @@ rule-providers:
 #    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical_No_Resolve.yaml"
 #    path: ./ruleset/ads.yaml
 #    interval: 86400
+
 #隐私保护
 #  privacy:
 #    behavior: classical
@@ -380,6 +401,7 @@ rule-providers:
 #    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical_No_Resolve.yaml"
 #    interval: 86400
 #    path: ./ruleset/privacy.yaml
+
 #本地网络
   lan:
     type: http
@@ -387,6 +409,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan_No_Resolve.yaml"
     path: ./ruleset/lancidr.yaml
     interval: 86400
+
 #服务平台
   microsoft:
     type: http
@@ -394,6 +417,7 @@ rule-providers:
     url: "https://whatshub.top/rule/Microsoft.rule"
     path: ./ruleset/microsoft.yaml
     interval: 86400
+
 ##苹果服务
   apple:
     type: http
@@ -419,6 +443,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google_No_Resolve.yaml"
     path: ./ruleset/google.yaml
     interval: 86400
+
 #聊天平台
   Discord:
     type: http
@@ -426,18 +451,21 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord_No_Resolve.yaml"
     path: ./ruleset/Discord.yaml
     interval: 86400
+
   Twitter:
     behavior: classical
     type: http
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter_No_Resolve.yaml"
     interval: 86400
     path: ./ruleset/Twitter.yaml
+
   Facebook:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook_No_Resolve.yaml"
     path: ./ruleset/Facebook.yaml
     interval: 86400
+
 ##telegram
   Telegram:
     type: http
@@ -445,6 +473,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml"
     path: ./ruleset/Telegram.yaml
     interval: 86400
+
 ##国外媒体
 ###小分流
   netflix:
@@ -453,30 +482,35 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml"
     path: ./ruleset/netflix.yaml
     interval: 86400
+
   disney:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/disney.yaml"
     path: ./ruleset/disney.yaml
     interval: 86400
+ 
   max:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/max.yaml"
     path: ./ruleset/max.yaml
     interval: 86400
+ 
   primevideo:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/primevideo.yaml"
     path: ./ruleset/primevideo.yaml
     interval: 86400
+ 
   appletv:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/appletv.yaml"
     path: ./ruleset/appletv.yaml
     interval: 86400
+
 ##YouTube
   youtubemusic:
     type: http
@@ -484,18 +518,21 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic_No_Resolve.yaml"
     path: ./ruleset/youtubemusic.yaml
     interval: 86400
+
   youtube:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml"
     path: ./ruleset/youtube.yaml
     interval: 86400
+
   tiktok:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml"
     path: ./ruleset/tiktok.yaml
     interval: 86400
+
 ##大分流
   GlobalMedia:
     type: http
@@ -503,6 +540,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical_No_Resolve.yaml"
     path: ./ruleset/GlobalMedia.yaml
     interval: 86400
+
 #国内媒体
 ##小分流
   DouYin:
@@ -511,24 +549,28 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouYin/DouYin_No_Resolve.yaml"
     path: ./ruleset/DouYin.yaml
     interval: 86400
+
   huya:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HuYa/HuYa_No_Resolve.yaml"
     path: ./ruleset/huya.yaml
     interval: 86400
+ 
   bilibili:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/bilibili.yaml"
     path: ./ruleset/bilibili.yaml
     interval: 86400
+
   Douyu:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Douyu/Douyu_No_Resolve.yaml"
     path: ./ruleset/Douyu.yaml
     interval: 86400
+
 ##大分流
   ChinaMedia:
     type: http
@@ -536,6 +578,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia_No_Resolve.yaml"
     path: ./ruleset/ChinaMediayaml
     interval: 86400
+
 #支付平台
   PayPal:
     behavior: classical
@@ -543,6 +586,7 @@ rule-providers:
     url: "https://whatshub.top/rule/PayPal.rule"
     interval: 86400
     path: ./ruleset/PayPal.yaml
+
 #人工智能
   AI:
     behavior: classical
@@ -550,6 +594,7 @@ rule-providers:
     url: "https://raw.githubusercontent.com/LaolunsiG/XiaoE-PCR/main/rules/Clash_Meta/AI/AI_Global.yaml"
     interval: 86400
     path: ./ruleset/AI.yaml
+
 #游戏平台
   games-cn:
     type: http
@@ -557,12 +602,14 @@ rule-providers:
     url: "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/games-cn.yaml"
     path: ./ruleset/games-cn.yaml
     interval: 86400
+ 
   games-global:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/mphin/ProxyTools/main/rules/classical/GamesPlatform.yaml"
     path: ./ruleset/games-global.yaml
     interval: 86400
+
 #大分流
   proxy:
     type: http
@@ -570,6 +617,7 @@ rule-providers:
     url: "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/proxy.yaml"
     path: ./ruleset/proxy.yaml
     interval: 86400
+
 #大分流
   cn1:
     type: http
@@ -577,12 +625,14 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical_No_Resolve.yaml"
     path: ./ruleset/cn1.yaml
     interval: 86400
+  
   cn2:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical_No_Resolve.yaml"
     path: ./ruleset/cn2.yaml
     interval: 86400
+
 rules:
 #网络测试
   - RULE-SET,networktest,📈 网络测试
