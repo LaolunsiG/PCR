@@ -6,7 +6,11 @@
 <details> 
   <summary> 更新日志和未来规划 </summary>
 
-> 只保留 5 次记录
+> 只保留 10 次记录
+
+### 2025-01-13
+- 修复了 [clash.meta](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash.Meta/Config) 配置文件的部分错误，（大概？）解决了入站为 IP 地址的问题。
+- 优化了 [QX](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Quantumult_X/Config) 和 [loon](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon/Config) 的配置
 
 ### 2025-01-11
 - 准备优化 clash.meta, loon, qx 配置文件，其中 loon 和 qx 的延迟优选与 clash.meta 不同，所以尽量减少节点。
