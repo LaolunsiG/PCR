@@ -1,11 +1,11 @@
-# name: XiaoE_Quantumult_X
-# 参考配置
-# https://whatshub.top/config/qx.conf
-# https://github.com/Theo-Messi/dotfiles/blob/1e92adaf4c13afe9f62c95d8340092d6ca1dea65/QuantumultX/T-Config.conf
-# updata: 2024-11-24
-# updata_log: 
-# updata_url: https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/Config_File/Quantumult_X/XiaoE_Quantumult_X.yaml
-# repo: https://github.com/LaolunsiG/XiaoE_PCR/edit/main/Config_File/Quantumult_X/XiaoE_Quantumult_X.yaml
+# Name: Quantumult_X MadedByXiaoE
+# 参考的配置
+# 1. https://whatshub.top/config/qx.conf
+# 2. https://github.com/Theo-Messi/dotfiles/blob/1e92adaf4c13afe9f62c95d8340092d6ca1dea65/QuantumultX/T-Config.conf
+# Updata: 2025-01-13
+# Updata_log: 
+# Updata_url: https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/Config_File/Quantumult_X/XiaoE_Quantumult_X.yaml
+# Repo: https://github.com/LaolunsiG/PCR/tree/main/Config_File/Quantumult_X/Config
 # 图标备用: 📮✉️📪📬💫💬💥🔨🥼🚫🔰🙈🍎🎬📺🎱🍐🐝🦁💡🌵🐯🎸💻📽🌏🕹📡🦑🌟🐷🦒🐳🚦📵🎧💊🔓🚦🚥🐼⛔️🈲🌐🎯🖲️🐦🔞🎵📱🚀💳♻️🙈🍱🔂📦🔀⏱
 
 # 全局配置
