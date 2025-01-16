@@ -1,12 +1,15 @@
-# AI
+# GlobalAI
+> 20250116
 
 ## 使用规则
-### AI_Globle
+
+### classical
 ```
-https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Shadowrocket/AI/AI_Globle-Classical.list
+https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Shadowrocket/GlobalAI/GlobalAI-Classical.list
 ```
 
 ## 规则来源
+
 ### OpenAI
 - https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket/OpenAI
 
