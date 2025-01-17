@@ -6,16 +6,7 @@
 <details> 
   <summary> 更新日志和未来规划 </summary>
 
-> 只保留 10 次记录
-
-### 2025-01-13
-- 修复了 [clash.meta](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash.Meta/Config) 配置文件的部分错误，（大概？）解决了入站为 IP 地址的问题。
-- 优化了 [QX](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Quantumult_X/Config) 和 [loon](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon/Config) 的配置
-
-### 2025-01-11
-- 准备优化 clash.meta, loon, qx 配置文件，其中 loon 和 qx 的延迟优选与 clash.meta 不同，所以尽量减少节点。
-- clash.meta 中嗅探域名可以防止因入站为 IP 导致的网络问题，之前没有注意到。
-- 处理部分内容的语法不一致的问题，完善各个内容缺失的部分。
+> 只保留 5 次记录
 
 ### 2025-01-02
 - 删去了不必要规则和优化了部分笔记的呈现。
@@ -30,29 +21,33 @@
 - 优化了多个页面的可读性，并修复了配置的部分错误。
 - 修改了 shadowrocket 的配置文件，主要去除了不必要的配置。
 
+### 2024-11-12
+- 修复 [loon 配置文件](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Loon/XiaoE_Loon.conf) 的 DNS 服务，配置文件整体修改，去除了不必要的代码解释。
+
+
 </details>
 
-## 不同代理软件的配置文件及其教程
+## 不同代理工具的配置文件及其教程
 
-| 软件使用平台（操作系统） | 内核或软件                                                                                                                                                              | 介绍                       |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ |
-| 多平台          | - [Clash(Old)](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash) <br>- [Clash.Meta](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash.Meta) |                          |
-| Android      | [Surfboard](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surfboard)                                                                                      |                          |
-| IOS or MacOS | [LanceX](https://github.com/LaolunsiG/PCR/tree/main/Config_File/LanceX)                                                                                            | 此软件还未完善，不推荐使用            |
-| ^^           | [Loon](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon)                                                                                                |                          |
-| ^^           | [Quantumult_X](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Quantumult_X)                                                                                |                          |
-| ^^           | [Shadowrocket](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Shadowrocket)                                                                                | 支持加密协议最多的代理软件            |
-| ^^           | [Sing-Box](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Sing-Box)                                                                                | 支持加密协议最多的代理软件            |
-| ^^           | [Stash](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Stash)                                                                                              |                          |
-| ^^           | [Surge](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surge)                                                                                              | IOS上最贵的代理工具，也是功能最全的代理工具。 |
+| 内核                                                                                  | 操作系统       | 配置文件 | 教程  | 介绍                       |
+| ----------------------------------------------------------------------------------- | ---------- | ---- | --- | ------------------------ |
+| [Clash](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash)（以删库）          | 多平台        |      |     |                          |
+| [Clash.Meta](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash.Meta)     | 多平台        |      |     |                          |
+| [LanceX](https://github.com/LaolunsiG/PCR/tree/main/Config_File/LanceX)             | IOS, MacOS |      |     | 此软件还未完善，不推荐使用            |
+| [Loon](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon)                 | IOS, MacOS |      |     |                          |
+| [Quantumult_X](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Quantumult_X) | IOS, MacOS |      |     |                          |
+| [Shadowrocket](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Shadowrocket) | IOS, MacOS |      |     | 支持加密协议最多的代理软件            |
+| [Sing-Box](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Sing-Box)         | 多平台        |      |     | 支持加密协议最多的代理软件            |
+| [Stash](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Stash)               | IOS, MacOS |      |     |                          |
+| [Surfboard](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surfboard)       | Android    |      |     |                          |
+| [Surge](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surge)               | IOS, MacOS |      |     | IOS上最贵的代理工具，也是功能最全的代理工具。 |
 
 ## 代理规则
-
 - [All](https://github.com/LaolunsiG/PCR/tree/main/Rules)
-  
-  ### 规则分类
 
-| 软件/内核            | 规则                                                            |
+### ruleset
+
+| 内核               | 规则                                                            |
 | ---------------- | :------------------------------------------------------------ |
 | Clash            | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash        |
 | Clash.Meta/Stash | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta   |
@@ -60,8 +55,9 @@
 | Quantumult_X     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Quantumult_X |
 |                  |                                                               |
 
-## 其他代理教程
+### geodata
 
+## 其他代理教程
 - [GetSomeCats](https://github.com/getsomecat/GetSomeCats/tree/Surge)
 
 ### 注释规则
@@ -82,8 +78,8 @@
 - 您必须在下载后的24小时内从计算机或手机中完全删除以上内容.
 - 任何以任何方式查看此项目的人或直接或间接使用该项目的使用者都应仔细阅读此声明。保留随时更改或补充此免责声明的权利。一旦使用并复制了该项目的任何文件，则视为您已接受此免责声明.
 
-## 感谢以下项目/人员
-> 感谢下面这些无私奉献的大佬，排名不分先后，在此表示感谢。
+## 感谢以下作者/项目
+> 排名不分先后
 
 | 作者/项目名        | 仓库链接/其他链接                                         | Telegram 频道         |
 | ------------- | ------------------------------------------------- | ------------------- |

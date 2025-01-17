@@ -1,9 +1,6 @@
-# Shadowrocket
-- 在IOS支持加密协议最多的代理软件，适合小白使用，此配置文件需要自己配置订阅节点。
+# Shadowrocket 配置教程
 
-## [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Shadowrocket/Shadowrocket%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%E5%92%8C%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF.md)
-
-## [配置模板](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Shadowrocket/Config)
+[**配置模板**](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Shadowrocket/Config)
 
 | 作者/项目地址                                                     | 配置链接                                                                                                                                                             | 介绍  |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
@@ -14,5 +11,13 @@
 | [wlxuf/Shadowrocket](https://github.com/wlxuf/Shadowrocket) | [lazy.conf](https://raw.githubusercontent.com/wlxuf/Shadowrocket/refs/heads/main/lazy.conf)                                                                      |     |
 | ^^                                                          | [lazy_group.conf](https://raw.githubusercontent.com/wlxuf/Shadowrocket/refs/heads/main/lazy_group.conf)                                                          |     |
 
-## 功能预览
+
+## 全局配置教程
+- [wlxuf-Shadowrocket](https://github.com/wlxuf/Shadowrocket)
+
+## host 配置
+- [Hosts-for-Shadowrocket](https://github.com/FloodLi/Hosts-for-Shadowrocket)
+
+## 主题配置
+- [Shadowrocket-First](https://github.com/LOWERTOP/Shadowrocket-First)
 

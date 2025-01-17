@@ -1,9 +1,6 @@
-# Clash
-- 配置的是 Clash_Premium 内核(非开源已删库)，需要自己配置订阅链接。适合 CFA (Clash For Android) 使用。
+# Clash 配置教程
 
-## Calsh 配置教程
-
-## Calsh 配置模板
+**配置模板**
 
 | 作者                                                  | 配置链接                                                                                                                                      | 介绍  |
 | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --- |
@@ -13,6 +10,9 @@
 | Moli-X                                              | [Clash.yml](https://raw.githubusercontent.com/Moli-X/Resources/main/Clash/Clash.yml)                                                      |     |
 | whatshub.top                                        | [stash-auto.yaml](https://whatshub.top/config/stash-auto.yaml)                                                                            |     |
 
-## 功能预览
+## 全局配置教程
+- https://clash.wiki/
+## [路由规则配置](https://github.com/LaolunsiG/XiaoE_PCR/blob/main/Config_File/Clash_Old/%E8%B7%AF%E7%94%B1%E8%A7%84%E5%88%99%E9%85%8D%E7%BD%AE.md)
 
-
+## 策略组相关配置
+- [节点筛选-正则表达式](https://github.com/LaolunsiG/XiaoE_PCR/blob/main/Config_File/%E8%8A%82%E7%82%B9%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)

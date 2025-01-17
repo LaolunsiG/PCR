@@ -1,8 +1,6 @@
-# Loon
-- 推荐使用，简单易上手，此配置文件需要自己配置订阅节点。
-- 如果需要自行修改配置文件的，请自己阅读官方文档，了解专用
+# Loon 配置教程
 
-## [配置模板](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon/Config)
+[**配置模板**](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon/Config)
 
 | 作者       | 链接                                                                                                                    | 介绍  |
 | -------- | --------------------------------------------------------------------------------------------------------------------- | --- |
@@ -11,27 +9,17 @@
 | HoCooo   | [LoonLite.conf](https://github.com/HoCooo/Loon/blob/main/LoonLite.conf)                                               |     |
 | lodepuly |                                                                                                                       |     |
 
-## 配置教程
-### 全局配置教程
-**官方**
+## 全局配置教程
+
+### 官方
 - https://nsloon.app/LoonManual/#/
 - https://nsloon.app/docs/intro
 
-**第三方**
+### 第三方
 - [Loon使用手册](https://coffee-elderberry-22b.notion.site/Loon-71747252d5054551a8cd10924064899c)
 - https://github.com/KeLee8/Loon-tutorial
 - [Loon知识库](https://getupnote.com/share/notes/zSn1ShBmzNYISKcTgjXE5oHMrNf2/b6047d8b-621c-44af-bfa6-a28d35bcf928)
 - https://wiki.repcz.link/loon/
 
-### 节点筛选教程
+## 节点筛选教程
 - [节点正则表达式](https://github.com/LaolunsiG/XiaoE_PCR/blob/main/Config_File/%E8%8A%82%E7%82%B9%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)
-
-## 功能预览
-![image](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Loon/Pictures/1.jpg?raw=true)
-![image](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Loon/Pictures/2.jpg?raw=true)
-![image](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Loon/Pictures/3.jpg?raw=true)
-![image](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Loon/Pictures/4.jpg?raw=true)
-![image](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Loon/Pictures/5.jpg?raw=true)
-
-
-

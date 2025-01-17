@@ -1,8 +1,6 @@
-# Stash 配置教程和配置模板
+# Stash 配置教程
 
-## [配置模板](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Stash/Config)
-**配置使用注意事项**
-- 主要配置了地区优选，故障转移，负载均衡，并为每个策略组加上了图标，图标来源：[icon](https://github.com/LaolunsiG/XiaoE_PCR/tree/main/icons)
+[**配置模板**](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Stash/Config)
 
 | 作者/项目地址                                               | 配置链接                                                                                                                                            | 介绍  |
 | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --- |
@@ -14,7 +12,6 @@
 | whatshub.top                                          | [stash-auto.yaml](https://whatshub.top/config/stash-auto.yaml)                                                                                  |     |
 | [jnlaoshu/MySelf](https://github.com/jnlaoshu/MySelf) | [Config.yaml](https://raw.githubusercontent.com/jnlaoshu/MySelf/refs/heads/main/Stash/Config.yaml)                                              |     |
 
-## Stash 配置教程
 ## 全局配置教程
 - https://stash.wiki/
 

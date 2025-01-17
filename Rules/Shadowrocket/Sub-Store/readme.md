@@ -1,10 +1,8 @@
 # Sub-Store
-> 20250116
 
 ## 使用规则
-### classical
+### XiaoE
+\# classical
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Shadowrocket/Sub-Store/Sub-Store-Classical.list
+https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Shadowrocket/Sub-Store/Sub-Store-Classical.list
 ```
-
-## 规则来源
