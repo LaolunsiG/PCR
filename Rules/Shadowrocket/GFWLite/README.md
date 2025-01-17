@@ -2,7 +2,7 @@
 
 ## 使用规则
 
-### XiaoE
+### classical
 ```
 https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Shadowrocket/GFWLite/GFWLite-Classical.list
 ```

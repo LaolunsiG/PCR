@@ -1,7 +1,8 @@
 # ChinaMedia
+
 ## 使用规则
-### XiaoE
-\# ChinaMedia_Classical
+
+### classical
 ```
 https://github.com/LaolunsiG/XiaoE_PCR/raw/main/rules/Shadowrocket/ChinaMedia/ChinaMedia_Classical.list
 ```

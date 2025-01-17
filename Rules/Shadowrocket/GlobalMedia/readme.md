@@ -1,11 +1,14 @@
 # GlobalMedia
+
 ## 使用规则
-### Classical
+
+### classical
 ```
 https://github.com/LaolunsiG/XiaoE_PCR/raw/main/rules/Shadowrocket/GlobalMedia/GlobalMedia_Classical.list
 ```
 
 ## 规则来源
+
 ### TikTok
 - https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Loon/TikTok/TikTok.list
 

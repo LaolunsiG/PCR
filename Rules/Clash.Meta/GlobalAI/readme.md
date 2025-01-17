@@ -3,13 +3,15 @@
 
 
 ## 使用规则
+
 ### Classical
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Clash.Meta/GlobalAI/GlobalAI-Classical.yaml
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GlobalAI/GlobalAI-Classical.yaml
 ```
+
 **Clash 专用**
 ```yaml
-https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Clash.Meta/GlobalAI/Clash-GlobalAI-Classical.yaml
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GlobalAI/Clash-GlobalAI-Classical.yaml
 ```
 
 ## 规则来源

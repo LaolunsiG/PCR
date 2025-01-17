@@ -1,11 +1,11 @@
 # GlobalGame
 
 ## 使用规则
-### Classical
+
+### classical
 ```
 https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Shadowrocket/GlobalGame/GlobalGame-Classical.list
 ```
-
 
 ## 规则来源
 - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PlayStation/PlayStation.list

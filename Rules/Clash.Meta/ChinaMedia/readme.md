@@ -1,6 +1,7 @@
 # ChinaMedia
 
 ## 使用规则
+
 ### classical
 ```yaml
 https://github.com/LaolunsiG/XiaoE_PCR/raw/refs/heads/main/rules/Clash.Meta/ChinaMedia/ChinaMedia-Classical.yaml
