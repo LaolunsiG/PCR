@@ -1,4 +1,4 @@
-# Quantumult_X规则类型
+# Quantumult_X 规则类型
 
 ## IP 规则
 - IP-CIDR

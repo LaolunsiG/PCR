@@ -10,7 +10,6 @@
 | [As-Lucky/Lucky](https://github.com/As-Lucky/Lucky)                 | [Lucky-Surge.conf](https://raw.githubusercontent.com/As-Lucky/Lucky/refs/heads/main/Lucky-Surge.conf)                                              |     |
 | 开发者最小配置                                                             | [Surge.conf](https://gist.githubusercontent.com/Zeaphyou/864aebea248ca1bb8000e0e5623b65f3/raw/c36413c715f43f22772d3c2353358e1ff936b2e6/Surge.conf) |     |
 
-
 ## 全局配置教程
 
 ### 官方

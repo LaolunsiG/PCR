@@ -1,11 +1,9 @@
 # Shadowrocket
 - 在IOS支持加密协议最多的代理软件，适合小白使用，此配置文件需要自己配置订阅节点。
 
-## [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Shadowrocket/Shadowrocket%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%E5%92%8C%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF.md)
+## 配置模板
 
-## [配置模板](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Shadowrocket/Config)
-
-| 作者/项目地址                                                     | 配置链接                                                                                                                                                             | 介绍  |
+| 作者/项目                                                       | 配置链接                                                                                                                                                             | 介绍  |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | XiaoE                                                       | [Shadowrocket-stable.conf](https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/refs/heads/main/Config_File/Shadowrocket/Config/XiaoE_Shadowrocket-stable.conf) |     |
 |                                                             | [Shadowrocket-test.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Shadowrocket/Config/Shadowrocket-test.conf)                 |     |
@@ -13,6 +11,8 @@
 | whatshub.top                                                | [shadowrocket_basic.conf](https://whatshub.top/config/shadowrocket_basic.conf)                                                                                   |     |
 | [wlxuf/Shadowrocket](https://github.com/wlxuf/Shadowrocket) | [lazy.conf](https://raw.githubusercontent.com/wlxuf/Shadowrocket/refs/heads/main/lazy.conf)                                                                      |     |
 | ^^                                                          | [lazy_group.conf](https://raw.githubusercontent.com/wlxuf/Shadowrocket/refs/heads/main/lazy_group.conf)                                                          |     |
+
+## [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Shadowrocket/Shadowrocket%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%E5%92%8C%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF.md)
 
 ## 功能预览
 

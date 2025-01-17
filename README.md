@@ -8,6 +8,11 @@
 
 > 只保留 5 次记录
 
+### 2025-01-17
+- 继续优化笔记呈现
+- 准备优化修改部分代理工具的配置文件
+- 准备尝试 sing-box
+
 ### 2025-01-02
 - 删去了不必要规则和优化了部分笔记的呈现。
 
@@ -29,18 +34,18 @@
 
 ## 不同代理工具的配置文件及其教程
 
-| 内核                                                                                  | 操作系统       | 配置文件 | 教程  | 介绍                       |
-| ----------------------------------------------------------------------------------- | ---------- | ---- | --- | ------------------------ |
-| [Clash](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash)（以删库）          | 多平台        |      |     |                          |
-| [Clash.Meta](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash.Meta)     | 多平台        |      |     |                          |
-| [LanceX](https://github.com/LaolunsiG/PCR/tree/main/Config_File/LanceX)             | IOS, MacOS |      |     | 此软件还未完善，不推荐使用            |
-| [Loon](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon)                 | IOS, MacOS |      |     |                          |
-| [Quantumult_X](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Quantumult_X) | IOS, MacOS |      |     |                          |
-| [Shadowrocket](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Shadowrocket) | IOS, MacOS |      |     | 支持加密协议最多的代理软件            |
-| [Sing-Box](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Sing-Box)         | 多平台        |      |     | 支持加密协议最多的代理软件            |
-| [Stash](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Stash)               | IOS, MacOS |      |     |                          |
-| [Surfboard](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surfboard)       | Android    |      |     |                          |
-| [Surge](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surge)               | IOS, MacOS |      |     | IOS上最贵的代理工具，也是功能最全的代理工具。 |
+| 内核           | 操作系统       | 配置文件                                                                                     | 教程                                                                                                                                                                                                          | 介绍                       |
+| ------------ | ---------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| Clash（以删库）   | 多平台        | [Clash 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash)               | [Clash 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Clash%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)               |                          |
+| Clash.Meta   | 多平台        | [Clash.Meta 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash.Meta)     |                                                                                                                                                                                                             |                          |
+| LanceX       | IOS, MacOS | [LanceX 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/LanceX)             | [LanceX 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/LanceX%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)             | 此软件还未完善，不推荐使用            |
+| Loon         | IOS, MacOS | [Loon 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon)                 | [Loon 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Loon%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)                 |                          |
+| Quantumult_X | IOS, MacOS | [Quantumult_X 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Quantumult_X) | [Quantumult_X 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Quantumult_X%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md) |                          |
+| Shadowrocket | IOS, MacOS | [Shadowrocket 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Shadowrocket) | [Shadowrocket 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Shadowrocket%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md) | 支持加密协议最多的代理软件            |
+| Sing-Box     | 多平台        | [Sing-Box 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Sing-Box)         | [Sing-Box 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Sing-Box%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)         | 支持加密协议最多的代理软件            |
+| Stash        | IOS, MacOS | [Stash 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Stash)               | [Stash 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Stash%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)               |                          |
+| Surfboard    | Android    | [Surfboard 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surfboard)       | [Surfboard 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Surfboard%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)       |                          |
+| Surge        | IOS, MacOS | [Surge 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surge)               | [Surge 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Surge%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)               | IOS上最贵的代理工具，也是功能最全的代理工具。 |
 
 ## 代理规则
 - [All](https://github.com/LaolunsiG/PCR/tree/main/Rules)
