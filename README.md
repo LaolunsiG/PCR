@@ -6,7 +6,7 @@
 <details> 
   <summary> 更新日志和未来规划 </summary>
 
-> 只保留 5 次记录
+> 只保留 10 次记录
 
 ### 2025-01-25
 - 更新了 clash，clash.meta，surge，loon 和 qx 的[配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File)，优化了部分配置，修复部分错误配置
