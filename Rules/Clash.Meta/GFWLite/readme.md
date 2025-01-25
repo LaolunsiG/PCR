@@ -3,4 +3,9 @@
 
 ## 使用规则
 
+### Classical
+```
+https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Clash.Meta/GFWLite/GFWLite-Classical.yaml
+```
+
 ## 规则来源
