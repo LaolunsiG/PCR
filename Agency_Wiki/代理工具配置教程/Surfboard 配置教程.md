@@ -2,9 +2,10 @@
 
 **配置模板**
 
-| 作者/项目地址                                                   | 配置链接                                                                                                                                               | 介绍  |
+| 作者/项目                                                     | 配置链接                                                                                                                                               | 介绍  |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-|                                                           | [XiaoE_Surfboard.conf]( https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/Config_File/Surfboard/XiaoE_Surfboard.conf)                     |     |
+| XiaoE                                                     | [Surfboard-stable.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Surfboard/Surfboard-stable.conf)               |     |
+| ^^                                                        | [Surfboard-test.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Surfboard/Surfboard-test.conf)                   |     |
 | [Rabbit-Spec/Surge](https://github.com/Rabbit-Spec/Surge) | [Surge.conf](https://raw.githubusercontent.com/Rabbit-Spec/Surge/refs/heads/Master/Conf/Spec/Surge.conf)                                           |     |
 | [GetSomeCats](https://github.com/getsomecat/GetSomeCats)  | [FishChips.conf](https://github.com/getsomecat/GetSomeCats/raw/refs/heads/Surge/FishChips.conf)                                                    |     |
 | [Lucky](https://github.com/As-Lucky/Lucky)                | [Lucky-Surge.conf](https://raw.githubusercontent.com/As-Lucky/Lucky/refs/heads/main/Lucky-Surge.conf)                                              |     |

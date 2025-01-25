@@ -10,10 +10,11 @@
 ### surge
 
 ### loon
-- [官方 - 代理链教程](https://coffee-elderberry-22b.notion.site/a48b7ec42e704b95bff9ba6396785bd4)
+- [代理链教程](https://coffee-elderberry-22b.notion.site/a48b7ec42e704b95bff9ba6396785bd4)
 
 ### clash.meta(mihomo)
-\# 官方教程
+
+**官方教程**
 - [单个代理节点设置代理链](https://wiki.metacubex.one/config/proxies/)
 - [代理集合设置代理链](https://wiki.metacubex.one/config/proxy-providers/)
 
