@@ -1,12 +1,16 @@
 # 自用代理资源存储库-PCR
 - Clash 因不再更新，不支持新规则和新的加密，所以创建此自用存储库。
 - 本存储库会将一些规则合在一起，以便于使用。
-- [Clash.Meta](https://github.com/LaolunsiG/PCR/tree/main/rules/Clash.Meta) 可用于旧版 Clash 内核的 Clash for Android(3.0.3) and Clash for Windows。
+- [Clash.Meta](https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta) 可用于旧版 Clash 内核的 Clash for Android(3.0.3) and Clash for Windows。
 
 <details> 
   <summary> 更新日志和未来规划 </summary>
 
 > 只保留 5 次记录
+
+### 2025-01-25
+- 更新了 clash，clash.meta，surge，loon 和 qx 的[配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File)，优化了部分配置，修复部分错误配置
+- 笔记呈现优化，代理配置教程逻辑优化，部分笔记增加了参考文章
 
 ### 2025-01-17
 - 继续优化笔记呈现
