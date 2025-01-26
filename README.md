@@ -1,7 +1,13 @@
 # 自用代理资源存储库-PCR
+<<<<<<< HEAD
 > data: 未知
 
 > updata: 20250126
+=======
+> data：未知
+
+> updata: 20250125
+>>>>>>> 4b1d0317ca54a9a5e06c35840c45afb66ef95637
 - Clash 因不再更新，不支持新规则和新的加密，所以创建此自用存储库。
 - 本存储库会将一些规则合在一起，以便于使用。
 - [Clash.Meta](https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta) 可用于旧版 Clash 内核的 Clash for Android(3.0.3) and Clash for Windows。
