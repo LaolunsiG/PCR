@@ -1,5 +1,7 @@
 # 自用代理资源存储库-PCR
-> 20250125
+> data: 未知
+
+> updata: 20250126
 - Clash 因不再更新，不支持新规则和新的加密，所以创建此自用存储库。
 - 本存储库会将一些规则合在一起，以便于使用。
 - [Clash.Meta](https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta) 可用于旧版 Clash 内核的 Clash for Android(3.0.3) and Clash for Windows。
@@ -92,10 +94,10 @@
 ## 感谢以下作者/项目
 > 排名不分先后
 
-| 作者/项目名        | 仓库链接/其他链接                                         | Telegram 频道         |
-| ------------- | ------------------------------------------------- | ------------------- |
-| blackmatrix7  | https://github.com/blackmatrix7/ios_rule_script   |                     |
-| iKeLee        | https://gitlab.com/lodepuly/vpn_tool/             | https://t.me/iKeLee |
-| ProxyResource | https://github.com/luestr/ProxyResource/tree/main |                     |
-| Moli-X        | https://github.com/Moli-X                         | https://t.me/QuantX |
-| whatshub.top  | https://whatshub.top/                             |                     |
+| 作者/项目名        | 仓库链接/其他链接                                       | Telegram 频道         |
+| ------------- | ----------------------------------------------- | ------------------- |
+| blackmatrix7  | https://github.com/blackmatrix7/ios_rule_script |                     |
+| iKeLee        | https://gitlab.com/lodepuly/vpn_tool/           | https://t.me/iKeLee |
+| ProxyResource | https://github.com/luestr/ProxyResource         |                     |
+| Moli-X        | https://github.com/Moli-X                       | https://t.me/QuantX |
+| whatshub.top  | https://whatshub.top/                           |                     |
