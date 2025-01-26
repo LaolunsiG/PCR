@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripts/Sub-Store/README.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
@@ -159,12 +159,17 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "3c44a70c637c25ec",
   "lastOpenFiles": [
+    "Scripts/Clash/CLash.Meta_Override.js",
+    "文档写作教程.md",
+    "README.md",
     "节点测试链接.md",
+    "Scripts/Sub-Store/README.md",
     "Agency_Tools/00_多平台.md",
     "Agency_Tools/01_Windows 代理工具.md",
     "Agency_Tools/02_MacOS 代理工具.md",
@@ -178,18 +183,14 @@
     "Extensions/Sing-Box/README.md",
     "Extensions/readme.md",
     "Scripts/Stash/README.md",
-    "Scripts/Sub-Store/README.md",
     "Scripts/Surge/README.md",
     "Scripts/readme.md",
-    "文档写作教程.md",
-    "README.md",
     "Config_File/Surge/readme.md",
     "Config_File/Surfboard/readme.md",
     "Config_File/Stash/readme.md",
     "Config_File/Sing-Box/readme.md",
     "Config_File/Shadowrocket/readme.md",
     "Config_File/Quantumult_X/readme.md",
-    "Config_File/Loon/readme.md",
     "Extensions/Loon/插件模板.plugin",
     "Scripts/Surge/backup",
     "Scripts/Sub-Store/backup/cname.js",
