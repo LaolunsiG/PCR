@@ -1,6 +1,8 @@
+// name: CLash-Verge
 // author: XiaoE
-// content: unknown
-// updata_url: 
-// updata: 
-// update_log(更新日志): 
+// updata: 2025-01-26
+// update_log: 
+// updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Scripts/Clash/CLash-Verge.js
+// repo: https://github.com/LaolunsiG/PCR/tree/main/Scripts/Clash
+
 
