@@ -1,9 +1,9 @@
 # name: sub-store
 # Modified By XiaoE
 # repo: https://github.com/LaolunsiG/PCR/tree/main/Extensions/Loon
-# updata_url: 
-# origin_repo: 
-# origin_updata_url: 
+# updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Extensions/Loon/sub-store.plugin
+# origin_repo: https://github.com/sub-store-org/Sub-Store
+# origin_updata_url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon.plugin
 
 ## Loon 介绍
 #!name=Sub-Store
