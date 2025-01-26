@@ -13,11 +13,13 @@
 
 ## 根据软件分类扩展
 
-| 软件名称     |     |
-| -------- | --- |
-| Loon     |     |
-| Surge    |     |
-| Sing-Box |     |
+| 软件名称         |     |
+| ------------ | --- |
+| Loon         |     |
+| Shadowrocket |     |
+| Sing-Box     |     |
+| Stash        |     |
+| Surge        |     |
 
 
  
