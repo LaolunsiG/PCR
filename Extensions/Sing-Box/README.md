@@ -1,4 +1,4 @@
-# Surge 脚本整理
+# Sing-Box 扩展资源整理
 > data: 20250126
 
 > updata: 20250126

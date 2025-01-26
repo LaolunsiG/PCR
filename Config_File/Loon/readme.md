@@ -7,11 +7,11 @@
 
 | 作者/项目    | 链接                                                                                                         | 介绍  |
 | -------- | ---------------------------------------------------------------------------------------------------------- | --- |
-| XiaoE    | [Loon-stable.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/main/Config_File/Loon/Loon-stable.conf) |     |
-| ^^       | [Loon-test.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/main/Config_File/Loon/Loon-test.conf)     |     |
-| SANYIMOE | [loon.conf](https://github.com/SANYIMOE/Quan_Shado_Conf/blob/master/conf/loon.conf)                        |     |
 | HoCooo   | [LoonLite.conf](https://github.com/HoCooo/Loon/blob/main/LoonLite.conf)                                    |     |
 | lodepuly |                                                                                                            |     |
+| SANYIMOE | [loon.conf](https://github.com/SANYIMOE/Quan_Shado_Conf/blob/master/conf/loon.conf)                        |     |
+| XiaoE    | [Loon-stable.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/main/Config_File/Loon/Loon-stable.conf) |     |
+| ^^       | [Loon-test.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/main/Config_File/Loon/Loon-test.conf)     |     |
 
 ## [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Loon%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
 

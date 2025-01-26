@@ -2,13 +2,13 @@
 
 **配置模板**
 
-| 作者/项目                                               | 配置链接                                                                                                                                      | 介绍  |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| XiaoE                                               | [Clash-stable.yml](https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/refs/heads/main/Config_File/Clash/Config/XiaoE_Clash-stable.yml) |     |
-| ^^                                                  | [Clash-test.yml](https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/refs/heads/main/Config_File/Clash/Config/XiaoE_Clash-test.yml)     |     |
-| [As-Lucky/Lucky](https://github.com/As-Lucky/Lucky) | [Lucky-ClashVerge.yaml](https://raw.githubusercontent.com/As-Lucky/Lucky/refs/heads/main/Lucky-ClashVerge.yaml)                           |     |
-| Moli-X                                              | [Clash.yml](https://raw.githubusercontent.com/Moli-X/Resources/main/Clash/Clash.yml)                                                      |     |
-| whatshub.top                                        | [stash-auto.yaml](https://whatshub.top/config/stash-auto.yaml)                                                                            |     |
+| 作者/项目                                               | 配置链接                                                                                                                   | 介绍  |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --- |
+| [As-Lucky/Lucky](https://github.com/As-Lucky/Lucky) | [Lucky-ClashVerge.yaml](https://raw.githubusercontent.com/As-Lucky/Lucky/refs/heads/main/Lucky-ClashVerge.yaml)        |     |
+| Moli-X                                              | [Clash.yml](https://raw.githubusercontent.com/Moli-X/Resources/main/Clash/Clash.yml)                                   |     |
+| XiaoE                                               | [Clash-stable.yml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash/Clash-stable.yml) |     |
+| ^^                                                  | [Clash-test.yml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash/Clash-test.yml)     |     |
+| whatshub.top                                        | [stash-auto.yaml](https://whatshub.top/config/stash-auto.yaml)                                                         |     |
 
 ## 全局配置教程
 - [Clash 知识库](https://clash.wiki/)

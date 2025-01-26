@@ -93,10 +93,12 @@
 ## 感谢以下作者/项目
 > 排名不分先后
 
-| 作者/项目名       | 仓库链接/其他链接                                       | Telegram 频道         |
+| 作者           | 仓库链接/其他链接                                       | Telegram 频道         |
 | ------------ | ----------------------------------------------- | ------------------- |
 | blackmatrix7 | https://github.com/blackmatrix7/ios_rule_script |                     |
 | iKeLee       | https://gitlab.com/lodepuly/vpn_tool/           | https://t.me/iKeLee |
-| Moli-X       | https://github.com/Moli-X                       | https://t.me/QuantX |
 | luestr       | https://github.com/luestr/ProxyResource         |                     |
+| Moli-X       | https://github.com/Moli-X/Resources             | https://t.me/QuantX |
+| ^^           | https://github.com/Moli-X/Tool                  |                     |
 | whatshub.top | https://whatshub.top/                           |                     |
+| Repcz        | https://github.com/Repcz/Tool                   |                     |

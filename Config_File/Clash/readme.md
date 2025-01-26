@@ -6,10 +6,10 @@
 
 | 作者/项目                                               | 配置链接                                                                                                                   | 介绍  |
 | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --- |
-| XiaoE                                               | [Clash-stable.yml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash/Clash-stable.yml) |     |
-| ^^                                                  | [Clash-test.yml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash/Clash-test.yml)     |     |
 | [As-Lucky/Lucky](https://github.com/As-Lucky/Lucky) | [Lucky-ClashVerge.yaml](https://raw.githubusercontent.com/As-Lucky/Lucky/refs/heads/main/Lucky-ClashVerge.yaml)        |     |
 | Moli-X                                              | [Clash.yml](https://raw.githubusercontent.com/Moli-X/Resources/main/Clash/Clash.yml)                                   |     |
+| XiaoE                                               | [Clash-stable.yml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash/Clash-stable.yml) |     |
+| ^^                                                  | [Clash-test.yml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash/Clash-test.yml)     |     |
 | whatshub.top                                        | [stash-auto.yaml](https://whatshub.top/config/stash-auto.yaml)                                                         |     |
 
 ## [Calsh 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Clash%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)

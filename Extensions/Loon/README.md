@@ -1,4 +1,7 @@
 # Loon 扩展资源整理
+> data: 20250126
+
+> updata: 20250126
 - Loon 扩展资源整理
 
 ## 广告拦截
@@ -28,13 +31,13 @@
 
 | 作者/项目                                                                        | 介绍  |
 | ---------------------------------------------------------------------------- | --- |
-| [Functional-Store-Hub](https://github.com/I-am-R-E/Functional-Store-Hub)     |     |
-| [chxm1023/Rewrite](https://github.com/chxm1023/Rewrite)                      |     |
-| [Moli-X/Resources](https://github.com/Moli-X/Resources)                      |     |
-| [app2smile/rules](https://github.com/app2smile/rules)                        |     |
-| [Whatshub/loon](https://whatshub.top/loon)                                   |     |
 | [插件资源](http://loon-plugin/)                                                  |     |
+| [app2smile/rules](https://github.com/app2smile/rules)                        |     |
+| [chxm1023/Rewrite](https://github.com/chxm1023/Rewrite)                      |     |
+| [Functional-Store-Hub](https://github.com/I-am-R-E/Functional-Store-Hub)     |     |
+| [Moli-X/Resources](https://github.com/Moli-X/Resources)                      |     |
 | [Loon插件大全](https://github.com/luestr/ProxyResource/blob/main/README.md/)<br> |     |
+| [Whatshub/loon](https://whatshub.top/loon)                                   |     |
 
 ## Loon 脚本资源
 - [Keywos-rule](https://github.com/Keywos/rule)

@@ -6,9 +6,11 @@
 - 使用的 JavaScript 语言
 
 ## 脚本配置
-- https://github.com/LaolunsiG/PCR/raw/main/Script/Clash/CLash_Verge.js
+
+| 作者/项目                                                 | 脚本链接                                                                                                           | 介绍  |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | --- |
+| XiaoE                                                 | [CLash-Verge.js](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Scripts/Clash/CLash-Verge.js) |     |
+| [Kiritocyz/Clash](https://github.com/Kiritocyz/Clash) |                                                                                                                |     |
+| [Repcz/Tool](https://github.com/Repcz/Tool)           | [Override.js](https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Meta/Override.js)                |     |
 
 ## reference
-- https://github.com/Kiritocyz/Clash
-- https://github.com/Repcz/Tool/blob/X/Clash/Meta/Verge_Rev_Script.js
-- https://github.com/Kiritocyz/Clash/

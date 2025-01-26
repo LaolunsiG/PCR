@@ -7,16 +7,16 @@
 
 ## 配置模板
 
-| 作者/项目                                                 | 配置链接                                                                                                                                            | 介绍  |
-| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| XiaoE                                                 | [Stash-stable.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Stash/Stash-stable.yaml)                        |     |
-| ^^                                                    | [Stash-test.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Stash/Stash-test.yaml)                            |     |
-| [rule](https://github.com/Infatuation-Fei/rule)       | [Config for Stash.yaml](https://github.com/Infatuation-Fei/rule/blob/main/Stash/%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF/Config%20for%20Stash.yaml) |     |
-| [Repcz/Tool](https://github.com/Repcz/Tool)           | [Stash.yaml](https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Stash/Stash.yaml)                                                        |     |
-| ^^                                                    | [Stash_lite.yaml](https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Stash/Stash_lite.yaml)                                              |     |
-| Moli-X                                                | [Clash.yml](https://raw.githubusercontent.com/Moli-X/Resources/main/Clash/Clash.yml)                                                            |     |
-| whatshub.top                                          | [stash-auto.yaml](https://whatshub.top/config/stash-auto.yaml)                                                                                  |     |
-| [jnlaoshu/MySelf](https://github.com/jnlaoshu/MySelf) | [Config.yaml](https://raw.githubusercontent.com/jnlaoshu/MySelf/refs/heads/main/Stash/Config.yaml)                                              |     |
+| 作者/项目                                                           | 配置链接                                                                                                                                            | 介绍  |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| [Infatuation-Fei/rule](https://github.com/Infatuation-Fei/rule) | [Config for Stash.yaml](https://github.com/Infatuation-Fei/rule/blob/main/Stash/%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF/Config%20for%20Stash.yaml) |     |
+| [jnlaoshu/MySelf](https://github.com/jnlaoshu/MySelf)           | [Config.yaml](https://raw.githubusercontent.com/jnlaoshu/MySelf/refs/heads/main/Stash/Config.yaml)                                              |     |
+| Moli-X                                                          | [Clash.yml](https://raw.githubusercontent.com/Moli-X/Resources/main/Clash/Clash.yml)                                                            |     |
+| [Repcz/Tool](https://github.com/Repcz/Tool)                     | [Stash.yaml](https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Stash/Stash.yaml)                                                        |     |
+| ^^                                                              | [Stash_lite.yaml](https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Stash/Stash_lite.yaml)                                              |     |
+| whatshub.top                                                    | [stash-auto.yaml](https://whatshub.top/config/stash-auto.yaml)                                                                                  |     |
+| XiaoE                                                           | [Stash-stable.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Stash/Stash-stable.yaml)                        |     |
+| ^^                                                              | [Stash-test.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Stash/Stash-test.yaml)                            |     |
 
 ## [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Stash/Stash%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%E5%92%8C%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF.md)
 

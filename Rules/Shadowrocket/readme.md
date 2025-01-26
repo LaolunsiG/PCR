@@ -1,4 +1,7 @@
 # Shadowrocket
+> data: 未知
+
+> updata: 20250126
 - 规则支持Shadowrocket,Loon,Surge等IOS代理软件
 
 ## 规则分类

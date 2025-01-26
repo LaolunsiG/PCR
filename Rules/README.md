@@ -1,4 +1,7 @@
 # Rules
+> data: 未知
+
+> updata: 20250126
 - 各种代理软件适用规则，不同软件之间大同小异
 
 ## [规则类型](https://github.com/LaolunsiG/PCR/tree/main/Rules/%E8%A7%84%E5%88%99%E7%B1%BB%E5%9E%8B)

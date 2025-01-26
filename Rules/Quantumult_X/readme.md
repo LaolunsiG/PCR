@@ -1,4 +1,7 @@
 # Quantumult_X
+> data: 未知
+
+> updata: 20250126
 - [Quantumult_X规则类型](https://github.com/LaolunsiG/XiaoE_PCR/blob/main/rules/Quantumult_X/Quantumult_X%E8%A7%84%E5%88%99%E7%B1%BB%E5%9E%8B.md)
 
 **Quantumult_X规则匹配顺序**
