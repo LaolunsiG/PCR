@@ -1,4 +1,7 @@
 # Stash
+> data: 未知
+
+> updata：20250126
 - Stash 完全兼容 Clash Premium 的配置
 
 **个人体验**

@@ -1,7 +1,7 @@
 # Config_Files
 > data: 未知
 
-> updata：20250125
+> updata：20250126
 - 此为代理工具配置模板。
 - 如果发现有配置错误的情况，请提 issue。
 
@@ -31,14 +31,14 @@
 | ------------ | :---------: | :------: |
 | Clash        | yaml & json |    #     |
 | Clash.Meta   | yaml & json |    #     |
+| LanceX       |     INI     |    #     |
+| Loon         |     INI     |    #     |
+| Quantumult_X |     INI     |    #     |
+| Shadowrocket |     INI     |    #     |
+| Sing-Box     |    json     |    无     |
 | Stash        |    yaml     |    #     |
 | Surfboard    |     INI     |    #     |
 | Surge        |     INI     |    #     |
-| Loon         |     INI     |    #     |
-| Shadowrocket |     INI     |    #     |
-| Sing-Box     |    json     |    无     |
-| LanceX       |     INI     |    #     |
-| Quantumult_X |     INI     |    #     |
 
 ## 参考的配置
 

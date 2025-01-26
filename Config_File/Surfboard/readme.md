@@ -1,4 +1,7 @@
 # [Surfboard](https://github.com/getsurfboard/surfboard)
+> data: 未知
+
+> updata：20250126
 - 此软件遵循 Surge 的配置方式......注意：使用示例配置文件时，因规则过多，导入时间不够，请到软件内修改获取配置文件的时间。
 
 **个人体验**

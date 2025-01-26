@@ -65,9 +65,9 @@
 | ---------------- | :------------------------------------------------------------ |
 | Clash            | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash        |
 | Clash.Meta/Stash | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta   |
-| Shadowrocket     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Shadowrocket |
 | Quantumult_X     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Quantumult_X |
-|                  |                                                               |
+| Shadowrocket     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Shadowrocket |
+
 
 ## 其他代理教程
 - [GetSomeCats](https://github.com/getsomecat/GetSomeCats/tree/Surge)
