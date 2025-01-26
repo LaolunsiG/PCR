@@ -1,7 +1,9 @@
+---
+modified by: XiaoE
+date: 2025-01-17 15:18
+updated: 2025-01-27 00:04
+---
 # Config_Files
-> data: 未知
-
-> updata：20250126
 - 此为代理工具配置模板。
 - 如果发现有配置错误的情况，请提 issue。
 

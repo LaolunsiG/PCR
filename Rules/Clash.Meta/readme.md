@@ -1,7 +1,9 @@
+---
+modified by: XiaoE
+date: 2025-01-17 15:18
+updated: 2025-01-27 00:06
+---
 # Clash.Meta
-> data: 未知
-
-> updata: 20250126
 - 本规则集只是将一些分散的规则和在一起。
 
 ## 规则分类

@@ -1,7 +1,9 @@
+---
+modified by: XiaoE
+date: 2025-01-17 15:18
+updated: 2025-01-27 00:03
+---
 # Clash.Meta & Clash 脚本整理
-> data: 未知
-
-> updata: 20250126
 - 看不懂正在学
 - 使用的 JavaScript 语言
 

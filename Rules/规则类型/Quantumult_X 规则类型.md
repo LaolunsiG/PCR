@@ -1,7 +1,10 @@
-# Quantumult_X 规则类型
-> data: 未知
+---
+modified by: XiaoE
+date: 2025-01-17 15:18
+updated: 2025-01-27 00:03
+---
 
-> updata: 20250126
+# Quantumult_X 规则类型
 
 ## IP 规则
 

@@ -1,7 +1,9 @@
+---
+modified by: XiaoE
+date: 2025-01-17 15:18
+updated: 2025-01-27 00:04
+---
 # 了解什么是 DNS 以及相关的协议
-> data: 20250125
-
-> updata：20250126
 - 如果你不想折腾（DNS 分流），用默认配置就可以了，使用运营商的 DNS 服务最快，如果 DNS 污染非常严重时再换公共 DNS。
 
 ## DNS(Domain Name System/域名系统) 

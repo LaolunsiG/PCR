@@ -1,7 +1,9 @@
+---
+modified by: XiaoE
+date: 2025-01-17 15:18
+updated: 2025-01-27 00:06
+---
 # Shadowrocket
-> data: 未知
-
-> updata: 20250126
 - 规则支持Shadowrocket,Loon,Surge等IOS代理软件
 
 ## 规则分类

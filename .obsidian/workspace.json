@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2d05895b72ece096",
+        "id": "d2be04f8f449e5c0",
         "type": "tabs",
         "children": [
           {
-            "id": "3c44a70c637c25ec",
+            "id": "f80cbab930558dea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Scripts/Clash/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -144,13 +144,23 @@
               "icon": "lucide-list",
               "title": "readme 的大纲"
             }
+          },
+          {
+            "id": "8051bf4038d373a6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -163,34 +173,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3c44a70c637c25ec",
+  "active": "d5152f1ca185b235",
   "lastOpenFiles": [
-    "Scripts/Clash/CLash.Meta_Override.js",
-    "文档写作教程.md",
-    "README.md",
-    "节点测试链接.md",
-    "Scripts/Sub-Store/README.md",
-    "Agency_Tools/00_多平台.md",
-    "Agency_Tools/01_Windows 代理工具.md",
-    "Agency_Tools/02_MacOS 代理工具.md",
-    "Agency_Tools/11_Android 代理工具.md",
-    "Agency_Tools/12_IOS 代理工具.md",
-    "Agency_Wiki/代理原理知识和教程.md",
-    "Agency_Wiki/节点的正则表达式.md",
-    "Agency_Wiki/其他网络技术教程.md",
-    "Agency_Wiki/readme.md",
-    "Config_File/readme.md",
-    "Extensions/Sing-Box/README.md",
-    "Extensions/readme.md",
+    "Scripts/Loon/README.md",
+    "Scripts/ScriptHub/README.md",
     "Scripts/Stash/README.md",
+    "Scripts/Sub-Store/README.md",
     "Scripts/Surge/README.md",
     "Scripts/readme.md",
-    "Config_File/Surge/readme.md",
-    "Config_File/Surfboard/readme.md",
-    "Config_File/Stash/readme.md",
-    "Config_File/Sing-Box/readme.md",
-    "Config_File/Shadowrocket/readme.md",
-    "Config_File/Quantumult_X/readme.md",
+    "Scripts/Clash/README.md",
+    "Rules/README.md",
+    "节点测试链接.md",
+    "Rules/Shadowrocket/GFWLite/README.md",
+    "Rules/GEODATA.md",
+    "Rules/Clash/Twitter/readme.md",
+    "Rules/Clash/GitHub/readme.md",
+    "Rules/Clash/Telegram/readme.md",
+    "Rules/Clash/README.md",
+    "Rules/Clash.Meta/Airport/README.md",
+    "Rules/Clash.Meta/readme.md",
+    "Rules/Clash.Meta/Sub-Store/readme.md",
+    "Rules/Shadowrocket/Airport/readme.md",
+    "Rules/Shadowrocket/CDN/README.md",
+    "Rules/Shadowrocket/ChinaMedia/readme.md",
+    "Rules/Shadowrocket/ChinaSocialMedia/readme.md",
+    "Rules/Shadowrocket/GlobalAI/readme.md",
+    "Rules/Shadowrocket/GlobalGame/readme.md",
+    "Rules/Shadowrocket/GlobalMedia/readme.md",
+    "Rules/Shadowrocket/Sub-Store/readme.md",
+    "Agency_Wiki/什么是代理链以及如何使用/中转-代理链.pdf",
+    "Scripts/Clash/CLash.Meta_Override.js",
     "Extensions/Loon/插件模板.plugin",
     "Scripts/Surge/backup",
     "Scripts/Sub-Store/backup/cname.js",
@@ -199,8 +211,6 @@
     "Scripts/ScriptHub/backup/removeLs.js",
     "Scripts/ScriptHub/backup/removeFlag.js",
     "Scripts/Clash/backup/Unknown1.js",
-    "Scripts/Clash/backup/Lainbo.js",
-    "Scripts/Clash/backup/Kiritocyz.js",
     "Config_File/Shadowrocket/未命名.canvas",
     "Config_File/Clash.Meta/Pictures/1.png",
     "Config_File/Loon/Pictures/1.jpg",

@@ -1,7 +1,9 @@
+---
+modified by: XiaoE
+date: 2025-01-26 13:42
+updated: 2025-01-27 00:07
+---
 # Sub-Store 脚本整理
-> data: 20250126
-
-> updata: 20250126
 * Sub-Store 脚本整理
 
 ## 节点检测
