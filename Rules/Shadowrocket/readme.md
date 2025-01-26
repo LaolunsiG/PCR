@@ -10,10 +10,9 @@
 | GFWLite   | GlobalAI   | GlobalMedia      | GlobalGame |
 | Sub-Store |            |                  |            |
 
-
 ## 规则来源
-- https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket
-- https://whatshub.top/strule
-- https://github.com/ACL4SSR/ACL4SSR
-- https://github.com/mphin/ProxyTools
+- [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket)
+- [mphin/ProxyTools](https://github.com/mphin/ProxyTools)
+- [whatshub.top/rule](https://whatshub.top/rule)
+
 

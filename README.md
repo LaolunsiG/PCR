@@ -55,10 +55,11 @@
 | [Surfboard](https://getsurfboard.com/)                | Android    | [Surfboard 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surfboard)       | [Surfboard 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Surfboard%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)       |                          |
 | [Surge](https://nssurge.com/)                         | IOS, MacOS | [Surge 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surge)               | [Surge 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Surge%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)               | IOS上最贵的代理工具，也是功能最全的代理工具。 |
 
-## 代理规则
-- [All](https://github.com/LaolunsiG/PCR/tree/main/Rules)
+## 代理规则分类
 
-### ruleset
+### [geodata](https://github.com/LaolunsiG/PCR/blob/main/Rules/GEODATA.md)
+
+### [ruleset](https://github.com/LaolunsiG/PCR/tree/main/Rules)
 
 | 内核               | 规则                                                            |
 | ---------------- | :------------------------------------------------------------ |
@@ -67,8 +68,6 @@
 | Shadowrocket     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Shadowrocket |
 | Quantumult_X     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Quantumult_X |
 |                  |                                                               |
-
-### geodata
 
 ## 其他代理教程
 - [GetSomeCats](https://github.com/getsomecat/GetSomeCats/tree/Surge)
@@ -94,10 +93,10 @@
 ## 感谢以下作者/项目
 > 排名不分先后
 
-| 作者/项目名        | 仓库链接/其他链接                                       | Telegram 频道         |
-| ------------- | ----------------------------------------------- | ------------------- |
-| blackmatrix7  | https://github.com/blackmatrix7/ios_rule_script |                     |
-| iKeLee        | https://gitlab.com/lodepuly/vpn_tool/           | https://t.me/iKeLee |
-| ProxyResource | https://github.com/luestr/ProxyResource         |                     |
-| Moli-X        | https://github.com/Moli-X                       | https://t.me/QuantX |
-| whatshub.top  | https://whatshub.top/                           |                     |
+| 作者/项目名       | 仓库链接/其他链接                                       | Telegram 频道         |
+| ------------ | ----------------------------------------------- | ------------------- |
+| blackmatrix7 | https://github.com/blackmatrix7/ios_rule_script |                     |
+| iKeLee       | https://gitlab.com/lodepuly/vpn_tool/           | https://t.me/iKeLee |
+| Moli-X       | https://github.com/Moli-X                       | https://t.me/QuantX |
+| luestr       | https://github.com/luestr/ProxyResource         |                     |
+| whatshub.top | https://whatshub.top/                           |                     |
