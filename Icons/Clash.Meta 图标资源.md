@@ -1,7 +1,9 @@
+---
+modified by: XiaoE
+date: 2025-01-17 15:44
+updated: 2025-01-27 12:54
+---
 # Clash.Meta 图标资源
-> data: 未知
-
-> updata: 20250126
 
 ## 策略组图标
 

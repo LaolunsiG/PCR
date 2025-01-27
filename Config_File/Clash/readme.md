@@ -1,7 +1,9 @@
+---
+modified by: XiaoE
+date: 2025-01-17 15:18
+updated: 2025-01-27 12:56
+---
 # Clash
-> data: 未知
-
-> updata：20250126
 - 配置的是 Clash_Premium 内核(非开源已删库)，需要自己配置订阅链接。适合 CFA (Clash For Android) 使用。
 
 ## Calsh 配置模板

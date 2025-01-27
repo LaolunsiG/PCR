@@ -6,6 +6,7 @@ updated: 2025-01-27 00:06
 # ChinaSocialMedia
 
 ## 使用规则
+
 ### classical
 ```yaml
 https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/refs/heads/main/rules/Shadowrocket/ChinaSocialMedia/ChinaSocialMedia-Classical.list

@@ -1,7 +1,9 @@
+---
+modified by: XiaoE
+date: 2025-01-17 15:18
+updated: 2025-01-27 12:56
+---
 # Clash.Meta
-> data: 未知
-
-> updata：20250126
 - 配置的是 mihomo 内核, 需要自己配置订阅链接。
 
 **前置知识**

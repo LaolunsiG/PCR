@@ -1,7 +1,9 @@
+---
+modified by: XiaoE
+date: 2025-01-17 15:18
+updated: 2025-01-27 12:56
+---
 # LanceX
-> data: 未知
-
-> updata：20250126
 - 不推荐使用，规则无法修改顺序。界面类似 Shadowrocket；适配 Surge 的模块。
 - LanceX 适用 shadowrocket 的代理规则，且这个软件目前不支持过多规则，一下子导入会卡住，所以不推荐使用。（本人不会配置，只是在他人的配置上做出更改。）
 

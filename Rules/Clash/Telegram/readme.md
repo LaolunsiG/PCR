@@ -3,7 +3,6 @@ modified by: XiaoE
 date: 2025-01-17 15:18
 updated: 2025-01-27 00:03
 ---
-
 # Telegram
 - 去除了 Clash 不支持的规则类型。
 

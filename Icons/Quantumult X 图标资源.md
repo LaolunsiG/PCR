@@ -1,7 +1,9 @@
+---
+modified by: XiaoE
+date: 2025-01-26 17:38
+updated: 2025-01-27 12:54
+---
 # Quantumult X 图标资源
-> data: 20250126
-
-> updata: 20250126
 
 ## 综合类型的图标库
 - [Qure Color (All)@Koolson](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FKoolson%2FQure%2Fraw%2Fmaster%2FOther%2FQureColor-All.json%22%0A%5D)

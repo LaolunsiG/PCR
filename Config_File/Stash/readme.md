@@ -4,9 +4,6 @@ date: 2025-01-17 15:18
 updated: 2025-01-27 00:04
 ---
 # Stash
-> data: 未知
-
-> updata：20250126
 - Stash 完全兼容 Clash Premium 的配置
 
 **个人体验**
