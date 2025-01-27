@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripts/Clash/README.md",
+                "file": "节点测试链接.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "节点测试链接"
             }
           }
         ]
@@ -175,13 +175,15 @@
   },
   "active": "d5152f1ca185b235",
   "lastOpenFiles": [
+    "文档写作教程.md",
+    "README.md",
+    "Scripts/Clash/README.md",
     "Scripts/Loon/README.md",
     "Scripts/ScriptHub/README.md",
     "Scripts/Stash/README.md",
     "Scripts/Sub-Store/README.md",
     "Scripts/Surge/README.md",
     "Scripts/readme.md",
-    "Scripts/Clash/README.md",
     "Rules/README.md",
     "节点测试链接.md",
     "Rules/Shadowrocket/GFWLite/README.md",
@@ -199,8 +201,6 @@
     "Rules/Shadowrocket/ChinaSocialMedia/readme.md",
     "Rules/Shadowrocket/GlobalAI/readme.md",
     "Rules/Shadowrocket/GlobalGame/readme.md",
-    "Rules/Shadowrocket/GlobalMedia/readme.md",
-    "Rules/Shadowrocket/Sub-Store/readme.md",
     "Agency_Wiki/什么是代理链以及如何使用/中转-代理链.pdf",
     "Scripts/Clash/CLash.Meta_Override.js",
     "Extensions/Loon/插件模板.plugin",
