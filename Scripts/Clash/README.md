@@ -11,7 +11,7 @@ updated: 2025-01-27 00:03
 
 | 作者/项目                                                 | 脚本链接                                                                                                           | 介绍  |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | --- |
-| XiaoE                                                 | [CLash-Verge.js](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Scripts/Clash/CLash-Verge.js) |     |
+| XiaoE                                                 | [CLash-Verge.js](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Scripts/Clash/Clash.Meta_Override.js) |     |
 | [Kiritocyz/Clash](https://github.com/Kiritocyz/Clash) |                                                                                                                |     |
 | [Repcz/Tool](https://github.com/Repcz/Tool)           | [Override.js](https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Meta/Override.js)                |     |
 
