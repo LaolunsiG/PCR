@@ -1,9 +1,5 @@
 # Surge 扩展资源整理
-> data: 未知
-
-> updata: 20250126
-- Surge 扩展资源整理
-* 在Surge中：script-update-interval=-1为禁用脚本更新
+- 在Surge中：script-update-interval=-1为禁用脚本更新
 
 ## 广告拦截
 
