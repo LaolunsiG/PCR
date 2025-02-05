@@ -11,7 +11,7 @@ updated: 2025-01-27 00:05
 **sing-box 一键配置工具**
 - [singbox1.com](https://singbox1.com/)
 - [singbox](https://cconfig.cc/singbox/)
-	- 建议使用这个，一键最新配置 
+  - 建议使用这个，一键最新配置 
 
 **配置模板**
 
@@ -30,7 +30,7 @@ updated: 2025-01-27 00:05
 ### 第三方
 - [fscarmen - Sing-box 全家桶](https://github.com/fscarmen/sing-box)
 - [sing-box 基础教程：sing-box 的配置方法和使用教程](https://icloudnative.io/posts/sing-box-tutorial/)
-- [[mihomo 和 sing-box 教程合集](https://proxy-tutorials.dustinwin.top/)
+- [mihomo 和 sing-box 教程合集](https://proxy-tutorials.dustinwin.top/)
 
 ## 策略组配置教程
 
