@@ -9,7 +9,7 @@ updated: 2025-01-27 00:03
 - [Clash.Meta](https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta) 可用于旧版 Clash 内核的 Clash for Android(3.0.3) and Clash for Windows。
 
 <details> 
-  <summary> 更新日志和未来规划 </summary>
+<summary> 更新日志 </summary>
 
 > 只保留 10 次记录
 
@@ -38,6 +38,10 @@ updated: 2025-01-27 00:03
 ### 2024-11-12
 - 修复 [loon 配置文件](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Loon/XiaoE_Loon.conf) 的 DNS 服务，配置文件整体修改，去除了不必要的代码解释。
 
+</details>
+
+<details> 
+<summary> 未来规划 </summary>
 
 </details>
 
