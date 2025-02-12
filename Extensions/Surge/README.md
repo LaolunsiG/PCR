@@ -1,3 +1,8 @@
+---
+modified by: XiaoE
+date: 2025-02-07 00:41
+updated: 2025-02-12 16:14
+---
 # Surge 扩展资源整理
 - 在Surge中：script-update-interval=-1为禁用脚本更新
 

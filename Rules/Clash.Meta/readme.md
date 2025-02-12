@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-01-27 00:06
+updated: 2025-02-12 16:08
 ---
 # Clash.Meta
 - 本规则集只是将一些分散的规则和在一起。
@@ -22,14 +22,14 @@ updated: 2025-01-27 00:06
 > 排名不分先后。
 
 ### geodata & ruleset
-- [DustinWin/ruleset_geodata](https://github.com/DustinWin/ruleset_geodata)
+- [ruleset_geodata - DustinWin](https://github.com/DustinWin/ruleset_geodata)
 
 ### ruleset
-- [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
-- [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash)
-- [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules)
-- [luestr/ProxyResource](https://github.com/luestr/ProxyResource/blob/main/Resource/Markdown/Rule/README.md)
-- [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat)
-- [mphin/ProxyTools](https://github.com/mphin/ProxyTools)
-- [whatshub.top/strule](https://whatshub.top/strule)
-- [xixu-me/rulesets-for-META](https://github.com/xixu-me/rulesets-for-META)
+- [ACL4SSR - ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
+- [clash-rules - Loyalsoldier](https://github.com/Loyalsoldier/clash-rules)
+- [ios_rule_script - blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash)
+- [meta-rules-dat - MetaCubeX](https://github.com/MetaCubeX/meta-rules-dat)
+- [ProxyResource - luestr](https://github.com/luestr/ProxyResource/blob/main/Resource/Markdown/Rule/README.md)
+- [ProxyTools - mphin](https://github.com/mphin/ProxyTools)
+- [rulesets-for-META - xixu-me](https://github.com/xixu-me/rulesets-for-META)
+- [strule - whatshub.top](https://whatshub.top/strule)

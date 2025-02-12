@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rules/Clash.Meta/ExternalControl/README.md",
+                "file": "Extensions/Loon/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -152,8 +152,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -161,8 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,32 +176,33 @@
   },
   "active": "f80cbab930558dea",
   "lastOpenFiles": [
-    "Extensions/Loon/adsense.plugin",
-    "Agency_Tools/00_多平台.md",
-    "Agency_Tools/02_MacOS 代理工具.md",
-    "Agency_Tools/01_Windows 代理工具.md",
-    "Agency_Tools/11_Android 代理工具.md",
-    "Agency_Tools/12_IOS 代理工具.md",
-    "Agency_Wiki/readme.md",
-    "Agency_Wiki/其他网络技术教程.md",
-    "Agency_Wiki/节点的正则表达式.md",
-    "Agency_Wiki/代理原理知识和教程.md",
-    "Agency_Wiki/DNS 原理/了解什么是 DNS 以及相关的协议.md",
-    "Agency_Wiki/什么是代理链以及如何使用/readme.md",
-    "Agency_Wiki/代理工具配置教程/Surge 配置教程.md",
-    "Agency_Wiki/代理工具配置教程/Stash 配置教程.md",
-    "Agency_Wiki/代理工具配置教程/Sing-Box 配置教程.md",
-    "Agency_Wiki/代理工具配置教程/Shadowrocket 配置教程.md",
-    "Agency_Wiki/代理工具配置教程/Quantumult_X 配置教程.md",
-    "Agency_Wiki/代理工具配置教程/LanceX 配置教程.md",
-    "Agency_Wiki/代理工具配置教程/Loon 配置教程.md",
-    "Agency_Wiki/代理工具配置教程/Clash 配置教程.md",
-    "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/锚点配置.md",
-    "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/README.md",
-    "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/代理组图标配置.md",
-    "Config_File/Clash/readme.md",
-    "Config_File/Clash.Meta/readme.md",
+    "README.md",
+    "Extensions/Loon/README.md",
+    "Extensions/Quantumult_X/README.md",
+    "Extensions/Shadowrocket/README.md",
+    "Extensions/Stash/README.md",
+    "Extensions/Surge/README.md",
+    "Extensions/通用扩展资源.md",
+    "Extensions/readme.md",
+    "Config_File/Sing-Box/readme.md",
+    "Config_File/Stash/readme.md",
+    "Config_File/Surfboard/readme.md",
+    "Config_File/Shadowrocket/readme.md",
+    "Config_File/Quantumult_X/readme.md",
+    "Config_File/Loon/readme.md",
     "Config_File/LanceX/Readme.md",
+    "Config_File/Clash.Meta/readme.md",
+    "Config_File/Clash/readme.md",
+    "Rules/Clash.Meta/ExternalControl/README.md",
+    "Rules/Clash.Meta/readme.md",
+    "Rules/Clash.Meta/Sub-Store/readme.md",
+    "Rules/Clash.Meta/GlobalAI/readme.md",
+    "Rules/Clash.Meta/GFWLite/readme.md",
+    "Rules/Clash.Meta/GFW/readme.md",
+    "Rules/Clash.Meta/ChinaService/readme.md",
+    "Rules/Clash.Meta/ChinaMedia/readme.md",
+    "Rules/Clash.Meta/ChinaLite/README.md",
+    "Extensions/Loon/adsense.plugin",
     "Agency_Wiki/什么是代理链以及如何使用/中转-代理链.pdf",
     "Scripts/Clash/CLash.Meta_Override.js",
     "Extensions/Loon/插件模板.plugin",
@@ -212,7 +212,6 @@
     "Scripts/Sub-Store/backup/pname.js",
     "Scripts/ScriptHub/backup/removeLs.js",
     "Scripts/ScriptHub/backup/removeFlag.js",
-    "Scripts/Clash/backup/Unknown1.js",
     "Config_File/Shadowrocket/未命名.canvas",
     "Config_File/Clash.Meta/Pictures/1.png",
     "Config_File/Loon/Pictures/1.jpg",

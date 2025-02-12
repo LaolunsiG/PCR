@@ -1,3 +1,8 @@
+---
+modified by: XiaoE
+date: 2025-02-07 00:41
+updated: 2025-02-12 16:08
+---
 # GlobalAI
 - 人工智能服务平台规则
 

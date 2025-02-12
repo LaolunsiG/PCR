@@ -21,6 +21,7 @@ updated: 2025-01-27 00:07
 | gpt.js |     | [链接](https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/check/gpt.js#timeout=1000&retries=1&retry_delay=1000&concurrency=10&client=iOS) | GPT 检测 |
 
 ## 节点重命名
+
 ### 通用脚本
 
 | 脚本名称      | 作者  | 脚本链接                                                                          | 介绍                                      |
@@ -38,4 +39,4 @@ updated: 2025-01-27 00:07
 
 ## reference
 - [Sub-Store 脚本](https://www.jovegg.tech/posts/5)
-- [KazooDemo/rule](https://github.com/KazooDemo/rule)
+- [rule - KazooDemo](https://github.com/KazooDemo/rule)
