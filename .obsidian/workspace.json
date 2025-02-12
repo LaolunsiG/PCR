@@ -177,6 +177,7 @@
   },
   "active": "f80cbab930558dea",
   "lastOpenFiles": [
+    "Extensions/Loon/adsense.plugin",
     "Agency_Tools/00_多平台.md",
     "Agency_Tools/02_MacOS 代理工具.md",
     "Agency_Tools/01_Windows 代理工具.md",
@@ -202,7 +203,6 @@
     "Config_File/Clash/readme.md",
     "Config_File/Clash.Meta/readme.md",
     "Config_File/LanceX/Readme.md",
-    "Config_File/Loon/readme.md",
     "Agency_Wiki/什么是代理链以及如何使用/中转-代理链.pdf",
     "Scripts/Clash/CLash.Meta_Override.js",
     "Extensions/Loon/插件模板.plugin",
