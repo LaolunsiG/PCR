@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d2be04f8f449e5c0",
+        "id": "394b4e80048845c2",
         "type": "tabs",
         "children": [
           {
-            "id": "f80cbab930558dea",
+            "id": "f535f0cf002a85d1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Agency_Wiki/readme.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "新标签页"
             }
           }
         ]
@@ -174,15 +170,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d5152f1ca185b235",
+  "active": "f535f0cf002a85d1",
   "lastOpenFiles": [
+    "节点测试链接.md",
+    "文档写作教程.md",
+    "Icons/Stash 图标资源.md",
+    "Icons/Quantumult X 图标资源.md",
+    "Agency_Wiki/readme.md",
     "Agency_Tools/00_多平台.md",
     "Agency_Tools/11_Android 代理工具.md",
     "Agency_Tools/12_IOS 代理工具.md",
     "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/锚点配置.md",
     "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/代理组图标配置.md",
-    "节点测试链接.md",
-    "文档写作教程.md",
     "README.md",
     "Extensions/Loon/README.md",
     "Extensions/Quantumult_X/README.md",
@@ -199,9 +198,6 @@
     "Config_File/Loon/readme.md",
     "Config_File/LanceX/Readme.md",
     "Config_File/Clash.Meta/readme.md",
-    "Config_File/Clash/readme.md",
-    "Rules/Clash.Meta/ExternalControl/README.md",
-    "Rules/Clash.Meta/readme.md",
     "Extensions/Loon/adsense.plugin",
     "Agency_Wiki/什么是代理链以及如何使用/中转-代理链.pdf",
     "Scripts/Clash/CLash.Meta_Override.js",
