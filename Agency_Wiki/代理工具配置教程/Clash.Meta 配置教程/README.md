@@ -18,9 +18,9 @@ updated: 2025-01-27 00:05
 |           |                                                                                                                                         |     |
 
 ## 全局配置教程
-- [metacubex/虚空终端 Docs](https://wiki.metacubex.one/)
-- [hokoory/Clash.Meta Docs](https://hokoory.github.io/clash-mate-doc/)
-- [metacubex/clash.meta-wiki-older](https://clash-meta.gitbook.io/clash.meta-wiki-older)
+- [clash.meta 虚空终端 Docs - metacubex](https://wiki.metacubex.one/)
+- [clash.meta-wiki-older - metacubex](https://clash-meta.gitbook.io/clash.meta-wiki-older)
+- [Clash.Meta Docs - hokoory](https://hokoory.github.io/clash-mate-doc/)
 - [mihomo 和 sing-box 教程合集](https://proxy-tutorials.dustinwin.top/)
 
 ## 策略组配置教程
