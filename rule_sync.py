@@ -2,7 +2,7 @@ import os
 import re
 
 # 定义源目录和目标目录（目标目录为 Rules/Shadowrocket/<NAME>）
-source_dir = "loon"
+source_dir = "main/Rules/Clash.Meta"
 target_base = os.path.join("Rules", "Shadowrocket")
 
 def transform_content(content):
