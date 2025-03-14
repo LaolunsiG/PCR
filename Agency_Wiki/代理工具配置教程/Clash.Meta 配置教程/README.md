@@ -9,7 +9,7 @@ updated: 2025-01-27 00:05
 
 | 作者/项目     | 链接                                                                                                                                      | 介绍  |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| As-Lucky  | [Lucky-ClashVerge.yaml](https://github.com/As-Lucky/Lucky/blob/main/Lucky-ClashVerge.yaml)                                    |     |
+| [As-Lucky](https://github.com/As-Lucky/Lucky)  | [Lucky-ClashVerge.yaml](https://github.com/As-Lucky/Lucky/blob/main/Lucky-ClashVerge.yaml)                                    |     |
 | MetaCubeX | [config.yaml](https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml)                                                           |     |
 | Moli-X    | [Clash.yml](https://github.com/Moli-X/Resources/raw/main/Clash/Clash.yml)                                                               |     |
 | lodepuly  | [Config](https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Clash/Config)                                                          |     |
