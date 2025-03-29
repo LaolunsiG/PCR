@@ -1,9 +1,9 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-01-27 00:03
+updated: 2025-03-29 16:32
 ---
-# Loon 规则类型和规则策略
+# Loon 规则类型和内置策略
 
 ## Loon 规则类型
 

@@ -5,21 +5,6 @@ updated: 2025-01-27 00:05
 ---
 # [Sing-Box](https://github.com/SagerNet/sing-box) 配置教程
 
-**语法-json** 
-- [json 语法检查工具](https://www.jyshare.com/front-end/53/)
-
-**sing-box 一键配置工具**
-- [singbox1.com](https://singbox1.com/)
-- [singbox](https://cconfig.cc/singbox/)
-  - 建议使用这个，一键最新配置 
-
-**配置模板**
-
-| 作者/项目 | 配置链接                                                                                                                               | 介绍              |
-| ----- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| 未知    | [sing-box_client_windows.json](https://github.com/chika0801/sing-box-examples/blob/main/Tun/self-use/sing-box_client_windows.json) |                 |
-| XiaoE |                                                                                                                                    | 还未配置完成，配置不可用！！！ |
-
 ## 全局配置教程
 > 一般都附带示例的配置文件。
 
@@ -34,11 +19,16 @@ updated: 2025-01-27 00:05
 
 ## 策略组配置教程
 
-## 节点筛选教程
+### 节点筛选教程
 - [节点正则表达式](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E8%8A%82%E7%82%B9%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)
 
+## 配置工具
 
 
+| 工具名称            |                                                                                                    |
+| --------------- | -------------------------------------------------------------------------------------------------- |
+| 语法检查            | [json 语法检查工具](https://www.jyshare.com/front-end/53/)                                               |
+| sing-box 一键配置工具 | - [singbox1.com](https://singbox1.com/)<br>-[singbox](https://cconfig.cc/singbox/)(建议使用这个，一键最新配置 ) |
+|                 |                                                                                                    |
 
-
-
+## 配置模板

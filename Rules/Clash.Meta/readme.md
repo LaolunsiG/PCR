@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-02-12 16:08
+updated: 2025-03-29 16:31
 ---
 # Clash.Meta
 - 本规则集只是将一些分散的规则和在一起。
@@ -18,8 +18,7 @@ updated: 2025-02-12 16:08
 | [GFW](https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta/GFWhttps://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta/GFWLite) | [GFWLite](https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta/GFWLite)       | [GlobalAI](https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta/GlobalAI)         |
 | [Sub-Store](https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta/Sub-Store)                                                        |                                                                                      |                                                                                          |
 
-## 规则来源
-> 排名不分先后。
+## reference
 
 ### geodata & ruleset
 - [ruleset_geodata - DustinWin](https://github.com/DustinWin/ruleset_geodata)

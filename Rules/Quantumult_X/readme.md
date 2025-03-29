@@ -1,10 +1,10 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-01-27 12:53
+updated: 2025-03-29 16:30
 ---
 # Quantumult_X
-- [Quantumult_X规则类型](https://github.com/LaolunsiG/XiaoE_PCR/blob/main/rules/Quantumult_X/Quantumult_X%E8%A7%84%E5%88%99%E7%B1%BB%E5%9E%8B.md)
+[Quantumult_X规则类型](https://github.com/LaolunsiG/XiaoE_PCR/blob/main/rules/Quantumult_X/Quantumult_X%E8%A7%84%E5%88%99%E7%B1%BB%E5%9E%8B.md)
 
 **Quantumult_X规则匹配顺序**
 - 本地>远程>final
@@ -14,7 +14,7 @@ updated: 2025-01-27 12:53
 
 ## 规则分类
 
-## 规则来源
+## reference
 - [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX)
 
 

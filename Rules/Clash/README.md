@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-01-27 00:06
+updated: 2025-03-29 16:31
 ---
 # Clash
 
@@ -17,8 +17,7 @@ updated: 2025-01-27 00:06
 |          |         |     |
 |          |         |     |
 
-## 规则来源
-> 排名不分先后。
+## reference
 
 ### geodata & ruleset
 - [DustinWin/ruleset_geodata](https://github.com/DustinWin/ruleset_geodata)

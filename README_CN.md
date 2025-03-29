@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-03-29 16:00
+updated: 2025-03-29 16:34
 ---
 English
 # 自用代理资源存储库-PCR
@@ -13,6 +13,9 @@ English
 <summary> 更新日志 </summary>
 
 > 只保留 10 次记录
+
+### 2025-03-29
+- 修改了笔记的部分内容。
 
 ### 2025-01-25
 - 更新了 clash，clash.meta，surge，loon 和 qx 的[配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File)，优化了部分配置，修复部分错误配置

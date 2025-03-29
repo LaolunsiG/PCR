@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-03-29 16:00
+updated: 2025-03-29 16:38
 ---
 [中文文档](https://github.com/LaolunsiG/PCR/blob/main/README_CN.md)
 # Self use proxy resource repository-PCR
@@ -29,18 +29,18 @@ updated: 2025-03-29 16:00
 ## Configuration files and tutorials for different proxy tools
 > Except for open-source kernels that have their own bodies, links to other kernels default to corresponding documentation tutorials. Some third-party tutorials that do not have official tutorials are more detailed in their use
 
-| kernel                                                    | Operating System       | configuration file                                                                                     | tutorial                                                                                                                                                                                                          | introduction                      |
-| ----------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| [Clash（以删库）](https://clash.wiki/)                     | 多平台        | [Clash 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash)               | [Clash 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Clash%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)               |                          |
-| [Clash.Meta](https://wiki.metacubex.one/)             | 多平台        | [Clash.Meta 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash.Meta)     | [Clash.Meta 配置教程 ](https://github.com/LaolunsiG/PCR/tree/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Clash.Meta%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B)       |                          |
-| [LanceX](https://shadowboat.app/lancexapp/zh/)        | IOS, MacOS | [LanceX 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/LanceX)             | [LanceX 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/LanceX%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)             | 此软件还未完善，不推荐使用            |
-| [Loon](https://nsloon.app/)                           | IOS, MacOS | [Loon 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon)                 | [Loon 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Loon%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)                 |                          |
-| [Quantumult_X](https://qx.atlucky.me/)                | IOS, MacOS | [Quantumult_X 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Quantumult_X) | [Quantumult_X 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Quantumult_X%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md) |                          |
-| [Shadowrocket](https://github.com/wlxuf/Shadowrocket) | IOS, MacOS | [Shadowrocket 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Shadowrocket) | [Shadowrocket 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Shadowrocket%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md) | IOS 支持加密协议最多的代理软件        |
-| [Sing-Box](https://github.com/SagerNet/sing-box)      | 多平台        | [Sing-Box 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Sing-Box)         | [Sing-Box 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Sing-Box%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)         | Android 支持加密协议最多的代理软件    |
-| [Stash](https://stash.wiki/)                          | IOS, MacOS | [Stash 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Stash)               | [Stash 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Stash%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)               |                          |
-| [Surfboard](https://getsurfboard.com/)                | Android    | [Surfboard 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surfboard)       | [Surfboard 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Surfboard%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)       |                          |
-| [Surge](https://nssurge.com/)                         | IOS, MacOS | [Surge 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surge)               | [Surge 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Surge%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)               | IOS上最贵的代理工具，也是功能最全的代理工具。 |
+| kernel                                                | operating system | configuration file                                                                       | tutorial                                                                                                                                                                                                    | introduction             |
+| ----------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| [Clash（以删库）](https://clash.wiki/)                     | 多平台              | [Clash 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash)               | [Clash 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Clash%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)               |                          |
+| [Clash.Meta](https://wiki.metacubex.one/)             | 多平台              | [Clash.Meta 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash.Meta)     | [Clash.Meta 配置教程 ](https://github.com/LaolunsiG/PCR/tree/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Clash.Meta%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B)       |                          |
+| [LanceX](https://shadowboat.app/lancexapp/zh/)        | IOS, MacOS       | [LanceX 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/LanceX)             | [LanceX 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/LanceX%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)             | 此软件还未完善，不推荐使用            |
+| [Loon](https://nsloon.app/)                           | IOS, MacOS       | [Loon 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon)                 | [Loon 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Loon%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)                 |                          |
+| [Quantumult_X](https://qx.atlucky.me/)                | IOS, MacOS       | [Quantumult_X 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Quantumult_X) | [Quantumult_X 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Quantumult_X%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md) |                          |
+| [Shadowrocket](https://github.com/wlxuf/Shadowrocket) | IOS, MacOS       | [Shadowrocket 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Shadowrocket) | [Shadowrocket 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Shadowrocket%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md) | IOS 支持加密协议最多的代理软件        |
+| [Sing-Box](https://github.com/SagerNet/sing-box)      | 多平台              | [Sing-Box 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Sing-Box)         | [Sing-Box 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Sing-Box%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)         | Android 支持加密协议最多的代理软件    |
+| [Stash](https://stash.wiki/)                          | IOS, MacOS       | [Stash 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Stash)               | [Stash 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Stash%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)               |                          |
+| [Surfboard](https://getsurfboard.com/)                | Android          | [Surfboard 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surfboard)       | [Surfboard 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Surfboard%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)       |                          |
+| [Surge](https://nssurge.com/)                         | IOS, MacOS       | [Surge 配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Surge)               | [Surge 配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Surge%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)               | IOS上最贵的代理工具，也是功能最全的代理工具。 |
 
 ## Classification of proxy rules
 
@@ -55,19 +55,6 @@ updated: 2025-03-29 16:00
 | Quantumult_X     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Quantumult_X |
 | Shadowrocket     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Shadowrocket |
 
-
-## Other agent tutorials
-- [GetSomeCats](https://github.com/getsomecat/GetSomeCats/tree/Surge)
-
-### Annotation rules
-> The annotation symbol of the configuration file
-
-| profile format | (single-line) annotation symbols | Wiki                                                                                         |
-| ------ |:---------:| -------------------------------------------------------------------------------------------- |
-| JSON   | 无         | [JavaScript和Json的区别](https://blog.csdn.net/qq_44273429/article/details/117409345)-CSDN       |
-| INI    | ; & # & ! | [programming-note](https://programming-note-sylarliu.readthedocs.io/zh-cn/latest/index.html) |
-| YAML   | #         | [菜鸟教程](https://www.runoob.com/w3cnote/yaml-intro.html)                                       |
-
 ## Disclaimer
 - The scripts involved in this project are for resource sharing and study only, and cannot be guaranteed as to their legality, accuracy, completeness or validity, so please make your own judgment based on the circumstances.
 - Any user who uses this project indirectly, including but not limited to setting up a VPS or distributing it in case of certain behavior that violates the laws of the country/region or related regulations, this project is not responsible for any privacy leakage or other consequences caused by such behavior.
@@ -80,7 +67,7 @@ updated: 2025-03-29 16:00
 ## Thanks to the following authors/projects
 > Ranking in no particular order
 
-| author           | Repository Links/Other Links                                       | Telegram Channel         |
+| author       | repository links/other links                    | telegram            |
 | ------------ | ----------------------------------------------- | ------------------- |
 | blackmatrix7 | https://github.com/blackmatrix7/ios_rule_script |                     |
 | iKeLee       | https://gitlab.com/lodepuly/vpn_tool/           | https://t.me/iKeLee |
