@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "节点测试链接.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "节点测试链接"
+              "title": "README"
             }
           }
         ]
@@ -174,15 +174,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f535f0cf002a85d1",
+  "active": "d5152f1ca185b235",
   "lastOpenFiles": [
+    "文档写作教程.md",
+    "节点测试链接.md",
     "rule_sync.py",
     "Icons/图标分类.md",
     "Icons/xiaoe/readme.md",
     "Icons/xiaoe/pixiv01-500.png",
     "Icons/xiaoe",
-    "文档写作教程.md",
-    "节点测试链接.md",
     "Extensions/readme.md",
     "Extensions/通用扩展资源.md",
     "Icons/Stash 图标资源.md",
@@ -212,7 +212,6 @@
     "Scripts/Sub-Store/backup/cname.js",
     "Scripts/Sub-Store/backup/rename.js",
     "Scripts/Sub-Store/backup/pname.js",
-    "Scripts/ScriptHub/backup/removeLs.js",
     "Config_File/Shadowrocket/未命名.canvas",
     "Config_File/Clash.Meta/Pictures/1.png",
     "Config_File/Loon/Pictures/1.jpg",
