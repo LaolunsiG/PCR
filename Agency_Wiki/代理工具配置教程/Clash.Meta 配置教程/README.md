@@ -7,20 +7,6 @@ updated: 2025-01-27 00:05
 
 ## 配置模板
 
-| 作者/项目 | 配置链接                                                                                                                                    | 介绍  |
-| ----- | --------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| XiaoE | [Clash.Meta-stable.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash.Meta/Clash.Meta-stable.yaml) | 稳定版 |
-| ^^    | [Clash.Meta-test.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash.Meta/Clash.Meta-test.yaml)     | 测试版 |
-
-## 其他配置模板
-
-| 作者/项目                                         | 配置链接                                                                                       | 介绍  |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------ | --- |
-| [As-Lucky](https://github.com/As-Lucky/Lucky) | [Lucky-ClashVerge.yaml](https://github.com/As-Lucky/Lucky/blob/main/Lucky-ClashVerge.yaml) |     |
-| MetaCubeX                                     | [config.yaml](https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml)              |     |
-| Moli-X                                        | [Clash.yml](https://github.com/Moli-X/Resources/raw/main/Clash/Clash.yml)                  |     |
-| lodepuly                                      | [Config](https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Clash/Config)             |     |
-
 ## 全局配置教程
 - [clash.meta 虚空终端 Docs - metacubex](https://wiki.metacubex.one/)
 - [clash.meta-wiki-older - metacubex](https://clash-meta.gitbook.io/clash.meta-wiki-older)
@@ -33,5 +19,3 @@ updated: 2025-01-27 00:05
 
 ### 节点筛选教程
 - [节点正则表达式](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E8%8A%82%E7%82%B9%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)
-
-## 其他配置教程

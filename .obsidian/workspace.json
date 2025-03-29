@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Config_File/Clash/readme.md",
+                "file": "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "README"
             }
           }
         ]
@@ -161,7 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 235.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,17 +174,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f535f0cf002a85d1",
+  "active": "8051bf4038d373a6",
   "lastOpenFiles": [
-    "Config_File/readme.md",
-    "Config_File/Clash.Meta/readme.md",
+    "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/锚点配置.md",
+    "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/策略组配置.md",
+    "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/README.md",
+    "Agency_Wiki/代理工具配置教程/Clash 配置教程.md",
     "Config_File/Clash/readme.md",
+    "Config_File/Clash.Meta/readme.md",
+    "Config_File/Clash/Pictures",
+    "Config_File/Clash.Meta/Pictures/3.png",
+    "Config_File/Clash.Meta/Pictures/2.png",
+    "Config_File/Clash.Meta/Pictures/1.png",
+    "Config_File/readme.md",
     "Agency_Wiki/代理工具配置教程/Sing-Box 配置教程.md",
     "Agency_Wiki/代理工具配置教程/Stash 配置教程.md",
     "Agency_Wiki/代理工具配置教程/Surfboard 配置教程.md",
     "Agency_Wiki/代理工具配置教程/Surge 配置教程.md",
-    "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/代理组图标配置.md",
-    "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/锚点配置.md",
     "Agency_Wiki/readme.md",
     "README.md",
     "README_CN.md",
@@ -200,10 +206,8 @@
     "Icons/软件专用图标资源整理/Clash.Meta 图标资源.md",
     "Icons/软件专用图标资源整理/根据工具分类.md",
     "Icons/xiaoe/readme.md",
-    "Icons/软件专用图标资源整理/01_APP 专用图标库.md",
     "Icons/软件专用图标资源整理",
     "Icons/xiaoe/pixiv01-500.png",
-    "Agency_Wiki/代理资源/节点的正则表达式.md",
     "Agency_Wiki/什么是代理链以及如何使用/中转-代理链.pdf",
     "Agency_Wiki/代理资源",
     "Agency_Wiki/教程",
@@ -212,17 +216,13 @@
     "Extensions/Loon/adsense.plugin",
     "Scripts/Clash/CLash.Meta_Override.js",
     "Extensions/Loon/插件模板.plugin",
-    "Scripts/Surge/backup",
     "Config_File/Shadowrocket/未命名.canvas",
-    "Config_File/Clash.Meta/Pictures/1.png",
     "Config_File/Loon/Pictures/1.jpg",
     "未命名.canvas",
-    "Config_File/Clash.Meta/Pictures/2.png",
     "Config_File/Loon/Pictures/2.jpg",
     "Config_File/Stash/Picture/1.jpg",
     "Config_File/Stash/Picture/3.jpg",
     "Config_File/Stash/Picture/2.jpg",
-    "Config_File/Quantumult_X/Pictures/1.jpg",
-    "Config_File/Quantumult_X/Pictures/2.jpg"
+    "Config_File/Quantumult_X/Pictures/1.jpg"
   ]
 }
