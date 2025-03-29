@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-02-12 16:14
+updated: 2025-03-29 16:00
 ---
 [中文文档](https://github.com/LaolunsiG/PCR/blob/main/README_CN.md)
 # Self use proxy resource repository-PCR

@@ -9,10 +9,6 @@ updated: 2025-01-27 00:04
 ## DNS(Domain Name System/域名系统) 
 - 将人们易于记忆的域名（如 www.example.com）转换为计算机能够理解的IP地址（如 192.0.2.1）。这就像是互联网的“电话簿”，帮助浏览器找到你要访问的网站。
 
-\# 其他来源
-- [Cloudflare](https://www.cloudflare-cn.com/learning/dns/what-is-a-dns-server/)
-- [百度百科](https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F/2251573)
-
 ## DNS 协议
 ### 传统 DNS (UDP/TCP over port 53)
 - 传统的 DNS 使用 UDP 端口 53 进行查询和响应。对于较大的查询响应（超过 512 字节），可能会使用 TCP 端口 53。
@@ -34,3 +30,6 @@ updated: 2025-01-27 00:04
 - 优点：与 DoT 一样提供加密，防止中间人攻击和窥探；通过使用 HTTPS 端口，可以绕过一些网络过滤和审查机制；利用现有的 HTTP/2 和 HTTP/3 连接优化，可能提供更高的性能。
 - 缺点：实现和配置相对复杂，可能增加客户端和服务器的处理负担。
 
+## reference
+- [Cloudflare](https://www.cloudflare-cn.com/learning/dns/what-is-a-dns-server/)
+- [百度百科](https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F/2251573)

@@ -1,8 +1,9 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-02-12 16:14
+updated: 2025-03-29 16:00
 ---
+English
 # 自用代理资源存储库-PCR
 - Clash 因不再更新，不支持新规则和新的加密，所以创建此自用存储库。
 - 本存储库会将一些规则合在一起，以便于使用。
@@ -67,25 +68,12 @@ updated: 2025-02-12 16:14
 
 ### [ruleset](https://github.com/LaolunsiG/PCR/tree/main/Rules)
 
-| 内核               | 规则                                                            |
+| 内核名称             | 链接                                                            |
 | ---------------- | :------------------------------------------------------------ |
 | Clash            | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash        |
 | Clash.Meta/Stash | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta   |
 | Quantumult_X     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Quantumult_X |
 | Shadowrocket     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Shadowrocket |
-
-
-## 其他代理教程
-- [GetSomeCats](https://github.com/getsomecat/GetSomeCats/tree/Surge)
-
-### 注释规则
-> 配置文件的注释符号
-
-| 配置文件格式 | (单行)注释符号  | Wiki                                                                                         |
-| ------ |:---------:| -------------------------------------------------------------------------------------------- |
-| JSON   | 无         | [JavaScript和Json的区别](https://blog.csdn.net/qq_44273429/article/details/117409345)-CSDN       |
-| INI    | ; & # & ! | [programming-note](https://programming-note-sylarliu.readthedocs.io/zh-cn/latest/index.html) |
-| YAML   | #         | [菜鸟教程](https://www.runoob.com/w3cnote/yaml-intro.html)                                       |
 
 ## 免责申明
 - 本项目涉及的脚本仅用于资源共享和学习研究，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
