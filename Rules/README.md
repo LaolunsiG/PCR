@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-03-29 16:31
+updated: 2025-04-04 14:13
 ---
 # Rules
 - 各种代理软件适用规则，不同软件之间大同小异
@@ -26,26 +26,25 @@ updated: 2025-03-29 16:31
 
 ### Clash.Meta & Clash
 
-**geodata & ruleset**
-- [DustinWin/ruleset_geodata](https://github.com/DustinWin/ruleset_geodata)
-
-**ruleset**
-- [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
-- [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash)
-- [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules)
-- [luestr/ProxyResource](https://github.com/luestr/ProxyResource/blob/main/Resource/Markdown/Rule/README.md)
-- [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat)
-- [mphin/ProxyTools](https://github.com/mphin/ProxyTools)
-- [whatshub.top/strule](https://whatshub.top/strule)
-- [xixu-me/rulesets-for-META](https://github.com/xixu-me/rulesets-for-META)
+| 规则                    | 项目名称                                                                                                         |
+| --------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **geodata & ruleset** | [ruleset_geodata - DustinWin](https://github.com/DustinWin/ruleset_geodata)                                  |
+| **ruleset**           | [ACL4SSR- ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)                                                       |
+| ^^                    | [ios_rule_script - blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash)     |
+| ^^                    | [clash-rules - Loyalsoldier](https://github.com/Loyalsoldier/clash-rules)                                    |
+| ^^                    | [ProxyResource - luestr](https://github.com/luestr/ProxyResource/blob/main/Resource/Markdown/Rule/README.md) |
+| ^^                    | [meta-rules-dat - MetaCubeX](https://github.com/MetaCubeX/meta-rules-dat)                                    |
+| ^^                    | [ProxyTools - mphin](https://github.com/mphin/ProxyTools)                                                    |
+| ^^                    | [whatshub.top/strule](https://whatshub.top/strule)                                                           |
+| ^^                    | [rulesets-for-META - xixu-me](https://github.com/xixu-me/rulesets-for-META)                                  |
 
 ### Quantumult_X
-- [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX)
+- [ios_rule_script - blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX)
 
 ### Shadowrocket
-- [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket)
-- [mphin/ProxyTools](https://github.com/mphin/ProxyTools)
-- [whatshub.top/rule](https://whatshub.top/rule)
+- [ios_rule_script - blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket)
+- [ProxyTools - mphin](https://github.com/mphin/ProxyTools)
+- [rule - whatshub.top](https://whatshub.top/rule)
 
 
 
