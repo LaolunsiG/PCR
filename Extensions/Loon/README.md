@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-02-07 00:41
-updated: 2025-02-12 16:14
+updated: 2025-04-04 16:16
 ---
 # Loon 扩展资源整理
 - Loon 扩展资源整理
@@ -31,15 +31,15 @@ updated: 2025-02-12 16:14
 
 ### Loon 插件资源
 
-| 作者/项目                                                                        | 介绍  |
-| ---------------------------------------------------------------------------- | --- |
-| [插件资源](http://loon-plugin/)                                                  |     |
-| [app2smile/rules](https://github.com/app2smile/rules)                        |     |
-| [chxm1023/Rewrite](https://github.com/chxm1023/Rewrite)                      |     |
-| [Functional-Store-Hub](https://github.com/I-am-R-E/Functional-Store-Hub)     |     |
-| [Moli-X/Resources](https://github.com/Moli-X/Resources)                      |     |
-| [Loon插件大全](https://github.com/luestr/ProxyResource/blob/main/README.md/)<br> |     |
-| [Whatshub/loon](https://whatshub.top/loon)                                   |     |
+| 项目名称和作者                                                                             | 介绍  |
+| ----------------------------------------------------------------------------------- | --- |
+| [插件资源](http://loon-plugin/)                                                         |     |
+| [Loon 插件大全](https://github.com/luestr/ProxyResource/blob/main/README.md/)<br>       |     |
+| [loon - Whatshub](https://whatshub.top/loon)                                        |     |
+| [Functional-Store-Hub - I-am-R-E](https://github.com/I-am-R-E/Functional-Store-Hub) |     |
+| [Resources - Moli-X](https://github.com/Moli-X/Resources)                           |     |
+| [Rewrite - chxm1023](https://github.com/chxm1023/Rewrite)                           |     |
+| [rules - app2smile](https://github.com/app2smile/rules)                             |     |
 
 ## Loon 脚本资源
-- [Keywos-rule](https://github.com/Keywos/rule)
+- [rule - Keywos](https://github.com/Keywos/rule)

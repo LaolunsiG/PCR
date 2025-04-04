@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-01-27 12:55
+updated: 2025-04-04 16:17
 ---
 # 扩展资源
 - 大多只在IOS上使用
@@ -24,5 +24,4 @@ updated: 2025-01-27 12:55
 |  |      |     |
 
 ## reference
-- [ProxyStorage/For-Own-Use](https://github.com/ProxyStorage/For-Own-Use)
- 
+- [For-Own-Use - ProxyStorage](https://github.com/ProxyStorage/For-Own-Use)
