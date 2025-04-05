@@ -1,0 +1,16 @@
+# name: GameDirect
+# updata: 2025-04-05
+# updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GameDirect/GameDirect-Classical.yaml
+# repo: https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta/GameDirect
+# content: 
+# DOMAIN: 
+# DOMAIN-KEYWORD: 
+# DOMAIN-SUFFIX: 
+# IP-CIDR: 
+
+# 规则分类
+# 部落冲突
+
+payload:
+  # 部落冲突
+  - DOMAIN-SUFFIX,supercell.com
