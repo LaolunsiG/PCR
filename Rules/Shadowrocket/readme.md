@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-03-29 16:30
+updated: 2025-04-05 12:59
 ---
 # Shadowrocket
 - 规则支持Shadowrocket,Loon,Surge等IOS代理软件
@@ -16,8 +16,7 @@ updated: 2025-03-29 16:30
 | Sub-Store |            |                  |            |
 
 ## reference
-- [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket)
-- [mphin/ProxyTools](https://github.com/mphin/ProxyTools)
-- [whatshub.top/rule](https://whatshub.top/rule)
-
+- [ios_rule_script - blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Shadowrocket)
+- [ProxyTools - mphin](https://github.com/mphin/ProxyTools)
+- [rule - whatshub.top](https://whatshub.top/rule)
 

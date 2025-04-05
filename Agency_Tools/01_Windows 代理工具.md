@@ -1,9 +1,19 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-04-04 16:22
+updated: 2025-04-05 12:52
 ---
 # 代理工具
+
+**代理工具内核**
+
+| 项目名称                                                        | 介绍  | 内核使用教程                                            |
+| ----------------------------------------------------------- | --- | ------------------------------------------------- |
+| [Clash.Meta(mohomo)](https://wiki.metacubex.one/)           |     | [文档教程](https://wiki.metacubex.one/)               |
+| [sing-box - SagerNet](https://github.com/SagerNet/sing-box) |     | [文档教程 - sing-box](https://sing-box.sagernet.org/) |
+| [sing-box - PuerNya](https://github.com/PuerNya/sing-box)   |     | [文档教程 - sing-box](https://sing-box.sagernet.org/) |
+| [v2ray-core](https://github.com/v2fly/v2ray-core)           |     | [文档教程 - V2Fly.org](https://www.v2fly.org/)        |
+| [Xray-core](https://github.com/XTLS/Xray-core)              |     | [文档教程 Project X](https://xtls.github.io/)         |
 
 ## 综合
 
@@ -13,18 +23,16 @@ updated: 2025-04-04 16:22
 | [clash-nyanpasu](https://github.com/LibNyanpasu/clash-nyanpasu) | [Clash Premium](https://github.com/Dreamacro/clash), [Mihomo](https://github.com/MetaCubeX/mihomo) & [Clash Rust](https://github.com/Watfaq/clash-rs) |     | [Clash Nyanpasu](https://nyanpasu.elaina.moe/) |
 | [hiddify-app](https://github.com/hiddify/hiddify-app)           | Sing-box, X-ray                                                                                                                                       |     |                                                |
 
-## Clash GUI
-- Clash(以删库)
-	- [Clash Wiki](https://clash.wiki/)
+## Clash(以删库) GUI
+- [Clash Wiki](https://clash.wiki/)
 
 | GUI | 项目名称                                                                             | 介绍和教程 |
 | --- | -------------------------------------------------------------------------------- | ----- |
 | 软件  | [Clash-for-Windows_Chinese](https://github.com/Z-Siqi/Clash-for-Windows_Chinese) |       |
 |     | [Clash_for_Windows](https://github.com/clashdownload/Clash_for_Windows)          |       |
 
-## clash.meta GUI
-- [Clash.Mete(mihomo)](https://github.com/MetaCubeX/mihomo)
-	- [文档教程-内核使用教程](https://wiki.metacubex.one/)
+## [Clash.Mete(mihomo)](https://github.com/MetaCubeX/mihomo) GUI
+- [文档教程-内核使用教程](https://wiki.metacubex.one/)
 
 | GUI   | 项目名称                                                                                | 介绍和教程                                                       |
 | ----- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------- |
@@ -53,18 +61,16 @@ updated: 2025-04-04 16:22
 | ^^  | [nekoray](https://github.com/MatsuriDayo/nekoray) |                             |
 | ^^  | [v2rayN](https://github.com/2dust/v2rayN)         |                             |
 
-## v2ray-core GUI
-- [v2ray-core](https://github.com/v2fly/v2ray-core)
-	- [文档教程 - V2Fly.org](https://www.v2fly.org/)
+## [v2ray-core](https://github.com/v2fly/v2ray-core)GUI
+- [文档教程 - V2Fly.org](https://www.v2fly.org/)
 
 | GUI | 项目名称                                                    | 介绍和教程 |
 | --- | ------------------------------------------------------- | ----- |
 | 软件  | [v2rayN](https://github.com/2dust/v2rayN)               |       |
 | ^^  | [V2RayN-PRO](https://github.com/lowercase78/V2RayN-PRO) |       |
 
-## Xray-core GUI
-- [Xray-core](https://github.com/XTLS/Xray-core)
-	- [文档教程 - Project X](https://xtls.github.io/)
+## [Xray-core](https://github.com/XTLS/Xray-core) GUI
+- [文档教程 - Project X](https://xtls.github.io/)
 
 | GUI | 项目名称                                                                                  | 介绍和教程 |
 | --- | ------------------------------------------------------------------------------------- | ----- |
