@@ -12,6 +12,7 @@
 # 规则分类
 # DNS leak
 # gamebanana
+# x10hosting.com
 
 payload:
   # DNS leak
@@ -19,3 +20,5 @@ payload:
   # gamebanana
   - DOMAIN,gamebanana.com
   - DOMAIN-SUFFIX,gamebanana.com
+  # x10hosting.com
+  - DOMAIN,x10hosting.com

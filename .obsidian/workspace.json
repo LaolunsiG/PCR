@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "文档写作教程.md",
+                "file": "Rules/Clash.Meta/ChinaLite/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "文档写作教程"
+              "title": "README"
             }
           }
         ]
@@ -161,8 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.5,
-    "collapsed": true
+    "width": 236.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,6 +176,8 @@
   },
   "active": "d5152f1ca185b235",
   "lastOpenFiles": [
+    "Rules/Clash.Meta/ChinaLite/ChinaLite-Classical.yaml",
+    "文档写作教程.md",
     "Scripts/readme.md",
     "Scripts/Surge/README.md",
     "Scripts/Loon/README.md",
@@ -193,7 +194,6 @@
     "Agency_Tools/00_多平台.md",
     "README_CN.md",
     "README.md",
-    "文档写作教程.md",
     "节点测试链接.md",
     "Extensions/readme.md",
     "Extensions/Stash/README.md",
@@ -202,7 +202,6 @@
     "Extensions/Loon/README.md",
     "Extensions/Surge/README.md",
     "Extensions/通用扩展资源.md",
-    "Rules/Clash.Meta/Sub-Store/readme.md",
     "Config_File/Clash/Pictures",
     "Config_File/Clash.Meta/Pictures/3.png",
     "Config_File/Clash.Meta/Pictures/2.png",
