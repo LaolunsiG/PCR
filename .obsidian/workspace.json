@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripts/readme.md",
+                "file": "文档写作教程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "readme"
+              "title": "文档写作教程"
             }
           }
         ]
@@ -175,8 +175,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f535f0cf002a85d1",
+  "active": "d5152f1ca185b235",
   "lastOpenFiles": [
+    "Scripts/readme.md",
     "Scripts/Surge/README.md",
     "Scripts/Loon/README.md",
     "Scripts/Clash/README.md",
@@ -202,7 +203,6 @@
     "Extensions/Surge/README.md",
     "Extensions/通用扩展资源.md",
     "Rules/Clash.Meta/Sub-Store/readme.md",
-    "Rules/Clash.Meta/Airport/README.md",
     "Config_File/Clash/Pictures",
     "Config_File/Clash.Meta/Pictures/3.png",
     "Config_File/Clash.Meta/Pictures/2.png",
