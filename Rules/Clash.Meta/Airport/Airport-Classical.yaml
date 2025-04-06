@@ -27,6 +27,7 @@ payload:
   - IP-CIDR,172.104.33.229/229,no-resolve
   # Tblack
   - DOMAIN,dy123.hhyjs.xyz
+  - DOMAIN,dy.hhyxt.top
   - DOMAIN,tckhhy.pw
   - DOMAIN,hhyxt.top
   # 超级机场

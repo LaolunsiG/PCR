@@ -1,10 +1,10 @@
 # name: ChinaMedia
 # updata: 2025-01-01
-# updata_log: 
 # updata_url: https://github.com/LaolunsiG/PCR/raw/refs/heads/main/Rules/Clash.Meta/ChinaMedia/ChinaMedia-Classical.yaml
 # repo: https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta/ChinaMedia
 # content: 
-# DOMAIN-SUFFIX
+# DOMAIN: 
+# DOMAIN-SUFFIX: 
 
 # 规则分类:
 # 虎牙

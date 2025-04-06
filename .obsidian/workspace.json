@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rules/Clash.Meta/ChinaLite/README.md",
+                "file": "Rules/Clash.Meta/Airport/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -174,8 +174,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d5152f1ca185b235",
+  "active": "f535f0cf002a85d1",
   "lastOpenFiles": [
+    "Rules/Clash.Meta/CDN/README.md",
+    "Rules/Clash.Meta/ExternalControl/README.md",
+    "Rules/Clash.Meta/GFWLite/readme.md",
+    "Rules/Clash.Meta/README.md",
+    "Rules/Clash.Meta/GameDirect/README.md",
+    "Rules/Clash.Meta/ChinaLite/README.md",
+    "Rules/Clash.Meta/ChinaService/readme.md",
+    "Rules/Clash.Meta/ChinaMedia/readme.md",
     "Rules/Clash.Meta/ChinaLite/ChinaLite-Classical.yaml",
     "文档写作教程.md",
     "Scripts/readme.md",
@@ -186,7 +194,6 @@
     "Rules/Shadowrocket/readme.md",
     "Rules/README.md",
     "Rules/GEODATA.md",
-    "Rules/Clash.Meta/README.md",
     "Agency_Tools/11_Android 代理工具.md",
     "Agency_Tools/01_Windows 代理工具.md",
     "Agency_Tools/02_MacOS 代理工具.md",
@@ -196,12 +203,6 @@
     "README.md",
     "节点测试链接.md",
     "Extensions/readme.md",
-    "Extensions/Stash/README.md",
-    "Extensions/Quantumult_X/README.md",
-    "Extensions/Shadowrocket/README.md",
-    "Extensions/Loon/README.md",
-    "Extensions/Surge/README.md",
-    "Extensions/通用扩展资源.md",
     "Config_File/Clash/Pictures",
     "Config_File/Clash.Meta/Pictures/3.png",
     "Config_File/Clash.Meta/Pictures/2.png",
@@ -215,7 +216,6 @@
     "Icons/xiaoe",
     "Extensions/Loon/adsense.plugin",
     "Scripts/Clash/CLash.Meta_Override.js",
-    "Extensions/Loon/插件模板.plugin",
     "Config_File/Shadowrocket/未命名.canvas",
     "Config_File/Loon/Pictures/1.jpg",
     "未命名.canvas",

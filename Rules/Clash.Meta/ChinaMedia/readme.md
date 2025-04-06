@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-02-07 00:41
-updated: 2025-02-12 16:08
+updated: 2025-04-06 10:46
 ---
 # ChinaMedia
 
@@ -9,7 +9,7 @@ updated: 2025-02-12 16:08
 
 ### classical
 ```yaml
-https://github.com/LaolunsiG/XiaoE_PCR/raw/refs/heads/main/rules/Clash.Meta/ChinaMedia/ChinaMedia-Classical.yaml
+https://github.com/LaolunsiG/PCR/raw/refs/heads/main/Rules/Clash.Meta/ChinaMedia/ChinaMedia-Classical.yaml
 ```
 
 ## 规则来源
