@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-04-05 12:52
+updated: 2025-04-07 18:40
 ---
 # 代理工具
 
@@ -34,20 +34,20 @@ updated: 2025-04-05 12:52
 ## [Clash.Mete(mihomo)](https://github.com/MetaCubeX/mihomo) GUI
 - [文档教程-内核使用教程](https://wiki.metacubex.one/)
 
-| GUI   | 项目名称                                                                                | 介绍和教程                                                       |
-| ----- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| 软件 UI | [Clash-for-Windows_Chinese](https://github.com/Z-Siqi/Clash-for-Windows_Chinese)    |                                                             |
-| ^^    | [Clash_for_Windows](https://github.com/clashdownload/Clash_for_Windows)             |                                                             |
-| ^^    | [clash-nyanpasu](https://github.com/LibNyanpasu/clash-nyanpasu)                     |                                                             |
-| ^^    | [Clash.Mini](https://github.com/MetaCubeX/Clash.Mini)                               |                                                             |
-| ^^    | [clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)               | [文档教程](https://clashvergerev.com/)                          |
-| ^^    | [clash-verge-rev-fluent](https://github.com/Daydreamer-riri/clash-verge-rev-fluent) |                                                             |
-| ^^    | [clashN](https://github.com/2dust/clashN)                                           |                                                             |
-| ^^    | [GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)                     | [文档教程 - GUI.for.Cores](https://gui-for-cores.github.io/zh/) |
-| ^^    | [mihomo-party- xishang0128](https://github.com/xishang0128/mihomo-party)            |                                                             |
-| ^^    | [mihomo-party - pompurin404](https://github.com/pompurin404/mihomo-party)           |                                                             |
-| ^^    | [Pandora-Box](https://github.com/snakem982/Pandora-Box)                             |                                                             |
-| WebUI | [zashboard](https://github.com/Zephyruso/zashboard)                                 |                                                             |
+| GUI   | 项目名称                                                                                | 介绍和教程                                                                          |
+| ----- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 软件 UI | [Clash-for-Windows_Chinese](https://github.com/Z-Siqi/Clash-for-Windows_Chinese)    |                                                                                |
+| ^^    | [Clash_for_Windows](https://github.com/clashdownload/Clash_for_Windows)             |                                                                                |
+| ^^    | [clash-nyanpasu](https://github.com/LibNyanpasu/clash-nyanpasu)                     |                                                                                |
+| ^^    | [Clash.Mini](https://github.com/MetaCubeX/Clash.Mini)                               |                                                                                |
+| ^^    | [clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)               | [文档教程](https://clashvergerev.com/)                                             |
+| ^^    | [clash-verge-rev-fluent](https://github.com/Daydreamer-riri/clash-verge-rev-fluent) |                                                                                |
+| ^^    | [clashN](https://github.com/2dust/clashN)                                           |                                                                                |
+| ^^    | [GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)                     | [文档教程 - GUI.for.Cores](https://gui-for-cores.github.io/zh/)                    |
+| ^^    | [mihomo-party- xishang0128](https://github.com/xishang0128/mihomo-party)            | [Mihomo Party](https://mihomo.party/)，[Mihomo Party](https://mihomoparty.org/) |
+| ^^    | [mihomo-party - pompurin404](https://github.com/pompurin404/mihomo-party)           |                                                                                |
+| ^^    | [Pandora-Box](https://github.com/snakem982/Pandora-Box)                             |                                                                                |
+| WebUI | [zashboard](https://github.com/Zephyruso/zashboard)                                 |                                                                                |
 
 ## Sing-Box GUI
 - [sing-box - SagerNet](https://github.com/SagerNet/sing-box)
