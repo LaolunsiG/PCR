@@ -12,6 +12,7 @@
 # DNS leak
 # gamebanana
 # x10hosting.com
+# 三瓜云
 
 payload:
   # DNS leak
@@ -21,3 +22,6 @@ payload:
   - DOMAIN-SUFFIX,gamebanana.com
   # x10hosting.com
   - DOMAIN,x10hosting.com
+  # 三瓜云
+  - DOMAIN,snangua.com
+  - DOMAIN,sanguayun.jiumaojiu.net
