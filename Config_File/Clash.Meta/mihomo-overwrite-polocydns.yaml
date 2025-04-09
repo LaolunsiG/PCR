@@ -1,0 +1,564 @@
+# -------------------------------------
+# 全局配置
+# -------------------------------------
+allow-lan: true   # 允许局域网连接
+bind-address: "*" # 绑定 IP 地址，仅作用于 allow-lan 为 true，'*'表示所有地址
+
+# -------------------------------------
+mode: rule 
+log-level: info         # 日志等级 silent/error/warning/info/debug。
+ipv6: true              # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录。
+# 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程；strict(默认)由 Clash 判断是否开启；off 不匹配进程，推荐在路由器上使用此模式。
+find-process-mode: strict
+unified-delay: false    # 开启统一延迟时，会计算 RTT，以消除连接握手等带来的不同类型节点的延迟差异
+tcp-concurrent: true    # TCP 并发
+# 缓存，存储 select 选择记录，持久化 fake-ip
+profile: {store-selected: true, store-fake-ip: true}
+global-client-fingerprint: chrome
+
+# -------------------------------------
+# 外部控制器，可以使用 RESTful API 来控制你的 Clash 内核
+external-controller: 127.0.0.1:9090 # API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP
+secret: "xiaoe"                     # API 的访问密钥
+
+# -------------------------------------
+# GEODATA 配置
+# GEOIP 数据模式
+geodata-mode: false        # 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true 为 dat，此项有默认值 false。
+# GEO 文件加载模式，standard：标准加载器；memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
+geodata-loader: standard
+geo-auto-update: true      # 是否自动更新
+geo-update-interval: 24    # 单位h（时），每24小时更新一次
+geox-url:                  # 自定义 geodata url（更新地址）
+  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
+  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+  asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+
+
+# -------------------------------------
+# 入站配置
+# -------------------------------------
+# 代理端口配置
+#port: 7890         # http 代理端口
+#socks-port: 7891   # SOCKS5 代理服务端口
+mixed-port: 7893   # 混合端口，同时支持 HTTP(S) 和 SOCKS5 协议。您可以使用任何支持 HTTP 或 SOCKS 代理的程序连接到这个端口。
+
+# -------------------------------------
+# 配置虚拟网卡，在 tun 模式下必须获得 IP 地址。
+tun:
+  enable: true
+  stack: mixed
+  device: mihomo.xiaoe
+  auto-route: true             # 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡。
+  auto-detect-interface: true  # 自动选择流量出口接口，多出口网卡同时连接的设备建议手动指定出口网卡
+  dns-hijack: ['any:53']       # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
+  strict-route: true           # 防止地址泄漏，并使 DNS 劫持在 Android 上工作。
+
+
+# -------------------------------------
+# DNS配置
+# -------------------------------------
+# 嗅探域名
+# sniffer:
+#   enable: true  
+#   force-dns-mapping: false     # 对 redir-host 类型识别的流量进行强制嗅探
+#   parse-pure-ip: false         # 对所有未获取到域名的流量进行强制嗅探
+#   override-destination: false  # 是否使用嗅探结果作为实际访问
+#   sniff: {HTTP: {ports: [80, 8080-8880], override-destination: true}, TLS: {ports: [443, 8443]}, QUIC: {ports: [443, 8443]}}
+#   force-domain:
+#     - +.v2ex.com
+#   skip-domain:
+#     - Mijia Cloud
+#     - '+.apple.com'
+
+# -------------------------------------
+hosts:
+  'www.google.com.hk': 'www.google.com'
+  doh.pub: [1.12.12.12, 120.53.53.53]
+  dns.alidns.com: [223.5.5.5, 223.6.6.6]
+  doh.onedns.net: 52.80.248.44
+  dns.twnic.tw: 101.101.101.101
+
+# -------------------------------------
+dns!:
+  enable: true          # 关闭将使用系统 DNS
+  prefer-h3: false      # 是否开启 DoH 支持 HTTP/3，将并发尝试
+  listen: 0.0.0.0:1053  # DNS 服务监听，仅支持 udp
+  ipv6: true            # 是否解析 IPV6, 如为 false, 则回应 AAAA 的空解析
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  # fakeip 过滤，默认黑名单，即以下地址不会下发 fakeip 映射用于连接，回到 redir-host 模式。
+  fake-ip-filter: ['rule-set:Fakeip-Filter,Private']
+  # ----------------DNS 服务配置--------------------
+  # 默认 DNS, 用于解析 DNS 服务器 的域名，必须为 IP, 可为加密 DNS
+  # 119.29.29.29, 223.5.5.5 , 8.8.8.8, 8.8.4.4
+  default-nameserver: 
+    - '223.5.5.5'
+    - '119.29.29.29'
+    - '1.1.1.1'
+    - system
+  # 专用于节点域名解析的 DNS 服务器，非必要配置项，因为大部分的代理服务器都是 IP 地址
+  # https://1.12.12.12/dns-query, https://1.1.1.1/dns-query, https://1.1.1.1/dns-query, https://dns.google/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query              # 阿里 DNS
+    - https:/doh.pub//dns-query                     # 腾讯 DNS
+    - https://dns.cloudflare.com/dns-query#h3=true  # Cloudflare
+    - https://dns.twnic.tw/dns-query                # 台湾Quad 101
+  # 用于 direct 出口域名解析的 DNS 服务器
+  # system, '1.2.4.8', '223.5.5.5', '119.29.29.29'
+  # direct-nameserver: [system, '1.2.4.8', '223.5.5.5', '119.29.29.29']
+  # DNS 分流，指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询。
+  nameserver-policy: 
+    # 国内分流
+    #'geosite:cn': ['1.2.4.8', 'system']
+    'rule-set:CN1,CN2': [system, '1.2.4.8', '223.5.5.5', '119.29.29.29']
+  # 默认的域名解析服务器，解析代理服务器的 IP 地址；匹配直连策略或遇到 IP 规则时会进行本地（直连） DNS 解析，如不配置 fallback/proxy-server-nameserver , 则所有域名都由 nameserver 解析。
+  # 'https://1.1.1.1/dns-query', https://doh.onedns.net/dns-query
+  nameserver:
+    - https://dns.google/dns-query                 # Google
+    - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
+    - https://doh.onedns.net/dns-query
+  # 后备域名解析服务器，一般情况下使用境外 DNS, 保证结果可信。
+  # 当 `fallback` 存在时, DNS 服务器将向此部分中的服务器与 nameservers 中的服务器发送并发请求。
+  # 配置 fallback 后默认启用 fallback-filter，geoip-code 为 cn
+  # fallback: 
+  #   - https://dns.google/dns-query                 # Google
+  #   - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
+  #   - https://doh.onedns.net/dns-query
+  # #后备域名解析服务器筛选，满足条件的将使用 fallback 结果或只使用 fallback 解析，这是对抗 DNS 污染攻击的一种措施。
+  # fallback-filter:
+  #   geoip: true      # 是否启用 geoip 检测
+  #   # 除了 geoip-code 配置的国家 IP, 其他的 IP 结果会被视为污染，将采用 fallback 结果。
+  #   geoip-code: CN
+  #   # 这些网段的结果会被视为污染，nameserver 解析出这些结果时将会采用 fallback 的解析结果。
+  #   ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32]
+  #   # geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 fallback 解析，不去使用 nameserver.
+  #   # geosite:
+  #   #   - gfw
+  #   # 这些域名被视为已污染，匹配到这些域名，会直接使用 fallback 解析，不去使用 nameserver。
+  #   # domain:
+
+
+# -------------------------------------
+# 策略组(代理组)
+# -------------------------------------
+# 地区节点筛选锚点配置
+## Africa
+FilterIN: &FilterIN "^(?=.*(🇮🇳|印|班加罗尔|孟买|Mumbai|IN|India))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+## Asia
+FilterHK: &FilterHK "^(?=.*(🇭🇰|港|虚通|(?i)HK|Hong))(?!.*(回国|校园|游戏|教育|(?i)GAME|IPV6)).*$"
+FilterJP: &FilterJP "^(?=.*((?i) 🇯🇵|日|川日|东京|大阪|泉日|埼玉|JP|Japan))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+FilterKR: &FilterKR "^(?=.*(🇰🇷|韩|韓|首尔|(?i)KR|Korea))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+FilterRU: &FilterRU "^(?=.*(🇷🇺|俄|莫斯科|新西伯利亚|Новосиби́рская|Moscow|RU|Russia))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+FilterSG: &FilterSG "^(?=.*(🇸🇬|新加坡|狮|(?i)SG|Singapore))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+FilterTW: &FilterTW "^(?=.*(🇹🇼|台|(?i)TW|Tai))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+## Australia
+FilterAU: &FilterAU "^(?=.*((?i)🇦🇺|澳大|AU|Australia))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+## Europe
+FilterFR: &FilterFR "^(?=.*(🇫🇷|法|FR|France))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+FilterIE: &FilterIE "^(?=.*(🇮🇪|爱尔兰|IRL|Ireland))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+FilterDE: &FilterDE "^(?=.*(🇩🇪|德|(?i)DE|Germany))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+FilterNL: &FilterNL "^(?=.*(🇳🇱|荷|NL|Holland|Netherlands))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+FilterTR: &FilterTR "^(?=.*(🇹🇷|土耳其|(?i)TR|TUR|Turkey))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+FilterUK: &FilterUK "^(?=.*(🇬🇧|英|伦敦|(?i)UK|United Kingdom))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+## North America
+FilterCA: &FilterCA "^(?=.*(🇨🇦|加拿大|CA|Canada))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+FilterUS: &FilterUS "^(?=.*(🇺🇸|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(?i)US|United States))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+## South America
+
+# 地区策略组专用锚点
+## 锚点 - 时延优选参数 [每 30 秒一次惰性健康检查，容差 20ms，时延超过 2.5 秒判定为失败，失败 3 次则自动触发健康检查]
+UrlTest: &urltest {type: url-test, tolerance: 50, interval: 180, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all-proxies: true}
+## 锚点 - 故障转移参数 [每 30 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+FallBack: &fallback {type: fallback, interval: 180, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all-proxies: true}
+## 锚点 - 负载均衡参数 [每 30 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+LoadBalance: &loadbalance {type: load-balance, strategy: consistent-hashing, interval: 180, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all-proxies: true}
+## 锚点 - 手动选择参数 [每 30 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+Select: &select {type: select, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3}
+
+# 机场策略组专用锚点
+Select1: &select1 {type: select, interval: 360, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all-proxies: true}
+UrlTest1: &urltest1 {type: url-test, tolerance: 50, interval: 180, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all-proxies: true}
+LoadBalance1: &loadbalance1 {type: load-balance, strategy: consistent-hashing, interval: 180, url: 'http://www.google.com/generate_204', timeout: 2500, max-failed-times: 3, disable-udp: false, lazy: true, hidden: false, include-all-proxies: true}
+
+# 功能策略组专用锚点
+UrlTest2: &urltest2 {type: url-test, tolerance: 50, interval: 180, url: 'http://www.google.com/generate_204', timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
+LoadBalance2: &loadbalance2 {type: load-balance, strategy: consistent-hashing, interval: 180, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
+
+# -------------------------------------
+proxy-groups:
+  # ----------------节点选择策略组--------------------
+  - {name: 🚀 策略选择, type: select, proxies: [🛫 机场节点优选, 🛫 机场负载均衡, 🗺 地区选择, 🎯 Direct], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Rocket.png}
+  # 模块化选择
+  - {name: 🗺 地区选择, type: select, proxies: [🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States, 🎯 Direct], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Accommodation/Map.png}
+  - {name: 🛫 机场节点优选, <<: *urltest1, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png}
+  - {name: 🛫 机场负载均衡, <<: *loadbalance1, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png}
+
+  # ----------------功能策略组--------------------
+  # 兜底策略组
+  - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png} 
+  # 服务平台
+  ## 机场服务
+  - {name: 🛫 Airport, type: select, proxies: [🎯 Direct, 🚀 策略选择, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png}
+  ## 网络测试
+  ## 选择`🎯 Direct`为测试本地网络（运营商网络速度和 IPv6 支持情况），可选择其它节点用于测试机场节点速度和 IPv6 支持情况
+  - {name: 📈 NetworkTest, type: select, proxies: [🎯 Direct, 🚀 策略选择, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png}
+  ## 直连软件
+  - {name: 🖥️ 直连软件, type: select, proxies: [🎯 Direct, 🚀 策略选择, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Download.png}
+  ## 人工智能
+  - {name: 🤖 AI, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
+  - {name: 🍎 AppleServe, type: select, proxies: [🎯 Direct, 🚀 策略选择, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_1.png}
+  - {name: 📢 GoogleServe, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png}
+  - {name: Ⓜ️ MicrosoftServe, type: select, proxies: [🎯 Direct, 🚀 策略选择, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
+  - {name: 💴 PayPal, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PayPal.png}
+  - {name: 🐱 Github, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
+  # 社交通讯平台
+  - {name: 🐦 Discord, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Discord.png} 
+  - {name: 📲 Telegram, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Telegram.png}
+  # 社交媒体平台
+  - {name: 💬 Facebook, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Facebook.png} 
+  - {name: 💬 Twitter, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Twitter.png}
+  - {name: 🎵 TikTok, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/TikTok_2.png}
+  - {name: 📹 YouTube, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
+  # 娱乐平台
+  ## 插画平台
+  - {name: 🖼️ Pixiv, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://raw.githubusercontent.com/LaolunsiG/PCR/main/Icons/xiaoe/pixiv01-500.png}
+  ## 游戏平台
+  - {name: 🎮 Steam, type: select, proxies: [🎯 Direct, 🚀 策略选择, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png}
+  - {name: 🎮 GameDirect, type: select, proxies: [🎯 Direct, 🚀 策略选择, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
+  - {name: 🎮 GameProxy, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
+  ## 音乐平台
+  - {name: 🎵 Spotify, type: select, proxies: [🎯 Direct, 🚀 策略选择, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Spotify.png}
+  ## 影视
+  - {name: 📽️ Disney+, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney.png}
+  - {name: 🎞️ Max, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/HBO_Max.png}
+  - {name: 🎥 Netflix, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png}
+  - {name: 🙈 GlobalMedia, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png}
+  # 国外代理
+  - {name: 🪜 Proxy, type: select, proxies: [🚀 策略选择, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
+  # 国内直连
+  - {name: 🔗 China, type: select, proxies: [🎯 Direct, 🚀 策略选择, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
+  - {name: 🛑 Reject, type: select, proxies: [REJECT, REJECT-DROP], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Reject.png}
+  - {name: 🎯 Direct, type: select, proxies: [DIRECT], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
+ 
+  # ----------------国家或地区策略组--------------------
+  ## Africa(非洲)
+  - {name: 🇮🇳 India, <<: *urltest, filter: *FilterIN, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/India.png}
+  ## Asia(亚洲)
+  - {name: 🇭🇰 Hong Kong, <<: *urltest, filter: *FilterHK, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/HK.png}
+  - {name: 🇯🇵 Japan, <<: *urltest, filter: *FilterJP, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/JP.png}
+  - {name: 🇰🇷 Korea, <<: *urltest, filter: *FilterKR, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/KR.png}
+  - {name: 🇷🇺 Russia, <<: *urltest, filter: *FilterRU, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/RU.png}
+  - {name: 🇸🇬 Singapore, <<: *urltest, filter: *FilterSG, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/SG.png}
+  - {name: 🇨🇳 Taiwan, <<: *urltest, filter: *FilterTW, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/TW.png}
+  ## Australia
+  - {name: 🇦🇺 Australia, <<: *urltest, filter: *FilterAU, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/AU.png}
+  ## Europe(欧洲)
+  - {name: 🇬🇧 Britain, <<: *urltest, filter: *FilterUK, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/UK.png}
+  - {name: 🇫🇷 France, <<: *urltest, filter: *FilterFR, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/FR.png}
+  - {name: 🇩🇪 Germany, <<: *urltest, filter: *FilterDE, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/DE.png}
+  - {name: 🇳🇱 Netherlands, <<: *urltest, filter: *FilterNL, icon: https://raw.githubusercontent.com/lipis/flag-icons/main/flags/1x1/nl.svg}
+  ## North America(北美洲)
+  - {name: 🇨🇦 Canada, <<: *urltest, filter: *FilterCA, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/CA.png}
+  - {name: 🇺🇸 United States, <<: *urltest, filter: *FilterUS, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/US.png}
+  ## South America(南美洲)
+
+
+# -------------------------------------
+# 路由规则
+# -------------------------------------
+# 远程规则锚点 [每小时更新一次订阅规则，更新规则时使用直连策略],默认格式为yaml，可以更改为text。
+rule-anchor:
+    ip: &ip {type: http, behavior: ipcidr,interval: 86400, format: yaml}
+    ip2: &ip2 {type: http, behavior: ipcidr,interval: 86400, format: mrs}
+    ip3: &ip3 {type: http, behavior: ipcidr,interval: 86400, format:text}
+    domain: &domain {type: http, behavior: domain, interval: 86400, format: yaml}
+    domain2: &domain2 {type: http, behavior: domain, interval: 86400, format: mrs}
+    domain3: &domain3 {type: http, behavior: domain, interval: 86400, format: text}
+    classical: &classical {type: http, behavior: classical, interval: 86400, format: yaml}
+    classical2: &classical2 {type: http, behavior: classical, interval: 86400, format: text}
+
+# -------------------------------------
+# 规则集
+rule-providers:
+  # fakeip-filter
+  Fakeip-Filter:
+    <<: *domain2
+    path: ./provider/ruleset/fakeip-filter.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/fakeip-filter.mrs"
+  
+  # 外部控制
+  ExternalControl:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./provider/ruleset/externalcontrol.yaml
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/ExternalControl/ExternalControl-Classical.yaml"
+    interval: 86400
+  
+  # 本地网络
+  Private:
+    <<: *domain2
+    path: ./provider/ruleset/private.mrs
+    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/private.mrs"
+
+  Privateip:
+    <<: *ip2
+    path: ./provider/ruleset/privateip.mrs
+    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/privateip.mrs"
+
+  # 服务平台
+  ## CDN 服务
+  CDN:
+    <<: *classical
+    path: ./provider/ruleset/cdn.yaml
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/CDN/CDN-Classical.yaml"
+  
+  ## 机场服务
+  Airport:
+    <<: *classical
+    path: ./provider/ruleset/airport.yaml
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/Airport/Airport-Classical.yaml"
+  
+  ## 直连软件
+  Applications:
+    <<: *classical
+    path: ./provider/ruleset/applications.yaml
+    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/applications.yaml"
+  
+  ## 网络测试
+  Networktest:
+    <<: *classical
+    path: ./provider/ruleset/networktest.yaml
+    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/networktest.yaml"
+  
+  ## 国外
+  ### 人工智能
+  Gemini:
+    <<: *classical
+    path: ./provider/ruleset/gemini.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini_No_Resolve.yaml"
+  
+  AIGlobal:
+    <<: *classical
+    path: ./provider/ruleset/aiglobal.yaml
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/AIGlobal/AIGlobal-Classical.yaml"
+
+  ### 苹果服务
+  Apple:
+    <<: *classical
+    path: ./provider/ruleset/apple.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml"
+
+  ### Google 服务
+  Google:
+    <<: *classical
+    path: ./provider/ruleset/google.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google_No_Resolve.yaml"
+  
+  ### 微软服务
+  Microsoft:
+    <<: *classical
+    path: ./provider/ruleset/microsoft.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml"
+
+  ## 支付服务
+  PayPal:
+    <<: *classical
+    path: ./provider/ruleset/paypal.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal_No_Resolve.yaml"
+
+  ### 代码托管平台
+  Github:
+    <<: *domain2
+    path: ./provider/ruleset/github.mrs
+    url: "https://github.com/xixu-me/rulesets-for-META/raw/universal/github.mrs"
+
+  Gitlab:
+    <<: *domain2
+    path: ./provider/ruleset/gitlab.mrs
+    url: "https://github.com/xixu-me/rulesets-for-META/raw/universal/gitlab.mrs"
+  
+  # 社交通讯平台
+  ## 国外
+  Discord:
+    <<: *classical
+    path: ./provider/ruleset/discord.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord_No_Resolve.yaml"
+  
+  Telegram:
+    <<: *classical
+    path: ./provider/ruleset/telegram.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml"
+
+  # 社交媒体平台
+  ## 国外
+  Facebook:
+    <<: *classical
+    path: ./provider/ruleset/facebook.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook_No_Resolve.yaml"
+  
+  TikTok:
+    <<: *domain2
+    path: ./provider/ruleset/tiktok.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/tiktok.mrs"
+  
+  Twitter:
+    <<: *classical
+    path: ./provider/ruleset/twitter.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter_No_Resolve.yaml"
+  
+  YouTube:
+    <<: *domain2
+    path: ./provider/ruleset/youtube.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/youtube.mrs"
+  
+  # 娱乐平台
+  ## 插画
+  Pixiv:
+    <<: *classical
+    path: ./provider/ruleset/pixiv.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv_No_Resolve.yaml"
+  
+  ## 游戏平台
+  Steam:
+    <<: *classical
+    path: ./provider/ruleset/steam.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml"
+
+  ### 代理
+  Game:
+    <<: *classical
+    path: ./provider/ruleset/game.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game_No_Resolve.yaml"
+  
+  ### 直连
+  GameDirect:
+    <<: *classical
+    path: ./provider/ruleset/gamedirect.yaml
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Clash.Meta/GameDirect/GameDirect-Classical.yaml"
+
+  ## 音乐平台
+  YouTubeMusic:
+    <<: *classical
+    path: ./provider/ruleset/youtubemusic.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic_No_Resolve.yaml"
+
+  Spotify:
+    <<: *classical
+    path: ./provider/ruleset/spotify.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify_No_Resolve.yaml"
+  
+  ## 影视
+  Disney:
+    <<: *domain2
+    path: ./provider/ruleset/disney.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/disney.mrs"
+  
+  Max:
+    <<: *domain2
+    path: ./provider/ruleset/max.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/max.mrs"
+  
+  Netflix:
+    <<: *domain2
+    path: ./provider/ruleset/netflix.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/netflix.mrs"
+
+  ### 综合国外媒体
+  GlobalMedia:
+    <<: *classical
+    path: ./provider/ruleset/globalmedia.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical_No_Resolve.yaml"
+
+  # 综合国外代理
+  ## GFW
+  GFWLite:
+    <<: *classical
+    path: ./provider/ruleset/gfwlite.yaml
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GFWLite/GFWLite-Classical.yaml"
+
+  Proxy:
+    <<: *domain2
+    path: ./provider/ruleset/proxy.mrs
+    url: "https://raw.githubusercontent.com/xixu-me/rulesets-for-META/basic/proxy.mrs"
+    
+  # 综合国内直连
+  CN1:
+    <<: *classical
+    path: ./provider/ruleset/cn1.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical_No_Resolve.yaml"
+
+  CN2:
+    <<: *domain2
+    path: ./provider/ruleset/cn2.mrs
+    url: "https://raw.githubusercontent.com/xixu-me/rulesets-for-META/basic/direct.mrs"
+
+# -------------------------------------
+# 规则类型-规则-策略组
+rules:
+  # 外部控制
+  - RULE-SET,ExternalControl,🎯 Direct
+  # 本地网络
+  - RULE-SET,Private,🎯 Direct
+  - RULE-SET,Privateip,🎯 Direct,no-resolve
+  # 服务平台
+  ## CDN 服务
+  - RULE-SET,CDN,🎯 Direct
+  ## 机场服务
+  - RULE-SET,Airport,🛫 Airport
+  ## 直连软件
+  - RULE-SET,Applications,🖥️ 直连软件
+  ## 网络测试
+  - RULE-SET,Networktest,📈 NetworkTest
+  ## 人工智能
+  - RULE-SET,Gemini,🤖 AI
+  - RULE-SET,AIGlobal,🤖 AI
+  ## 苹果服务
+  - RULE-SET,Apple,🍎 AppleServe
+  ## Google 服务
+  - RULE-SET,Google,📢 GoogleServe
+  ## 微软服务
+  - RULE-SET,Microsoft,Ⓜ️ MicrosoftServe
+  ## 支付服务
+  - RULE-SET,PayPal,💴 PayPal
+  ## 代码托管平台
+  - RULE-SET,Github,🐱 Github
+  - RULE-SET,Gitlab,🐱 Github
+  # 社交通讯平台
+  ## 国外
+  - RULE-SET,Discord,🐦 Discord
+  - RULE-SET,Facebook,💬 Facebook
+  - RULE-SET,Telegram,📲 Telegram
+  - RULE-SET,Twitter,💬 Twitter
+  # 娱乐平台
+  ## 插画站
+  - RULE-SET,Pixiv,🖼️ Pixiv
+  ## 游戏平台
+  - RULE-SET,Steam,🎮 Steam
+  ### 代理
+  - RULE-SET,Game,🎮 GameProxy
+  ### 直连
+  - RULE-SET,GameDirect,🎮 GameDirect
+  ## 音乐平台
+  - RULE-SET,Spotify,🎵 Spotify
+  - RULE-SET,YouTubeMusic,📹 YouTube
+  ## 短视频和直播
+  - RULE-SET,Disney,📽️ Disney+
+  - RULE-SET,Netflix,🎥 Netflix
+  - RULE-SET,Max,🎞️ Max
+  - RULE-SET,TikTok,🎵 TikTok
+  - RULE-SET,YouTube,📹 YouTube
+  ### 综合国外媒体
+  - RULE-SET,GlobalMedia,🙈 GlobalMedia
+  # 综合国外代理
+  - RULE-SET,GFWLite,🪜 Proxy
+  - RULE-SET,Proxy,🪜 Proxy
+  # 综合国内直连
+  - RULE-SET,CN1,🔗 China
+  - RULE-SET,CN2,🔗 China
+  ## 综合 IP 规则
+  - GEOIP,CN,🔗 China
+  # 兜底规则
+  - MATCH,🐟 漏网之鱼
