@@ -1,12 +1,30 @@
 # pubg-domain
 # 卡风景，卡背景
 ## 国际
-prod-live-front.playbattlegrounds.com #UHE_
+prod-live-front.playbattlegrounds.com #UHE
+
+prod-live-cfentry.playbattlegrounds.com #UHE_
+prod-live-images.playbattlegrounds.com #UHE_
+3.165.102.37
+99.84.55.109
+99.84.55.96
+99.84.55.11
+3.165.102.73
+13.226.120.2
+3.165.102.125
+3.168.167.63
+13.226.120.27
+3.165.102.53
+3.168.167.15
 
 ## 国内
 prod-live-front.playbattlegrounds.com.cn #UHE_
 
+## 游戏内
+iepl-hy.blue-bgp.xyz
+125.94.46.17
+125.94.46.18
 
-# 游戏内
-prod-live-cfentry.playbattlegrounds.com #UHE_
-prod-live-images.playbattlegrounds.com #UHE_
+
+
+
