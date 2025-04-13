@@ -3,6 +3,10 @@
 ## 国际
 prod-live-front.playbattlegrounds.com #UHE
 
+## 国内
+prod-live-front.playbattlegrounds.com.cn #UHE_
+
+## 其他
 prod-live-cfentry.playbattlegrounds.com #UHE_
 prod-live-images.playbattlegrounds.com #UHE_
 3.165.102.37
@@ -16,9 +20,6 @@ prod-live-images.playbattlegrounds.com #UHE_
 13.226.120.27
 3.165.102.53
 3.168.167.15
-
-## 国内
-prod-live-front.playbattlegrounds.com.cn #UHE_
 
 ## 游戏内
 iepl-hy.blue-bgp.xyz
