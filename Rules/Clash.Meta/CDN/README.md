@@ -11,5 +11,3 @@ updated: 2025-02-12 16:07
 ```
 https://github.com/LaolunsiG/PCR/raw/refs/heads/main/Rules/Clash.Meta/CDN/CDN-Classical.yaml
 ```
-
-## 规则来源

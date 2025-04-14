@@ -3,7 +3,7 @@
 # updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GFWLite/GFWLite-Classical.yaml
 # repo: https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta/GFWLite
 # content: 
-# DOMAIN: 2
+# DOMAIN: 
 # DOMAIN-KEYWORD: 
 # DOMAIN-SUFFIX: 
 # IP-CIDR: 
@@ -25,3 +25,7 @@ payload:
   # 三瓜云
   - DOMAIN,snangua.com
   - DOMAIN,sanguayun.jiumaojiu.net
+  # 域名服务
+  - DOMAIN,freedomain.one
+  - DOMAIN,www.site.ac
+  
