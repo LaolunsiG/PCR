@@ -75,10 +75,13 @@ tun:
 # -------------------------------------
 hosts:
   'www.google.com.hk': 'www.google.com'
-  doh.pub: [1.12.12.12, 120.53.53.53]
+  ## DNS hosts
   dns.alidns.com: [223.5.5.5, 223.6.6.6]
-  doh.onedns.net: 52.80.248.44
+  dns.cloudflare.com: [104.16.133.229, 104.16.132.229]
+  dns.google: [8.8.4.4, 8.8.8.8]
   dns.twnic.tw: 101.101.101.101
+  doh.onedns.net: 52.80.248.44
+  doh.pub: [1.12.12.12, 120.53.53.53]
 
 # -------------------------------------
 dns!:
@@ -112,13 +115,17 @@ dns!:
   nameserver-policy: 
     # 国内分流
     #'geosite:cn': ['1.2.4.8', 'system']
-    'rule-set:CN1,CN2': [system, '1.2.4.8', '223.5.5.5', '119.29.29.29']
+    #'rule-set:CN1,CN2': [system, '1.2.4.8', '223.5.5.5', '119.29.29.29']
+    'rule-set:GFWLite':
+       - https://dns.google/dns-query                 # Google
+       - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
+       - https://doh.onedns.net/dns-query
   # 默认的域名解析服务器，解析代理服务器的 IP 地址；匹配直连策略或遇到 IP 规则时会进行本地（直连） DNS 解析，如不配置 fallback/proxy-server-nameserver , 则所有域名都由 nameserver 解析。
   # 'https://1.1.1.1/dns-query', https://doh.onedns.net/dns-query
-  nameserver:
-    - https://dns.google/dns-query                 # Google
-    - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
-    - https://doh.onedns.net/dns-query
+  nameserver: [system, '1.2.4.8', '223.5.5.5', '119.29.29.29']
+    # - https://dns.google/dns-query                 # Google
+    # - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
+    # - https://doh.onedns.net/dns-query
   # 后备域名解析服务器，一般情况下使用境外 DNS, 保证结果可信。
   # 当 `fallback` 存在时, DNS 服务器将向此部分中的服务器与 nameservers 中的服务器发送并发请求。
   # 配置 fallback 后默认启用 fallback-filter，geoip-code 为 cn
@@ -128,7 +135,7 @@ dns!:
   #   - https://doh.onedns.net/dns-query
   # #后备域名解析服务器筛选，满足条件的将使用 fallback 结果或只使用 fallback 解析，这是对抗 DNS 污染攻击的一种措施。
   # fallback-filter:
-  #   geoip: true      # 是否启用 geoip 检测
+  #   geoip: false      # 是否启用 geoip 检测
   #   # 除了 geoip-code 配置的国家 IP, 其他的 IP 结果会被视为污染，将采用 fallback 结果。
   #   geoip-code: CN
   #   # 这些网段的结果会被视为污染，nameserver 解析出这些结果时将会采用 fallback 的解析结果。
@@ -183,6 +190,7 @@ UrlTest1: &urltest1 {type: url-test, tolerance: 50, interval: 180, url: 'http://
 LoadBalance1: &loadbalance1 {type: load-balance, strategy: consistent-hashing, interval: 180, url: 'http://www.google.com/generate_204', timeout: 2500, max-failed-times: 3, disable-udp: false, lazy: true, hidden: false, include-all-proxies: true}
 
 # 功能策略组专用锚点
+Select2: &select2 {type: select, interval: 360, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
 UrlTest2: &urltest2 {type: url-test, tolerance: 50, interval: 180, url: 'http://www.google.com/generate_204', timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
 LoadBalance2: &loadbalance2 {type: load-balance, strategy: consistent-hashing, interval: 180, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
 
