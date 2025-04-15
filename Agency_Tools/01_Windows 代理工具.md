@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-04-07 18:40
+updated: 2025-04-15 19:18
 ---
 # 代理工具
 
@@ -47,7 +47,10 @@ updated: 2025-04-07 18:40
 | ^^    | [mihomo-party- xishang0128](https://github.com/xishang0128/mihomo-party)            | [Mihomo Party](https://mihomo.party/)，[Mihomo Party](https://mihomoparty.org/) |
 | ^^    | [mihomo-party - pompurin404](https://github.com/pompurin404/mihomo-party)           |                                                                                |
 | ^^    | [Pandora-Box](https://github.com/snakem982/Pandora-Box)                             |                                                                                |
-| WebUI | [zashboard](https://github.com/Zephyruso/zashboard)                                 |                                                                                |
+| WebUI | [zashboard](https://github.com/Zephyruso/zashboard)                                 | A Dashboard Using Clash API                                                    |
+| ^^    | [metacubexd](https://github.com/MetaCubeX/metacubexd)                               |                                                                                |
+| ^^    | [yacd](https://github.com/haishanh/yacd)                                            |                                                                                |
+| ^^    | [Yacd-meta - MetaCubeX](https://github.com/MetaCubeX/Yacd-meta)                     |                                                                                |
 
 ## Sing-Box GUI
 - [sing-box - SagerNet](https://github.com/SagerNet/sing-box)
