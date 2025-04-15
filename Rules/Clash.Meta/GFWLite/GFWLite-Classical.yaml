@@ -15,8 +15,6 @@
 # 三瓜云
 
 payload:
-  # DNS leak
-  - DOMAIN,dns.icoa.cn
   # gamebanana
   - DOMAIN,gamebanana.com
   - DOMAIN-SUFFIX,gamebanana.com

@@ -8,7 +8,16 @@ updated: 2025-04-06 10:48
 
 ## 使用规则
 
-### Classical
+### GFWLite
+
+#### Classical
 ```
 https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Clash.Meta/GFWLite/GFWLite-Classical.yaml
+```
+
+### GFWLite-DNS
+
+#### Classical
+```
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GFWLite/GFWLite-DNS-Classical.yaml
 ```
