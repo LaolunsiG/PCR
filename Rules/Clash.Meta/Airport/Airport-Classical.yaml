@@ -40,9 +40,9 @@ payload:
   # 便宜机场
   - DOMAIN,pianyi.sub.sub.subsub123456789.com
   - DOMAIN,便宜机场.co
-  # # 三瓜云
-  # - DOMAIN,snangua.com
-  # - DOMAIN,sanguayun.jiumaojiu.net
+  # 三瓜云
+  - DOMAIN,snangua.com
+  - DOMAIN,sanguayun.jiumaojiu.net
   # 团子机场
   - DOMAIN,sub.tuanzi.xyz
   

@@ -9,10 +9,8 @@
 # IP-CIDR: 
 
 # 规则分类
-# DNS leak
 # gamebanana
 # x10hosting.com
-# 三瓜云
 
 payload:
   # gamebanana
@@ -20,9 +18,6 @@ payload:
   - DOMAIN-SUFFIX,gamebanana.com
   # x10hosting.com
   - DOMAIN,x10hosting.com
-  # 三瓜云
-  - DOMAIN,snangua.com
-  - DOMAIN,sanguayun.jiumaojiu.net
   # 域名服务
   - DOMAIN,freedomain.one
   - DOMAIN,www.site.ac
