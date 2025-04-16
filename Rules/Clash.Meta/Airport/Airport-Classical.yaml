@@ -37,6 +37,8 @@ payload:
   # 马铃薯机场
   - DOMAIN,mlshu.com
   - DOMAIN,mlshu.xyz
+  # 漏网之鱼
+  - DOMAIN,ch.cukug.website
   # 便宜机场
   - DOMAIN,pianyi.sub.sub.subsub123456789.com
   - DOMAIN,便宜机场.co
