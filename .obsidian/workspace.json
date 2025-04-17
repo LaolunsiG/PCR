@@ -174,8 +174,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f535f0cf002a85d1",
+  "active": "8051bf4038d373a6",
   "lastOpenFiles": [
+    "Hosts/OneDrive",
     "Agency_Tools/02_MacOS 代理工具.md",
     "Agency_Tools/01_Windows 代理工具.md",
     "Agency_Tools/11_Android 代理工具.md",
@@ -202,7 +203,6 @@
     "Agency_Tools/12_IOS 代理工具.md",
     "Agency_Tools/00_多平台.md",
     "README_CN.md",
-    "README.md",
     "Config_File/Clash/Pictures",
     "Config_File/Clash.Meta/Pictures/3.png",
     "Config_File/Clash.Meta/Pictures/2.png",
