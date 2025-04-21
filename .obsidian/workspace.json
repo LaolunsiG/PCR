@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Agency_Tools/11_Android 代理工具.md",
+                "file": "Agency_Tools/01_Windows 代理工具.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11_Android 代理工具"
+              "title": "01_Windows 代理工具"
             }
           }
         ]
@@ -176,6 +176,7 @@
   },
   "active": "f535f0cf002a85d1",
   "lastOpenFiles": [
+    "Agency_Tools/11_Android 代理工具.md",
     "Extensions/Surge/README.md",
     "Extensions/Stash/README.md",
     "Extensions/Shadowrocket/README.md",
@@ -187,7 +188,6 @@
     "Agency_Tools/01_Windows 代理工具.md",
     "Hosts/OneDrive",
     "Agency_Tools/02_MacOS 代理工具.md",
-    "Agency_Tools/11_Android 代理工具.md",
     "Agency_Wiki/代理工具配置教程/Clash.Meta 配置教程/README.md",
     "Rules/Clash.Meta/Airport/README.md",
     "Rules/Clash.Meta/CDN/README.md",

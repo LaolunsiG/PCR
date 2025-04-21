@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-04-15 19:18
+updated: 2025-04-21 13:35
 ---
 # 代理工具
 
@@ -58,11 +58,12 @@ updated: 2025-04-15 19:18
 - [sing-box - piernya](https://github.com/PuerNya/sing-box)
 	- 魔改内核，支持订阅代理，[文档教程 - sing-box](https://sing-box.sagernet.org/zh/)
 
-| GUI | 项目名称                                              | 介绍和教程                       |
-| --- | ------------------------------------------------- | --------------------------- |
-| 软件  | [karing](https://github.com/KaringX/karing)       | [文档教程](https://karing.app/) |
-| ^^  | [nekoray](https://github.com/MatsuriDayo/nekoray) |                             |
-| ^^  | [v2rayN](https://github.com/2dust/v2rayN)         |                             |
+| GUI | 项目名称                                                              | 介绍和教程                                                      |
+| --- | ----------------------------------------------------------------- | ---------------------------------------------------------- |
+| 软件  | [karing](https://github.com/KaringX/karing)                       | [文档教程](https://karing.app/)                                |
+| ^^  | [nekoray](https://github.com/MatsuriDayo/nekoray)                 |                                                            |
+| ^^  | [sing-box-windows](https://github.com/xinggaoya/sing-box-windows) | 🚀 一个优雅的 Sing-Box Windows GUI 客户端，基于 Tauri 2.0 和 Vue 3 构建。 |
+| ^^  | [v2rayN](https://github.com/2dust/v2rayN)                         |                                                            |
 
 ## [v2ray-core](https://github.com/v2fly/v2ray-core)GUI
 - [文档教程 - V2Fly.org](https://www.v2fly.org/)
