@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Extensions/Surge/README.md",
+                "file": "Agency_Tools/11_Android 代理工具.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "11_Android 代理工具"
             }
           }
         ]
@@ -176,9 +176,9 @@
   },
   "active": "f535f0cf002a85d1",
   "lastOpenFiles": [
+    "Extensions/Surge/README.md",
     "Extensions/Stash/README.md",
     "Extensions/Shadowrocket/README.md",
-    "Extensions/Surge/README.md",
     "Extensions/Quantumult_X/README.md",
     "Extensions/Loon/README.md",
     "Scripts/Clash/README.md",
