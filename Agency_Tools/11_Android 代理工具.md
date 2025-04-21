@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-04-05 12:50
+updated: 2025-04-21 13:32
 ---
 # Android 代理工具
 
@@ -36,6 +36,7 @@ updated: 2025-04-05 12:50
 | GUI | 项目名称                                                                    | 介绍和教程 |
 | --- | ----------------------------------------------------------------------- | ----- |
 | 软件  | [ClashMetaForAndroid](https://github.com/MetaCubeX/ClashMetaForAndroid) |       |
+| ^^  | [clashmi](https://github.com/KaringX/clashmi)                           |       |
 | ^^  | [FlClash](https://github.com/chen08209/FlClash)                         |       |
 
 ## Sing-Box GUI
