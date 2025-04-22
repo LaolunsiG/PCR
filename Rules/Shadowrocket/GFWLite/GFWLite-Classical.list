@@ -1,13 +1,16 @@
 # name: GFW-lite
-# updata: 2025-01-01
-# updata_log: 
+# updata: 2025-04-22
 # updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Shadowrocket/GFWLite/GFWLite-Classical.list
 # repo: https://github.com/LaolunsiG/PCR/tree/main/Rules/Shadowrocket/GFWLite
 # content: 
 # DOMAIN: 1
 
 # 规则分类
-# DNS & IP 地址查询
-
-# DNS & IP 地址查询
-DOMAIN,dns.icoa.cn
+# gamebanana
+DOMAIN,gamebanana.com
+DOMAIN-SUFFIX,gamebanana.com
+# x10hosting.com
+DOMAIN,x10hosting.com
+# 域名服务
+DOMAIN,freedomain.one
+DOMAIN,www.site.ac

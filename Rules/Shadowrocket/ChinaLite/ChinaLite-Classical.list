@@ -1,0 +1,20 @@
+# name: ChinaLite
+# updata: 2025-04-22
+# updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Shadowrocket/ChinaLite/ChinaLite-Classical.list
+# repo: https://github.com/LaolunsiG/XiaoE_PCR/tree/main/rules/Shadowrocket/GameGlobal
+# content: 
+# DOMAIN
+# DOMAIN-SUFFIX
+# DOMAIN-KEYWORD
+# IP-CIDR
+
+# webstacknav
+DOMAIN,webstacknav.xiaoe.x10.mx
+DOMAIN,webstacknav.xiaoelaolunsi.ip-ddns.com
+DOMAIN,webstacknav.xiaoe.ggff.net
+DOMAIN,webstacknav.xiaoe520.dpdns.org
+# blog
+DOMAIN,blog.xiaoelaolunsi.ip-ddns.com
+DOMAIN,blog.xiaoelaolunsi.dpdns.org
+DOMAIN,blog.xiaoe520.dpdns.org
+DOMAIN,blog.nekoha520.dpdns.org
