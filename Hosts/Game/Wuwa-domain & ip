@@ -1,3 +1,4 @@
+# Wuwa-domain & ip
 
 ## 启动器
 qcloud-sg-datareceiver.kurogame.xyz
@@ -5,10 +6,8 @@ pc-launcher-gray-api.kurogame.net
 pc.crashsight.wetest.net
 prod-alicdn-gamestarter.kurogame.com
 
-
 ## 游戏内
 dl.listdl.com
-
 cdn-qcloud-hw-mc.aki-game.net
 cdn-akamai-hw-mc.aki-game.net
 sdkapi.kurogame-service.com

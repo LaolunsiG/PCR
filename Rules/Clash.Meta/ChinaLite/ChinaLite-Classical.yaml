@@ -7,3 +7,13 @@
 # DOMAIN-SUFFIX
 
 payload:
+  # webstacknav
+  - DOMAIN,webstacknav.xiaoe.x10.mx
+  - DOMAIN,webstacknav.xiaoelaolunsi.ip-ddns.com
+  - DOMAIN,webstacknav.xiaoe.ggff.net
+  - DOMAIN,webstacknav.xiaoe520.dpdns.org
+  # blog
+  - DOMAIN,blog.xiaoelaolunsi.ip-ddns.com
+  - DOMAIN,blog.xiaoelaolunsi.dpdns.org
+  - DOMAIN,blog.xiaoe520.dpdns.org
+  - DOMAIN,blog.nekoha520.dpdns.org

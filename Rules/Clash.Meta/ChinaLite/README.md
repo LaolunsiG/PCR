@@ -10,5 +10,5 @@ updated: 2025-04-06 10:46
 
 ### classical
 ```yaml
-https://github.com/LaolunsiG/PCR/raw/refs/heads/main/Rules/Clash.Meta/ChinaLite/ChinaLite-Classical.yaml
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/ChinaLite/ChinaLite-Classical.yaml
 ```

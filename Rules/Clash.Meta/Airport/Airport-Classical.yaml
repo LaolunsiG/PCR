@@ -17,6 +17,7 @@
 # 团子机场
 
 payload:
+  - DOMAIN,www.redleaf.cloud
   # pithecia
   - DOMAIN,pithecia.com
   - DOMAIN,subs.pithecia.com
@@ -47,4 +48,10 @@ payload:
   - DOMAIN,sanguayun.jiumaojiu.net
   # 团子机场
   - DOMAIN,sub.tuanzi.xyz
+  # 自建订阅
+  - DOMAIN,edgesetting.xiaoe520.dpdns.org
+  - DOMAIN,edgesetting.xiaoelaolunsi.dpdns.org
+  - DOMAIN,edgesetting.xiaoe.x10.mx
+  - DOMAIN,edgesetting.nekoha520.dpdns.org
+  - DOMAIN,edgesetting.xiaoelaolunsi.ip-ddns.com
   
