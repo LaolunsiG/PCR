@@ -1,42 +1,30 @@
 ---
 modified by: XiaoE
 date: 2025-01-26 13:42
-updated: 2025-01-27 00:07
+updated: 2025-04-23 20:36
 ---
 # Sub-Store 脚本整理
 * Sub-Store 脚本整理
 
-## 节点检测
+## 检测 & 功能性脚本
 
 ### 仅支持 `Loon`、 `Surge` 
 
-| 脚本名称   | 作者  | 脚本链接                                                                                                                                                                      | 介绍     |
-| ------ | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| gpt.js |     | [链接](https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/check/gpt.js#timeout=1000&retries=1&retry_delay=1000&concurrency=10&client=iOS) | GPT 检测 |
+| 功能分类   | 脚本名称                                                                                                                                                                          | 脚本链接                                                                                                                                                                | 作者  |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| GPT 检测 | [gpt.js](https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/check/gpt.js#timeout=1000&retries=1&retry_delay=1000&concurrency=10&client=iOS) | https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/check/gpt.js#timeout=1000&retries=1&retry_delay=1000&concurrency=10&client=iOS |     |
+| 节点测速   |                                                                                                                                                                               | https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/check/http_meta_speed_utopter.js                                               |     |
+|        |                                                                                                                                                                               | https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/check/gpt_filter_utopter.js                                                    |     |
+## 生成文件 & 配置
 
-## 节点测速
+## 其他
 
-| 脚本名称   | 作者  | 脚本链接                                                                                                                                                                      | 介绍     |
-| ------ | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| gpt.js |     | [链接](https://raw.githubusercontent.com/xream/scripts/main/surge/modules/sub-store-scripts/check/gpt.js#timeout=1000&retries=1&retry_delay=1000&concurrency=10&client=iOS) | GPT 检测 |
-
-## 节点重命名
-
-### 通用脚本
-
-| 脚本名称      | 作者  | 脚本链接                                                                          | 介绍                                      |
-| --------- | --- | ----------------------------------------------------------------------------- | --------------------------------------- |
-| rename.js |     | [链接](https://raw.githubusercontent.com/Keywos/rule/refs/heads/main/rename.js) | 本地: 按原节点, 批量重命名, 速度最快 支持所有支持SubStore的设备 |
-|           |     |                                                                               |                                         |
-
-### 仅支持 `Loon`、 `Surge` 
- > Surge 必须使用带 有参数 [ability=http-client-policy] 走指定节点功能的substore否则脚本无效 
- 
-| 脚本名称     | 作者  | 脚本链接 | 介绍                     |
-| -------- | --- | ---- | ---------------------- |
-| cname.js |     |      | 联网:真实 入口查询 落地查询 去重并重命名 |
-| pname.js |     |      | 联网:Ping去除无效节点 不改名      |
+| 功能分类  | 脚本名称                                                                                 | 脚本链接                                                                    | 作者  | 功能介绍                                    |
+| ----- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- | --- | --------------------------------------- |
+| 节点重命名 | [rename.js](https://raw.githubusercontent.com/Keywos/rule/refs/heads/main/rename.js) | https://raw.githubusercontent.com/Keywos/rule/refs/heads/main/rename.js |     | 本地: 按原节点, 批量重命名, 速度最快 支持所有支持SubStore的设备 |
+|       |                                                                                      |                                                                         |     |                                         |
 
 ## reference
 - [Sub-Store 脚本](https://www.jovegg.tech/posts/5)
 - [rule - KazooDemo](https://github.com/KazooDemo/rule)
+- [Sub-Store 常用信息汇总](https://www.jovegg.tech/posts/5)
