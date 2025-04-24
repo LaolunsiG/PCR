@@ -92,7 +92,7 @@ dns!:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   # fakeip 过滤，默认黑名单，即以下地址不会下发 fakeip 映射用于连接，回到 redir-host 模式。
-  #fake-ip-filter: ['rule-set:Fakeip-Filter,Private']
+  fake-ip-filter: ['rule-set:Fakeip-Filter,Private']
   # ----------------DNS 服务配置--------------------
   # 默认 DNS, 用于解析 DNS 服务器 的域名，必须为 IP, 可为加密 DNS
   # 119.29.29.29, 223.5.5.5 , 8.8.8.8, 8.8.4.4
@@ -112,14 +112,14 @@ dns!:
   # system, '1.2.4.8', '223.5.5.5', '119.29.29.29'
   # direct-nameserver: [system, '1.2.4.8', '223.5.5.5', '119.29.29.29']
   # DNS 分流，指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询。
-  # nameserver-policy: 
-  #   # 国内分流
-  #   #'geosite:cn': ['1.2.4.8', 'system']
-  #   'rule-set:CN1,CN2': [system, '1.2.4.8', '223.5.5.5', '119.29.29.29']
-  #   'rule-set:GFWLite':
-  #      - https://dns.google/dns-query                 # Google
-  #      - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
-  #      - https://doh.onedns.net/dns-query
+  nameserver-policy: 
+    # 国内分流
+    #'geosite:cn': ['1.2.4.8', 'system']
+    #'rule-set:CN1,CN2': [system, '1.2.4.8', '223.5.5.5', '119.29.29.29']
+    'rule-set:GFWLite,GFWLite-DNS':
+       - https://dns.google/dns-query                 # Google
+       - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
+       - https://doh.onedns.net/dns-query
   # 默认的域名解析服务器，解析代理服务器的 IP 地址；匹配直连策略或遇到 IP 规则时会进行本地（直连） DNS 解析，如不配置 fallback/proxy-server-nameserver , 则所有域名都由 nameserver 解析。
   # 'https://1.1.1.1/dns-query', https://doh.onedns.net/dns-query
   nameserver: [system, '1.2.4.8', '223.5.5.5', '119.29.29.29']
@@ -129,22 +129,22 @@ dns!:
   # 后备域名解析服务器，一般情况下使用境外 DNS, 保证结果可信。
   # 当 `fallback` 存在时, DNS 服务器将向此部分中的服务器与 nameservers 中的服务器发送并发请求。
   # 配置 fallback 后默认启用 fallback-filter，geoip-code 为 cn
-  fallback: 
-    - https://dns.google/dns-query                 # Google
-    - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
-    - https://doh.onedns.net/dns-query
-  #后备域名解析服务器筛选，满足条件的将使用 fallback 结果或只使用 fallback 解析，这是对抗 DNS 污染攻击的一种措施。
-  fallback-filter:
-    geoip: false      # 是否启用 geoip 检测
-    # 除了 geoip-code 配置的国家 IP, 其他的 IP 结果会被视为污染，将采用 fallback 结果。
-    geoip-code: CN
-    # 这些网段的结果会被视为污染，nameserver 解析出这些结果时将会采用 fallback 的解析结果。
-    ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32]
-    # geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 fallback 解析，不去使用 nameserver.
-    # geosite:
-    #   - gfw
-    # 这些域名被视为已污染，匹配到这些域名，会直接使用 fallback 解析，不去使用 nameserver。
-    # domain:
+  # fallback: 
+  #   - https://dns.google/dns-query                 # Google
+  #   - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
+  #   - https://doh.onedns.net/dns-query
+  # #后备域名解析服务器筛选，满足条件的将使用 fallback 结果或只使用 fallback 解析，这是对抗 DNS 污染攻击的一种措施。
+  # fallback-filter:
+  #   geoip: false      # 是否启用 geoip 检测
+  #   # 除了 geoip-code 配置的国家 IP, 其他的 IP 结果会被视为污染，将采用 fallback 结果。
+  #   geoip-code: CN
+  #   # 这些网段的结果会被视为污染，nameserver 解析出这些结果时将会采用 fallback 的解析结果。
+  #   ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32]
+  #   # geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 fallback 解析，不去使用 nameserver.
+  #   # geosite:
+  #   #   - gfw
+  #   # 这些域名被视为已污染，匹配到这些域名，会直接使用 fallback 解析，不去使用 nameserver。
+  #   # domain:
 
 
 # -------------------------------------
@@ -487,12 +487,22 @@ rule-providers:
     path: ./provider/ruleset/gfwlite.yaml
     url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GFWLite/GFWLite-Classical.yaml"
 
+  GFWLite-DNS:
+    <<: *classical
+    path: ./provider/ruleset/gfwlite-dns.yaml
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GFWLite/GFWLite-DNS-Classical.yaml"
+
   Proxy:
     <<: *domain2
     path: ./provider/ruleset/proxy.mrs
     url: "https://raw.githubusercontent.com/xixu-me/rulesets-for-META/basic/proxy.mrs"
     
   # 综合国内直连
+  ChinaLite:
+    <<: *classical
+    path: ./provider/ruleset/chinalite.yaml
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/ChinaLite/ChinaLite-Classical.yaml"
+
   CN1:
     <<: *classical
     path: ./provider/ruleset/cn1.yaml
@@ -564,9 +574,8 @@ rules:
   - RULE-SET,GFWLite,🪜 Proxy
   - RULE-SET,Proxy,🪜 Proxy
   # 综合国内直连
+  - RULE-SET,ChinaLite,🔗 China
   - RULE-SET,CN1,🔗 China
   - RULE-SET,CN2,🔗 China
-  ## 综合 IP 规则
-  - GEOIP,CN,🔗 China
   # 兜底规则
   - MATCH,🐟 漏网之鱼
