@@ -17,3 +17,5 @@ payload:
   - DOMAIN,blog.xiaoelaolunsi.dpdns.org
   - DOMAIN,blog.xiaoe520.dpdns.org
   - DOMAIN,blog.nekoha520.dpdns.org
+  # other
+  - DOMAIN,ticktick.com
