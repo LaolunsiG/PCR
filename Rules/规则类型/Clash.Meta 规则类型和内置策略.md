@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-03-29 16:32
+updated: 2025-05-02 10:31
 ---
 # Clash.Meta 规则类型和内置策略
 
@@ -12,7 +12,7 @@ rules:
   - DOMAIN-SUFFIX,google.com,DIRECT
 ```
 
-## Clash.Meta 规则类型
+## 规则类型
 
 ### 规则集
 

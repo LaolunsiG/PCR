@@ -1,17 +1,16 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-03-29 16:32
+updated: 2025-05-02 10:34
 ---
 # Loon 规则类型和内置策略
 
-## Loon 规则类型
+## 规则类型
 
 ### 规则集
 
 **RULE-SET**
-> （兼容仅包含 IP 地址且不带规则类型的规则集）
-- 匹配规则集内容。规则集的内容需包含规则类型。
+- 匹配规则集内容。规则集的内容需包含规则类型。（兼容仅包含 IP 地址且不带规则类型的规则集）
 ```
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list
 ```
@@ -84,9 +83,9 @@ USER-AGENT,Apple*,DIRECT
 
 ### 端口规则
 > 根据请求的源端口或者目标端口进行匹配（3.1.7+）
-- 表示特定的某个端口，如`DEST-PORT,443,DIRECT`
-- 表示端口闭区间，如`DEST-PORT,80-443,DIRECT`
-- 使用>, <, <=, >= 表示一个无穷区间，如`DEST-PORT,>=443,DIRECT`
+> 表示特定的某个端口，如`DEST-PORT,443,DIRECT`
+> 表示端口闭区间，如`DEST-PORT,80-443,DIRECT`
+> 使用>, <, <=, >= 表示一个无穷区间，如`DEST-PORT,>=443,DIRECT`
 
 **SRC-PORT**
 ```
@@ -141,7 +140,7 @@ NOT,((AND,((DOMAIN-SUFFIX,axample),(DEST-PORT,443),(GEOIP,CN)))),DIRECT
 final,DIRECT
 ```
 
-## Loon 规则策略
+## 内置策略
 
 ### 直连
 - DIRECT：直连。连接不经过任何代理服务器。

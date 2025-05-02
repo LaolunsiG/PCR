@@ -1,11 +1,12 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-01-27 00:03
+updated: 2025-05-02 10:33
 ---
-# Quantumult_X 规则类型
+# Quantumult_X 规则类型和内置策略
 
-## IP 规则
+## 规则类型
+### IP 规则
 
 **IP-CIDR**
 ```
@@ -27,23 +28,29 @@ GEOIP,CN,DIRECT
 IP-ASN,714
 ```
 
-## 域名规则
+### 域名规则
 > 可以用 “DOMAIN”
-- HOST(域名)
+
+HOST(域名)
 ```
 HOST,www.google.com,policy
 ```
-- HOST-SUFFIX(域名后缀)
+
+HOST-SUFFIX(域名后缀)
 ```
 HOST-SUFFIX,youtube.com,policy
 ```
-- HOST-KEYWORD(域名关键字)
-- HOST-WILDCARD(域名通配符)
 
-## 其他规则
+HOST-KEYWORD(域名关键字)
+
+HOST-WILDCARD(域名通配符)
+
+### 其他规则
 - USER-AGENT
 
-## 兜底规则（全匹配）
+### 兜底规则
 - FINAL
+
+## 内置策略
 
 ## reference

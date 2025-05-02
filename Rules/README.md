@@ -1,7 +1,7 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-04-04 14:13
+updated: 2025-05-02 10:30
 ---
 # Rules
 - 各种代理软件适用规则，不同软件之间大同小异
@@ -20,7 +20,6 @@ updated: 2025-04-04 14:13
 | Clash.Meta/Stash | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta   |
 | Shadowrocket     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Shadowrocket |
 | Quantumult_X     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Quantumult_X |
-
 
 ## reference
 
