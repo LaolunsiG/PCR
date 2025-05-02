@@ -45,8 +45,14 @@ DOMAIN,sanguayun.jiumaojiu.net
 # 团子机场
 DOMAIN,sub.tuanzi.xyz
 # 自建订阅
-DOMAIN,edgesetting.xiaoe520.dpdns.org
-DOMAIN,edgesetting.xiaoelaolunsi.dpdns.org
-DOMAIN,edgesetting.xiaoe.x10.mx
-DOMAIN,edgesetting.nekoha520.dpdns.org
-DOMAIN,edgesetting.xiaoelaolunsi.ip-ddns.com
+DOMAIN,cftunnel.xiaoe520.dpdns.org
+DOMAIN,cftunnel.nekoha520.dpdns.org
+DOMAIN,cftunnel.xiaoelaolunsi.dpdns.org
+DOMAIN,cftunnel.xiaoe.x10.mx
+DOMAIN,cftunnel.xiaoelaolunsi.ip-ddns.com
+# 汇聚订阅
+DOMAIN,sub-converge.xiaoe520.dpdns.org
+DOMAIN,sub-converge.xiaoelaolunsi.dpdns.org
+DOMAIN,sub-converge.nekoha520.dpdns.org
+DOMAIN,sub-converge.xiaoe.x10.mx
+DOMAIN,sub-converge.xiaoelaolunsi.ip-ddns.com
