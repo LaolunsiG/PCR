@@ -1,7 +1,6 @@
 ---
-modified by: XiaoE
-date: 2025-01-17 15:18
-updated: 2025-05-04 10:36
+Created date: 2025-02-07 00:41
+Modified date: 2025-05-04 10:55
 ---
 # LanceX 配置模板和配置教程
 - 不推荐使用，规则无法修改顺序。界面类似 Shadowrocket；适配 Surge 的模块。

@@ -1,7 +1,6 @@
 ---
-modified by: XiaoE
-date: 2025-01-17 15:18
-updated: 2025-05-04 10:48
+Created date: 2025-02-07 00:41
+Modified date: 2025-05-04 10:58
 ---
 # [Sing-Box](https://github.com/SagerNet/sing-box) 配置教程
 

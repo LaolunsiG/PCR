@@ -1,7 +1,6 @@
 ---
-modified by: XiaoE
-date: 2025-01-17 15:18
-updated: 2025-04-20 09:55
+Created date: 2025-02-07 00:41
+Modified date: 2025-05-04 10:57
 ---
 # Clash.Meta & Clash 脚本整理
 - 看不懂正在学
