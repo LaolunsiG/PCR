@@ -1,7 +1,6 @@
 ---
-modified by: XiaoE
-date: 2025-01-17 15:18
-updated: 2025-05-04 10:51
+Created date: 2025-02-07 00:41
+Modified date: 2025-05-04 11:11
 ---
 # Clash.Meta 配置模板和配置教程
 - 配置的是 mihomo 内核, 需要自己配置订阅链接。
