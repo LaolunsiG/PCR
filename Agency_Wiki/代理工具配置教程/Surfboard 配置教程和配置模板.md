@@ -1,14 +1,13 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-01-27 00:05
+updated: 2025-05-04 10:48
 ---
 # Surfboard 配置教程
 
-## 全局配置教程
-- [surfboard](https://getsurfboard.com/)
-
-## 节点筛选
-- [节点正则表达式](https://github.com/LaolunsiG/XiaoE_PCR/blob/main/Config_File/%E8%8A%82%E7%82%B9%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)
+| 教程类型   | 教程来源 | 作者  | 教程链接                                                                                                                                          |
+| ------ | ---- | --- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| 全局配置教程 | 官方   | 官方  | [surfboard](https://getsurfboard.com/)                                                                                                        |
+| 节点筛选教程 | 第三方  | 未知  | [节点正则表达式](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E8%8A%82%E7%82%B9%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.md) |
 
 ## 配置模板
