@@ -16,3 +16,15 @@ Modified date: 2025-05-04 10:58
 | 节点筛选教程 | 第三方  | 未知     | [节点正则表达式](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E8%8A%82%E7%82%B9%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.md) |
 
 ## [配置模板](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon)
+
+| XiaoE    | [Loon-stable.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/main/Config_File/Loon/Loon-stable.conf) |
+| -------- | ---------------------------------------------------------------------------------------------------------- |
+| ^^       | [Loon-test.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/main/Config_File/Loon/Loon-test.conf)     |
+
+**参考配置**
+
+| 作者/来源    | 链接                                                                                                         |
+| -------- | ---------------------------------------------------------------------------------------------------------- |
+| HoCooo   | [LoonLite.conf](https://github.com/HoCooo/Loon/blob/main/LoonLite.conf)                                    |
+| lodepuly |                                                                                                            |
+| SANYIMOE | [loon.conf](https://github.com/SANYIMOE/Quan_Shado_Conf/blob/master/conf/loon.conf)                        |

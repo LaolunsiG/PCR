@@ -1,9 +1,10 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-05-04 10:58
+Modified date: 2025-05-04 11:08
 ---
-# [Sing-Box](https://github.com/SagerNet/sing-box) 配置教程
+# [Sing-Box](https://github.com/SagerNet/sing-box) 配置教程和配置模板
 
+## 配置教程
 
 | 教程类型    | 教程来源 | 作者       | 教程链接                                                                                                                                          |
 | ------- | ---- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -23,4 +24,4 @@ Modified date: 2025-05-04 10:58
 | sing-box 一键配置工具 | [singbox1.com](https://singbox1.com/)<br>            |               |
 | sing-box 一键配置工具 | [singbox](https://cconfig.cc/singbox/)               | 建议使用这个，一键最新配置 |
 
-## 配置模板
+## [配置模板](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Sing-Box)

@@ -1,6 +1,6 @@
 ---
 Created date: 2025-03-14 17:39
-Modified date: 2025-05-04 10:58
+Modified date: 2025-05-04 11:07
 ---
 # Clash.Meta 配置教程和配置模板
 
@@ -16,7 +16,7 @@ Modified date: 2025-05-04 10:58
 | 全局配置教程  | 第三方  |     | [锚点配置](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/Clash.Meta%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/%E9%94%9A%E7%82%B9%E9%85%8D%E7%BD%AE.md)           |
 | 节点筛选教程  | 第三方  |     | [节点正则表达式](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/%E8%8A%82%E7%82%B9%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.md)                                                                                               |
 
-## 配置模板
+## [配置模板](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash.Meta)
 
 | 作者/来源 | 配置链接                                                                                                                                    |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------- |
