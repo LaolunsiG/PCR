@@ -1,21 +1,20 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-01-27 00:05
+updated: 2025-05-04 10:24
 ---
 # [Sing-Box](https://github.com/SagerNet/sing-box) 配置教程
 
 ## 全局配置教程
 > 一般都附带示例的配置文件。
 
-### 官方
-- https://sing-box.sagernet.org/configuration/
-- https://matsuridayo.github.io/index_docs/
-
-### 第三方
-- [fscarmen - Sing-box 全家桶](https://github.com/fscarmen/sing-box)
-- [sing-box 基础教程：sing-box 的配置方法和使用教程](https://icloudnative.io/posts/sing-box-tutorial/)
-- [mihomo 和 sing-box 教程合集](https://proxy-tutorials.dustinwin.top/)
+| 教程来源 | 作者  | 教程链接                                                                                  |
+| ---- | --- | ------------------------------------------------------------------------------------- |
+| 官方   |     | https://sing-box.sagernet.org/configuration/                                          |
+| ^^   |     | https://matsuridayo.github.io/index_docs/<br>                                         |
+| 第三方  |     | [fscarmen - Sing-box 全家桶](https://github.com/fscarmen/sing-box)                       |
+| ^^   |     | [sing-box 基础教程：sing-box 的配置方法和使用教程](https://icloudnative.io/posts/sing-box-tutorial/) |
+| ^^   |     | [mihomo 和 sing-box 教程合集](https://proxy-tutorials.dustinwin.top/)                      |
 
 ## 策略组配置教程
 

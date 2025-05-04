@@ -1,9 +1,9 @@
 ---
 modified by: XiaoE
 date: 2025-01-17 15:18
-updated: 2025-01-27 00:05
+updated: 2025-05-04 10:30
 ---
-# Quantumult_X 配置教程
+# Quantumult_X 配置教程和配置模板
 
 ## 全局配置教程
 - [rencuijian/Quantumult-X](https://github.com/rencuijian/Quantumult-X)
