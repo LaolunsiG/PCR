@@ -14,3 +14,6 @@
 payload:
   # 部落冲突
   - DOMAIN-SUFFIX,supercell.com
+  - DOMAIN-KEYWORD,supercell
+  - PROCESS-NAME,com.supercell.clashofclans
+
