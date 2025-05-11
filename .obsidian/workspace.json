@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rules/GEODATA.md",
+                "file": "Config_File/Clash.Meta/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GEODATA"
+              "title": "README"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rules/GEODATA.md",
+                "file": "Config_File/Clash.Meta/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "GEODATA 的反向链接列表"
+              "title": "README 的反向链接列表"
             }
           },
           {
@@ -177,6 +177,15 @@
   },
   "active": "e0f7e586a7e59613",
   "lastOpenFiles": [
+    "Config_File/LanceX/README.md",
+    "Config_File/Clash.Meta/README.md",
+    "Config_File/Clash/README.md",
+    "Extensions/Quantumult_X/README.md",
+    "Extensions/Shadowrocket/README.md",
+    "Extensions/Stash/README.md",
+    "Extensions/Surge/README.md",
+    "Extensions/README.md",
+    "Rules/GEODATA.md",
     "Rules/README.md",
     "Scripts/Clash/README.md",
     "Scripts/Loon/README.md",
@@ -195,15 +204,6 @@
     "_debug_remotely_save",
     "Agency_Wiki/AgencyResource/DNS 服务整理.md",
     "Agency_Wiki/代理资源/DNS 服务整理/DNS 服务资源.md",
-    "Agency_Wiki/代理资源/DNS 服务整理/国外 DNS 服务.md",
-    "Agency_Wiki/代理资源/DNS 服务整理/国内 DNS 服务.md",
-    "Agency_Wiki/DNS 原理/了解什么是 DNS 以及相关的协议.md",
-    "Agency_Wiki/代理原理知识和教程.md",
-    "Agency_Wiki/其他网络技术教程.md",
-    "Agency_Wiki/readme.md",
-    "Config_File/Clash.Meta/readme.md",
-    "Config_File/Clash/readme.md",
-    "Config_File/Loon/readme.md",
     "Agency_Wiki/什么是代理链以及如何使用/中转-代理链.pdf",
     "Tests/test01-10.exe",
     "Tests",

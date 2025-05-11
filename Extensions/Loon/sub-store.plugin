@@ -17,7 +17,7 @@
 
 [Rule]
 DOMAIN,sub-store.vercel.app,PROXY
-DOMAIN, ip-api.com, PROXY
+DOMAIN,ip-api.com,PROXY
 
 [MITM]
 hostname=sub.store

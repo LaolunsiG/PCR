@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-05-04 11:11
+Modified date: 2025-05-11 12:48
 ---
 # Clash.Meta 配置模板和配置教程
 - 配置的是 mihomo 内核, 需要自己配置订阅链接。
@@ -10,7 +10,7 @@ Modified date: 2025-05-04 11:11
 | 作者/来源 | 配置链接                                                                                                                                    |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | XiaoE | [Clash.Meta-stable.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash.Meta/Clash.Meta-stable.yaml) |
-| ^^    | [Clash.Meta-test.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash.Meta/Clash.Meta-test.yaml)     |
+| XiaoE | [Clash.Meta-test.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash.Meta/Clash.Meta-test.yaml)     |
 
 **参考配置**
 
