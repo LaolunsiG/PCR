@@ -3,6 +3,5 @@
   "obsidian-linter",
   "obsidian-timestamper",
   "date-inserter",
-  "last-modified-timestamp-in-status-bar",
-  "syncthing-status-icon"
+  "last-modified-timestamp-in-status-bar"
 ]
