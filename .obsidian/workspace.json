@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripts/README1.md",
+                "file": "Rules/GEODATA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README1"
+              "title": "GEODATA"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scripts/README1.md",
+                "file": "Rules/GEODATA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "README1 的反向链接列表"
+              "title": "GEODATA 的反向链接列表"
             }
           },
           {
@@ -177,6 +177,13 @@
   },
   "active": "e0f7e586a7e59613",
   "lastOpenFiles": [
+    "Rules/README.md",
+    "Scripts/Clash/README.md",
+    "Scripts/Loon/README.md",
+    "Scripts/ScriptHub/README.md",
+    "Scripts/Stash/README.md",
+    "Scripts/Surge/README.md",
+    "Scripts/README.md",
     "节点测速.md",
     "节点测速 204 URL.md",
     "文档写作教程.md",
@@ -197,13 +204,6 @@
     "Config_File/Clash.Meta/readme.md",
     "Config_File/Clash/readme.md",
     "Config_File/Loon/readme.md",
-    "Agency_Wiki/AgencyTool_ConfigTutorial/Surge 配置教程和配置模板.md",
-    "Config_File/Surge/readme.md",
-    "Agency_Wiki/AgencyTool_ConfigTutorial/Surfboard 配置教程和配置模板.md",
-    "Agency_Wiki/AgencyTool_ConfigTutorial/Stash 配置教程和配置模板.md",
-    "Agency_Wiki/AgencyTool_ConfigTutorial/Sing-Box 配置教程和配置模板.md",
-    "Agency_Wiki/AgencyTool_ConfigTutorial/Shadowrocket 配置教程和配置模板.md",
-    "Agency_Wiki/AgencyTool_ConfigTutorial/Quantumult_X 配置教程和配置模板.md",
     "Agency_Wiki/什么是代理链以及如何使用/中转-代理链.pdf",
     "Tests/test01-10.exe",
     "Tests",
