@@ -18,6 +18,7 @@
 
 payload:
   - DOMAIN,www.redleaf.cloud
+  - DOMAIN,hajimi.icu
   # pithecia
   - DOMAIN,pithecia.com
   - DOMAIN,subs.pithecia.com
