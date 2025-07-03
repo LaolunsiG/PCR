@@ -18,6 +18,7 @@ payload:
   - DOMAIN-SUFFIX,gamebanana.com
   # 小说
   - DOMAIN,hlib.cc
+  - DOMAIN-SUFFIX,alicesw.com
   # DNS 资源
   - DOMAIN,dns.icoa.cn
   # 域名服务
