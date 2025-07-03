@@ -19,6 +19,8 @@ payload:
   # 小说
   - DOMAIN,hlib.cc
   - DOMAIN-SUFFIX,alicesw.com
+  # 论坛
+  - DOMAIN,hjd2048.com
   # DNS 资源
   - DOMAIN,dns.icoa.cn
   # 域名服务
