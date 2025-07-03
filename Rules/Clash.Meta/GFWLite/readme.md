@@ -10,14 +10,7 @@ updated: 2025-05-02 10:28
 
 ### GFWLite
 
-**Classical**
+Classical
 ```
 https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Clash.Meta/GFWLite/GFWLite-Classical.yaml
-```
-
-### GFWLite-DNS
-
-**Classical**
-```
-https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GFWLite/GFWLite-DNS-Classical.yaml
 ```

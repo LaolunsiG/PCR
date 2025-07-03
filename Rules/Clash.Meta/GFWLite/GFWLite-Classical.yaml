@@ -13,11 +13,14 @@
 # x10hosting.com
 
 payload:
-  # gamebanana
+  # 游戏资源
   - DOMAIN,gamebanana.com
   - DOMAIN-SUFFIX,gamebanana.com
-  # x10hosting.com
-  - DOMAIN,x10hosting.com
+  # 小说
+  - DOMAIN,hlib.cc
+  # DNS 资源
+  - DOMAIN,dns.icoa.cn
   # 域名服务
   - DOMAIN,freedomain.one
   - DOMAIN,www.site.ac
+  - DOMAIN,x10hosting.com
