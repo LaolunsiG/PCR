@@ -1,22 +1,13 @@
 # NAME: Airport
-# update: 2025-03-26
+# update: 20250715
 # updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/Airport/Airport-Classical.yaml
 # repo: https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta/Airport
-
 # content:
 # DOMAIN: 13
 # IP-CIDR: 1
 
-# 规则分类
-# pithecia
-# flynb.site
-# Tblack
-# 超级机场
-# 马铃薯机场
-# 便宜机场
-# 团子机场
-
 payload:
+  # 机场
   - DOMAIN,www.redleaf.cloud
   - DOMAIN,hajimi.icu
   # pithecia
@@ -49,16 +40,18 @@ payload:
   - DOMAIN,sanguayun.jiumaojiu.net
   # 团子机场
   - DOMAIN,sub.tuanzi.xyz
+  
   # 自建订阅
   - DOMAIN,cftunnel.xiaoe520.dpdns.org
   - DOMAIN,cftunnel.nekoha520.dpdns.org
   - DOMAIN,cftunnel.xiaoelaolunsi.dpdns.org
   - DOMAIN,cftunnel.xiaoe.x10.mx
   - DOMAIN,cftunnel.xiaoelaolunsi.ip-ddns.com
+  - DOMAIN,cfepeius.nekoha520.dpdns.org
+  
   # 汇聚订阅
   - DOMAIN,sub-converge.xiaoe520.dpdns.org
   - DOMAIN,sub-converge.xiaoelaolunsi.dpdns.org
   - DOMAIN,sub-converge.nekoha520.dpdns.org
-  - DOMAIN,sub-converge.xiaoe.x10.mx
   - DOMAIN,sub-converge.xiaoelaolunsi.ip-ddns.com
   
