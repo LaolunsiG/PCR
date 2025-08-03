@@ -3,7 +3,7 @@ modified by: XiaoE
 date: 2025-01-17 15:18
 updated: 2025-05-04 10:33
 Created date: 2025-02-07 00:41
-Modified date: 2025-05-04 11:10
+Modified date: 2025-08-03 22:46
 ---
 # Clash 配置模板和配置教程
 - 配置的是 Clash_Premium 内核(非开源已删库)，需要自己配置订阅链接。适合 CFA (Clash For Android) 使用。
@@ -13,7 +13,7 @@ Modified date: 2025-05-04 11:10
 | 作者/项目 | 配置链接                                                                                                                   |
 | ----- | ---------------------------------------------------------------------------------------------------------------------- |
 | XiaoE | [Clash-stable.yml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash/Clash-stable.yml) |
-| ^^    | [Clash-test.yml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash/Clash-test.yml)     |
+| XiaoE | [Clash-test.yml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash/Clash-test.yml)     |
 
 **参考配置**
 

@@ -1,10 +1,10 @@
 ---
-modified by: XiaoE
-date: 2025-01-17 15:18
-updated: 2025-04-04 16:17
+Created date: 2025-02-07 00:41
+Modified date: 2025-08-03 22:46
 ---
 # 扩展资源
-- 大多只在IOS上使用
+
+- 大多只在 IOS 上使用
 
 ## 根据软件分类扩展
 
@@ -24,4 +24,5 @@ updated: 2025-04-04 16:17
 |  |      |     |
 
 ## reference
+
 - [For-Own-Use - ProxyStorage](https://github.com/ProxyStorage/For-Own-Use)

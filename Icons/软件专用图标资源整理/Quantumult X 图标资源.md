@@ -1,11 +1,11 @@
 ---
-modified by: XiaoE
-date: 2025-01-26 17:38
-updated: 2025-01-27 12:54
+Created date: 2025-02-07 00:41
+Modified date: 2025-08-03 22:45
 ---
 # Quantumult X 图标资源
 
 ## 综合类型的图标库
+
 - [Qure Color (All)@Koolson](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FKoolson%2FQure%2Fraw%2Fmaster%2FOther%2FQureColor-All.json%22%0A%5D)
 - [Qure Color@Koolson](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%22https://raw.githubusercontent.com/Koolson/Qure/master/Other/QureColor.json%22%5D)
 - [Qure mini@Koolson](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FKoolson%2FQure%2Fmaster%2FOther%2FQuremini.json%22%0A%5D)
@@ -30,14 +30,17 @@ updated: 2025-01-27 12:54
 - [图标库@chxm1023收集](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%22https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/icons.json%22%5D)
 
 ## [🌐](tg://emoji?id=5463355480350925440&t=8) EMBY 合集
+
 - [TEXON’S EMBY 图标](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5Bhttps%3A%2F%2Fraw.githubusercontent.com%2FOnlookers-Group%2FTexonin-LAB-Public%2Fmain%2FQuantumult%28X%29%2FIcon%2Fcolor%2Fcolor.json%5D)
 - [Fileball Icon](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%22https://raw.githubusercontent.com/Softlyx/Fileball/main/YUAN/tubiao.json%22%5D)
 - [Emby 图标@twoz](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%22https://raw.githubusercontent.com/Twoandz9/Emby-icons/main/TheRaw.json%22%5D)
 
 ## [📱](tg://emoji?id=5220069871072583573&t=29) 一些机场图标
+
 - [The Magic@twoz](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%22https://raw.githubusercontent.com/Twoandz9/TheMagic-Icons/main/TheRaw.json%22%5D)
 - [EDC Airport Icon@ErdongChan](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%22https://raw.githubusercontent.com/erdongchanyo/icon/main/edc-airport-icon-gallery.json%22%5D)
 
 ## reference
+
 - [图标集 - Lᴜᴄʏ's Tool](https://wiki.repcz.link/quantumultx/icon/#1151)
 - [qx.atlucky.me/zi-ding-yi-tu-biao](https://qx.atlucky.me/shi-yong-fang-fa/zi-ding-yi-tu-biao)

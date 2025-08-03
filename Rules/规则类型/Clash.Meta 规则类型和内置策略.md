@@ -1,11 +1,11 @@
 ---
-modified by: XiaoE
-date: 2025-01-17 15:18
-updated: 2025-05-02 10:31
+Created date: 2025-02-07 00:41
+Modified date: 2025-08-03 22:39
 ---
 # Clash.Meta 规则类型和内置策略
 
 ## 使用规则
+
 ```
 rules:
   - 规则类型,字段,规则策略
@@ -17,7 +17,7 @@ rules:
 ### 规则集
 
 **RULE-SET**
-- 引用规则集合，需配置[rule-providers](https://wiki.metacubex.one/config/rule-providers/)
+- 引用规则集合，需配置 [rule-providers](https://wiki.metacubex.one/config/rule-providers/)
 
 ### 域名规则
 
@@ -26,6 +26,7 @@ rules:
 
 **DOMAIN-SUFFIX**
 - 匹配域名后缀
+
 ```
 rules:
   - DOMAIN-SUFFIX,google.com,DIRECT # 匹配 www.google.com/mail.google.com 和google.com,但不匹配 content-google.com.
@@ -39,6 +40,7 @@ rules:
 
 **GEOSITE**
 - 匹配 Geosite 内的域名，部分内容参考 v2fly/domain-list-community
+
 ```
 rules:
   - GEOSITE,category-ads-all,REJECT
@@ -46,10 +48,10 @@ rules:
   - GEOSITE,geolocation-!cn,PROXY
 ```
 
-### IP规则
+### IP 规则
 
 **IP-CIDR & IP-CIDR6**
-- 匹配 IP 地址范围，IP-CIDR和IP-CIDR6效果是一样的，IP-CIDR6只是一个别名
+- 匹配 IP 地址范围，IP-CIDR 和 IP-CIDR6 效果是一样的，IP-CIDR6 只是一个别名
 
 **IP-SUFFIX** 
 - 匹配 IP 后缀范围
@@ -59,6 +61,7 @@ rules:
 
 **GEOIP** 
 - 匹配 IP 所属国家代码
+
 ```
 rules:
   - GEOIP,telegram,PROXY,no-resolve
@@ -98,10 +101,10 @@ rules:
 - 使用进程路径正则表达式匹配
 
 **PROCESS-NAME** 
-- 使用进程匹配，在Android平台可以匹配包名
+- 使用进程匹配，在 Android 平台可以匹配包名
 
 **PROCESS-NAME-REGEX** 
-- 使用进程名称正则表达式匹配，在Android平台可以匹配包名
+- 使用进程名称正则表达式匹配，在 Android 平台可以匹配包名
 
 ### 其他规则
 
@@ -148,4 +151,5 @@ rules:
 - 将 `目标IP` 匹配转为 `来源IP` 匹配
 
 ## reference
+
 - [路由规则 - 虚空终端 Docs](https://wiki.metacubex.one/config/rules/#domain-regex)

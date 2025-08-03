@@ -1,10 +1,10 @@
 ---
-modified by: XiaoE
-date: 2025-02-07 00:41
-updated: 2025-04-20 10:13
+Created date: 2025-02-07 00:41
+Modified date: 2025-08-03 22:46
 ---
 # Surge 扩展资源整理
-- 在Surge中：script-update-interval=-1为禁用脚本更新
+
+- 在 Surge 中：script-update-interval=-1 为禁用脚本更新
 
 ## 广告拦截
 
@@ -16,7 +16,7 @@ updated: 2025-04-20 10:13
 
 ## reference
 
-| 类型  | 项目名称+（作者）                                                                           |
+| 类型  | 项目名称 +（作者）                                                                           |
 | --- | ----------------------------------------------------------------------------------- |
 | 综合  | [DualSubs](https://github.com/DualSubs)                                             |
 | ^^  | [Functional-Store-Hub - I-am-R-E](https://github.com/I-am-R-E/Functional-Store-Hub) |

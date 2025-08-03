@@ -1,15 +1,12 @@
 ---
-modified by: XiaoE
-date: 2025-01-26 16:35
-updated: 2025-04-20 10:06
 Created date: 2025-02-07 00:41
-Modified date: 2025-05-11 12:47
+Modified date: 2025-08-03 22:46
 ---
-# Quantumult_X  扩展资源整理
+# Quantumult_X 扩展资源整理
 
 ## reference
 
-| 类型  | 项目名称+（作者）                                                                           |
+| 类型  | 项目名称 +（作者）                                                                           |
 | --- | ----------------------------------------------------------------------------------- |
 | 综合  | [ddgksf2013](https://github.com/ddgksf2013/ddgksf2013)                              |
 | 综合  | [Functional-Store-Hub - I-am-R-E](https://github.com/I-am-R-E/Functional-Store-Hub) |

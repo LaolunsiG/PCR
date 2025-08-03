@@ -1,11 +1,9 @@
 ---
-modified by: XiaoE
-date: 2025-01-17 15:18
-updated: 2025-05-02 10:30
 Created date: 2025-02-07 00:41
-Modified date: 2025-05-11 12:25
+Modified date: 2025-08-03 22:43
 ---
 # Rules
+
 - 各种代理软件适用规则，不同软件之间大同小异
 
 ## [规则类型](https://github.com/LaolunsiG/PCR/tree/main/Rules/%E8%A7%84%E5%88%99%E7%B1%BB%E5%9E%8B)

@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-07-27 22:48
+Modified date: 2025-08-03 22:40
 ---
 # Loon 规则类型和内置策略
 
@@ -10,12 +10,14 @@ Modified date: 2025-07-27 22:48
 
 **RULE-SET**
 - 匹配规则集内容。规则集的内容需包含规则类型。（兼容仅包含 IP 地址且不带规则类型的规则集）
+
 ```
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list
 ```
 
 **DOMAIN-SET**
 - 匹配域名集内容。域名集的内容不包含规则类型。
+
 ```
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple_Domain.list
 ```
@@ -24,18 +26,21 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shado
 
 **DOMAIN**
 - 匹配整个域名
+
 ```
 DOMAIN,google.com,proxy
 ```
 
 **DOMAIN-SUFFIX**
 - 匹配域名后缀，例如 `apple.com` 可以匹配 `icloud.apple.com`，`www.apple.com`，但是不能够匹配 `app-apple.com`
+
 ```
 DOMAIN-SUFFIX,apple.com,proxy
 ```
 
 **DOMAIN-KEYWORD**
 - 域名关键词匹配
+
 ```
 DOMAIN-KEYWORD,apple,proxy
 ```
@@ -45,23 +50,27 @@ DOMAIN-KEYWORD,apple,proxy
 > no-resolve 可选: 当设置 no-resolve 后表示该规则只会对目标地址类型是 IP 类型的生效，域名类型的目标地址不会进行 dns 解析后再去匹配这个规则，为了防止域名类的目标地址做无效的 DNS 请求，请在给纯 IP 类型的域名制定的规则中加上 no-resolve。
 
 **IPV4**
+
 ```
 IP-CIDR,118.89.204.198/32,no-resolve
 ```
 
 **IPV6**
+
 ```
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128
 ```
 
 **GEOIP**
 - 根据 mmdb 查询的 IP 国家地区进行匹配
+
 ```
 geoip,cn,DIRECT
 ```
 
 **IP-ASN**
 - 根据 IP 服务商进行匹配
+
 ```
 IP-ASN,4134,DIRECT,no-resolve
 ```
@@ -72,12 +81,14 @@ IP-ASN,4134,DIRECT,no-resolve
 
 **URL-REGEX**
 - 根据提供的正则表达式对请求的 url 进行匹配
+
 ```
 URL-REGEX,^http://google\.com,PROXY
 ```
 
 **USER-AGENT**
 - 根据请求 header 中的 user-agent 进行匹配，支持通配符
+
 ```
 USER-AGENT,Apple*,DIRECT
 ```
@@ -90,6 +101,7 @@ USER-AGENT,Apple*,DIRECT
 > 使用>, <, <=, >= 表示一个无穷区间，如 `DEST-PORT,>=443,DIRECT`
 
 **SRC-PORT**
+
 ```
 SRC-PORT,443,DIRECT
 SRC-PORT,80-443,DIRECT
@@ -97,6 +109,7 @@ SRC-PORT,>=443,DIRECT
 ```
 
 **DEST-PORT**
+
 ```
 DEST-PORT,443,DIRECT
 DEST-PORT,80-443,DIRECT
@@ -108,6 +121,7 @@ DEST-PORT,>=443,DIRECT
 > 根据请求的协议类型进行匹配（3.1.7+），目前支持 `HTTP/HTTPS/TCP/QUIC/STUN/UDP`
 
 **PROTOCOL**
+
 ```
 PROTOCOL,STUN,REJECT
 ```
@@ -119,6 +133,7 @@ PROTOCOL,STUN,REJECT
 
 **AND**
 - 多个子规则同时满足时才会匹配
+
 ```
 AND,((子规则),(子规则)),PolicyName
 AND,((DOMAIN-SUFFIX,axample),(DEST-PORT,443),(GEOIP,CN)),DIRECT
@@ -126,6 +141,7 @@ AND,((DOMAIN-SUFFIX,axample),(DEST-PORT,443),(GEOIP,CN)),DIRECT
 
 **OR**
 - 子规则满足一个时匹配
+
 ```
 OR,((子规则),(子规则)),PolicyName
 OR,((DOMAIN-SUFFIX,axample),(DEST-PORT,443),(GEOIP,CN,no-resolve)),DIRECT
@@ -133,6 +149,7 @@ OR,((DOMAIN-SUFFIX,axample),(DEST-PORT,443),(GEOIP,CN,no-resolve)),DIRECT
 
 **NOT**
 - 子规则不满足时匹配，只有有一个子规则
+
 ```
 NOT,((子规则)),PolicyName
 NOT,((AND,((DOMAIN-SUFFIX,axample),(DEST-PORT,443),(GEOIP,CN)))),DIRECT
@@ -141,6 +158,7 @@ NOT,((AND,((DOMAIN-SUFFIX,axample),(DEST-PORT,443),(GEOIP,CN)))),DIRECT
 ### Final
 
 - Final 表示最后、兜底，即在没有匹配到配置的规则后，使用 Final 指定的策略
+
 ```
 final,DIRECT
 ```

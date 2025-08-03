@@ -1,18 +1,19 @@
 ---
-modified by: XiaoE
-date: 2025-01-17 15:18
-updated: 2025-01-27 00:06
+Created date: 2025-02-07 00:41
+Modified date: 2025-08-03 22:43
 ---
-# GlobalGame
+# GameGlobal
 
 ## 使用规则
 
 ### classical
+
 ```
 https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Shadowrocket/GameGlobal/GameGlobal-Classical.list
 ```
 
 ## 规则来源
+
 - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PlayStation/PlayStation.list
 - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list
 - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sony/Sony.list

@@ -1,13 +1,13 @@
 ---
-modified by: XiaoE
-date: 2025-01-17 18:34
-updated: 2025-01-27 00:06
+Created date: 2025-02-07 00:41
+Modified date: 2025-08-03 22:42
 ---
 # CDN
 
-## 规则使用
+## 使用规则
 
 ### classical
+
 ```yaml
 https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Shadowrocket/CDN/CDN-Classical.list
 ```
