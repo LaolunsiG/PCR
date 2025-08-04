@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-05-04 11:07
+Modified date: 2025-08-04 09:30
 ---
 # Shadowrocket 配置教程和配置模板
 
@@ -14,6 +14,3 @@ Modified date: 2025-05-04 11:07
 | 主题配置    | 第三方  | LOWERTOP | [Shadowrocket-First](https://github.com/LOWERTOP/Shadowrocket-First)                                                                          |
 
 ## [配置模板](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Shadowrocket)
-
-
-

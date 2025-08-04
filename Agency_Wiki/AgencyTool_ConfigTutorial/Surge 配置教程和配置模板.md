@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-05-04 11:09
+Modified date: 2025-08-04 09:30
 ---
 # Surge 配置教程和配置模板
 
@@ -22,7 +22,7 @@ Modified date: 2025-05-04 11:09
 | 作者/项目 | 配置链接                                                                                                                                 |
 | ----- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | XiaoE | [Surfboard-stable.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Surfboard/Surfboard-stable.conf) |
-| ^^    | [Surfboard-test.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Surfboard/Surfboard-test.conf)     |
+| XiaoE | [Surfboard-test.conf](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Surfboard/Surfboard-test.conf)     |
 
 **参考配置**
 

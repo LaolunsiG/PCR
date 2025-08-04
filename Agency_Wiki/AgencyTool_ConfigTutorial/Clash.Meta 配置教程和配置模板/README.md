@@ -1,6 +1,6 @@
 ---
 Created date: 2025-03-14 17:39
-Modified date: 2025-05-04 11:07
+Modified date: 2025-08-04 09:30
 ---
 # Clash.Meta 配置教程和配置模板
 
@@ -21,7 +21,7 @@ Modified date: 2025-05-04 11:07
 | 作者/来源 | 配置链接                                                                                                                                    |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | XiaoE | [Clash.Meta-stable.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash.Meta/Clash.Meta-stable.yaml) |
-| ^^    | [Clash.Meta-test.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash.Meta/Clash.Meta-test.yaml)     |
+| XiaoE | [Clash.Meta-test.yaml](https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash.Meta/Clash.Meta-test.yaml)     |
 
 **参考配置**
 
