@@ -1,6 +1,6 @@
 ---
 Created date: 2025-03-26 21:05
-Modified date: 2025-08-03 22:40
+Modified date: 2025-08-07 16:42
 ---
 English
 
@@ -9,54 +9,6 @@ English
 - Clash 因不再更新，不支持新规则和新的加密，所以创建此自用存储库。
 - 本存储库会将一些规则合在一起，以便于使用。
 - [Clash.Meta](https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta) 可用于旧版 Clash 内核的 Clash for Android(3.0.3) and Clash for Windows。
-
-<details> 
-<summary> 更新日志 </summary>
-
-> 只保留 10 次记录
-
-### 2025-03-29
-
-- 修改了笔记的部分内容。
-
-### 2025-01-25
-
-- 更新了 clash，clash.meta，surge，loon 和 qx 的 [配置文件](https://github.com/LaolunsiG/PCR/tree/main/Config_File)，优化了部分配置，修复部分错误配置
-- 笔记呈现优化，代理配置教程逻辑优化，部分笔记增加了参考文章
-
-### 2025-01-17
-
-- 继续优化笔记呈现
-- 准备优化修改部分代理工具的配置文件
-- 准备尝试 sing-box
-
-### 2025-01-02
-
-- 删去了不必要规则和优化了部分笔记的呈现。
-
-### 2025-01-01
-
-- 决定修改规则资源和部分笔记的呈现，之后再修改优化配置文件。
-
-### 2024-11-25
-
-- loon 配置文件节点筛选错误修复
-
-### 2024-11-24
-
-- 优化了多个页面的可读性，并修复了配置的部分错误。
-- 修改了 shadowrocket 的配置文件，主要去除了不必要的配置。
-
-### 2024-11-12
-
-- 修复 [loon 配置文件](https://github.com/LaolunsiG/PCR/blob/main/Config_File/Loon/XiaoE_Loon.conf) 的 DNS 服务，配置文件整体修改，去除了不必要的代码解释。
-
-</details>
-
-<details> 
-<summary> 未来规划 </summary>
-
-</details>
 
 ## 不同代理工具的配置文件及其教程
 
@@ -77,16 +29,14 @@ English
 
 ## 代理规则分类
 
-### [geodata](https://github.com/LaolunsiG/PCR/blob/main/Rules/GEODATA.md)
-
-### [ruleset](https://github.com/LaolunsiG/PCR/tree/main/Rules)
-
-| 内核名称             | 链接                                                            |
-| ---------------- | :------------------------------------------------------------ |
-| Clash            | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash        |
-| Clash.Meta/Stash | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta   |
-| Quantumult_X     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Quantumult_X |
-| Shadowrocket     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Shadowrocket |
+| 内核名称             | 链接                                                                     |
+| ---------------- | :--------------------------------------------------------------------- |
+| all              | [ruleset](https://github.com/LaolunsiG/PCR/tree/main/Rules)            |
+| all              | [geodata](https://github.com/LaolunsiG/PCR/blob/main/Rules/GEODATA.md) |
+| Clash            | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash                 |
+| Clash.Meta/Stash | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta            |
+| Quantumult_X     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Quantumult_X          |
+| Shadowrocket     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Shadowrocket          |
 
 ## 免责申明
 

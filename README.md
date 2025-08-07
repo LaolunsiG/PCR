@@ -1,6 +1,6 @@
 ---
 Created date: 2025-03-26 21:05
-Modified date: 2025-08-03 22:40
+Modified date: 2025-08-07 16:41
 ---
 [中文文档](https://github.com/LaolunsiG/PCR/blob/main/README_CN.md)
 
@@ -9,24 +9,6 @@ Modified date: 2025-08-03 22:40
 - Clash is no longer updated and does not support new rules and encryption, so this self use repository is created.
 - This repository will consolidate some rules together for ease of use.
 - [Clash.Meta](https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta) can be used for Clash for Android (3.0.3) and Clash for Windows with older Clash kernels.
-
-<details> 
-<summary> Update Log </summary>
-
-> Only keep 10 records
-
-### 2025-03-14
-
-- Added machine translated English
-
-
-</details>
-
-<details> 
-
-<summary> Future Plans </summary>
-
-</details>
 
 ## Configuration files and tutorials for different proxy tools
 
@@ -47,16 +29,14 @@ Modified date: 2025-08-03 22:40
 
 ## Classification of proxy rules
 
-### [geodata](https://github.com/LaolunsiG/PCR/blob/main/Rules/GEODATA.md)
-
-### [ruleset](https://github.com/LaolunsiG/PCR/tree/main/Rules)
-
-| kernel              | rule                                                            |
-| ---------------- | :------------------------------------------------------------ |
-| Clash            | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash        |
-| Clash.Meta/Stash | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta   |
-| Quantumult_X     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Quantumult_X |
-| Shadowrocket     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Shadowrocket |
+| kernel           | rule                                                                   |
+| ---------------- | :--------------------------------------------------------------------- |
+| all              | [ruleset](https://github.com/LaolunsiG/PCR/tree/main/Rules)            |
+| all              | [geodata](https://github.com/LaolunsiG/PCR/blob/main/Rules/GEODATA.md) |
+| Clash            | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash                 |
+| Clash.Meta/Stash | https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta            |
+| Quantumult_X     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Quantumult_X          |
+| Shadowrocket     | https://github.com/LaolunsiG/PCR/tree/main/Rules/Shadowrocket          |
 
 ## Disclaimer
 
