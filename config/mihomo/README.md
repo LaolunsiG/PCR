@@ -7,11 +7,11 @@ Modified date: 2025-08-07 16:54
 - 配置的是 mihomo 内核, 需要自己配置订阅链接。
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash.Meta/Clash.Meta-stable.yaml
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/mihomo/mihomo-stable.yaml
 ```
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash.Meta/Clash.Meta-test.yaml
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/mihomo/mihomo-test.yaml
 ```
 
 ## reference

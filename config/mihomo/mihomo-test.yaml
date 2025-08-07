@@ -1,3 +1,98 @@
+# name: mihomo-test
+# 参考的配置
+# https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml
+# https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-ClashVerge.yaml
+# https://github.com/Moli-X/Resources/raw/main/Clash/Clash.yml
+# https://github.com/luestr/ProxyResource/blob/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee.yaml
+# updata：20250807
+# updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/config/mihomo/Clash.Meta-test.yaml
+# repo: https://github.com/LaolunsiG/PCR/tree/main/config/mihomo
+# 图标备用: 📮✉️📪📬💫💬💥🔨🥼🚫🔰🙈🍎🎬📺🎱🍐🐝🦁💡🌵🐯🎸💻📽🌏🕹📡🦑🌟🐷🦒🐳🚦📵🎧💊🔓🚦🚥🐼⛔️🈲🌐🎯🖲️🐦🔞🎵📱🚀💳♻️🙈🍱🔂📦🔀⏱
+
+
+# -------------------------------------
+# 出站配置
+# -------------------------------------
+# 代理集-锚点配置
+NodeParam: &NodeParam {type: http, interval: 43200, health-check: {enable: true, lazy: false, url: 'http://www.google.com/generate_204', timeout: 3000, interval: 3600}, exclude-filter: "CN"}
+# 出站-本地节点
+proxies: null
+
+# 出站-代理集
+proxy-providers:
+
+  sub1:
+    url: "你的机场订阅链接"
+    <<: *NodeParam                 # 使用上述锚点配置
+    path: ./proxies/airport1.yaml
+    override:
+      additional-prefix: "[sub1]" # 为订阅节点添加机场名称前缀
+  
+  # sub2:
+  #   url: ""
+  #   <<: *NodeParam
+  #   path: ./proxies/airport2.yaml
+  #   override:
+  #     additional-prefix: "[sub2]"
+  
+  # sub3:
+  #   url: ""
+  #   <<: *NodeParam
+  #   path: ./proxies/airport3.yaml
+  #   override:
+  #     additional-prefix: "[sub3]"
+  
+  # sub4:
+  #   url: ""
+  #   <<: *NodeParam
+  #   path: ./proxies/airport4.yaml
+  #   override:
+  #     additional-prefix: "[sub4]"
+  
+  # sub5:
+  #   url: ""
+  #   <<: *NodeParam
+  #   path: ./proxies/airport5.yaml
+  #   override:
+  #     additional-prefix: "[sub5]"
+  
+  # sub6:
+  #   url: ""
+  #   <<: *NodeParam
+  #   path: ./proxies/airport6.yaml
+  #   override:
+  #     additional-prefix: "[sub6]"
+  
+  # sub7:
+  #   url: ""
+  #   <<: *NodeParam
+  #   path: ./proxies/airport7.yaml
+  #   override:
+  #     additional-prefix: "[sub7]"
+  
+  # sub8:
+  #   url: ""
+  #   <<: *NodeParam
+  #   path: ./proxies/airport8.yaml
+  #   override:
+  #     additional-prefix: "[sub8]"
+  
+  # sub9:
+  #    url: ""
+  #   <<: *NodeParam
+  #   path: ./proxies/airport9.yaml
+  #   override:
+  #     additional-prefix: "[sub9]"
+  
+  # sub10:
+  #   url: ""
+  #   <<: *NodeParam
+  #   path: ./proxies/airport10.yaml
+  #   override:
+  #     additional-prefix: "[sub10]"
+
+
+
 # -------------------------------------
 # 全局配置
 # -------------------------------------
@@ -88,7 +183,7 @@ dns:
   enable: true          # 关闭将使用系统 DNS
   prefer-h3: false      # 是否开启 DoH 支持 HTTP/3，将并发尝试
   listen: 0.0.0.0:1053  # DNS 服务监听，仅支持 udp
-  ipv6: true            # 是否解析 IPV6, 如为 false, 则回应 AAAA 的空解析
+  ipv6: false           # 是否解析 IPV6, 如为 false, 则回应 AAAA 的空解析
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   # fakeip 过滤，默认黑名单，即以下地址不会下发 fakeip 映射用于连接，回到 redir-host 模式。
@@ -96,57 +191,14 @@ dns:
   # ----------------DNS 服务配置--------------------
   # 默认 DNS, 用于解析 DNS 服务器 的域名，必须为 IP, 可为加密 DNS
   # 119.29.29.29, 223.5.5.5 , 8.8.8.8, 8.8.4.4
-  default-nameserver: 
-    - 223.5.5.5
-    - 119.29.29.29
-    - 1.1.1.1
-    - system
+  default-nameserver: [223.5.5.5, 119.29.29.29, 1.1.1.1, system]
   # 专用于节点域名解析的 DNS 服务器，非必要配置项，因为大部分的代理服务器都是 IP 地址
-  # https://1.12.12.12/dns-query, https://1.1.1.1/dns-query, https://1.1.1.1/dns-query, https://dns.google/dns-query
-  # proxy-server-nameserver:
-  #   - https://dns.alidns.com/dns-query              # 阿里 DNS
-  #   - https:/doh.pub//dns-query                     # 腾讯 DNS
-  #   - https://dns.cloudflare.com/dns-query#h3=true  # Cloudflare
-  # 用于 direct 出口域名解析的 DNS 服务器
-  # system, '1.2.4.8', '223.5.5.5', '119.29.29.29'
-  # direct-nameserver: [system, '1.2.4.8', '223.5.5.5', '119.29.29.29']
-  # DNS 分流，指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询。
-  nameserver-policy: 
-    # 国内分流
-    #'geosite:cn': ['1.2.4.8', 'system']
-    #'rule-set:CN1,CN2': [system, '1.2.4.8', '223.5.5.5', '119.29.29.29']
-    # DNS 污染
-    'rule-set:GFWLite-DNS':
-       - https://dns.google/dns-query                 # Google
-       - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
-       - https://doh.opendns.com/dns-query            # OpenDNS
-    # CF 优选域名和反代域名
-    #'rule-set:CN1,CN2': [system, '223.5.5.5', '119.29.29.29']
+  proxy-server-nameserver:
+    - 'https://dns.alidns.com/dns-query'      # 阿里 DNS
+    - 'https:/doh.pub//dns-query'             # 腾讯 DNS
+    - 'https://dns.cloudflare.com/dns-query'  # Cloudflare
   # 默认的域名解析服务器，解析代理服务器的 IP 地址；匹配直连策略或遇到 IP 规则时会进行本地（直连） DNS 解析，如不配置 fallback/proxy-server-nameserver , 则所有域名都由 nameserver 解析。
-  # 'https://1.1.1.1/dns-query', https://doh.onedns.net/dns-query
-  nameserver: [8.8.8.8, 223.5.5.5, 119.29.29.29]
-    # - https://dns.google/dns-query                 # Google
-    # - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
-    # - https://doh.onedns.net/dns-query
-  # 后备域名解析服务器，一般情况下使用境外 DNS, 保证结果可信。
-  # 当 `fallback` 存在时, DNS 服务器将向此部分中的服务器与 nameservers 中的服务器发送并发请求。
-  # 配置 fallback 后默认启用 fallback-filter，geoip-code 为 cn
-  # fallback: [8.8.8.8, 1.1.1.1]
-  #   # - https://dns.google/dns-query                 # Google
-  #   # - https://dns.cloudflare.com/dns-query#h3=true # Cloudflare
-  #   # - https://doh.opendns.com/dns-query            # OpenDNS
-  # #后备域名解析服务器筛选，满足条件的将使用 fallback 结果或只使用 fallback 解析，这是对抗 DNS 污染攻击的一种措施。
-  # fallback-filter:
-  #   geoip: true      # 是否启用 geoip 检测
-  #   # 除了 geoip-code 配置的国家 IP, 其他的 IP 结果会被视为污染，将采用 fallback 结果。
-  #   geoip-code: CN
-  #   # 这些网段的结果会被视为污染，nameserver 解析出这些结果时将会采用 fallback 的解析结果。
-  #   ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32]
-  #   # geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 fallback 解析，不去使用 nameserver.
-  #   # geosite:
-  #   #   - gfw
-  #   # 这些域名被视为已污染，匹配到这些域名，会直接使用 fallback 解析，不去使用 nameserver。
-  #   # domain:
+  nameserver: [system, 223.5.5.5, 119.29.29.29, 1.2.3.4]
 
 
 # -------------------------------------
@@ -178,84 +230,106 @@ FilterUS: &FilterUS "^(?=.*(🇺🇸|美|波特兰|达拉斯|俄勒冈|凤凰城
 
 # 地区策略组专用锚点
 ## 锚点 - 时延优选参数 [每 30 秒一次惰性健康检查，容差 20ms，时延超过 2.5 秒判定为失败，失败 3 次则自动触发健康检查]
-UrlTest: &urltest {type: url-test, tolerance: 50, interval: 180, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all: true}
+UrlTest: &urltest {type: url-test, tolerance: 50, interval: 60, url: 'https://www.google.com/blank.html', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all: true}
 ## 锚点 - 故障转移参数 [每 30 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-FallBack: &fallback {type: fallback, interval: 180, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all: true}
+FallBack: &fallback {type: fallback, interval: 60, url: 'https://www.google.com/blank.html', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all: true}
 ## 锚点 - 负载均衡参数 [每 30 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-LoadBalance: &loadbalance {type: load-balance, strategy: consistent-hashing, interval: 180, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all: true}
+LoadBalance: &loadbalance {type: load-balance, strategy: consistent-hashing, interval: 60, url: 'https://www.google.com/blank.html', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all: true}
 ## 锚点 - 手动选择参数 [每 30 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-Select: &select {type: select, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3}
 
 # 节点策略组专用锚点
-Select1: &select1 {type: select, interval: 360, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all: true}
-UrlTest1: &urltest1 {type: url-test, tolerance: 50, interval: 180, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false, include-all: true}
-LoadBalance1: &loadbalance1 {type: load-balance, strategy: consistent-hashing, interval: 180, url: 'http://www.google.com/generate_204', timeout: 2500, max-failed-times: 3, disable-udp: false, lazy: true, hidden: false, include-all: true}
+UrlTest1: &urltest1 {type: url-test, tolerance: 50, interval: 60, url: 'https://www.google.com/blank.html', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
+LoadBalance1: &loadbalance1 {type: load-balance, strategy: consistent-hashing, interval: 60, url: 'https://www.google.com/blank.html', timeout: 2500, max-failed-times: 3, disable-udp: false, lazy: true, hidden: true}
 
 # 功能策略组专用锚点
-Select2: &select2 {type: select, interval: 360, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
-UrlTest2: &urltest2 {type: url-test, tolerance: 50, interval: 180, url: 'http://www.google.com/generate_204', timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
-LoadBalance2: &loadbalance2 {type: load-balance, strategy: consistent-hashing, interval: 180, url: 'http://www.google.com/generate_204', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
+Select2: &select2 {type: select, interval: 60, url: 'https://www.google.com/blank.html', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
+UrlTest2: &urltest2 {type: url-test, tolerance: 50, interval: 60, url: 'https://www.google.com/blank.html', timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
+LoadBalance2: &loadbalance2 {type: load-balance, strategy: consistent-hashing, interval: 60, url: 'https://www.google.com/blank.html', disable-udp: false, timeout: 2500, max-failed-times: 3, lazy: true, hidden: false}
 
 # -------------------------------------
+# ⏱ All 延迟优选, ⏱ 节点延迟优选01, ⏱ 节点延迟优选02, ⏱ 节点延迟优选03, ⏱ 节点延迟优选04, ⏱ 节点延迟优选05, ⏱ 节点延迟优选06
+# 🎛 All 负载均衡, 🎛 节点负载均衡01, 🎛 节点负载均衡02, 🎛 节点负载均衡03, 🎛 节点负载均衡04, 🎛 节点负载均衡05, 🎛 节点负载均衡06
 proxy-groups:
   # ----------------节点选择策略组--------------------
-  # 兜底策略组
-  # 模块化选择
-  - {name: 🚀 Proxy, type: select, proxies: [🛫 节点延迟优选, 🛫 节点负载均衡, 🗺 地区选择, 🎯 Direct], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Rocket.png}
-  - {name: 🐟 漏网之鱼, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png} 
-  - {name: 🗺 地区选择, type: select, proxies: [🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States, 🎯 Direct], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Accommodation/Map.png}
-  # 节点测试
-  - {name: 🛫 节点延迟优选, <<: *urltest1, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png}
-  - {name: 🛫 节点负载均衡, <<: *loadbalance1, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png}
+    # 模块化选择
+  - {name: 🚀 Proxy, type: select, proxies: [🗺 地区选择, 🛫 节点延迟优选, 🛫 节点负载均衡, 🎯 Direct], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Rocket.png}
+  - {name: 🛫 节点延迟优选, <<: *select2, proxies: [⏱ All 延迟优选, ⏱ 节点延迟优选01, ⏱ 节点延迟优选02, ⏱ 节点延迟优选03, ⏱ 节点延迟优选04, ⏱ 节点延迟优选05, ⏱ 节点延迟优选06], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png}
+  - {name: 🛫 节点负载均衡, <<: *select2, proxies: [🎛 All 负载均衡, 🎛 节点负载均衡01, 🎛 节点负载均衡02, 🎛 节点负载均衡03, 🎛 节点负载均衡04, 🎛 节点负载均衡05, 🎛 节点负载均衡06], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png}
+  - {name: 🗺 地区选择, type: select, proxies: [🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Accommodation/Map.png}
+
+  # ----------------节点测试--------------------
+  ## 节点延迟优选
+  - {name: ⏱ All 延迟优选, <<: *urltest1, include-all: true, icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Auto_Speed.png}
+  - {name: ⏱ 节点延迟优选01, <<: *urltest1, use: [Sub01], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Auto_Speed.png}
+  - {name: ⏱ 节点延迟优选02, <<: *urltest1, use: [Sub02], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Auto_Speed.png}
+  - {name: ⏱ 节点延迟优选03, <<: *urltest1, use: [Sub03], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Auto_Speed.png}
+  - {name: ⏱ 节点延迟优选04, <<: *urltest1, use: [Sub04], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Auto_Speed.png}
+  - {name: ⏱ 节点延迟优选05, <<: *urltest1, use: [Sub05], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Auto_Speed.png}
+  - {name: ⏱ 节点延迟优选06, <<: *urltest1, use: [Sub06], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Auto_Speed.png}
+
+  ## 节点负载均衡
+  - {name: 🎛 All 负载均衡, <<: *loadbalance1, include-all: true, icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Available.png}
+  - {name: 🎛 节点负载均衡01, <<: *loadbalance1, use: [Sub01], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Available.png}
+  - {name: 🎛 节点负载均衡02, <<: *loadbalance1, use: [Sub02], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Available.png}
+  - {name: 🎛 节点负载均衡03, <<: *loadbalance1, use: [Sub03], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Available.png}
+  - {name: 🎛 节点负载均衡04, <<: *loadbalance1, use: [Sub04], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Available.png}
+  - {name: 🎛 节点负载均衡05, <<: *loadbalance1, use: [Sub05], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Available.png}
+  - {name: 🎛 节点负载均衡06, <<: *loadbalance1, use: [Sub06], icon: https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Universal/Available.png}
 
   # ----------------功能策略组--------------------
+  # 兜底策略组
+  - {name: 🐟 漏网之鱼, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png} 
+  
   # 服务平台
-  ## 机场服务
-  - {name: 🛫 Airport, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png}
-  ## 网络测试
-  ## 选择`🎯 Direct`为测试本地网络（运营商网络速度和 IPv6 支持情况），可选择其它节点用于测试机场节点速度和 IPv6 支持情况
-  - {name: 📈 NetworkTest, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png}
-  ## 直连软件
-  - {name: 🖥️ 直连软件, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Download.png}
-  ## 人工智能
-  - {name: 🤖 AI, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
+  - {name: ☁ Cloudflare, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png}
+  
+  ## 大型服务
   - {name: 🍎 AppleServe, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_1.png}
   - {name: 📢 GoogleServe, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png}
   - {name: Ⓜ️ MicrosoftServe, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
-  - {name: 💴 PayPal, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PayPal.png}
+  
+  ## 人工智能
+  - {name: 🤖 AI, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
+  
+  - {name: 💴 PayPal, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PayPal.png}
+  
   - {name: 🐱 Github, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
+  
+  ## 网络测试，选择`🎯 Direct`为测试本地网络（运营商网络速度和 IPv6 支持情况），可选择其它节点用于测试机场节点速度和 IPv6 支持情况
+  - {name: 📈 NetworkTest, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png}
+  
   # 社交通讯平台
   - {name: 🐦 Discord, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Discord.png} 
-  - {name: 📲 Telegram, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Telegram.png}
+   
   # 社交媒体平台
   - {name: 💬 Facebook, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Facebook.png} 
   - {name: 💬 Twitter, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Twitter.png}
   - {name: 🎵 TikTok, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/TikTok_2.png}
   - {name: 📹 YouTube, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
+  
   # 娱乐平台
   ## 插画平台
   - {name: 🖼️ Pixiv, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://raw.githubusercontent.com/LaolunsiG/PCR/main/Icons/xiaoe/pixiv01-500.png}
+  
   ## 游戏平台
-  - {name: 🎮 Steam, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png}
-  - {name: 🎮 GameDirect, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
-  - {name: 🎮 GameProxy, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
+  - {name: 🎮 GameGlobal, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png}
+
   ## 音乐平台
   - {name: 🎵 Spotify, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Spotify.png}
+  
   ## 影视
   - {name: 📽️ Disney+, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney.png}
   - {name: 🎞️ Max, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/HBO_Max.png}
   - {name: 🎥 Netflix, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png}
-  - {name: 🙈 GlobalMedia, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png}
-  # 国外代理
-  - {name: 🪜 Proxy, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
-  # 国内直连
-  - {name: 🔗 China, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
+  - {name: 🙈 MediaGlobal, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India, 🇭🇰 Hong Kong, 🇯🇵 Japan, 🇰🇷 Korea, 🇷🇺 Russia, 🇸🇬 Singapore, 🇨🇳 Taiwan, 🇦🇺 Australia, 🇬🇧 Britain, 🇫🇷 France, 🇩🇪 Germany, 🇳🇱 Netherlands, 🇨🇦 Canada, 🇺🇸 United States], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png}
+
   - {name: 🛑 Reject, type: select, proxies: [REJECT, REJECT-DROP], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Reject.png}
   - {name: 🎯 Direct, type: select, proxies: [DIRECT], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
  
   # ----------------国家或地区策略组--------------------
   ## Africa(非洲)
   - {name: 🇮🇳 India, <<: *urltest, filter: *FilterIN, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/India.png}
+  
   ## Asia(亚洲)
   - {name: 🇭🇰 Hong Kong, <<: *urltest, filter: *FilterHK, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/HK.png}
   - {name: 🇯🇵 Japan, <<: *urltest, filter: *FilterJP, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/JP.png}
@@ -263,16 +337,20 @@ proxy-groups:
   - {name: 🇷🇺 Russia, <<: *urltest, filter: *FilterRU, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/RU.png}
   - {name: 🇸🇬 Singapore, <<: *urltest, filter: *FilterSG, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/SG.png}
   - {name: 🇨🇳 Taiwan, <<: *urltest, filter: *FilterTW, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/TW.png}
+  
   ## Australia
   - {name: 🇦🇺 Australia, <<: *urltest, filter: *FilterAU, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/AU.png}
+  
   ## Europe(欧洲)
   - {name: 🇬🇧 Britain, <<: *urltest, filter: *FilterUK, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/UK.png}
   - {name: 🇫🇷 France, <<: *urltest, filter: *FilterFR, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/FR.png}
   - {name: 🇩🇪 Germany, <<: *urltest, filter: *FilterDE, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/DE.png}
   - {name: 🇳🇱 Netherlands, <<: *urltest, filter: *FilterNL, icon: https://raw.githubusercontent.com/lipis/flag-icons/main/flags/1x1/nl.svg}
+  
   ## North America(北美洲)
   - {name: 🇨🇦 Canada, <<: *urltest, filter: *FilterCA, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/CA.png}
   - {name: 🇺🇸 United States, <<: *urltest, filter: *FilterUS, icon: https://fastly.jsdelivr.net/gh//Orz-3/mini@master/Color/US.png}
+  
   ## South America(南美洲)
 
 
@@ -283,7 +361,7 @@ proxy-groups:
 rule-anchor:
     ip: &ip {type: http, behavior: ipcidr,interval: 86400, format: yaml}
     ip2: &ip2 {type: http, behavior: ipcidr,interval: 86400, format: mrs}
-    ip3: &ip3 {type: http, behavior: ipcidr,interval: 86400, format:text}
+    ip3: &ip3 {type: http, behavior: ipcidr,interval: 86400, format: text}
     domain: &domain {type: http, behavior: domain, interval: 86400, format: yaml}
     domain2: &domain2 {type: http, behavior: domain, interval: 86400, format: mrs}
     domain3: &domain3 {type: http, behavior: domain, interval: 86400, format: text}
@@ -301,12 +379,9 @@ rule-providers:
   
   # 外部控制
   ExternalControl:
-    type: http
-    behavior: classical
-    format: yaml
+    <<: *classical
     path: ./provider/ruleset/externalcontrol.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/ExternalControl/ExternalControl-Classical.yaml"
-    interval: 86400
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/rule/mihomo/ExternalControl/ExternalControl-Classical.yaml"
   
   # 本地网络
   Private:
@@ -318,19 +393,18 @@ rule-providers:
     <<: *ip2
     path: ./provider/ruleset/privateip.mrs
     url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/privateip.mrs"
-
+    
   # 服务平台
+  Cloudflare:
+    <<: *classical
+    path: ./provider/ruleset/cloudflare.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Cloudflare/Cloudflare_No_Resolve.yaml"
+  
   ## CDN 服务
   CDN:
     <<: *classical
     path: ./provider/ruleset/cdn.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/CDN/CDN-Classical.yaml"
-  
-  ## 机场服务
-  Airport:
-    <<: *classical
-    path: ./provider/ruleset/airport.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/Airport/Airport-Classical.yaml"
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/rule/mihomo/CDN/CDN-Classical.yaml"
   
   ## 直连软件
   Applications:
@@ -346,15 +420,15 @@ rule-providers:
   
   ## 国外
   ### 人工智能
+  AIGlobal:
+    <<: *domain2
+    path: ./provider/ruleset/aiglobal.yaml
+    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/ai.mrs"
+
   Gemini:
     <<: *classical
     path: ./provider/ruleset/gemini.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini_No_Resolve.yaml"
-  
-  AIGlobal:
-    <<: *classical
-    path: ./provider/ruleset/aiglobal.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/AIGlobal/AIGlobal-Classical.yaml"
 
   ### 苹果服务
   Apple:
@@ -409,12 +483,7 @@ rule-providers:
     <<: *classical
     path: ./provider/ruleset/facebook.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook_No_Resolve.yaml"
-  
-  TikTok:
-    <<: *domain2
-    path: ./provider/ruleset/tiktok.mrs
-    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/tiktok.mrs"
-  
+
   Twitter:
     <<: *classical
     path: ./provider/ruleset/twitter.yaml
@@ -439,16 +508,16 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml"
 
   ### 代理
-  Game:
+  GameGlobal1:
     <<: *classical
-    path: ./provider/ruleset/game.yaml
+    path: ./provider/ruleset/gameglobal1.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game_No_Resolve.yaml"
   
   ### 直连
-  GameDirect:
+  GameGlobal2:
     <<: *classical
-    path: ./provider/ruleset/gamedirect.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Rules/Clash.Meta/GameDirect/GameDirect-Classical.yaml"
+    path: ./provider/ruleset/gameglobal2.yaml
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/rule/mihomo/GameDirect/GameDirect-Classical.yaml"
 
   ## 音乐平台
   YouTubeMusic:
@@ -478,43 +547,48 @@ rule-providers:
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/netflix.mrs"
 
   ### 综合国外媒体
-  GlobalMedia:
-    <<: *classical
-    path: ./provider/ruleset/globalmedia.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical_No_Resolve.yaml"
+  MediaGlobal:
+    <<: *domain2
+    path: ./provider/ruleset/media.yaml
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/media.mrs"
+  MediaGlobalIP:
+    <<: *ip2
+    path: ./provider/ruleset/mediaip.yaml
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/mediaip.mrs"
 
   # 综合国外代理
   ## GFW
   GFWLite:
     <<: *classical
     path: ./provider/ruleset/gfwlite.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GFWLite/GFWLite-Classical.yaml"
-
-  GFWLite-DNS:
-    <<: *classical
-    path: ./provider/ruleset/gfwlite-dns.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GFWLite/GFWLite-DNS-Classical.yaml"
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/rule/mihomo/GFWLite/GFWLite-Classical.yaml"
 
   Proxy:
     <<: *domain2
     path: ./provider/ruleset/proxy.mrs
-    url: "https://raw.githubusercontent.com/xixu-me/rulesets-for-META/basic/proxy.mrs"
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/proxy.mrs"
+
+  TLD-Proxy:
+    <<: *domain2
+    path: ./provider/ruleset/tld-proxy.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/tld-proxy.mrs"
     
   # 综合国内直连
-  ChinaLite:
+  CNLite:
     <<: *classical
     path: ./provider/ruleset/chinalite.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/ChinaLite/ChinaLite-Classical.yaml"
+    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/rule/mihomo/ChinaLite/ChinaLite-Classical.yaml"
 
-  CN1:
-    <<: *classical
-    path: ./provider/ruleset/cn1.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical_No_Resolve.yaml"
-
-  CN2:
+  CN:
     <<: *domain2
-    path: ./provider/ruleset/cn2.mrs
-    url: "https://raw.githubusercontent.com/xixu-me/rulesets-for-META/basic/direct.mrs"
+    path: ./provider/ruleset/cn.yaml
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/cn.mrs"
+
+  CNIP:
+    <<: *ip2
+    path: ./provider/ruleset/cnip.yaml
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/cnip.mrs"
+
 
 # -------------------------------------
 # 规则类型-规则-策略组
@@ -525,12 +599,11 @@ rules:
   - RULE-SET,Private,🎯 Direct
   - RULE-SET,Privateip,🎯 Direct,no-resolve
   # 服务平台
+  - RULE-SET,Cloudflare,☁ Cloudflare
   ## CDN 服务
   - RULE-SET,CDN,🎯 Direct
-  ## 机场服务
-  - RULE-SET,Airport,🛫 Airport
   ## 直连软件
-  - RULE-SET,Applications,🖥️ 直连软件
+  - RULE-SET,Applications,🎯 Direct
   ## 网络测试
   - RULE-SET,Networktest,📈 NetworkTest
   ## 人工智能
@@ -549,19 +622,17 @@ rules:
   - RULE-SET,Gitlab,🐱 Github
   # 社交通讯平台
   ## 国外
+  - RULE-SET,Telegram,🚀 Proxy
   - RULE-SET,Discord,🐦 Discord
   - RULE-SET,Facebook,💬 Facebook
-  - RULE-SET,Telegram,📲 Telegram
   - RULE-SET,Twitter,💬 Twitter
   # 娱乐平台
   ## 插画站
   - RULE-SET,Pixiv,🖼️ Pixiv
   ## 游戏平台
-  - RULE-SET,Steam,🎮 Steam
-  ### 代理
-  - RULE-SET,Game,🎮 GameProxy
-  ### 直连
-  - RULE-SET,GameDirect,🎮 GameDirect
+  - RULE-SET,Steam,🎮 GameGlobal
+  - RULE-SET,GameGlobal1,🎮 GameGlobal
+  - RULE-SET,GameGlobal2,🎮 GameGlobal
   ## 音乐平台
   - RULE-SET,Spotify,🎵 Spotify
   - RULE-SET,YouTubeMusic,📹 YouTube
@@ -569,16 +640,17 @@ rules:
   - RULE-SET,Disney,📽️ Disney+
   - RULE-SET,Netflix,🎥 Netflix
   - RULE-SET,Max,🎞️ Max
-  - RULE-SET,TikTok,🎵 TikTok
   - RULE-SET,YouTube,📹 YouTube
   ### 综合国外媒体
-  - RULE-SET,GlobalMedia,🙈 GlobalMedia
+  - RULE-SET,MediaGlobal,🙈 MediaGlobal
+  - RULE-SET,MediaGlobalIP,🙈 MediaGlobal,no-resolve
   # 综合国外代理
-  - RULE-SET,GFWLite,🪜 Proxy
-  - RULE-SET,Proxy,🪜 Proxy
+  - RULE-SET,GFWLite,🚀 Proxy
+  - RULE-SET,Proxy,🚀 Proxy
+  - RULE-SET,TLD-Proxy,🚀 Proxy
   # 综合国内直连
-  - RULE-SET,ChinaLite,🔗 China
-  - RULE-SET,CN1,🔗 China
-  - RULE-SET,CN2,🔗 China
+  - RULE-SET,CNLite,🎯 Direct
+  - RULE-SET,CN,🎯 Direct
+  - RULE-SET,CNIP,🎯 Direct,no-resolve
   # 兜底规则
   - MATCH,🐟 漏网之鱼
