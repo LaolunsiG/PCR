@@ -8,10 +8,7 @@
 # DOMAIN-KEYWORD
 
 payload:
-  - DOMAIN,mediafilez.forgecdn.net
-  - DOMAIN,mediafiles.forgecdn.net
-  - DOMAIN,edge.forgecdn.net
-  - DOMAIN,mediafiles.forgecdn.net
+  - DOMAIN-SUFFIX,forgecdn.net
   - DOMAIN-SUFFIX,modrinth.com
   - DOMAIN-SUFFIX,curseforge.com
   - DOMAIN-SUFFIX,fabricmc.net
