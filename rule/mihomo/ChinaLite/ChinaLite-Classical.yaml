@@ -8,10 +8,6 @@
 # DOMAIN-KEYWORD
 
 payload:
-  - DOMAIN-SUFFIX,forgecdn.net
-  - DOMAIN-SUFFIX,modrinth.com
-  - DOMAIN-SUFFIX,curseforge.com
-  - DOMAIN-SUFFIX,fabricmc.net
   # webstacknav
   - DOMAIN,webstacknav.xiaoe.x10.mx
   - DOMAIN,webstacknav.xiaoelaolunsi.ip-ddns.com
