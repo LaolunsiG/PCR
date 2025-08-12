@@ -8,11 +8,11 @@ Modified date: 2025-08-07 16:54
 - 如果需要自行修改配置文件的，请自己阅读官方文档，了解专用
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/main/Config_File/Loon/Loon-stable.conf
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/loon/loon-stable.conf
 ```
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/main/Config_File/Loon/Loon-test.conf
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/loon/loon-test.conf
 ```
 
 ## reference

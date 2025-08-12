@@ -7,11 +7,11 @@ Modified date: 2025-08-07 16:54
 - 配置的是 Clash_Premium 内核 (非开源已删库)，需要自己配置订阅链接。适合 CFA (Clash For Android) 使用。
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash/Clash-stable.yml
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/clash/clash-stable.yml
 ```
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Clash/Clash-test.yml)
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/clash/clash-test.yml
 ```
 
 ## reference

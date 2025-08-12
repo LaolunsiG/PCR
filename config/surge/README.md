@@ -11,7 +11,7 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/surge/surge-stable.c
 ```
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/surge/surge-test.conf
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/surge/Surge-test.conf
 ```
 
 ## reference
