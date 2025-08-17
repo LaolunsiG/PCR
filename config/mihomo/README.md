@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-07 16:54
+Modified date: 2025-08-17 12:23
 ---
 # Clash.Meta 配置模板
 
@@ -16,9 +16,9 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/mihomo/mihomo-test.y
 
 ## reference
 
-| 作者/来源     | 配置链接                                                                                                 |
-| --------- | ---------------------------------------------------------------------------------------------------- |
-| As-Lucky  | [Lucky-ClashVerge.yaml](https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-ClashVerge.yaml) |
-| MetaCubeX | [config.yaml](https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml)                        |
-| Moli-X    | [Clash.yml](https://github.com/Moli-X/Resources/raw/main/Clash/Clash.yml)                            |
-| lodepuly  | [Config](https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Clash/Config)                       |
+| 配置链接                                                                                                 | 作者        | 来源     |
+| ---------------------------------------------------------------------------------------------------- | --------- | ------ |
+| [Lucky-ClashVerge.yaml](https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-ClashVerge.yaml) | As-Lucky  | GitHub |
+| [config.yaml](https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml)                        | MetaCubeX | GitHub |
+| [Clash.yml](https://github.com/Moli-X/Resources/raw/main/Clash/Clash.yml)                            | Moli-X    | GitHub |
+| [META](https://github.com/xixu-me/META/blob/config/META.yaml)                                        | xixu-me   | GitHub |
