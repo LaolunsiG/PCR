@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-19 12:20
+Modified date: 2025-08-19 12:23
 ---
 # Clash.Meta 规则类型和内置策略
 
@@ -16,8 +16,8 @@ rules:
 
 ### 规则集
 
-**RULE-SET**
-- 引用规则集合，需配置 [rule-providers](https://wiki.metacubex.one/config/rule-providers/)
+- `RULE-SET`
+	- 引用规则集合，需配置 [rule-providers](https://wiki.metacubex.one/config/rule-providers/)
 
 ### 域名规则
 
@@ -58,17 +58,21 @@ rules:
 | 字段                   | 用途                                                   |
 | -------------------- | ---------------------------------------------------- |
 | `IP-CIDR & IP-CIDR6` | 匹配 IP 地址范围，IP-CIDR 和 IP-CIDR6 效果是一样的，IP-CIDR6 只是一个别名 |
+| `IP-SUFFIX`          | 匹配 IP 后缀范围                                           |
+| `IP-ASN`             | 匹配 IP 所属 ASN                                         |
+| `GEOIP`              | 匹配 IP 所属国家代码                                         |
+| `SRC-GEOIP`          | 匹配来源 IP 所属国家代码                                       |
+| `SRC-IP-ASN`         | 匹配来源 IP 所属 ASN                                       |
+| SRC-IP-CIDR          | 匹配来源 IP 地址范围                                         |
+| SRC-IP-SUFFIX        | 匹配来源 IP 后缀范围                                         |
 
 - `IP-CIDR & IP-CIDR6`
 
-**IP-SUFFIX** 
-- 匹配 IP 后缀范围
+- `IP-SUFFIX`
 
-**IP-ASN** 
-- 匹配 IP 所属 ASN
+- `IP-ASN`
 
-**GEOIP** 
-- 匹配 IP 所属国家代码
+- `GEOIP`
 
 ```
 rules:
@@ -77,17 +81,13 @@ rules:
   - GEOIP,cn,DIRECT
 ```
 
-**SRC-GEOIP** 
-- 匹配来源 IP 所属国家代码
+- `SRC-GEOIP`
 
-**SRC-IP-ASN** 
-- 匹配来源 IP 所属 ASN
+- `SRC-IP-ASN`
 
-**SRC-IP-CIDR** 
-- 匹配来源 IP 地址范围
+- `SRC-IP-CIDR`
 
-**SRC-IP-SUFFIX**
-- 匹配来源 IP 后缀范围
+- `SRC-IP-SUFFIX`
 
 ### 端口规则
 
