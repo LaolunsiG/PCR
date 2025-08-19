@@ -1,12 +1,12 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-03 22:46
+Modified date: 2025-08-19 12:37
 ---
 # Stash 扩展资源整理
 
 ## reference
 
-| 类型  | 项目名称 +（作者）                                                                           |
+| 类型  | 项目名称                                                                                |
 | --- | ----------------------------------------------------------------------------------- |
 | 综合  | [Functional-Store-Hub - I-am-R-E](https://github.com/I-am-R-E/Functional-Store-Hub) |
 | 综合  | [Rewrite - chxm1023](https://github.com/chxm1023/Rewrite)                           |
