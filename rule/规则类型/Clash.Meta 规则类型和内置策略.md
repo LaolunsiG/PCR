@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-03 22:39
+Modified date: 2025-08-19 12:20
 ---
 # Clash.Meta 规则类型和内置策略
 
@@ -21,25 +21,30 @@ rules:
 
 ### 域名规则
 
-**DOMAIN**
-- 匹配完整域名
+| 字段                       | 用途                                                 |
+| ------------------------ | -------------------------------------------------- |
+| `DOMAIN`                 | 匹配完整域名                                             |
+| `DOMAIN-SUFFIX`          | 匹配域名后缀                                             |
+| `DOMAIN-KEYWORD`         | 使用域名关键字匹配                                          |
+| `DOMAIN-REGEX/URL-REGEX` | 域名正则表达式匹配                                          |
+| `GEOSITE`                | 匹配 Geosite 内的域名，部分内容参考 v2fly/domain-list-community |
 
-**DOMAIN-SUFFIX**
-- 匹配域名后缀
+**示例**
+
+- `DOMAIN`
+- `DOMAIN-SUFFIX`
+> 匹配 www.google.com/mail.google.com 和 google.com,但不匹配 content-google.com.
 
 ```
 rules:
-  - DOMAIN-SUFFIX,google.com,DIRECT # 匹配 www.google.com/mail.google.com 和google.com,但不匹配 content-google.com.
+  - DOMAIN-SUFFIX,google.com,DIRECT
 ```
 
-**DOMAIN-KEYWORD**
-- 使用域名关键字匹配
+- `DOMAIN-KEYWORD`
 
-**DOMAIN-REGEX/URL-REGEX**
-- 域名正则表达式匹配
+- `DOMAIN-REGEX/URL-REGEX`
 
-**GEOSITE**
-- 匹配 Geosite 内的域名，部分内容参考 v2fly/domain-list-community
+- `GEOSITE`
 
 ```
 rules:
@@ -50,8 +55,11 @@ rules:
 
 ### IP 规则
 
-**IP-CIDR & IP-CIDR6**
-- 匹配 IP 地址范围，IP-CIDR 和 IP-CIDR6 效果是一样的，IP-CIDR6 只是一个别名
+| 字段                   | 用途                                                   |
+| -------------------- | ---------------------------------------------------- |
+| `IP-CIDR & IP-CIDR6` | 匹配 IP 地址范围，IP-CIDR 和 IP-CIDR6 效果是一样的，IP-CIDR6 只是一个别名 |
+
+- `IP-CIDR & IP-CIDR6`
 
 **IP-SUFFIX** 
 - 匹配 IP 后缀范围
