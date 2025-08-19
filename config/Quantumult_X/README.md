@@ -7,11 +7,11 @@ Modified date: 2025-08-07 16:54
 - 类 INI 语法，注意！在配置文件中，带 “;” 和 “#” 的都是注释符号，去掉前面的符号，该行才有效。
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Quantumult_X/Quantumult_X-stable.conf
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/quantumult_x/quantumult_x-stable.conf
 ```
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Quantumult_X/Quantumult_X-test.conf
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/quantumult_x/quantumult_x-test.conf
 ```
 
 ## reference

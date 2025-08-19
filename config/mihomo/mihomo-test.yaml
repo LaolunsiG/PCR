@@ -1,5 +1,5 @@
 # name: mihomo-test
-# updata：20250807
+# updata：20250819
 # updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/mihomo/mihomo-test.yaml
 # repo: https://github.com/LaolunsiG/PCR/tree/main/config/mihomo
 # 参考的配置
@@ -79,7 +79,7 @@ log-level: info         # 日志等级 silent/error/warning/info/debug。
 ipv6: true              # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录。
 # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程；strict(默认)由 Clash 判断是否开启；off 不匹配进程，推荐在路由器上使用此模式。
 find-process-mode: strict
-unified-delay: false    # 开启统一延迟时，会计算 RTT，以消除连接握手等带来的不同类型节点的延迟差异
+unified-delay: true     # 开启统一延迟时，会计算 RTT，以消除连接握手等带来的不同类型节点的延迟差异
 tcp-concurrent: true    # TCP 并发
 # 缓存，存储 select 选择记录，持久化 fake-ip
 profile: {store-selected: true, store-fake-ip: true}
@@ -121,7 +121,7 @@ tun:
   device: mihomo.xiaoe
   auto-route: true             # 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡。
   auto-detect-interface: true  # 自动选择流量出口接口，多出口网卡同时连接的设备建议手动指定出口网卡
-  dns-hijack: ['any:53']       # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
+  dns-hijack: ['any:53', "tcp://any:53"]       # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
   strict-route: true           # 防止地址泄漏，并使 DNS 劫持在 Android 上工作。
 
 
@@ -153,6 +153,15 @@ hosts:
   doh.opendns.com: 146.112.41.2
 
 # -------------------------------------
+# DNS 锚点配置
+dns-anchor:
+  doh-global: &doh-global
+      - 'https://dns.alidns.com/dns-query'      # 阿里 DNS
+      - 'https:/doh.pub//dns-query'             # 腾讯 DNS
+      - 'https://dns.cloudflare.com/dns-query'  # Cloudflare
+  direct: &direct [system, 223.5.5.5, 119.29.29.29, 1.2.3.4]
+  udp-global: &udp-global [1.1.1.1, 8.8.8.8, 8.8.4.4]
+
 dns:
   enable: true          # 关闭将使用系统 DNS
   prefer-h3: false      # 是否开启 DoH 支持 HTTP/3，将并发尝试
@@ -161,69 +170,74 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   # fakeip 过滤，默认黑名单，即以下地址不会下发 fakeip 映射用于连接，回到 redir-host 模式。
-  fake-ip-filter: ['rule-set:Fakeip-Filter,Private']
+  fake-ip-filter: ['rule-set:fakeip-filter,private,connectivity-check,cn']
   # ----------------DNS 服务配置--------------------
   # 默认 DNS, 用于解析 DNS 服务器 的域名，必须为 IP, 可为加密 DNS
-  # 119.29.29.29, 223.5.5.5 , 8.8.8.8, 8.8.4.4
   default-nameserver: [223.5.5.5, 119.29.29.29, 1.1.1.1, system]
   # 专用于节点域名解析的 DNS 服务器，非必要配置项，因为大部分的代理服务器都是 IP 地址
-  proxy-server-nameserver:
-    - 'https://dns.alidns.com/dns-query'      # 阿里 DNS
-    - 'https:/doh.pub//dns-query'             # 腾讯 DNS
-    - 'https://dns.cloudflare.com/dns-query'  # Cloudflare
+  proxy-server-nameserver: *doh-global
+  nameserver-policy:
+    "rule-set:cn,private": *direct
   # 默认的域名解析服务器，解析代理服务器的 IP 地址；匹配直连策略或遇到 IP 规则时会进行本地（直连） DNS 解析，如不配置 fallback/proxy-server-nameserver , 则所有域名都由 nameserver 解析。
-  nameserver: [1.1.1.1, 223.5.5.5, 119.29.29.29, 1.2.3.4]
+  nameserver: *doh-global
 
 
 # -------------------------------------
 # 策略组(代理组)
 # -------------------------------------
-# 地区节点筛选锚点配置
-## Africa
-FilterIN: &FilterIN "^(?=.*(🇮🇳|印|班加罗尔|孟买|Mumbai|IN|India))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
-## Asia
-FilterHK: &FilterHK "^(?=.*(🇭🇰|港|虚通|(?i)HK|Hong))(?!.*(回国|校园|游戏|教育|(?i)GAME|IPV6)).*$"
-FilterJP: &FilterJP "^(?=.*((?i) 🇯🇵|日|川日|东京|大阪|泉日|埼玉|JP|Japan))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
-FilterKR: &FilterKR "^(?=.*(🇰🇷|韩|韓|首尔|(?i)KR|Korea))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
-FilterRU: &FilterRU "^(?=.*(🇷🇺|俄|莫斯科|新西伯利亚|Новосиби́рская|Moscow|RU|Russia))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
-FilterSG: &FilterSG "^(?=.*(🇸🇬|新加坡|狮|(?i)SG|Singapore))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
-FilterTW: &FilterTW "^(?=.*(🇹🇼|台|(?i)TW|Tai))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
-## Australia
-FilterAU: &FilterAU "^(?=.*((?i)🇦🇺|澳大|AU|Australia))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
-## Europe
-FilterFR: &FilterFR "^(?=.*(🇫🇷|法|FR|France))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
-FilterIE: &FilterIE "^(?=.*(🇮🇪|爱尔兰|IRL|Ireland))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
-FilterDE: &FilterDE "^(?=.*(🇩🇪|德|(?i)DE|Germany))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
-FilterNL: &FilterNL "^(?=.*(🇳🇱|荷|NL|Holland|Netherlands))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
-FilterTR: &FilterTR "^(?=.*(🇹🇷|土耳其|(?i)TR|TUR|Turkey))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
-FilterUK: &FilterUK "^(?=.*(🇬🇧|英|伦敦|(?i)UK|United Kingdom|GB))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
-## North America
-FilterCA: &FilterCA "^(?=.*(🇨🇦|加拿大|CA|Canada))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
-FilterUS: &FilterUS "^(?=.*(🇺🇸|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(?i)US|United States))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
-FilterOT: &FilterOT "^(?=.*(🇬🇧|英|伦敦|(?i)UK|United Kingdom|GB))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇹🇷|土耳其|(?i)TR|TUR|Turkey))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇳🇱|荷|NL|Holland|Netherlands))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇩🇪|德|(?i)DE|Germany))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇮🇪|爱尔兰|IRL|Ireland))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇫🇷|法|FR|France))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*((?i)🇦🇺|澳大|AU|Australia))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇹🇼|台|(?i)TW|Tai))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇸🇬|新加坡|狮|(?i)SG|Singapore))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇷🇺|俄|莫斯科|新西伯利亚|Новосиби́рская|Moscow|RU|Russia))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇰🇷|韩|韓|首尔|(?i)KR|Korea))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*((?i) 🇯🇵|日|川日|东京|大阪|泉日|埼玉|JP|Japan))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇭🇰|港|虚通|(?i)HK|Hong))(?!.*(回国|校园|游戏|教育|(?i)GAME|IPV6)).*$`^(?=.*(🇮🇳|印|班加罗尔|孟买|Mumbai|IN|India))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇺🇸|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(?i)US|United States))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇨🇦|加拿大|CA|Canada))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+regular-anchor:
+  # 地区节点筛选锚点配置
+  ## Africa
+  FilterIN: &FilterIN "^(?=.*(🇮🇳|印|班加罗尔|孟买|Mumbai|IN|India))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+  ## Asia
+  FilterHK: &FilterHK "^(?=.*(🇭🇰|港|虚通|(?i)HK|Hong))(?!.*(回国|校园|游戏|教育|(?i)GAME|IPV6)).*$"
+  FilterJP: &FilterJP "^(?=.*((?i) 🇯🇵|日|川日|东京|大阪|泉日|埼玉|JP|Japan))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+  FilterKR: &FilterKR "^(?=.*(🇰🇷|韩|韓|首尔|(?i)KR|Korea))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+  FilterRU: &FilterRU "^(?=.*(🇷🇺|俄|莫斯科|新西伯利亚|Новосиби́рская|Moscow|RU|Russia))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+  FilterSG: &FilterSG "^(?=.*(🇸🇬|新加坡|狮|(?i)SG|Singapore))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+  FilterTW: &FilterTW "^(?=.*(🇹🇼|台|(?i)TW|Tai))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+  ## Australia
+  FilterAU: &FilterAU "^(?=.*((?i)🇦🇺|澳大|AU|Australia))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+  ## Europe
+  FilterFR: &FilterFR "^(?=.*(🇫🇷|法|FR|France))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+  FilterIE: &FilterIE "^(?=.*(🇮🇪|爱尔兰|IRL|Ireland))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+  FilterDE: &FilterDE "^(?=.*(🇩🇪|德|(?i)DE|Germany))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+  FilterNL: &FilterNL "^(?=.*(🇳🇱|荷|NL|Holland|Netherlands))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+  FilterTR: &FilterTR "^(?=.*(🇹🇷|土耳其|(?i)TR|TUR|Turkey))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+  FilterUK: &FilterUK "^(?=.*(🇬🇧|英|伦敦|(?i)UK|United Kingdom|GB))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+  ## North America
+  FilterCA: &FilterCA "^(?=.*(🇨🇦|加拿大|CA|Canada))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
+  FilterUS: &FilterUS "^(?=.*(🇺🇸|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(?i)US|United States))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$"
+  FilterOT: &FilterOT "^(?=.*(🇬🇧|英|伦敦|(?i)UK|United Kingdom|GB))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇹🇷|土耳其|(?i)TR|TUR|Turkey))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇳🇱|荷|NL|Holland|Netherlands))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇩🇪|德|(?i)DE|Germany))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇮🇪|爱尔兰|IRL|Ireland))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇫🇷|法|FR|France))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*((?i)🇦🇺|澳大|AU|Australia))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇹🇼|台|(?i)TW|Tai))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇸🇬|新加坡|狮|(?i)SG|Singapore))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇷🇺|俄|莫斯科|新西伯利亚|Новосиби́рская|Moscow|RU|Russia))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇰🇷|韩|韓|首尔|(?i)KR|Korea))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*((?i) 🇯🇵|日|川日|东京|大阪|泉日|埼玉|JP|Japan))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇭🇰|港|虚通|(?i)HK|Hong))(?!.*(回国|校园|游戏|教育|(?i)GAME|IPV6)).*$`^(?=.*(🇮🇳|印|班加罗尔|孟买|Mumbai|IN|India))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇺🇸|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(?i)US|United States))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇨🇦|加拿大|CA|Canada))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$"
 
-# 地区策略组专用锚点
-## 锚点 - 时延优选参数 [每 30 秒一次惰性健康检查，容差 20ms，时延超过 2.5 秒判定为失败，失败 3 次则自动触发健康检查]
-UrlTest: &urltest {type: url-test, tolerance: 50, interval: 60, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, lazy: true, hidden: false, include-all: true}
-## 锚点 - 故障转移参数 [每 30 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-FallBack: &fallback {type: fallback, interval: 60, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, lazy: true, hidden: false, include-all: true}
-## 锚点 - 负载均衡参数 [每 30 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-LoadBalance-1: &loadbalance-1 {type: load-balance, strategy: consistent-hashing, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, lazy: true, hidden: true, include-all: true}
-LoadBalance-2: &loadbalance-2 {type: load-balance, strategy: round-robin, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, lazy: true, hidden: true, include-all: true}
-LoadBalance-3: &loadbalance-3 {type: load-balance, strategy: sticky-sessions, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, lazy: true, hidden: true, include-all: true}
+strategy-anchor:
+  # 筛选节点测试策略组专用锚点
+  ## 时延优选参数
+  UrlTest: &urltest {type: url-test, tolerance: 50, interval: 60, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: false, include-all: true, expected-status: 204}
+  ## 故障转移参数
+  FallBack: &fallback {type: fallback, interval: 60, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: false, include-all: true, expected-status: 204}
+  ## 负载均衡参数
+  LoadBalance-1: &loadbalance-1 {type: load-balance, strategy: round-robin, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: true, include-all: true, expected-status: 204}
+  LoadBalance-2: &loadbalance-2 {type: load-balance, strategy: consistent-hashing, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: true, include-all: true, expected-status: 204}
+  LoadBalance-3: &loadbalance-3 {type: load-balance, strategy: sticky-sessions, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: true, include-all: true, expected-status: 204}
 
-# 节点策略组专用锚点
-UrlTest1: &urltest1 {type: url-test, tolerance: 50, interval: 60, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, lazy: true, hidden: false}
-LoadBalance1-1: &loadbalance1-1 {type: load-balance, strategy: consistent-hashing, interval: 15, url: 'https://www.google.com/generate_204', timeout: 2000, max-failed-times: 3, disable-udp: false, lazy: true, hidden: true}
-LoadBalance1-2: &loadbalance1-2 {type: load-balance, strategy: round-robin, interval: 15, url: 'https://www.google.com/blank.html', timeout: 2000, max-failed-times: 3, disable-udp: false, lazy: true, hidden: true}
-LoadBalance1-3: &loadbalance1-2 {type: load-balance, strategy: round-robin, interval: 15, url: 'https://www.google.com/blank.html', timeout: 2000, max-failed-times: 3, disable-udp: false, lazy: true, hidden: true}
+  # 订阅节点测试策略组专用锚点
+  ## 时延优选参数
+  UrlTest1: &urltest1 {type: url-test, tolerance: 50, interval: 60, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: false, expected-status: 204}
+  ## 负载均衡参数
+  LoadBalance1-1: &loadbalance1-1 {type: load-balance, strategy: round-robin, interval: 15, url: 'https://www.google.com/generate_204', timeout: 3000, max-failed-times: 3, disable-udp: false, lazy: true, hidden: true, expected-status: 204}
+  LoadBalance1-2: &loadbalance1-2 {type: load-balance, strategy: consistent-hashing, interval: 15, url: 'https://www.google.com/generate_204', timeout: 3000, max-failed-times: 3, disable-udp: false, lazy: true, hidden: true, expected-status: 204}
+  LoadBalance1-3: &loadbalance1-3 {type: load-balance, strategy: round-robin, interval: 15, url: 'https://www.google.com/generate_204', timeout: 3000, max-failed-times: 3, disable-udp: false, lazy: true, hidden: true, expected-status: 204}
 
-# 功能策略组专用锚点
-Select2: &select2 {type: select, interval: 60, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, lazy: true, hidden: false}
-UrlTest2: &urltest2 {type: url-test, tolerance: 60, interval: 180, url: 'https://www.google.com/generate_204', timeout: 2000, max-failed-times: 3, lazy: true, hidden: false}
-LoadBalance2-1: &loadbalance2-1 {type: load-balance, strategy: consistent-hashing, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, lazy: true, hidden: false}
-LoadBalance2-2: &loadbalance2-2 {type: load-balance, strategy: round-robin, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, lazy: true, hidden: false}
-LoadBalance2-3: &loadbalance2-2 {type: load-balance, strategy: sticky-sessions, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, lazy: true, hidden: false}
+  # 功能选择策略组专用锚点
+  ## 手动选择参数
+  Select2: &select2 {type: select, interval: 60, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: false, expected-status: 204}
+  ## 时延优选参数
+  UrlTest2: &urltest2 {type: url-test, tolerance: 60, interval: 180, url: 'https://www.google.com/generate_204', timeout: 3000, max-failed-times: 3, lazy: true, hidden: false, expected-status: 204}
+  ## 负载均衡参数
+  LoadBalance2-1: &loadbalance2-1 {type: load-balance, strategy: round-robin, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: false, expected-status: 204}
+  LoadBalance2-2: &loadbalance2-2 {type: load-balance, strategy: consistent-hashing, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: false, expected-status: 204}
+  LoadBalance2-3: &loadbalance2-3 {type: load-balance, strategy: sticky-sessions, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: false, expected-status: 204}
 
 # -------------------------------------
 proxy-groups:
@@ -272,9 +286,9 @@ proxy-groups:
   - {name: ☁ Cloudflare, type: select, proxies: [🚀 Proxy, 🎯 Direct], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png}
   
   ## 大型服务
-  - {name: 🍎 AppleServe, type: select, proxies: [🎯 Direct, 🚀 Proxy], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_1.png}
-  - {name: 📢 GoogleServe, type: select, proxies: [🚀 Proxy, 🎯 Direct], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png}
-  - {name: Ⓜ️ MicrosoftServe, type: select, proxies: [🎯 Direct, 🚀 Proxy], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
+  - {name: 🍎 AppleServe, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India 延迟优选, 🇭🇰 Hong Kong 延迟优选, 🇯🇵 Japan 延迟优选, 🇰🇷 Korea 延迟优选, 🇷🇺 Russia 延迟优选, 🇸🇬 Singapore 延迟优选, 🇨🇳 Taiwan 延迟优选, 🇦🇺 Australia 延迟优选, 🇬🇧 Britain 延迟优选, 🇫🇷 France 延迟优选, 🇩🇪 Germany 延迟优选, 🇳🇱 Netherlands 延迟优选, 🇨🇦 Canada 延迟优选, 🇺🇸 United States 延迟优选], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_1.png}
+  - {name: 📢 GoogleServe, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India 延迟优选, 🇭🇰 Hong Kong 延迟优选, 🇯🇵 Japan 延迟优选, 🇰🇷 Korea 延迟优选, 🇷🇺 Russia 延迟优选, 🇸🇬 Singapore 延迟优选, 🇨🇳 Taiwan 延迟优选, 🇦🇺 Australia 延迟优选, 🇬🇧 Britain 延迟优选, 🇫🇷 France 延迟优选, 🇩🇪 Germany 延迟优选, 🇳🇱 Netherlands 延迟优选, 🇨🇦 Canada 延迟优选, 🇺🇸 United States 延迟优选], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png}
+  - {name: Ⓜ️ MicrosoftServe, type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India 延迟优选, 🇭🇰 Hong Kong 延迟优选, 🇯🇵 Japan 延迟优选, 🇰🇷 Korea 延迟优选, 🇷🇺 Russia 延迟优选, 🇸🇬 Singapore 延迟优选, 🇨🇳 Taiwan 延迟优选, 🇦🇺 Australia 延迟优选, 🇬🇧 Britain 延迟优选, 🇫🇷 France 延迟优选, 🇩🇪 Germany 延迟优选, 🇳🇱 Netherlands 延迟优选, 🇨🇦 Canada 延迟优选, 🇺🇸 United States 延迟优选], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
   
   ## 人工智能
   - {name: 🤖 AI, type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India 延迟优选, 🇭🇰 Hong Kong 延迟优选, 🇯🇵 Japan 延迟优选, 🇰🇷 Korea 延迟优选, 🇷🇺 Russia 延迟优选, 🇸🇬 Singapore 延迟优选, 🇨🇳 Taiwan 延迟优选, 🇦🇺 Australia 延迟优选, 🇬🇧 Britain 延迟优选, 🇫🇷 France 延迟优选, 🇩🇪 Germany 延迟优选, 🇳🇱 Netherlands 延迟优选, 🇨🇦 Canada 延迟优选, 🇺🇸 United States 延迟优选], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
@@ -411,218 +425,226 @@ rule-anchor:
 # 规则集
 rule-providers:
   # fakeip-filter
-  Fakeip-Filter:
+  fakeip-filter:
     <<: *domain2
     path: ./provider/ruleset/fakeip-filter.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/fakeip-filter.mrs"
   
+  # 本地网络
+  private:
+    <<: *domain2
+    path: ./provider/ruleset/private.mrs
+    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/private.mrs"
+  privateip:
+    <<: *ip2
+    path: ./provider/ruleset/privateip.mrs
+    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/privateip.mrs"
+  
+  ## 苹果服务
+  connectivity-check:
+    <<: *domain2
+    path: ./provider/ruleset/connectivity-check.mrs
+    url: "https://github.com/xixu-me/RFM/raw/universal/connectivity-check.mrs"
+
   # 外部控制
-  ExternalControl:
+  externalcontrol:
     <<: *classical
     path: ./provider/ruleset/externalcontrol.yaml
     url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/rule/mihomo/ExternalControl/ExternalControl-Classical.yaml"
   
-  # 本地网络
-  Private:
-    <<: *domain2
-    path: ./provider/ruleset/private.mrs
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/private.mrs"
-
-  Privateip:
-    <<: *ip2
-    path: ./provider/ruleset/privateip.mrs
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/privateip.mrs"
-    
   # 服务平台
-  Cloudflare:
+  cloudflare:
     <<: *classical
     path: ./provider/ruleset/cloudflare.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare_No_Resolve.yaml"
   
   ## CDN 服务
-  CDN:
+  cdn:
     <<: *classical
     path: ./provider/ruleset/cdn.yaml
     url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/rule/mihomo/CDN/CDN-Classical.yaml"
   
   ## 直连软件
-  Applications:
+  applications:
     <<: *classical
     path: ./provider/ruleset/applications.yaml
-    url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/applications.yaml"
+    url: "https://raw.githubusercontent.com/xixu-me/RFM/basic/applications.yaml"
   
   ## 人工智能
-  AIGlobal:
+  aiglobal:
     <<: *domain2
-    path: ./provider/ruleset/aiglobal.yaml
+    path: ./provider/ruleset/aiglobal.mrs
     url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/ai.mrs"
 
-  Gemini:
+  gemini:
     <<: *classical
     path: ./provider/ruleset/gemini.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini_No_Resolve.yaml"
 
   ## 苹果服务
-  Apple:
-    <<: *classical
-    path: ./provider/ruleset/apple.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml"
+  applecn:
+    <<: *domain2
+    path: ./provider/ruleset/applecn.mrs
+    url: "https://github.com/xixu-me/RFM/raw/basic/apple@cn.mrs"
 
   ## Google 服务
-  Google:
+  google:
     <<: *classical
     path: ./provider/ruleset/google.yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google_No_Resolve.yaml"
   
   ## 微软服务
-  Microsoft:
-    <<: *classical
-    path: ./provider/ruleset/microsoft.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml"
+  microsoftcn:
+    <<: *domain2
+    path: ./provider/ruleset/microsoftcn.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/microsoft-cn.mrs"
 
   ## 支付服务
-  PayPal:
-    <<: *classical
-    path: ./provider/ruleset/paypal.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal_No_Resolve.yaml"
+  paypal:
+    <<: *domain2
+    path: ./provider/ruleset/paypal.mrs
+    url: "https://github.com/xixu-me/rulesets-for-META/raw/universal/paypal.mrs"
 
   ## 代码托管平台
-  Github:
+  github:
     <<: *domain2
     path: ./provider/ruleset/github.mrs
     url: "https://github.com/xixu-me/rulesets-for-META/raw/universal/github.mrs"
 
-  Gitlab:
+  gitlab:
     <<: *domain2
     path: ./provider/ruleset/gitlab.mrs
     url: "https://github.com/xixu-me/rulesets-for-META/raw/universal/gitlab.mrs"
   
   # 社交通讯平台
-  Discord:
-    <<: *classical
-    path: ./provider/ruleset/discord.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord_No_Resolve.yaml"
-  
-  Telegram:
-    <<: *classical
-    path: ./provider/ruleset/telegram.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml"
+  discord:
+    <<: *domain2
+    path: ./provider/ruleset/discord.mrs
+    url: "https://github.com/xixu-me/RFM/raw/universal/discord.mrs"
 
+  telegram:
+    <<: *domain2
+    path: ./provider/ruleset/telegram.mrs
+    url: "https://github.com/xixu-me/RFM/raw/universal/telegram.mrs"
+  telegramip:
+    <<: *ip2
+    path: ./provider/ruleset/telegramip.mrs
+    url: "https://github.com/xixu-me/RFM/raw/basic/telegramcidr.mrs"
+  
   # 社交媒体平台
-  Facebook:
-    <<: *classical
-    path: ./provider/ruleset/facebook.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook_No_Resolve.yaml"
+  facebook:
+    <<: *domain2
+    path: ./provider/ruleset/facebook.mrs
+    url: "https://github.com/xixu-me/RFM/raw/universal/facebook.mrs"
 
-  Twitter:
-    <<: *classical
-    path: ./provider/ruleset/twitter.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter_No_Resolve.yaml"
+  twitter:
+    <<: *domain2
+    path: ./provider/ruleset/twitter.mrs
+    url: "https://github.com/xixu-me/RFM/raw/universal/twitter.mrs"
   
-  YouTube:
+  youtube:
     <<: *domain2
     path: ./provider/ruleset/youtube.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/youtube.mrs"
 
-  TikTokGlobal:
+  tiktokglobal:
     <<: *domain2
     path: ./provider/ruleset/tiktokglobal.mrs
     url: "https://github.com/xixu-me/RFM/raw/universal/tiktok@!cn.mrs"
-  
-  TikTokCN:
-    <<: *domain2
-    path: ./provider/ruleset/tiktokcn.mrs
-    url: "https://github.com/xixu-me/RFM/raw/universal/tiktok.mrs"
-  
+
   # 娱乐平台
   ## 插画
-  Pixiv:
-    <<: *classical
-    path: ./provider/ruleset/pixiv.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv_No_Resolve.yaml"
+  pixiv:
+    <<: *domain2
+    path: ./provider/ruleset/pixiv.mrs
+    url: "https://github.com/xixu-me/RFM/raw/universal/pixiv.mrs"
   
   ## 游戏平台
-  Steam:
-    <<: *classical
-    path: ./provider/ruleset/steam.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml"
-  GameGlobal1:
-    <<: *classical
-    path: ./provider/ruleset/gameglobal1.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game_No_Resolve.yaml"
-  GameGlobal2:
-    <<: *classical
-    path: ./provider/ruleset/gameglobal2.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/rule/mihomo/GameDirect/GameDirect-Classical.yaml"
-
+  steam:
+    <<: *domain2
+    path: ./provider/ruleset/steam.mrs
+    url: "https://github.com/xixu-me/RFM/raw/universal/steam.mrs"
+  steamcn:
+    <<: *domain2
+    path: ./provider/ruleset/steamcn.mrs
+    url: "https://github.com/xixu-me/RFM/raw/universal/steam@cn.mrs"
+  
+  gamecn:
+    <<: *domain2
+    path: ./provider/ruleset/gamecn.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/games-cn.mrs"
+  gameglobal:
+    <<: *domain2
+    path: ./provider/ruleset/gameglobal.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/games.mrs"
+  gameglobalip:
+    <<: *ip2
+    path: ./provider/ruleset/gameglobalip.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/gamesip.mrs"
+    
   ## 音乐平台
-  YouTubeMusic:
-    <<: *classical
-    path: ./provider/ruleset/youtubemusic.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic_No_Resolve.yaml"
-
-  Spotify:
-    <<: *classical
-    path: ./provider/ruleset/spotify.yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify_No_Resolve.yaml"
+  spotify:
+    <<: *domain2
+    path: ./provider/ruleset/spotify.mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/spotify.mrs"
   
   ## 影视
-  Disney:
+  disney:
     <<: *domain2
     path: ./provider/ruleset/disney.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/disney.mrs"
   
-  Max:
+  max:
     <<: *domain2
     path: ./provider/ruleset/max.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/max.mrs"
   
-  Netflix:
+  netflix:
     <<: *domain2
     path: ./provider/ruleset/netflix.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/netflix.mrs"
 
   ### 综合国外媒体
-  MediaGlobal:
+  mediaglobal:
     <<: *domain2
-    path: ./provider/ruleset/media.yaml
+    path: ./provider/ruleset/media.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/media.mrs"
-  MediaGlobalIP:
+  mediaglobalip:
     <<: *ip2
-    path: ./provider/ruleset/mediaip.yaml
+    path: ./provider/ruleset/mediaip.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/mediaip.mrs"
 
   # 综合国外代理
   ## GFW
-  GFWLite:
+  gfwlite:
     <<: *classical
     path: ./provider/ruleset/gfwlite.yaml
     url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/rule/mihomo/GFWLite/GFWLite-Classical.yaml"
 
-  Proxy:
+  proxy:
     <<: *domain2
     path: ./provider/ruleset/proxy.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/proxy.mrs"
 
-  TLD-Proxy:
+  tld-proxy:
     <<: *domain2
     path: ./provider/ruleset/tld-proxy.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/tld-proxy.mrs"
     
   # 综合国内直连
-  CNLite:
+  cnlite:
     <<: *classical
     path: ./provider/ruleset/chinalite.yaml
     url: "https://raw.githubusercontent.com/LaolunsiG/PCR/main/rule/mihomo/ChinaLite/ChinaLite-Classical.yaml"
 
-  CN:
+  cn:
     <<: *domain2
-    path: ./provider/ruleset/cn.yaml
+    path: ./provider/ruleset/cn.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/cn.mrs"
 
-  CNIP:
+  cnip:
     <<: *ip2
-    path: ./provider/ruleset/cnip.yaml
+    path: ./provider/ruleset/cnip.mrs
     url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/cnip.mrs"
 
 
@@ -630,62 +652,64 @@ rule-providers:
 # 规则类型-规则-策略组
 rules:
   # 外部控制
-  - RULE-SET,ExternalControl,🎯 Direct
+  - RULE-SET,externalcontrol,🎯 Direct
   # 本地网络
-  - RULE-SET,Private,🎯 Direct
-  - RULE-SET,Privateip,🎯 Direct,no-resolve
+  - RULE-SET,private,🎯 Direct
+  - RULE-SET,privateip,🎯 Direct,no-resolve
   # 服务平台
-  - RULE-SET,Cloudflare,☁ Cloudflare
+  - RULE-SET,cloudflare,☁ Cloudflare
   ## CDN 服务
-  - RULE-SET,CDN,🎯 Direct
+  - RULE-SET,cdn,🎯 Direct
   ## 直连软件
-  - RULE-SET,Applications,🎯 Direct
+  - RULE-SET,applications,🎯 Direct
   ## 人工智能
-  - RULE-SET,Gemini,🤖 AI
-  - RULE-SET,AIGlobal,🤖 AI
+  - RULE-SET,gemini,🤖 AI
+  - RULE-SET,aiglobal,🤖 AI
   ## 苹果服务
-  - RULE-SET,Apple,🍎 AppleServe
+  - RULE-SET,applecn,🍎 AppleServe
   ## Google 服务
-  - RULE-SET,Google,📢 GoogleServe
+  - RULE-SET,google,📢 GoogleServe
   ## 微软服务
-  - RULE-SET,Microsoft,Ⓜ️ MicrosoftServe
+  - RULE-SET,microsoftcn,Ⓜ️ MicrosoftServe
   ## 支付服务
-  - RULE-SET,PayPal,💴 PayPal
+  - RULE-SET,paypal,💴 PayPal
   ## 代码托管平台
-  - RULE-SET,Github,🐱 Github
-  - RULE-SET,Gitlab,🐱 Github
+  - RULE-SET,github,🐱 Github
+  - RULE-SET,gitlab,🐱 Github
   # 社交通讯平台
-  - RULE-SET,Telegram,🚀 Proxy
-  - RULE-SET,Discord,🐦 Discord
-  - RULE-SET,Facebook,💬 Facebook
-  - RULE-SET,Twitter,💬 Twitter
+  - RULE-SET,telegram,🚀 Proxy
+  - RULE-SET,telegramip,🚀 Proxy
+  - RULE-SET,discord,🐦 Discord
+  - RULE-SET,facebook,💬 Facebook
+  - RULE-SET,twitter,💬 Twitter
   # 娱乐平台
   ## 插画站
-  - RULE-SET,Pixiv,🖼️ Pixiv
+  - RULE-SET,pixiv,🖼️ Pixiv
   ## 游戏平台
-  - RULE-SET,Steam,🎮 GameGlobal
-  - RULE-SET,GameGlobal1,🎮 GameGlobal
-  - RULE-SET,GameGlobal2,🎮 GameGlobal
+  - RULE-SET,steamcn,🎯 Direct
+  - RULE-SET,gamecn,🎯 Direct
+  - RULE-SET,steam,🎮 GameGlobal
+  - RULE-SET,gameglobal,🎮 GameGlobal
+  - RULE-SET,gameglobalip,🎮 GameGlobal
   ## 音乐平台
-  - RULE-SET,Spotify,🎵 Spotify
-  - RULE-SET,YouTubeMusic,🚀 Proxy
+  - RULE-SET,spotify,🎵 Spotify
   ## 短视频和直播
-  - RULE-SET,TikTokGlobal,🎵 TikTok
-  - RULE-SET,TikTokCN,🎯 Direct
-  - RULE-SET,Disney,📽️ Disney+
-  - RULE-SET,Netflix,🎥 Netflix
-  - RULE-SET,Max,🎞️ Max
-  - RULE-SET,YouTube,📹 YouTube
+  - RULE-SET,tiktokglobal,🎵 TikTok
+  - RULE-SET,disney,📽️ Disney+
+  - RULE-SET,netflix,🎥 Netflix
+  - RULE-SET,max,🎞️ Max
+  - RULE-SET,youtube,📹 YouTube
   ### 综合国外媒体
-  - RULE-SET,MediaGlobal,🙈 MediaGlobal
-  - RULE-SET,MediaGlobalIP,🙈 MediaGlobal,no-resolve
+  - RULE-SET,mediaglobal,🙈 MediaGlobal
+  - RULE-SET,mediaglobalip,🙈 MediaGlobal,no-resolve
+  # 漏网之鱼
+  - RULE-SET,gfwlite,🚀 Proxy
+  - RULE-SET,cnlite,🎯 Direct
   # 综合国外代理
-  - RULE-SET,GFWLite,🚀 Proxy
-  - RULE-SET,Proxy,🚀 Proxy
-  - RULE-SET,TLD-Proxy,🚀 Proxy
+  - RULE-SET,proxy,🚀 Proxy
+  - RULE-SET,tld-proxy,🚀 Proxy
   # 综合国内直连
-  - RULE-SET,CNLite,🎯 Direct
-  - RULE-SET,CN,🎯 Direct
-  - RULE-SET,CNIP,🎯 Direct,no-resolve
+  - RULE-SET,cn,🎯 Direct
+  - RULE-SET,cnip,🎯 Direct,no-resolve
   # 兜底规则
   - MATCH,🐟 漏网之鱼
