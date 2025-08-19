@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-07 16:54
+Modified date: 2025-08-19 14:04
 ---
 # Loon 配置模板
 
@@ -17,8 +17,8 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/loon/loon-test.conf
 
 ## reference
 
-| 作者/来源    | 链接                                                                                  |
-| -------- | ----------------------------------------------------------------------------------- |
-| HoCooo   | [LoonLite.conf](https://github.com/HoCooo/Loon/blob/main/LoonLite.conf)             |
-| lodepuly |                                                                                     |
-| SANYIMOE | [loon.conf](https://github.com/SANYIMOE/Quan_Shado_Conf/blob/master/conf/loon.conf) |
+| 配置链接                                                                                | 作者                          |
+| ----------------------------------------------------------------------------------- | --------------------------- |
+| [LoonLite.conf](https://github.com/HoCooo/Loon/blob/main/LoonLite.conf)             | HoCooo                      |
+| [loon.conf](https://github.com/SANYIMOE/Quan_Shado_Conf/blob/master/conf/loon.conf) | SANYIMOE                    |
+| [Loon](https://github.com/luestr/ProxyResource/tree/main/Tool/Loon/Lcf/zh-CN)       | [可莉🅥](https://t.me/iKeLee) |
