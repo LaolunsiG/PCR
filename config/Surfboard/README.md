@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-20 19:25
+Modified date: 2025-08-20 20:06
 ---
 # [Surfboard](https://github.com/getsurfboard/surfboard) 配置模板
 
@@ -13,11 +13,11 @@ Modified date: 2025-08-20 19:25
 - 不同策略组同一节点测速状态之间是不互通的，也就是你在手动选择策略组延迟测试后，他的测试状态不会同步到自动选择策略组，自动选择策略组只会按照你规定的时间测速。
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Surfboard/Surfboard-stable.conf
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/surfboard/surfboard-stable.conf
 ```
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Surfboard/Surfboard-test.conf
+https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/surfboard/surfboard-test.conf
 ```
 
 ## reference
@@ -30,4 +30,4 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Surf
 | [Lucky配置](https://github.com/As-Lucky/Lucky)                                               | https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-Surge.conf                    |
 | [MAICOO](https://github.com/blankmagic/surge)                                              | https://blankmagic.github.io/surge/profile.conf                                           |
 | [Rabbit-Spec/Surge](https://github.com/Rabbit-Spec/Surge)                                  | https://github.com/getsomecat/GetSomeCats/raw/Surge/FishChips.conf                        |
-| [Repcz/Tool](https://github.com/Repcz/Tool/tree/X/Surfboard)                               | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Surfboard/Surfboard.conf        |
+| [Repcz/Tool](https://github.com/Repcz/Tool/tree/X/Surfboard)                               | https://raw.githubusercontent.com/Repcz/Tool/X/Surfboard/Surfboard.conf        |
