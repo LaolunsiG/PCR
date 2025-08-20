@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-20 19:12
+Modified date: 2025-08-20 19:36
 ---
 # Stash 配置模板
 
@@ -20,14 +20,15 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Stas
 
 ## reference
 
-| 作者/项目链接                                                         | 配置链接                                                                                                                               | 来源     |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| As-Lucky                                                        | https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-ClashVerge.yaml                                                        | GitHub |
-| [luestr/ProxyResource](https://github.com/luestr/ProxyResource) | https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee.yaml | GitHub |
-| [MetaCubeX/mihomo](https://github.com/MetaCubeX/mihomo)         | https://raw.githubusercontent.com/MetaCubeX/mihomo/refs/heads/Meta/docs/config.yaml                                                | GitHub |
-| Moli-X                                                          | https://github.com/Moli-X/Resources/raw/main/Clash/Clash.yml                                                                       | GitHub |
-| [Repcz/Tool](https://github.com/Repcz/Tool)                     | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Meta/Mihomo.yaml                                                   | GitHub |
-| [Repcz/Tool](https://github.com/Repcz/Tool)                     | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Stash/Stash.yaml                                                         |        |
-| [Repcz/Tool](https://github.com/Repcz/Tool)                     | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Stash/Stash_lite.yaml                                                    |        |
-| whatshub.top                                                    | https://whatshub.top/config/stash-auto.yaml                                                                                        |        |
-| [xixu-me/META](https://github.com/xixu-me/META)                 | https://raw.githubusercontent.com/xixu-me/META/refs/heads/config/META.yaml                                                         | GitHub |
+| 作者/项目链接                                                                                             | 配置链接                                                                                                                               | 来源     |
+| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| As-Lucky                                                                                            | https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-ClashVerge.yaml                                                        | GitHub |
+| [luestr/ProxyResource](https://github.com/luestr/ProxyResource)                                     | https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee.yaml | GitHub |
+| [MetaCubeX/mihomo](https://github.com/MetaCubeX/mihomo)                                             | https://raw.githubusercontent.com/MetaCubeX/mihomo/refs/heads/Meta/docs/config.yaml                                                | GitHub |
+| Moli-X                                                                                              | https://github.com/Moli-X/Resources/raw/main/Clash/Clash.yml                                                                       | GitHub |
+| [Repcz/Tool](https://github.com/Repcz/Tool)                                                         | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Clash/Meta/Mihomo.yaml                                                   | GitHub |
+| [Repcz/Tool](https://github.com/Repcz/Tool)                                                         | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Stash/Stash.yaml                                                         |        |
+| [Repcz/Tool](https://github.com/Repcz/Tool)                                                         | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Stash/Stash_lite.yaml                                                    |        |
+| [SANYIMOE/Quan_Shado_Conf](https://github.com/SANYIMOE/Quan_Shado_Conf/blob/master/conf/stash.yaml) | https://raw.githubusercontent.com/SANYIMOE/Quan_Shado_Conf/refs/heads/master/conf/stash.yaml                                       |        |
+| whatshub.top                                                                                        | https://whatshub.top/config/stash-auto.yaml                                                                                        |        |
+| [xixu-me/META](https://github.com/xixu-me/META)                                                     | https://raw.githubusercontent.com/xixu-me/META/refs/heads/config/META.yaml                                                         | GitHub |

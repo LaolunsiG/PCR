@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-19 14:04
+Modified date: 2025-08-20 19:44
 ---
 # Loon 配置模板
 
@@ -17,8 +17,13 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/loon/loon-test.conf
 
 ## reference
 
-| 配置链接                                                                                | 作者                          |
-| ----------------------------------------------------------------------------------- | --------------------------- |
-| [LoonLite.conf](https://github.com/HoCooo/Loon/blob/main/LoonLite.conf)             | HoCooo                      |
-| [loon.conf](https://github.com/SANYIMOE/Quan_Shado_Conf/blob/master/conf/loon.conf) | SANYIMOE                    |
-| [Loon](https://github.com/luestr/ProxyResource/tree/main/Tool/Loon/Lcf/zh-CN)       | [可莉🅥](https://t.me/iKeLee) |
+| 作者                                                                                                 | 配置链接                                                                                                                                        | 群聊                          |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| [Repcz/Tool](https://github.com/Repcz/Tool/tree/X/Loon)                                            | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Loon/Loon.conf                                                                    |                             |
+| [As-Lucky/Lucky](https://github.com/As-Lucky/Lucky/blob/main/Lucky-Loon.conf)                      | https://raw.githubusercontent.com/As-Lucky/Lucky/refs/heads/main/Lucky-Loon.conf                                                            |                             |
+| [luestr/ProxyResource](https://github.com/luestr/ProxyResource/tree/main/Tool/Loon/Lcf/zh-CN)      | https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Tool/Loon/Lcf/zh-CN/Loon_Basic_Configuration_By_iKeLee.lcf           | [可莉🅥](https://t.me/iKeLee) |
+| [luestr/ProxyResource](https://github.com/luestr/ProxyResource/tree/main/Tool/Loon/Lcf/zh-CN)      | https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Tool/Loon/Lcf/zh-CN/Loon_Lazy_Configuration_By_iKeLee.lcf            | [可莉🅥](https://t.me/iKeLee) |
+| [luestr/ProxyResource](https://github.com/luestr/ProxyResource/tree/main/Tool/Loon/Lcf/zh-CN)      | https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Tool/Loon/Lcf/zh-CN/Loon_Return_to_China_Configuration_By_iKeLee.lcf | [可莉🅥](https://t.me/iKeLee) |
+| [luestr/ProxyResource](https://github.com/luestr/ProxyResource/tree/main/Tool/Loon/Lcf/zh-CN)      | https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Tool/Loon/Lcf/zh-CN/Loon_Sample_Configuration_By_iKeLee.lcf          | [可莉🅥](https://t.me/iKeLee) |
+| [s-theo/dotfiles](https://github.com/s-theo/dotfiles/blob/main/Proxy/Loon/T-Config.conf)           | https://raw.githubusercontent.com/s-theo/dotfiles/refs/heads/main/Proxy/Loon/T-Config.conf                                                  |                             |
+| [SANYIMOE/Quan_Shado_Conf](https://github.com/SANYIMOE/Quan_Shado_Conf/blob/master/conf/loon.conf) | https://raw.githubusercontent.com/SANYIMOE/Quan_Shado_Conf/refs/heads/master/conf/loon.conf                                                 |                             |

@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-07 16:54
+Modified date: 2025-08-20 19:35
 ---
 # Shadowrocket 配置模板
 
@@ -16,9 +16,11 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/shadowrocket/shadowr
 
 ## reference
 
-| 作者/项目                                                       | 配置链接                                                                                                                |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [As-Lucky/Lucky](https://github.com/As-Lucky/Lucky)         | [Lucky-Shadowrocket.conf](https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-Shadowrocket.conf) |
-| whatshub.top                                                | [shadowrocket_basic.conf](https://whatshub.top/shadowrocket_basic.conf)                                      |
-| [wlxuf/Shadowrocket](https://github.com/wlxuf/Shadowrocket) | [lazy.conf](https://raw.githubusercontent.com/wlxuf/Shadowrocket/main/lazy.conf)                         |
-| [wlxuf/Shadowrocket](https://github.com/wlxuf/Shadowrocket) | [lazy_group.conf](https://raw.githubusercontent.com/wlxuf/Shadowrocket/main/lazy_group.conf)             |
+| 作者/项目链接                                                                                                    | 配置链接                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| [SANYIMOE/Quan_Shado_Conf](https://github.com/SANYIMOE/Quan_Shado_Conf/blob/master/conf/shadowrocket.conf) | https://raw.githubusercontent.com/SANYIMOE/Quan_Shado_Conf/refs/heads/master/conf/shadowrocket.conf |
+| [As-Lucky/Lucky]https://github.com/As-Lucky/Lucky/blob/main/Lucky-Shadowrocket.conf)                       | https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-Shadowrocket.conf                       |
+| [Repcz/Tool](https://github.com/Repcz/Tool/tree/X/Shadowrocket)                                            | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Shadowrocket/Shadowrocket.conf            |
+| [whatshub.top](https://whatshub.top/shadowrocket)                                                          | https://whatshub.top/shadowrocket_basic.conf                                                        |
+| [wlxuf/Shadowrocket](https://github.com/wlxuf/Shadowrocket)                                                | https://raw.githubusercontent.com/wlxuf/Shadowrocket/main/lazy.conf                                 |
+| [wlxuf/Shadowrocket](https://github.com/wlxuf/Shadowrocket)                                                | https://raw.githubusercontent.com/wlxuf/Shadowrocket/main/lazy_group.conf                           |

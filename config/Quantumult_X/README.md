@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-20 18:02
+Modified date: 2025-08-20 19:46
 ---
 # Quantumult_X 配置模板
 
@@ -16,10 +16,16 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/quantumult_x/quantum
 
 ## reference
 
-| 仓库                                                                                                                                        | 作者                                                                    | 配置链接 |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ---- |
-| [qixin.conf](https://raw.githubusercontent.com/zwf234/rules/master/QuantumultX/qixin.conf)                                                | 奇心                                                                    |      |
-| [full.conf](https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/full.conf)                                                     | [limbopro/Profiles4limbo](https://github.com/limbopro/Profiles4limbo) |      |
-| [T-Config.conf](https://raw.githubusercontent.com/Theo-Messi/dotfiles/1e92adaf4c13afe9f62c95d8340092d6ca1dea65/QuantumultX/T-Config.conf) | [Theo-Messi/dotfiles](https://github.com/Theo-Messi/dotfiles)         |      |
-| [qx.conf](https://whatshub.top/config/qx.conf)                                                                                            | whatshub.top                                                          |      |
-| [QuantumultX](https://github.com/luestr/ProxyResource/tree/main/Tool/QuantumultX/Config)                                                  | [可莉🅥](https://t.me/iKeLee)                                           |      |
+| 作者/项目链接                                                                                                   | 配置链接                                                                                                                                                   | 群聊  |
+| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
+| [limbopro/Profiles4limbo](https://github.com/limbopro/Profiles4limbo)                                     | https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/full.conf                                                                               |     |
+| [luestr/ProxyResource](https://github.com/luestr/ProxyResource/tree/main/Tool/QuantumultX/Config)         | https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Tool/QuantumultX/Config/Quantumult_X_Sample_Configuration_By_iKeLee.conf        |     |
+| [luestr/ProxyResource](https://github.com/luestr/ProxyResource/tree/main/Tool/QuantumultX/Config)         | https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/Tool/QuantumultX/Config/Quantumult_X_Simple_Sample_Configuration_By_iKeLee.conf |     |
+| [Repcz/Tool](https://github.com/Repcz/Tool/tree/X/QuantumultX)                                            | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/QuantumultX/QuantumultX.conf                                                                 |     |
+| [Repcz/Tool](https://github.com/Repcz/Tool/tree/X/QuantumultX)                                            | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/QuantumultX/QuantumultX_Pro.conf                                                             |     |
+| [Repcz/Tool](https://github.com/Repcz/Tool/tree/X/QuantumultX)                                            | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/QuantumultX/QuantumultX_tvOS.conf                                                            |     |
+| [SANYIMOE/Quan_Shado_Conf](https://github.com/SANYIMOE/Quan_Shado_Conf/blob/master/conf/quantumultx.conf) | https://raw.githubusercontent.com/SANYIMOE/Quan_Shado_Conf/refs/heads/master/conf/quantumultx.conf                                                     |     |
+| [SANYIMOE/Quan_Shado_Conf](https://github.com/SANYIMOE/Quan_Shado_Conf/blob/master/conf/quantumult.conf)  | https://raw.githubusercontent.com/SANYIMOE/Quan_Shado_Conf/refs/heads/master/conf/quantumult.conf                                                      |     |
+| [Theo-Messi/dotfiles](https://github.com/s-theo/dotfiles/blob/main/Proxy/QuantumultX/T-Config.conf)       | https://raw.githubusercontent.com/Theo-Messi/dotfiles/1e92adaf4c13afe9f62c95d8340092d6ca1dea65/QuantumultX/T-Config.conf                               |     |
+| [whatshub.top](https://whatshub.top/quantumultx)                                                          | https://whatshub.top/config/qx.conf                                                                                                                    |     |
+| [zwf234/rules](https://github.com/zwf234/rules/tree/master/Shadowrocket)                                  | https://raw.githubusercontent.com/zwf234/rules/master/QuantumultX/qixin.conf                                                                           |     |

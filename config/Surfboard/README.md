@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-20 19:07
+Modified date: 2025-08-20 19:25
 ---
 # [Surfboard](https://github.com/getsurfboard/surfboard) 配置模板
 
@@ -30,3 +30,4 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Surf
 | [Lucky配置](https://github.com/As-Lucky/Lucky)                                               | https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-Surge.conf                    |
 | [MAICOO](https://github.com/blankmagic/surge)                                              | https://blankmagic.github.io/surge/profile.conf                                           |
 | [Rabbit-Spec/Surge](https://github.com/Rabbit-Spec/Surge)                                  | https://github.com/getsomecat/GetSomeCats/raw/Surge/FishChips.conf                        |
+| [Repcz/Tool](https://github.com/Repcz/Tool/tree/X/Surfboard)                               | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Surfboard/Surfboard.conf        |
