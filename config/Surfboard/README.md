@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-07 16:54
+Modified date: 2025-08-20 19:07
 ---
 # [Surfboard](https://github.com/getsurfboard/surfboard) 配置模板
 
@@ -22,9 +22,11 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/refs/heads/main/Config_File/Surf
 
 ## reference
 
-| 作者/项目                                                     | 配置链接                                                                                                                                               |
-| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 开发者最小配置                                                   | [Surge.conf](https://gist.githubusercontent.com/Zeaphyou/864aebea248ca1bb8000e0e5623b65f3/raw/c36413c715f43f22772d3c2353358e1ff936b2e6/Surge.conf) |
-| [GetSomeCats](https://github.com/getsomecat/GetSomeCats)  | [FishChips.conf](https://github.com/getsomecat/GetSomeCats/raw/refs/heads/Surge/FishChips.conf)                                                    |
-| [Lucky](https://github.com/As-Lucky/Lucky)                | [Lucky-Surge.conf](https://raw.githubusercontent.com/As-Lucky/Lucky/refs/heads/main/Lucky-Surge.conf)                                              |
-| [Rabbit-Spec/Surge](https://github.com/Rabbit-Spec/Surge) | [Surge.conf](https://raw.githubusercontent.com/Rabbit-Spec/Surge/refs/heads/Master/Conf/Spec/Surge.conf)                                           |
+| 作者/项目链接                                                                                    | 配置链接                                                                                      |
+| ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| 开发者最小配置                                                                                    | https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Conf/Spec/Surge-Developer.conf |
+| [深港有喵](https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Conf/Spec/Surge-EN.conf) | https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Conf/Spec/Surge-EN.conf        |
+| [dler-io/Rules](https://github.com/dler-io/Rules/tree/main/Surge)                          | https://github.com/dler-io/Rules/tree/main/Surge                                          |
+| [Lucky配置](https://github.com/As-Lucky/Lucky)                                               | https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-Surge.conf                    |
+| [MAICOO](https://github.com/blankmagic/surge)                                              | https://blankmagic.github.io/surge/profile.conf                                           |
+| [Rabbit-Spec/Surge](https://github.com/Rabbit-Spec/Surge)                                  | https://github.com/getsomecat/GetSomeCats/raw/Surge/FishChips.conf                        |

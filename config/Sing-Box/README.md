@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-07 16:54
+Modified date: 2025-08-20 19:16
 ---
 # [Sing-Box](https://github.com/SagerNet/sing-box) 配置模板
 
@@ -9,6 +9,7 @@ Modified date: 2025-08-07 16:54
 
 ## reference
 
-| 作者/项目 | 配置链接                                                                                                                               |
-| ----- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| 未知    | [sing-box_client_windows.json](https://github.com/chika0801/sing-box-examples/blob/main/Tun/self-use/sing-box_client_windows.json) |
+| 作者/项目链接                                                                                     | 配置链接                                                                                                                    |
+| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| [chika0801/sing-box-examples](https://github.com/chika0801/sing-box-examples/tree/main/Tun) | https://raw.githubusercontent.com/chika0801/sing-box-examples/refs/heads/main/Tun/self-use/sing-box_client_windows.json |
+| [Repcz/Tool](https://github.com/Repcz/Tool)                                                 | https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/sing-box/sing-box.json                                        |
