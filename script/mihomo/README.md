@@ -2,9 +2,7 @@
 Created date: 2025-02-07 00:41
 Modified date: 2025-05-04 10:57
 ---
-# Clash.Meta & Clash 脚本整理
-- 看不懂正在学
-- 使用的 JavaScript 语言
+# mihomo & clash 脚本整理
 
 ## 脚本配置
 
