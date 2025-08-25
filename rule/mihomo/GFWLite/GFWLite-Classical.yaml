@@ -16,7 +16,6 @@ payload:
   # 工具
   - DOMAIN-SUFFIX,ticktick.com
   # 游戏资源
-  - DOMAIN,gamebanana.com
   - DOMAIN-SUFFIX,gamebanana.com
   # 小说
   - DOMAIN,hlib.cc
