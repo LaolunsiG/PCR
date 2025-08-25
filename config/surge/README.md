@@ -1,10 +1,12 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-20 20:10
+Modified date: 2025-08-25 14:50
 ---
 # Surge 配置模板
 
-这个软件是订阅制的，很好用就是很贵。这个软件的官方文档也好奇怪。需自行配置订阅链接。
+> [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/surge%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
+
+- 这个软件是订阅制的，很好用就是很贵。这个软件的官方文档也好奇怪。需自行配置订阅链接。
 
 ```
 https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/surge/surge-stable.conf

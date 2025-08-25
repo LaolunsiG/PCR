@@ -1,8 +1,10 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-20 20:06
+Modified date: 2025-08-25 14:53
 ---
 # [Surfboard](https://github.com/getsurfboard/surfboard) 配置模板
+
+> [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/surfboard%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
 
 - 此软件遵循 Surge 的配置方式......注意：使用示例配置文件时，因规则过多，导入时间不够，请到软件内修改获取配置文件的时间。
 

@@ -1,8 +1,10 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-20 19:48
+Modified date: 2025-08-25 14:51
 ---
 # Clash.Meta 配置模板
+
+> [配置教程](https://github.com/LaolunsiG/PCR/tree/main/Agency_Wiki/Agency_Config_Tutorial/mihomo%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B)
 
 - 配置的是 mihomo 内核, 需要自己配置订阅链接。
 

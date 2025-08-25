@@ -1,8 +1,10 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-20 19:46
+Modified date: 2025-08-25 14:52
 ---
 # Quantumult_X 配置模板
+
+> [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/quantumult_x%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
 
 - 类 INI 语法，注意！在配置文件中，带 “;” 和 “#” 的都是注释符号，去掉前面的符号，该行才有效。
 
