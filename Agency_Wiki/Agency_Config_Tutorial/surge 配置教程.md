@@ -1,8 +1,8 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-20 22:04
+Modified date: 2025-08-25 14:45
 ---
-# Surge 配置教程
+# surge 配置教程
 
 > [配置模板](https://github.com/LaolunsiG/PCR/tree/main/config/surge)
 

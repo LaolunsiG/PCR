@@ -1,10 +1,10 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-19 11:52
+Modified date: 2025-08-25 14:45
 ---
-# Loon 配置教程
+# loon 配置教程
 
-> [配置模板](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Loon)
+> [配置模板](https://github.com/LaolunsiG/PCR/tree/main/config/loon)
 
 | 教程类型   | 教程链接                                                                                                                                          | 作者     |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- | ------ |

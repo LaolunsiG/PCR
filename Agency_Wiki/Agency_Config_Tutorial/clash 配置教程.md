@@ -1,10 +1,10 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-07 16:59
+Modified date: 2025-08-25 14:44
 ---
-# Clash 配置教程
+# clash 配置教程
 
-> [配置模板](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Clash)
+> [配置模板](https://github.com/LaolunsiG/PCR/tree/main/config/clash)
 
 | 教程类型   | 教程链接                                                                                                                                          | 教程来源 | 作者  |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- | ---- | --- |

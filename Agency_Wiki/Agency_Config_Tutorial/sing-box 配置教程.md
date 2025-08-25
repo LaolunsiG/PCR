@@ -1,10 +1,10 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-07 16:59
+Modified date: 2025-08-25 14:45
 ---
-# [Sing-Box](https://github.com/SagerNet/sing-box) 配置教程
+# sing-box 配置教程
 
-> [配置模板](https://github.com/LaolunsiG/PCR/tree/main/Config_File/Sing-Box)
+> [配置模板](https://github.com/LaolunsiG/PCR/tree/main/config/sing-box)
 
 | 教程类型    | 教程链接                                                                                                                                          | 教程来源 | 作者       |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---- | -------- |
