@@ -6,4 +6,4 @@ Modified date: 2025-08-21 10:06
 
 | 资源分类 | 项目名称                                                                                 | 介绍                                               |
 | ---- | ------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| 综合   | [Stash 玩家](https://clashios.app/)                                                    | Stash 玩家是一个集 Stash 教程、Stash 覆写、Stash 配置的一站式 Blog |
+| 综合   | [Stash 玩家](https://clashios.app/blog/icon-set)                                                    | Stash 玩家是一个集 Stash 教程、Stash 覆写、Stash 配置的一站式 Blog |
