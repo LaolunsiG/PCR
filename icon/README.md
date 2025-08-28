@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-19 12:34
+Modified date: 2025-08-28 12:02
 ---
 # icons
 
@@ -138,4 +138,10 @@ https://raw.githubusercontent.com/Koolson/Qure/master/Other/QureColor-Service.js
 
 # reference
 
-- https://telegra.ph/%E7%AD%96%E7%95%A5%E5%9B%BE%E6%A0%87%E8%AE%A2%E9%98%85-%E5%90%88%E9%9B%86-03-12-2
+| 项目名称                                                                                                           | 介绍          |
+| -------------------------------------------------------------------------------------------------------------- | ----------- |
+| [策略图标订阅](https://telegra.ph/%E7%AD%96%E7%95%A5%E5%9B%BE%E6%A0%87%E8%AE%A2%E9%98%85-%E5%90%88%E9%9B%86-03-12-2) |             |
+| [Kolson/Qure](https://github.com/Koolson/Qure)                                                                 | 彩色、亮色、暗色图标  |
+| [lipis/flag-icons](https://github.com/lipis/flag-icons)                                                        | 标准 3:2 国旗图标 |
+| [Semporia/Hand-Painted-icon](https://github.com/Semporia/Hand-Painted-icon)                                    | 手绘彩色图标      |
+| [www.clashverge.dev/group_icon](https://www.clashverge.dev/guide/group_icon/group_icon.html)                   |             |

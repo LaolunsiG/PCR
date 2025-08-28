@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-03 22:43
+Modified date: 2025-08-28 12:09
 ---
 # GEODATA
 
@@ -26,5 +26,6 @@ Modified date: 2025-08-03 22:43
 
 ## ASN
 
-- [loon_data - Loon0x00](https://gitlab.com/Loon0x00/loon_data)
-	- Loon mmdb and default rule files
+| 项目名称                                                        | 介绍  |
+| ----------------------------------------------------------- | --- |
+| [Loon0x00/loon_data](https://gitlab.com/Loon0x00/loon_data) |     |
