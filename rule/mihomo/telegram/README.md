@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-29 09:52
+Modified date: 2025-08-29 10:04
 ---
 # Telegram
 
@@ -9,8 +9,6 @@ Modified date: 2025-08-29 09:52
 ## 使用规则
 
 ### classical
-
-**Clash 专用**
 
 ```
 https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Clash.Meta/Telegram/Clash-Telegram-Classical.yaml
