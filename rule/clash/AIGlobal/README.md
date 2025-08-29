@@ -1,14 +1,14 @@
 ---
 Created date: 2025-04-05 13:57
-Modified date: 2025-08-03 22:40
+Modified date: 2025-08-29 09:17
 ---
-# AIGlobal
+# aiglobal
 
 - 人工智能服务平台规则
 
 ## 使用规则
 
-### Classical
+### classical
 
 ```yaml
 https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GlobalAI/Clash-GlobalAI-Classical.yaml
@@ -16,10 +16,7 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Clash.Meta/GlobalAI/C
 
 ## 规则来源
 
-### OpenAI
-
-- https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/OpenAI
-
-### Copilot
-
-- https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Copilot
+| 分类      | 文件格式      | 链接                                                                             |
+| ------- | --------- | ------------------------------------------------------------------------------ |
+| OpenAI  | classical | https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/OpenAI  |
+| Copilot | classical | https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Copilot |

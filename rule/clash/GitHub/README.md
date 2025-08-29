@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-19 12:27
+Modified date: 2025-08-29 09:19
 ---
 # Github
 
@@ -10,4 +10,6 @@ Modified date: 2025-08-19 12:27
 
 ## 规则来源
 
-- https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GitHub/GitHub_No_Resolve.yaml
+| 文件格式      | 链接                                                                                                   |
+| --------- | ---------------------------------------------------------------------------------------------------- |
+| classical | https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GitHub/GitHub_No_Resolve.yaml |

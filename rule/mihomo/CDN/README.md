@@ -2,7 +2,7 @@
 Created date: 2025-02-07 00:41
 Modified date: 2025-08-03 22:44
 ---
-# CDN
+# cdn
 
 ## 使用规则
 
