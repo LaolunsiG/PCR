@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-29 10:04
+Modified date: 2025-08-29 10:33
 ---
 # Telegram
 
@@ -23,4 +23,3 @@ https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Clash.Meta/Tele
 | domain    | https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo-lite/geosite/telegram.yaml |
 | ip        | https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo-lite/geoip/telegram.yaml   |
 | ip        | https://github.com/xixu-me/RFM/blob/basic/yaml/telegramcidr.yaml                     |
-
