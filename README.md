@@ -4,10 +4,10 @@ Modified date: 2025-08-19 12:15
 ---
 [中文文档](https://github.com/LaolunsiG/PCR/blob/main/README_CN.md)
 
-# Self use proxy resource repository-PCR
+# PCR
 > This repository is primarily intended for personal storage and use.
 
-## Disclaimer
+## disclaimer
 
 - The scripts involved in this project are for resource sharing and study only, and cannot be guaranteed as to their legality, accuracy, completeness or validity, so please make your own judgment based on the circumstances.
 - Any user who uses this project indirectly, including but not limited to setting up a VPS or distributing it in case of certain behavior that violates the laws of the country/region or related regulations, this project is not responsible for any privacy leakage or other consequences caused by such behavior.
