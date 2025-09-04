@@ -1,5 +1,5 @@
 # name: mihomo-stable
-# updata：20250825
+# updata：20250904
 # updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/mihomo/mihomo-stable.yaml
 # repo: https://github.com/LaolunsiG/PCR/tree/main/config/mihomo
 # 图标备用: 📮✉️📪📬💫💬💥🔨🥼🚫🔰🙈🍎🎬📺🎱🍐🐝🦁💡🌵🐯🎸💻📽🌏🕹📡🦑🌟🐷🦒🐳🚦📵🎧💊🔓🚦🚥🐼⛔️🈲🌐🎯🖲️🐦🔞🎵📱🚀💳♻️🙈🍱🔂📦🔀⏱
@@ -9,7 +9,8 @@
 # 出站配置
 # -------------------------------------
 # 代理集-锚点配置
-NodeParam: &NodeParam {type: http, interval: 14400, health-check: {enable: true, lazy: true, url: 'https://www.google.com/generate_204', timeout: 2000, interval: 180}}
+proxy-provider-anchor:
+  NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, lazy: false, url: 'https://www.google.com/generate_204', timeout: 3000, interval: 3600, expected-status: 204}}
 
 # 出站-本地节点
 proxies: null
