@@ -5,11 +5,7 @@ Modified date: 2025-08-19 12:15
 [中文文档](https://github.com/LaolunsiG/PCR/blob/main/README_CN.md)
 
 # Self use proxy resource repository-PCR
-
-- Clash is no longer updated and does not support new rules and encryption, so this self use repository is created.
-- This repository will consolidate some rules together for ease of use.
-- [Clash.Meta](https://github.com/LaolunsiG/PCR/tree/main/Rules/Clash.Meta) can be used for Clash for Android (3.0.3) and Clash for Windows with older Clash kernels.
-- This repository is primarily intended for personal storage and use.
+> This repository is primarily intended for personal storage and use.
 
 ## Disclaimer
 
