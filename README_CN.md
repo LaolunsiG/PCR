@@ -5,8 +5,7 @@ Modified date: 2025-08-19 12:16
 [English](https://github.com/LaolunsiG/PCR/blob/main/README.md)
 
 # 自用代理资源存储库 -PCR
-
-- 本存储库个人存储使用。
+> 本存储库个人存储使用。
 
 ## 免责申明
 
