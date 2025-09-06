@@ -3,19 +3,9 @@
 # updata_url: https://github.com/LaolunsiG/PCR/raw/main/rule/mihomo/ChinaLite/ChinaLite-Classical.yaml
 # repo: https://github.com/LaolunsiG/PCR/tree/main/rule/mihomo/ChinaLite
 # content: 
-# DOMAIN
 # DOMAIN-SUFFIX
 # DOMAIN-KEYWORD
 
 payload:
-  # webstacknav
-  - DOMAIN,webstacknav.xiaoe.x10.mx
-  - DOMAIN,webstacknav.xiaoelaolunsi.ip-ddns.com
-  - DOMAIN,webstacknav.xiaoe.ggff.net
-  - DOMAIN,webstacknav.xiaoe520.dpdns.org
-  # blog
-  - DOMAIN,blog.xiaoelaolunsi.ip-ddns.com
-  - DOMAIN,blog.xiaoelaolunsi.dpdns.org
-  - DOMAIN,blog.xiaoe520.dpdns.org
-  - DOMAIN,blog.nekoha520.dpdns.org
   - DOMAIN-KEYWORD,ticktick.com
+  - DOMAIN-SUFFIX,xiaohuolongjc.top

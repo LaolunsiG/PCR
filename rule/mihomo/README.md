@@ -7,7 +7,7 @@ Modified date: 2025-08-20 20:02
 - 本规则集只是将一些分散的规则和在一起。
 
 ## 规则分类
-
+> [规则类型](https://wiki.metacubex.one/config/rules/)
 > 根据英文字母顺序分类
 
 | 规则分类                                                                                           | 介绍  |
