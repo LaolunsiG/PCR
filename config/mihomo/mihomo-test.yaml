@@ -27,41 +27,6 @@ proxy-providers:
       # 为订阅节点添加机场名称前缀
       additional-prefix: "[Sub01]"
 
-  # Sub02:
-  #   <<: *NodeParam
-  #   url: ""
-  #   path: ./provider/proxyset/Sub02.yaml
-  #   override:
-  #     additional-prefix: "[Sub02]"
-
-  # Sub03:
-  #   <<: *NodeParam
-  #   url: ""
-  #   path: ./provider/proxyset/Sub03.yaml
-  #   override:
-  #     additional-prefix: "[Sub03]"
-
-  # Sub04:
-  #   <<: *NodeParam
-  #   url: ""
-  #   path: ./provider/proxyset/Sub04.yaml
-  #   override:
-  #     additional-prefix: "[Sub04]"
-
-  # Sub05:
-  #   <<: *NodeParam
-  #   url: ""
-  #   path: ./provider/proxyset/Sub05.yaml
-  #   override:
-  #     additional-prefix: "[Sub05]"
-
-  # Sub06:
-  #   <<: *NodeParam
-  #   url: ""
-  #   path: ./provider/proxyset/Sub06.yaml
-  #   override:
-  #     additional-prefix: "[Sub06]"
-
   
 # -------------------------------------
 # 全局配置
@@ -193,8 +158,10 @@ regular-anchor:
   filterRU: &filterRU '^(?=.*((?i)🇷🇺|俄罗斯|莫斯科|新西伯利亚|(\b(Новосиби́рская|Moscow|RU|Russia)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
   filterSG: &filterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
   filterTW: &filterTW '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+  
   ## Australia
   filterAU: &filterAU '^(?=.*((?i)🇦🇺|澳大利亚|(\b(AU|Australia)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+  
   ## Europe
   filterAR: &filterAR '^(?=.*((?i)🇦🇷|阿根廷|(\b(AR|Argentinaia)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
   filterDE: &filterDE '^(?=.*((?i)🇩🇪|德国|(\b(DE|Germany)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -203,215 +170,221 @@ regular-anchor:
   filterNL: &filterNL '^(?=.*((?i)🇳🇱|荷兰|(\b(NL|Holland|Netherlands)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
   filterTR: &filterTR '^(?=.*((?i)🇹🇷|土耳其|(\b(TR|TUR|Turkey)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
   filterUK: &filterUK '^(?=.*((?i)🇬🇧|英国|伦敦|(\b(UK|United Kingdom)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+  
   ## North America
   filterCA: &filterCA '^(?=.*((?i)🇨🇦|加拿大|(\b(CA|Canada)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
   filterUS: &filterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+  
   ## other
-  filterOT: &filterOT '^(?=.*(🇬🇧|英|伦敦|(?i)UK|United Kingdom|GB))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇹🇷|土耳其|(?i)TR|TUR|Turkey))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇳🇱|荷|NL|Holland|Netherlands))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇩🇪|德|(?i)DE|Germany))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇮🇪|爱尔兰|IRL|Ireland))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇫🇷|法|FR|France))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*((?i)🇦🇺|澳大|AU|Australia))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇹🇼|台|(?i)TW|Tai))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇸🇬|新加坡|狮|(?i)SG|Singapore))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇷🇺|俄|莫斯科|新西伯利亚|Новосиби́рская|Moscow|RU|Russia))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇰🇷|韩|韓|首尔|(?i)KR|Korea))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*((?i) 🇯🇵|日|川日|东京|大阪|泉日|埼玉|JP|Japan))(?!.*((?i)回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇭🇰|港|虚通|(?i)HK|Hong))(?!.*(回国|校园|游戏|教育|(?i)GAME|IPV6)).*$`^(?=.*(🇮🇳|印|班加罗尔|孟买|Mumbai|IN|India))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$`^(?=.*(🇺🇸|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(?i)US|United States))(?!.*(回国|校园|游戏|教育|久虚|(?i)GAME|IPV6)).*$`^(?=.*(🇨🇦|加拿大|CA|Canada))(?!.*(回国|校园|游戏|教育|久虚|GAME|IPV6)).*$'
+  filterOther: &filterOther '^(?!.*((?i)🇮🇳|印度|班加罗尔|孟买|(\b(Mumbai|IN|India)\d{0,2}\b)|🇭🇰|香港|(\b(HK|Hong)\d{0,2}\b)|🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\d{0,2}\b)|🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\d{0,2}\b)|🇲🇴|澳门|(\b(MO|Oman)\d{0,2}\b)|🇷🇺|俄|莫斯科|新西伯利亚|Новосиби́рская|Moscow|RU|Russia|🇸🇬|新加坡|狮|(\b(SG|Singapore)\d{0,2}\b)|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\d{0,2}\b)|🇦🇺|澳大利亚|(\b(AU|Australia)\d{0,2}\b)|🇦🇷|阿根廷|(\b(AR|Argentinaia)\d{0,2}\b)|🇫🇷|法国|(\b(FR|FRA|France)(\d+)?\b)|🇮🇪|爱尔兰|(\b(IE|IRL|Ireland)(\d+)?\b)|🇩🇪|德国|(\b(DE|Germany)\d{0,2}\b)|🇳🇱|荷兰|(\b(NL|Holland|Netherlands)\d{0,2}\b)|🇹🇷|土耳其|(\b(TR|TUR|Turkey)\d{0,2}\b)|🇬🇧|英国|伦敦|(\b(UK|United Kingdom)\d{0,2}\b)|🇨🇦|加拿大|(\b(CA|Canada)\b)|🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\d{0,2}\b))).*$'
   filterGL: &filterGL '^(?=.*(.*))(?!.*((?i)邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|🎮|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\d{0,2}\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$'
-  filterBA: &filterBA '^(?=.*(回国))(?!.*((?i)校园|游戏|🎮|(\b(GAME)\b))).*$'
-  filterGA: &filterGA '^(?=.*((?i)游戏|🎮|(\b(GAME)\d{0,2}\b)))(?!.*((?i)回国|校园)).*$'
+  filterBack: &filterBack '^(?=.*(回国))(?!.*((?i)校园|游戏|🎮|(\b(GAME)\b))).*$'
+  filterGame: &filterGame '^(?=.*((?i)游戏|🎮|(\b(GAME)\d{0,2}\b)))(?!.*((?i)回国|校园)).*$'
 
 # 策略组锚点
 strategy-anchor:  
   ## 手动选择参数
   select-test: &select-test {type: select, interval: 60, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: false, expected-status: 204}
-  select-h: &select-h {type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India 延迟优选, 🇭🇰 Hong Kong 延迟优选, 🇯🇵 Japan 延迟优选, 🇰🇷 Korea 延迟优选, 🇲🇴 Oman 延迟优选, 🇷🇺 Russia 延迟优选, 🇸🇬 Singapore 延迟优选, 🇨🇳 Taiwan 延迟优选, 🇦🇺 Australia 延迟优选, 🇦🇷 Argentinaia 延迟优选, 🇫🇷 France 延迟优选, 🇩🇪 Germany 延迟优选, 🇮🇪 Ireland 延迟优选, 🇳🇱 Netherlands 延迟优选, 🇹🇷 Turkey 延迟优选, 🇬🇧 United Kingdom 延迟优选, 🇨🇦 Canada 延迟优选, 🇺🇸 United States 延迟优选]}
-  select-d: &select-d {type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India 延迟优选, 🇭🇰 Hong Kong 延迟优选, 🇯🇵 Japan 延迟优选, 🇰🇷 Korea 延迟优选, 🇲🇴 Oman 延迟优选, 🇷🇺 Russia 延迟优选, 🇸🇬 Singapore 延迟优选, 🇨🇳 Taiwan 延迟优选, 🇦🇺 Australia 延迟优选, 🇦🇷 Argentinaia 延迟优选, 🇫🇷 France 延迟优选, 🇩🇪 Germany 延迟优选, 🇮🇪 Ireland 延迟优选, 🇳🇱 Netherlands 延迟优选, 🇹🇷 Turkey 延迟优选, 🇬🇧 United Kingdom 延迟优选, 🇨🇦 Canada 延迟优选, 🇺🇸 United States 延迟优选]}
-  select-p: &select-p {type: select, proxies: [🚀 Proxy, 🇮🇳 India 延迟优选, 🇭🇰 Hong Kong 延迟优选, 🇯🇵 Japan 延迟优选, 🇰🇷 Korea 延迟优选, 🇲🇴 Oman 延迟优选, 🇷🇺 Russia 延迟优选, 🇸🇬 Singapore 延迟优选, 🇨🇳 Taiwan 延迟优选, 🇦🇺 Australia 延迟优选, 🇦🇷 Argentinaia 延迟优选, 🇫🇷 France 延迟优选, 🇩🇪 Germany 延迟优选, 🇮🇪 Ireland 延迟优选, 🇳🇱 Netherlands 延迟优选, 🇹🇷 Turkey 延迟优选, 🇬🇧 United Kingdom 延迟优选, 🇨🇦 Canada 延迟优选, 🇺🇸 United States 延迟优选]}
+  select-hybrid: &select-hybrid {type: select, proxies: [🚀 Proxy, 🎯 Direct, 🇮🇳 India-urltest, 🇭🇰 Hong Kong-urltest, 🇯🇵 Japan-urltest, 🇰🇷 Korea-urltest, 🇲🇴 Oman-urltest, 🇷🇺 Russia-urltest, 🇸🇬 Singapore-urltest, 🇨🇳 Taiwan-urltest, 🇦🇺 Australia-urltest, 🇦🇷 Argentinaia-urltest, 🇫🇷 France-urltest, 🇩🇪 Germany-urltest, 🇮🇪 Ireland-urltest, 🇳🇱 Netherlands-urltest, 🇹🇷 Turkey-urltest, 🇬🇧 United Kingdom-urltest, 🇨🇦 Canada-urltest, 🇺🇸 United States-urltest]}
+  select-direct: &select-direct {type: select, proxies: [🎯 Direct, 🚀 Proxy, 🇮🇳 India-urltest, 🇭🇰 Hong Kong-urltest, 🇯🇵 Japan-urltest, 🇰🇷 Korea-urltest, 🇲🇴 Oman-urltest, 🇷🇺 Russia-urltest, 🇸🇬 Singapore-urltest, 🇨🇳 Taiwan-urltest, 🇦🇺 Australia-urltest, 🇦🇷 Argentinaia-urltest, 🇫🇷 France-urltest, 🇩🇪 Germany-urltest, 🇮🇪 Ireland-urltest, 🇳🇱 Netherlands-urltest, 🇹🇷 Turkey-urltest, 🇬🇧 United Kingdom-urltest, 🇨🇦 Canada-urltest, 🇺🇸 United States-urltest]}
+  select-proxy: &select-proxy {type: select, proxies: [🚀 Proxy, 🇮🇳 India-urltest, 🇭🇰 Hong Kong-urltest, 🇯🇵 Japan-urltest, 🇰🇷 Korea-urltest, 🇲🇴 Oman-urltest, 🇷🇺 Russia-urltest, 🇸🇬 Singapore-urltest, 🇨🇳 Taiwan-urltest, 🇦🇺 Australia-urltest, 🇦🇷 Argentinaia-urltest, 🇫🇷 France-urltest, 🇩🇪 Germany-urltest, 🇮🇪 Ireland-urltest, 🇳🇱 Netherlands-urltest, 🇹🇷 Turkey-urltest, 🇬🇧 United Kingdom-urltest, 🇨🇦 Canada-urltest, 🇺🇸 United States-urltest]}
   ## 时延优选参数
   urlTest: &urltest {type: url-test, tolerance: 50, interval: 60, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: false, include-all: true, expected-status: 204}
   ## 故障转移参数
   fallBack: &fallback {type: fallback, interval: 60, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: false, include-all: true, expected-status: 204}
   ## 负载均衡参数
-  loadbalance-1: &loadbalance-1 {type: load-balance, strategy: round-robin, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: true, include-all: true, expected-status: 204}
-  loadbalance-2: &loadbalance-2 {type: load-balance, strategy: consistent-hashing, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: true, include-all: true, expected-status: 204}
-  loadbalance-3: &loadbalance-3 {type: load-balance, strategy: sticky-sessions, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: true, include-all: true, expected-status: 204}
+  loadbalance-roundrobin: &loadbalance-roundrobin {type: load-balance, strategy: round-robin, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: true, include-all: true, expected-status: 204}
+  loadbalance-consistent: &loadbalance-consistent {type: load-balance, strategy: consistent-hashing, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: true, include-all: true, expected-status: 204}
+  loadbalance-sticky: &loadbalance-sticky {type: load-balance, strategy: sticky-sessions, interval: 15, url: 'https://www.google.com/generate_204', disable-udp: false, timeout: 3000, max-failed-times: 3, lazy: true, hidden: true, include-all: true, expected-status: 204}
 
 # -------------------------------------
+# 策略组
 proxy-groups:
   # ----------------节点选择策略组--------------------
   # 模块化选择
-  - {name: 🚀 Proxy, type: select, proxies: [🗺 地区延迟优选, 🗺 地区负载均衡-1 , 🗺 地区负载均衡-2, 🗺 地区负载均衡-3, 🌐 其它节点选择], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Rocket.png}
+  - {name: 🚀 Proxy, type: select, proxies: [🗺 Nation-urltest, 🗺 Nation-roundrobin , 🗺 Nation-consistent, 🗺 Nation-sticky, 🌐 Other], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Rocket.png}
   # 兜底策略组
-  - {name: 🐟 漏网之鱼, <<: *select-d, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png} 
-  - {name: 🗺 地区延迟优选, <<: *select-test, proxies: [🇮🇳 India 延迟优选, 🇭🇰 Hong Kong 延迟优选, 🇯🇵 Japan 延迟优选, 🇰🇷 Korea 延迟优选, 🇲🇴 Oman 延迟优选, 🇷🇺 Russia 延迟优选, 🇸🇬 Singapore 延迟优选, 🇨🇳 Taiwan 延迟优选, 🇦🇺 Australia 延迟优选, 🇦🇷 Argentinaia 延迟优选, 🇫🇷 France 延迟优选, 🇩🇪 Germany 延迟优选, 🇮🇪 Ireland 延迟优选, 🇳🇱 Netherlands 延迟优选, 🇹🇷 Turkey 延迟优选, 🇬🇧 United Kingdom 延迟优选, 🇨🇦 Canada 延迟优选, 🇺🇸 United States 延迟优选], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png}
-  - {name: 🗺 地区负载均衡-1, <<: *select-test, proxies: [🇮🇳 India 负载均衡-1, 🇭🇰 Hong Kong 负载均衡-1, 🇯🇵 Japan 负载均衡-1, 🇰🇷 Korea 负载均衡-1, 🇲🇴 Oman 负载均衡-1, 🇷🇺 Russia 负载均衡-1, 🇸🇬 Singapore 负载均衡-1, 🇨🇳 Taiwan 负载均衡-1, 🇦🇺 Australia 负载均衡-1, 🇦🇷 Argentinaia 负载均衡-1, 🇫🇷 France 负载均衡-1, 🇩🇪 Germany 负载均衡-1, 🇳🇱 Netherlands 负载均衡-1, 🇹🇷 Turkey 负载均衡-1, 🇬🇧 United Kingdom 负载均衡-1, 🇨🇦 Canada 负载均衡-1, 🇺🇸 United States 负载均衡-1], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png}
-  - {name: 🗺 地区负载均衡-2, <<: *select-test, proxies: [🇮🇳 India 负载均衡-2, 🇭🇰 Hong Kong 负载均衡-2, 🇯🇵 Japan 负载均衡-2, 🇰🇷 Korea 负载均衡-2, 🇲🇴 Oman 负载均衡-2, 🇷🇺 Russia 负载均衡-2, 🇸🇬 Singapore 负载均衡-2, 🇨🇳 Taiwan 负载均衡-2, 🇦🇺 Australia 负载均衡-2, 🇦🇷 Argentinaia 负载均衡-2, 🇫🇷 France 负载均衡-2, 🇩🇪 Germany 负载均衡-2, 🇳🇱 Netherlands 负载均衡-2, 🇹🇷 Turkey 负载均衡-2, 🇬🇧 United Kingdom 负载均衡-2, 🇨🇦 Canada 负载均衡-2, 🇺🇸 United States 负载均衡-2], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png}
-  - {name: 🗺 地区负载均衡-3, <<: *select-test, proxies: [🇮🇳 India 负载均衡-3, 🇭🇰 Hong Kong 负载均衡-3, 🇯🇵 Japan 负载均衡-3, 🇰🇷 Korea 负载均衡-3, 🇲🇴 Oman 负载均衡-3, 🇷🇺 Russia 负载均衡-3, 🇸🇬 Singapore 负载均衡-3, 🇨🇳 Taiwan 负载均衡-3, 🇦🇺 Australia 负载均衡-3, 🇦🇷 Argentinaia 负载均衡-3, 🇫🇷 France 负载均衡-3, 🇩🇪 Germany 负载均衡-3, 🇳🇱 Netherlands 负载均衡-3, 🇹🇷 Turkey 负载均衡-3, 🇬🇧 United Kingdom 负载均衡-3, 🇨🇦 Canada 负载均衡-3, 🇺🇸 United States 负载均衡-3], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png}
-  - {name: 🌐 其它节点选择, <<: *select-test, proxies: [🌐 其它节点延迟优选, 🌐 其它节点负载均衡-1, 🌐 其它节点负载均衡-2, 🌐 其它节点负载均衡-3], icon: https://www.clashverge.dev/assets/icons/adjust.svg}
-  - {name: ✈️ All, type: select, include-all: true, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png}
+  - {name: 🐟 漏网之鱼, <<: *select-direct, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png} 
+  - {name: 🗺 Nation-urltest, <<: *select-test, proxies: [🇮🇳 India-urltest, 🇭🇰 Hong Kong-urltest, 🇯🇵 Japan-urltest, 🇰🇷 Korea-urltest, 🇲🇴 Oman-urltest, 🇷🇺 Russia-urltest, 🇸🇬 Singapore-urltest, 🇨🇳 Taiwan-urltest, 🇦🇺 Australia-urltest, 🇦🇷 Argentinaia-urltest, 🇫🇷 France-urltest, 🇩🇪 Germany-urltest, 🇮🇪 Ireland-urltest, 🇳🇱 Netherlands-urltest, 🇹🇷 Turkey-urltest, 🇬🇧 United Kingdom-urltest, 🇨🇦 Canada-urltest, 🇺🇸 United States-urltest], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png}
+  - {name: 🗺 Nation-roundrobin, <<: *select-test, proxies: [🇮🇳 India-roundrobin, 🇭🇰 Hong Kong-roundrobin, 🇯🇵 Japan-roundrobin, 🇰🇷 Korea-roundrobin, 🇲🇴 Oman-roundrobin, 🇷🇺 Russia-roundrobin, 🇸🇬 Singapore-roundrobin, 🇨🇳 Taiwan-roundrobin, 🇦🇺 Australia-roundrobin, 🇦🇷 Argentinaia-roundrobin, 🇫🇷 France-roundrobin, 🇩🇪 Germany-roundrobin, 🇳🇱 Netherlands-roundrobin, 🇹🇷 Turkey-roundrobin, 🇬🇧 United Kingdom-roundrobin, 🇨🇦 Canada-roundrobin, 🇺🇸 United States-roundrobin], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png}
+  - {name: 🗺 Nation-consistent, <<: *select-test, proxies: [🇮🇳 India-consistent, 🇭🇰 Hong Kong-consistent, 🇯🇵 Japan-consistent, 🇰🇷 Korea-consistent, 🇲🇴 Oman-consistent, 🇷🇺 Russia-consistent, 🇸🇬 Singapore-consistent, 🇨🇳 Taiwan-consistent, 🇦🇺 Australia-consistent, 🇦🇷 Argentinaia-consistent, 🇫🇷 France-consistent, 🇩🇪 Germany-consistent, 🇳🇱 Netherlands-consistent, 🇹🇷 Turkey-consistent, 🇬🇧 United Kingdom-consistent, 🇨🇦 Canada-consistent, 🇺🇸 United States-consistent], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png}
+  - {name: 🗺 Nation-sticky, <<: *select-test, proxies: [🇮🇳 India-sticky, 🇭🇰 Hong Kong-sticky, 🇯🇵 Japan-sticky, 🇰🇷 Korea-sticky, 🇲🇴 Oman-sticky, 🇷🇺 Russia-sticky, 🇸🇬 Singapore-sticky, 🇨🇳 Taiwan-sticky, 🇦🇺 Australia-sticky, 🇦🇷 Argentinaia-sticky, 🇫🇷 France-sticky, 🇩🇪 Germany-sticky, 🇳🇱 Netherlands-sticky, 🇹🇷 Turkey-sticky, 🇬🇧 United Kingdom-sticky, 🇨🇦 Canada-sticky, 🇺🇸 United States-sticky], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png}
+  - {name: 🌐 Other, <<: *select-test, proxies: [🌐 Other-urltest, 🌐 Other-roundrobin, 🌐 Other-consistent, 🌐 Other-sticky], icon: https://www.clashverge.dev/assets/icons/adjust.svg}
+
 
   # ----------------节点测试--------------------
-  # 延迟优选策略组
-  - {name: 🌐 其它节点延迟优选, <<: *urltest, exclude-filter: *filterOT, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: ✈️ All, type: select, include-all: true, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png}
+
+  # urltest策略组
+  - {name: 🌐 Other-urltest, <<: *urltest, exclude-filter: *filterOther, icon: https://www.clashverge.dev/assets/icons/speed.svg}
   
   ## Africa(非洲)
-  - {name: 🇮🇳 India 延迟优选, <<: *urltest, filter: *filterIN, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇮🇳 India-urltest, <<: *urltest, filter: *filterIN, icon: https://www.clashverge.dev/assets/icons/speed.svg}
 
   ## Asia(亚洲)
-  - {name: 🇭🇰 Hong Kong 延迟优选, <<: *urltest, filter: *filterHK, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇯🇵 Japan 延迟优选, <<: *urltest, filter: *filterJP, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇰🇷 Korea 延迟优选, <<: *urltest, filter: *filterKR, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇲🇴 Oman 延迟优选, <<: *urltest, filter: *filterMO, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇷🇺 Russia 延迟优选, <<: *urltest, filter: *filterRU, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇸🇬 Singapore 延迟优选, <<: *urltest, filter: *filterSG, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇨🇳 Taiwan 延迟优选, <<: *urltest, filter: *filterTW, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇭🇰 Hong Kong-urltest, <<: *urltest, filter: *filterHK, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇯🇵 Japan-urltest, <<: *urltest, filter: *filterJP, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇰🇷 Korea-urltest, <<: *urltest, filter: *filterKR, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇲🇴 Oman-urltest, <<: *urltest, filter: *filterMO, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇷🇺 Russia-urltest, <<: *urltest, filter: *filterRU, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇸🇬 Singapore-urltest, <<: *urltest, filter: *filterSG, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇨🇳 Taiwan-urltest, <<: *urltest, filter: *filterTW, icon: https://www.clashverge.dev/assets/icons/speed.svg}
   
   ## Australia
-  - {name: 🇦🇺 Australia 延迟优选, <<: *urltest, filter: *filterAU, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇦🇺 Australia-urltest, <<: *urltest, filter: *filterAU, icon: https://www.clashverge.dev/assets/icons/speed.svg}
   
   ## Europe(欧洲)
-  - {name: 🇦🇷 Argentinaia 延迟优选, <<: *urltest, filter: *filterAR, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇫🇷 France 延迟优选, <<: *urltest, filter: *filterFR, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇩🇪 Germany 延迟优选, <<: *urltest, filter: *filterDE, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇮🇪 Ireland 延迟优选, <<: *urltest, filter: *filterIE, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇳🇱 Netherlands 延迟优选, <<: *urltest, filter: *filterNL, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇹🇷 Turkey 延迟优选, <<: *urltest, filter: *filterTR, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇬🇧 United Kingdom 延迟优选, <<: *urltest, filter: *filterUK, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇦🇷 Argentinaia-urltest, <<: *urltest, filter: *filterAR, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇫🇷 France-urltest, <<: *urltest, filter: *filterFR, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇩🇪 Germany-urltest, <<: *urltest, filter: *filterDE, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇮🇪 Ireland-urltest, <<: *urltest, filter: *filterIE, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇳🇱 Netherlands-urltest, <<: *urltest, filter: *filterNL, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇹🇷 Turkey-urltest, <<: *urltest, filter: *filterTR, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇬🇧 United Kingdom-urltest, <<: *urltest, filter: *filterUK, icon: https://www.clashverge.dev/assets/icons/speed.svg}
 
   ## North America(北美洲)
-  - {name: 🇨🇦 Canada 延迟优选, <<: *urltest, filter: *filterCA, icon: https://www.clashverge.dev/assets/icons/speed.svg}
-  - {name: 🇺🇸 United States 延迟优选, <<: *urltest, filter: *filterUS, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇨🇦 Canada-urltest, <<: *urltest, filter: *filterCA, icon: https://www.clashverge.dev/assets/icons/speed.svg}
+  - {name: 🇺🇸 United States-urltest, <<: *urltest, filter: *filterUS, icon: https://www.clashverge.dev/assets/icons/speed.svg}
 
 
   # ----------------功能策略组--------------------
   # 服务平台
-  - {name: ☁ Cloudflare, <<: *select-h, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png}
+  - {name: ☁ Cloudflare, <<: *select-hybrid, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png}
   
   ## 大型服务
-  - {name: 🍎 AppleServe, <<: *select-d, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_1.png}
-  - {name: 📢 GoogleServe, <<: *select-h, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png}
-  - {name: Ⓜ️ MicrosoftServe, <<: *select-d, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
+  - {name: 🍎 AppleServe, <<: *select-direct, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_1.png}
+  - {name: 📢 GoogleServe, <<: *select-hybrid, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png}
+  - {name: Ⓜ️ MicrosoftServe, <<: *select-direct, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png}
   
   ## 人工智能
-  - {name: 🤖 AI, <<: *select-h, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
+  - {name: 🤖 AI, <<: *select-hybrid, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png}
   
-  - {name: 💴 PayPal, <<: *select-d, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PayPal.png}
+  - {name: 💴 PayPal, <<: *select-direct, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PayPal.png}
   
-  - {name: 🐱 Github, <<: *select-h, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
+  - {name: 🐱 Github, <<: *select-hybrid, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png}
 
   # 社交通讯平台
-  - {name: 🐦 Discord, <<: *select-p, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Discord.png} 
+  - {name: 🐦 Discord, <<: *select-proxy, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Discord.png} 
    
   # 社交媒体平台
-  - {name: 💬 Facebook, <<: *select-p, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Facebook.png} 
-  - {name: 💬 Twitter, <<: *select-p, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Twitter.png}
-  - {name: 🎵 TikTok, <<: *select-p, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/TikTok_2.png}
-  - {name: 📹 YouTube, <<: *select-p, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
+  - {name: 💬 Facebook, <<: *select-proxy, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Facebook.png} 
+  - {name: 💬 Twitter, <<: *select-proxy, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Twitter.png}
+  - {name: 🎵 TikTok, <<: *select-proxy, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/TikTok_2.png}
+  - {name: 📹 YouTube, <<: *select-proxy, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png}
   
   # 娱乐平台
   ## 插画平台
-  - {name: 🖼️ Pixiv, <<: *select-p, icon: https://raw.githubusercontent.com/LaolunsiG/PCR/main/Icons/xiaoe/pixiv01-500.png}
+  - {name: 🖼️ Pixiv, <<: *select-proxy, icon: https://raw.githubusercontent.com/LaolunsiG/PCR/main/Icons/xiaoe/pixiv01-500.png}
   
   ## 游戏平台
-  - {name: 🎮 GameGlobal, <<: *select-d, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png}
+  - {name: 🎮 GameGlobal, <<: *select-direct, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png}
 
   ## 音乐平台
-  - {name: 🎵 Spotify, <<: *select-d, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Spotify.png}
+  - {name: 🎵 Spotify, <<: *select-direct, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Spotify.png}
   
   ## 影视
-  - {name: 📽️ Disney+, <<: *select-p, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney.png}
-  - {name: 🎞️ Max, <<: *select-p, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/HBO_Max.png}
-  - {name: 🎥 Netflix, <<: *select-p, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png}
-  - {name: 🙈 MediaGlobal, <<: *select-p, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png}
+  - {name: 📽️ Disney+, <<: *select-proxy, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney.png}
+  - {name: 🎞️ Max, <<: *select-proxy, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/HBO_Max.png}
+  - {name: 🎥 Netflix, <<: *select-proxy, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png}
+  - {name: 🙈 MediaGlobal, <<: *select-proxy, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Streaming.png}
 
   - {name: 🛑 Reject, type: select, proxies: [REJECT, REJECT-DROP], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Reject.png}
   - {name: 🎯 Direct, type: select, proxies: [DIRECT], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png}
  
   # ----------------国家或地区策略组--------------------
   # 负载均衡策略组-1
-  - {name: 🌐 其它节点负载均衡-1, <<: *loadbalance-1, exclude-filter: *filterOT, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🌐 Other-roundrobin, <<: *loadbalance-roundrobin, exclude-filter: *filterOther, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Africa(非洲)
-  - {name: 🇮🇳 India 负载均衡-1, <<: *loadbalance-1, filter: *filterIN, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇮🇳 India-roundrobin, <<: *loadbalance-roundrobin, filter: *filterIN, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Asia(亚洲)
-  - {name: 🇭🇰 Hong Kong 负载均衡-1, <<: *loadbalance-1, filter: *filterHK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇯🇵 Japan 负载均衡-1, <<: *loadbalance-1, filter: *filterJP, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇰🇷 Korea 负载均衡-1, <<: *loadbalance-1, filter: *filterKR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇲🇴 Oman 负载均衡-1, <<: *loadbalance-1, filter: *filterMO, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇷🇺 Russia 负载均衡-1, <<: *loadbalance-1, filter: *filterRU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇸🇬 Singapore 负载均衡-1, <<: *loadbalance-1, filter: *filterSG, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇨🇳 Taiwan 负载均衡-1, <<: *loadbalance-1, filter: *filterTW, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇭🇰 Hong Kong-roundrobin, <<: *loadbalance-roundrobin, filter: *filterHK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇯🇵 Japan-roundrobin, <<: *loadbalance-roundrobin, filter: *filterJP, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇰🇷 Korea-roundrobin, <<: *loadbalance-roundrobin, filter: *filterKR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇲🇴 Oman-roundrobin, <<: *loadbalance-roundrobin, filter: *filterMO, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇷🇺 Russia-roundrobin, <<: *loadbalance-roundrobin, filter: *filterRU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇸🇬 Singapore-roundrobin, <<: *loadbalance-roundrobin, filter: *filterSG, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇨🇳 Taiwan-roundrobin, <<: *loadbalance-roundrobin, filter: *filterTW, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Australia
-  - {name: 🇦🇺 Australia 负载均衡-1, <<: *loadbalance-1, filter: *filterAU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇦🇺 Australia-roundrobin, <<: *loadbalance-roundrobin, filter: *filterAU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Europe
-  - {name: 🇦🇷 Argentinaia 负载均衡-1, <<: *loadbalance-1, filter: *filterAR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇫🇷 France 负载均衡-1, <<: *loadbalance-1, filter: *filterFR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇩🇪 Germany 负载均衡-1, <<: *loadbalance-1, filter: *filterDE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇮🇪 Ireland 负载均衡-1, <<: *loadbalance-1, filter: *filterIE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇳🇱 Netherlands 负载均衡-1, <<: *loadbalance-1, filter: *filterNL, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇹🇷 Turkey 负载均衡-1, <<: *loadbalance-1, filter: *filterTR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇬🇧 United Kingdom 负载均衡-1, <<: *loadbalance-1, filter: *filterUK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇦🇷 Argentinaia-roundrobin, <<: *loadbalance-roundrobin, filter: *filterAR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇫🇷 France-roundrobin, <<: *loadbalance-roundrobin, filter: *filterFR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇩🇪 Germany-roundrobin, <<: *loadbalance-roundrobin, filter: *filterDE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇮🇪 Ireland-roundrobin, <<: *loadbalance-roundrobin, filter: *filterIE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇳🇱 Netherlands-roundrobin, <<: *loadbalance-roundrobin, filter: *filterNL, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇹🇷 Turkey-roundrobin, <<: *loadbalance-roundrobin, filter: *filterTR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇬🇧 United Kingdom-roundrobin, <<: *loadbalance-roundrobin, filter: *filterUK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
 
   ## North America
-  - {name: 🇨🇦 Canada 负载均衡-1, <<: *loadbalance-1, filter: *filterCA, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇺🇸 United States 负载均衡-1, <<: *loadbalance-1, filter: *filterUS, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇨🇦 Canada-roundrobin, <<: *loadbalance-roundrobin, filter: *filterCA, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇺🇸 United States-roundrobin, <<: *loadbalance-roundrobin, filter: *filterUS, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   # 负载均衡策略组-2
-  - {name: 🌐 其它节点负载均衡-2, <<: *loadbalance-2, exclude-filter: *filterOT, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🌐 Other-consistent, <<: *loadbalance-consistent, exclude-filter: *filterOther, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Africa
-  - {name: 🇮🇳 India 负载均衡-2, <<: *loadbalance-2, filter: *filterIN, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇮🇳 India-consistent, <<: *loadbalance-consistent, filter: *filterIN, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Asia
-  - {name: 🇭🇰 Hong Kong 负载均衡-2, <<: *loadbalance-2, filter: *filterHK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇯🇵 Japan 负载均衡-2, <<: *loadbalance-2, filter: *filterJP, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇰🇷 Korea 负载均衡-2, <<: *loadbalance-2, filter: *filterKR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇲🇴 Oman 负载均衡-2, <<: *loadbalance-2, filter: *filterMO, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇷🇺 Russia 负载均衡-2, <<: *loadbalance-2, filter: *filterRU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇸🇬 Singapore 负载均衡-2, <<: *loadbalance-2, filter: *filterSG, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇨🇳 Taiwan 负载均衡-2, <<: *loadbalance-2, filter: *filterTW, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇭🇰 Hong Kong-consistent, <<: *loadbalance-consistent, filter: *filterHK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇯🇵 Japan-consistent, <<: *loadbalance-consistent, filter: *filterJP, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇰🇷 Korea-consistent, <<: *loadbalance-consistent, filter: *filterKR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇲🇴 Oman-consistent, <<: *loadbalance-consistent, filter: *filterMO, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇷🇺 Russia-consistent, <<: *loadbalance-consistent, filter: *filterRU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇸🇬 Singapore-consistent, <<: *loadbalance-consistent, filter: *filterSG, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇨🇳 Taiwan-consistent, <<: *loadbalance-consistent, filter: *filterTW, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Australia
-  - {name: 🇦🇺 Australia 负载均衡-2, <<: *loadbalance-2, filter: *filterAU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇦🇺 Australia-consistent, <<: *loadbalance-consistent, filter: *filterAU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Europe(欧洲)
-  - {name: 🇦🇷 Argentinaia 负载均衡-2, <<: *loadbalance-2, filter: *filterAR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇫🇷 France 负载均衡-2, <<: *loadbalance-2, filter: *filterFR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇩🇪 Germany 负载均衡-2, <<: *loadbalance-2, filter: *filterDE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇮🇪 Ireland 负载均衡-2, <<: *loadbalance-2, filter: *filterIE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇳🇱 Netherlands 负载均衡-2, <<: *loadbalance-2, filter: *filterNL, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇹🇷 Turkey 负载均衡-2, <<: *loadbalance-2, filter: *filterTR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇬🇧 United Kingdom 负载均衡-2, <<: *loadbalance-2, filter: *filterUK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇦🇷 Argentinaia-consistent, <<: *loadbalance-consistent, filter: *filterAR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇫🇷 France-consistent, <<: *loadbalance-consistent, filter: *filterFR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇩🇪 Germany-consistent, <<: *loadbalance-consistent, filter: *filterDE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇮🇪 Ireland-consistent, <<: *loadbalance-consistent, filter: *filterIE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇳🇱 Netherlands-consistent, <<: *loadbalance-consistent, filter: *filterNL, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇹🇷 Turkey-consistent, <<: *loadbalance-consistent, filter: *filterTR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇬🇧 United Kingdom-consistent, <<: *loadbalance-consistent, filter: *filterUK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## North America(北美洲)
-  - {name: 🇨🇦 Canada 负载均衡-2, <<: *loadbalance-2, filter: *filterCA, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇺🇸 United States 负载均衡-2, <<: *loadbalance-2, filter: *filterUS, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇨🇦 Canada-consistent, <<: *loadbalance-consistent, filter: *filterCA, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇺🇸 United States-consistent, <<: *loadbalance-consistent, filter: *filterUS, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
 
   # 负载均衡策略组-3
-  - {name: 🌐 其它节点负载均衡-3, <<: *loadbalance-3, exclude-filter: *filterOT, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🌐 Other-sticky, <<: *loadbalance-sticky, exclude-filter: *filterOther, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Africa(非洲)
-  - {name: 🇮🇳 India 负载均衡-3, <<: *loadbalance-3, filter: *filterIN, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇮🇳 India-sticky, <<: *loadbalance-sticky, filter: *filterIN, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Asia(亚洲)
-  - {name: 🇭🇰 Hong Kong 负载均衡-3, <<: *loadbalance-3, filter: *filterHK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇯🇵 Japan 负载均衡-3, <<: *loadbalance-3, filter: *filterJP, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇰🇷 Korea 负载均衡-3, <<: *loadbalance-3, filter: *filterKR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇲🇴 Oman 负载均衡-3, <<: *loadbalance-3, filter: *filterMO, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇷🇺 Russia 负载均衡-3, <<: *loadbalance-3, filter: *filterRU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇸🇬 Singapore 负载均衡-3, <<: *loadbalance-3, filter: *filterSG, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇨🇳 Taiwan 负载均衡-3, <<: *loadbalance-3, filter: *filterTW, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇭🇰 Hong Kong-sticky, <<: *loadbalance-sticky, filter: *filterHK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇯🇵 Japan-sticky, <<: *loadbalance-sticky, filter: *filterJP, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇰🇷 Korea-sticky, <<: *loadbalance-sticky, filter: *filterKR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇲🇴 Oman-sticky, <<: *loadbalance-sticky, filter: *filterMO, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇷🇺 Russia-sticky, <<: *loadbalance-sticky, filter: *filterRU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇸🇬 Singapore-sticky, <<: *loadbalance-sticky, filter: *filterSG, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇨🇳 Taiwan-sticky, <<: *loadbalance-sticky, filter: *filterTW, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Australia
-  - {name: 🇦🇺 Australia 负载均衡-3, <<: *loadbalance-3, filter: *filterAU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇦🇺 Australia-sticky, <<: *loadbalance-sticky, filter: *filterAU, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
   
   ## Europe(欧洲)
-  - {name: 🇦🇷 Argentinaia 负载均衡-3, <<: *loadbalance-3, filter: *filterAR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇫🇷 France 负载均衡-3, <<: *loadbalance-3, filter: *filterFR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇩🇪 Germany 负载均衡-3, <<: *loadbalance-3, filter: *filterDE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇮🇪 Ireland 负载均衡-3, <<: *loadbalance-3, filter: *filterIE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇳🇱 Netherlands 负载均衡-3, <<: *loadbalance-3, filter: *filterNL, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇹🇷 Turkey 负载均衡-3, <<: *loadbalance-3, filter: *filterTR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇬🇧 United Kingdom 负载均衡-3, <<: *loadbalance-3, filter: *filterUK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇦🇷 Argentinaia-sticky, <<: *loadbalance-sticky, filter: *filterAR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇫🇷 France-sticky, <<: *loadbalance-sticky, filter: *filterFR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇩🇪 Germany-sticky, <<: *loadbalance-sticky, filter: *filterDE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇮🇪 Ireland-sticky, <<: *loadbalance-sticky, filter: *filterIE, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇳🇱 Netherlands-sticky, <<: *loadbalance-sticky, filter: *filterNL, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇹🇷 Turkey-sticky, <<: *loadbalance-sticky, filter: *filterTR, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇬🇧 United Kingdom-sticky, <<: *loadbalance-sticky, filter: *filterUK, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
 
   ## North America(北美洲)
-  - {name: 🇨🇦 Canada 负载均衡-3, <<: *loadbalance-3, filter: *filterCA, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
-  - {name: 🇺🇸 United States 负载均衡-3, <<: *loadbalance-3, filter: *filterUS, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇨🇦 Canada-sticky, <<: *loadbalance-sticky, filter: *filterCA, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+  - {name: 🇺🇸 United States-sticky, <<: *loadbalance-sticky, filter: *filterUS, icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Roundrobin.png}
+
 
 # -------------------------------------
 # 路由规则
@@ -446,7 +419,7 @@ rule-providers:
     path: ./provider/ruleset/privateip.mrs
     url: "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/privateip.mrs"
   
-  ## 苹果服务
+  ## 测速服务
   connectivity-check:
     <<: *domain-mrs
     path: ./provider/ruleset/connectivity-check.mrs
@@ -578,21 +551,21 @@ rule-providers:
   gamecn:
     <<: *domain-mrs
     path: ./provider/ruleset/gamecn.mrs
-    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/games-cn.mrs"
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/games-cn.mrs"
   gameglobal:
     <<: *domain-mrs
     path: ./provider/ruleset/gameglobal.mrs
-    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/games.mrs"
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/games.mrs"
   gameglobalip:
     <<: *ip-mrs
     path: ./provider/ruleset/gameglobalip.mrs
-    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/gamesip.mrs"
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/gamesip.mrs"
     
   ## 音乐平台
   spotify:
     <<: *domain-mrs
     path: ./provider/ruleset/spotify.mrs
-    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/spotify.mrs"
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/mihomo-ruleset/spotify.mrs"
   
   ## 影视
   disney:
