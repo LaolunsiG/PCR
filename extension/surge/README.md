@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-21 10:04
+Modified date: 2025-09-10 12:33
 ---
 # Surge 扩展资源整理
 
@@ -15,17 +15,18 @@ Modified date: 2025-08-21 10:04
 
 ## reference
 
-| 类型  | 作者/项目名称                                                                           |
-| --- | --------------------------------------------------------------------------------- |
-| 综合  | [DualSubs](https://github.com/DualSubs)                                           |
-| 综合  | [I-am-R-E/Functional-Store-Hub](https://github.com/I-am-R-E/Functional-Store-Hub) |
-| 综合  | [Moli-X/Resources](https://github.com/Moli-X/Resources)                           |
-| 综合  | [chxm1023/Rewrite](https://github.com/chxm1023/Rewrite)                           |
-| 综合  | [Keywos/rule](https://github.com/Keywos/rule)                                     |
-| 综合  | [app2smile/rules](https://github.com/app2smile/rules)                             |
-| 综合  | [chenyk1219/surge](https://github.com/chenyk1219/surge)                           |
-| 综合  | [Rabbit-Spec/Surge](https://github.com/Rabbit-Spec/Surge)                         |
-| 综合  | [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts)                     |
-| 扩展  | [wiki.surge.community/模块](https://wiki.surge.community/modules)                   |
-| 扩展  | [surge.qingr.moe](https://surge.qingr.moe/)                                       |
-| 脚本  | [Keywos/rule](https://github.com/Keywos/rule)                                     |
+| 作者/项目名称                                                                           |
+| --------------------------------------------------------------------------------- |
+| [app2smile/rules](https://github.com/app2smile/rules)                             |
+| [chenyk1219/surge](https://github.com/chenyk1219/surge)                           |
+| [chxm1023/Rewrite](https://github.com/chxm1023/Rewrite)                           |
+| [DualSubs](https://github.com/DualSubs)                                           |
+| [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts)                     |
+| [I-am-R-E/Functional-Store-Hub](https://github.com/I-am-R-E/Functional-Store-Hub) |
+| [Keywos/rule](https://github.com/Keywos/rule)                                     |
+| [Keywos/rule](https://github.com/Keywos/rule)                                     |
+| [Moli-X/Resources](https://github.com/Moli-X/Resources)                           |
+| [Rabbit-Spec/Surge](https://github.com/Rabbit-Spec/Surge)                         |
+| [Repository Structure](https://surge.qingr.moe/)                                  |
+| [surge.qingr.moe](https://surge.qingr.moe/)                                       |
+| [wiki.surge.community/模块](https://wiki.surge.community/modules)                   |
