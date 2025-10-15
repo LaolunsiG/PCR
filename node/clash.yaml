@@ -1,0 +1,1707 @@
+proxies:
+- cipher: aes-128-gcm
+  name: HK Akari 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 45329
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: HK AKILE 02 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 27643
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: HK HNSL 03 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 35652
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: HK AMAZON 04 @SubscriptionShare
+  password: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  port: 15097
+  server: 95.40.102.134
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: HK AMAZON 05 @SubscriptionShare
+  password: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  port: 11688
+  server: 43.198.139.164
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: HK AMAZON 06 @SubscriptionShare
+  password: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  port: 11688
+  server: 18.163.105.58
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: HK AMAZON 07 @SubscriptionShare
+  password: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  port: 11688
+  server: 95.40.31.74
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: HK AMAZON 08 @SubscriptionShare
+  password: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  port: 15098
+  server: 18.167.85.204
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: HK AMAZON 09 @SubscriptionShare
+  password: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  port: 15099
+  server: 18.163.189.4
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: HK AMAZON 10 @SubscriptionShare
+  password: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  port: 11688
+  server: 54.46.77.71
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: HK AMAZON 11 @SubscriptionShare
+  password: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  port: 11689
+  server: 18.167.94.30
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: HK AKILE 12 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 36732
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: HK HNSL 13 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 43048
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: HK AMAZON 14 @SubscriptionShare
+  password: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  port: 19888
+  server: 43.198.22.55
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: HK HKT 15 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 565
+  server: 103.37.45.136
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: HK HK 16 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 591
+  server: 103.37.45.144
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: HK HK 17 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 564
+  server: 103.37.45.136
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: HK AMAZON 18 @SubscriptionShare
+  password: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  port: 15098
+  server: 95.40.119.117
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: HK HKT 19 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 593
+  server: 103.37.45.144
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: HK HGCL 20 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 563
+  server: 103.37.45.151
+  type: ss
+  udp: true
+- name: SG AMAZON 01 @SubscriptionShare
+  network: ws
+  password: 8c92b985-02fc-4bc1-8cd7-a12e5aae243b
+  port: 20230
+  server: 13.212.95.138
+  skip-cert-verify: true
+  sni: www.alibaba.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.alibaba.com
+    path: ''
+- client-fingerprint: ios
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: bby
+  name: SG AMAZON 02 @SubscriptionShare
+  network: grpc
+  port: 40000
+  reality-opts:
+    public-key: Jqwg_L2lzNEBWCaH4oyqbw7KfqxtOA0TQXtxTaAU1nU
+    short-id: aec0af41
+  server: 54.169.102.93
+  servername: www.walmart.com
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: acf03723-aeff-4724-9536-4234cda1fcf4
+- cipher: aes-128-gcm
+  name: SG ORACLE 03 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 690
+  server: 119.36.154.60
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: SG ORACLE 04 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 680
+  server: 119.36.154.60
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: SG ORACLE 05 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 594
+  server: 119.36.154.169
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: SG AKILE 06 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 23059
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- name: SG AMAZON 07 @SubscriptionShare
+  network: ws
+  password: 8c92b985-02fc-4bc1-8cd7-a12e5aae243b
+  port: 20230
+  server: 18.143.148.52
+  skip-cert-verify: true
+  sni: www.alibaba.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.alibaba.com
+    path: ''
+- name: SG AMAZON 08 @SubscriptionShare
+  network: ws
+  password: 8c92b985-02fc-4bc1-8cd7-a12e5aae243b
+  port: 20230
+  server: 13.229.235.135
+  skip-cert-verify: true
+  sni: www.alibaba.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.alibaba.com
+    path: ''
+- name: SG AMAZON 09 @SubscriptionShare
+  network: ws
+  password: 8c92b985-02fc-4bc1-8cd7-a12e5aae243b
+  port: 20230
+  server: 52.77.244.144
+  skip-cert-verify: true
+  sni: www.alibaba.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.alibaba.com
+    path: ''
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: SG Datacamp 10 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 45.88.42.40
+  skip-cert-verify: true
+  sni: dv-sg.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: SG CLOUDFLARENET 11 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 45.88.42.40
+  skip-cert-verify: true
+  sni: dv-sg.9966661.xyz
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: SG ORACLE 12 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 595
+  server: 119.36.154.169
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: SG ORACLE 13 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 596
+  server: 119.36.154.169
+  type: ss
+  udp: true
+- auth: a5674edf-cf44-4e0f-877d-9942e2442a21
+  name: SG Wap 14 @SubscriptionShare
+  obfs: salamander
+  obfs-password: fdrccJDGatdFDDRp
+  password: a5674edf-cf44-4e0f-877d-9942e2442a21
+  port: 20000
+  server: 185.151.146.31
+  skip-cert-verify: true
+  type: hysteria2
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 01 @SubscriptionShare
+  port: 22211
+  server: 13.231.186.177
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 05d1a3ab-2ca8-42b2-8f21-527695250017
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 02 @SubscriptionShare
+  port: 23211
+  server: 3.115.6.165
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 05d1a3ab-2ca8-42b2-8f21-527695250017
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 03 @SubscriptionShare
+  port: 22211
+  server: 13.112.48.194
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 05d1a3ab-2ca8-42b2-8f21-527695250017
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 04 @SubscriptionShare
+  port: 23211
+  server: 54.238.194.191
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 05d1a3ab-2ca8-42b2-8f21-527695250017
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 05 @SubscriptionShare
+  port: 23211
+  server: 52.196.198.75
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 591d0321-53a9-4420-8148-6f2deb559b60
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 06 @SubscriptionShare
+  port: 23211
+  server: 35.76.113.33
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 05d1a3ab-2ca8-42b2-8f21-527695250017
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 07 @SubscriptionShare
+  network: ws
+  port: 23211
+  server: 52.195.145.136
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  ws-opts:
+    headers:
+      Host: tls.13.node-for-bigairport.win
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 08 @SubscriptionShare
+  port: 22211
+  server: 54.250.181.227
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 05d1a3ab-2ca8-42b2-8f21-527695250017
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 09 @SubscriptionShare
+  network: ws
+  port: 23211
+  server: 52.195.173.185
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 591d0321-53a9-4420-8148-6f2deb559b60
+  ws-opts:
+    headers:
+      Host: tls.17.node-for-bigairport.win
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 10 @SubscriptionShare
+  port: 22211
+  server: 54.95.67.77
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 05d1a3ab-2ca8-42b2-8f21-527695250017
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 11 @SubscriptionShare
+  port: 23211
+  server: 18.183.52.133
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 05d1a3ab-2ca8-42b2-8f21-527695250017
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 12 @SubscriptionShare
+  network: ws
+  port: 23211
+  server: 35.78.170.218
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 591d0321-53a9-4420-8148-6f2deb559b60
+  ws-opts:
+    headers:
+      Host: tls.15.node-for-bigairport.win
+    path: /
+- alterId: 0
+  cipher: auto
+  name: JP AMAZON 13 @SubscriptionShare
+  network: ws
+  port: 22211
+  server: 43.207.220.121
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 05d1a3ab-2ca8-42b2-8f21-527695250017
+  ws-opts:
+    headers:
+      Host: tls.07.node-for-bigairport.win
+    path: /
+- cipher: aes-128-gcm
+  name: JP NTT 14 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 45213
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: JP AKILE 15 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 25388
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- name: JP AMAZON 16 @SubscriptionShare
+  network: ws
+  password: 8c92b985-02fc-4bc1-8cd7-a12e5aae243b
+  port: 20230
+  server: 54.238.17.180
+  skip-cert-verify: true
+  sni: www.alibaba.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.alibaba.com
+    path: ''
+- name: JP AMAZON 17 @SubscriptionShare
+  network: ws
+  password: 8c92b985-02fc-4bc1-8cd7-a12e5aae243b
+  port: 20230
+  server: 13.115.206.27
+  skip-cert-verify: true
+  sni: www.alibaba.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.alibaba.com
+    path: ''
+- name: JP AMAZON 18 @SubscriptionShare
+  network: ws
+  password: 8c92b985-02fc-4bc1-8cd7-a12e5aae243b
+  port: 20230
+  server: 43.207.74.107
+  skip-cert-verify: true
+  sni: www.alibaba.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.alibaba.com
+    path: ''
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: JP CLOUDFLARENET 19 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 45.11.1.104
+  skip-cert-verify: true
+  sni: dv-jp.9966661.xyz
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: JP ORACLE 20 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 660
+  server: 119.36.154.60
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: US Alice 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 43055
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- auth: a45cdb0f-db6f-4c86-81c4-dbab19df5c29
+  name: US RELIABLESITE 02 @SubscriptionShare
+  password: a45cdb0f-db6f-4c86-81c4-dbab19df5c29
+  port: 11112
+  server: 151.243.168.45
+  skip-cert-verify: true
+  sni: us1.oxdtangx.top
+  type: hysteria2
+  udp: true
+- auth: a45cdb0f-db6f-4c86-81c4-dbab19df5c29
+  name: US PONYNET 03 @SubscriptionShare
+  password: a45cdb0f-db6f-4c86-81c4-dbab19df5c29
+  port: 11112
+  server: 209.141.47.22
+  skip-cert-verify: true
+  sni: tw1.oxdtangx.top
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: US Alice 04 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 32303
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- name: US NETLAB 05 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 34718
+  server: 154.9.249.114
+  skip-cert-verify: true
+  sni: us.cxk.lol
+  type: trojan
+  udp: true
+- auth: b8b00ee8-87e7-4ebb-a6c2-00073c6535c1
+  name: US ASNET 06 @SubscriptionShare
+  obfs: salamander
+  obfs-password: fdrccJDGatdFDDRp
+  password: b8b00ee8-87e7-4ebb-a6c2-00073c6535c1
+  port: 20000
+  server: 166.88.164.34
+  skip-cert-verify: true
+  type: hysteria2
+  udp: true
+- auth: a45cdb0f-db6f-4c86-81c4-dbab19df5c29
+  name: US DARTNODE 07 @SubscriptionShare
+  password: a45cdb0f-db6f-4c86-81c4-dbab19df5c29
+  port: 11112
+  server: 166.88.160.176
+  skip-cert-verify: true
+  sni: yg1.oxdtangx.top
+  type: hysteria2
+  udp: true
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: US HostPapa 08 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 107.175.34.118
+  skip-cert-verify: true
+  sni: ce044a-330.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: US AS 09 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 192.3.233.174
+  skip-cert-verify: true
+  sni: 1e3fb9-330-co.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d
+  name: US HostPapa 10 @SubscriptionShare
+  password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d
+  port: 3000
+  server: 104.168.4.155
+  skip-cert-verify: true
+  sni: b47a2e-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: US EDCL 11 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 615
+  server: 119.36.154.232
+  type: ss
+  udp: true
+- name: US AMAZON 12 @SubscriptionShare
+  network: ws
+  password: 8c92b985-02fc-4bc1-8cd7-a12e5aae243b
+  port: 20230
+  server: 34.217.92.216
+  skip-cert-verify: true
+  sni: www.alibaba.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.alibaba.com
+    path: ''
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: US HostPapa 13 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 107.173.230.59
+  skip-cert-verify: true
+  sni: c94442-20-2.9966661.xyz
+  type: hysteria2
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: US GH&DL 14 @SubscriptionShare
+  network: tcp
+  port: 20133
+  reality-opts:
+    public-key: GbNAnIWBHu4NRuaJsE5X1dIRLSWjmREoudx7TZltYS0
+    short-id: 4926f6d9
+  server: 192.41.102.128
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: a24c6851-2055-42c1-9c20-2d3bad97334f
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: US CLOUDFLARENET 15 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 104.168.4.185
+  skip-cert-verify: true
+  sni: 03e37e-330-co.9966661.xyz
+  type: hysteria2
+  udp: true
+- name: US AMAZON 16 @SubscriptionShare
+  network: ws
+  password: 8c92b985-02fc-4bc1-8cd7-a12e5aae243b
+  port: 20230
+  server: 44.247.80.25
+  skip-cert-verify: true
+  sni: www.alibaba.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: www.alibaba.com
+    path: ''
+- alterId: 0
+  cipher: auto
+  name: US OVH 17 @SubscriptionShare
+  network: ws
+  port: 19290
+  server: 15.204.9.102
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6578c489-28d2-4f12-8c2f-9f2d8789626d
+  ws-opts:
+    headers:
+      Host: 15.204.9.102.yixianled.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: US OVH 18 @SubscriptionShare
+  network: ws
+  port: 26080
+  server: 15.204.57.227
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 6578c489-28d2-4f12-8c2f-9f2d8789626d
+  ws-opts:
+    headers:
+      Host: 15204.57227.yixianled.com
+    path: /
+- auth: c232f411-96b5-4b07-b2f7-66a434725ffb
+  name: US DARTNODE 19 @SubscriptionShare
+  password: c232f411-96b5-4b07-b2f7-66a434725ffb
+  port: 23892
+  server: 38.45.89.97
+  skip-cert-verify: true
+  sni: fus02.mistea.top
+  type: hysteria2
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: US PONYNET 20 @SubscriptionShare
+  network: ws
+  port: 27123
+  server: 212.192.15.176
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: f9e34a94-a65d-49a2-b839-7a51f078a239
+  ws-opts:
+    path: /
+- cipher: aes-128-gcm
+  name: TW Akari 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 36647
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: TW AKILE 02 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 49327
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: TW AKILE 03 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 21849
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: TW DCBG 04 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 585
+  server: 103.255.71.139
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: TW DCBG 05 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 584
+  server: 103.255.71.139
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: TW DCBG 06 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 43742
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: TW DCBG 07 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 586
+  server: 103.255.71.139
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: TW DCBG 08 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 559
+  server: 103.255.71.139
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: TW DCBG 09 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 580
+  server: 103.255.71.139
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: TW DCBG 10 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 558
+  server: 103.255.71.139
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: TW DCBG 11 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 581
+  server: 103.255.71.139
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: AE Melbikomas 01 @SubscriptionShare
+  port: 26078
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d
+  name: AR Kaopu 01 @SubscriptionShare
+  password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d
+  port: 3000
+  server: 107.172.15.134
+  skip-cert-verify: true
+  sni: d88df6-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: AT GCSL 01 @SubscriptionShare
+  port: 26128
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: AU CAPL 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 31761
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: AU CAPL 02 @SubscriptionShare
+  port: 26110
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: AU M247 03 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 107.175.64.226
+  skip-cert-verify: true
+  sni: c94442-20-1.9966661.xyz
+  type: hysteria2
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: BE GCSL 01 @SubscriptionShare
+  port: 26150
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- alterId: 0
+  cipher: auto
+  name: BG Belcloud 01 @SubscriptionShare
+  port: 26094
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: BG VCPL 02 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 39651
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: BG VCPL 03 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 2095
+  server: 119.36.154.205
+  type: ss
+  udp: true
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: BH Kaopu 01 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 107.172.50.174
+  skip-cert-verify: true
+  sni: 57bf2d-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: BR BrainStorm 01 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 107.173.230.118
+  skip-cert-verify: true
+  sni: afb4b1-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: CA OVH 01 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 107.172.15.131
+  skip-cert-verify: true
+  sni: 79706e-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: CA AS 02 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 107.172.15.131
+  skip-cert-verify: true
+  sni: 79706e-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: CA DIGITALOCEAN 03 @SubscriptionShare
+  port: 26114
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: CA Datacamp 04 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 2055
+  server: 119.36.154.205
+  type: ss
+  udp: true
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: CH Green 01 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 23.94.175.175
+  skip-cert-verify: true
+  sni: f0ba91-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: CH Green 02 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 23.94.175.175
+  skip-cert-verify: true
+  sni: f0ba91-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: CN NATOLAB 01 @SubscriptionShare
+  port: 26122
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: CY WorkTitans 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 45108
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: CY Pq 02 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 107.175.77.61
+  skip-cert-verify: true
+  sni: 1036a5-330-co.9966661.xyz
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: CZ GamerHost 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 35454
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: DE SYNLINQ 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 22845
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: DE BAGE 02 @SubscriptionShare
+  network: tcp
+  port: 20133
+  reality-opts:
+    public-key: 65E6IjBrQMYqhrtISS0F2kUFIjT5aSxgNPKCf88fGFw
+    short-id: 3b03febe
+  server: 193.160.221.220
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d
+- auth: a45cdb0f-db6f-4c86-81c4-dbab19df5c29
+  name: DE dataforest 03 @SubscriptionShare
+  password: a45cdb0f-db6f-4c86-81c4-dbab19df5c29
+  port: 11112
+  server: 5.231.70.146
+  skip-cert-verify: true
+  sni: dg1.oxdtangx.top
+  type: hysteria2
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: DE ASNET 04 @SubscriptionShare
+  port: 26104
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: DK Din 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 36981
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: ES JAVQ 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 41223
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: ES ASNET 02 @SubscriptionShare
+  port: 26126
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: ES GCSL 03 @SubscriptionShare
+  network: tcp
+  port: 20223
+  reality-opts:
+    public-key: RsbED0LyE3f2byTPx5t-dQewju6z9R4xqTWrADM4WnM
+    short-id: c6842be1
+  server: 5.44.42.27
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+- cipher: aes-128-gcm
+  name: ES Chelyabinsk 04 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 2083
+  server: 119.36.154.205
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: FI GCSL 01 @SubscriptionShare
+  network: tcp
+  port: 20223
+  reality-opts:
+    public-key: 2hmTpdZk2JPHCIBM0ism_AAr9HjtnyMV9syarwvj-Q4
+    short-id: 587d20c4
+  server: 78.153.139.116
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+- alterId: 0
+  cipher: auto
+  name: FI ASNET 02 @SubscriptionShare
+  port: 26136
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: FR Dyjix 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 24156
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- auth: f31b0af4-8b46-4bb9-8141-8c66d156d3de
+  name: GB RELIABLESITE 01 @SubscriptionShare
+  password: f31b0af4-8b46-4bb9-8141-8c66d156d3de
+  port: 11112
+  server: 151.243.168.75
+  skip-cert-verify: true
+  sni: tw2.oxdtangx.top
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: GB Haruka 02 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 33648
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: GB DIGITALOCEAN 03 @SubscriptionShare
+  port: 26116
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: GB Massivegrid 04 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 107.172.132.254
+  skip-cert-verify: true
+  sni: 20f7cc-330-co-uk1.9966661.xyz
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: GB ICSL 05 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 2065
+  server: 119.36.154.205
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: GR GCSL 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 41682
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: HR GCSL 01 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 172.245.106.250
+  skip-cert-verify: true
+  sni: 32ffe6-20-co-hr1.9966661.xyz
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: ID PHDI 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 40145
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: IL AS 01 @SubscriptionShare
+  port: 26145
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: IN CAPL 01 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 107.172.128.139
+  skip-cert-verify: true
+  sni: 74c5a9-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: IN CAPL 02 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 107.172.128.139
+  skip-cert-verify: true
+  sni: 74c5a9-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: IT Seflow 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 24153
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: IT Melbikomas 02 @SubscriptionShare
+  port: 26142
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: IT Green 03 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 2137
+  server: 119.36.154.205
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: KH IICWTBVIT 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 37163
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: KR ORACLE 01 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 700
+  server: 119.36.154.60
+  type: ss
+  udp: true
+- auth: b8b00ee8-87e7-4ebb-a6c2-00073c6535c1
+  name: KR ASNET 02 @SubscriptionShare
+  obfs: salamander
+  obfs-password: fdrccJDGatdFDDRp
+  password: b8b00ee8-87e7-4ebb-a6c2-00073c6535c1
+  port: 20000
+  server: 103.115.17.232
+  skip-cert-verify: true
+  type: hysteria2
+  udp: true
+- client-fingerprint: ios
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: bby
+  name: KR AMAZON 03 @SubscriptionShare
+  network: grpc
+  port: 40000
+  reality-opts:
+    public-key: IllHH4k1x34LP2g6PJPd5-p__kNMRL0-Xq0VSli59mM
+    short-id: 83dd2e7b
+  server: 43.203.205.156
+  servername: www.walmart.com
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2dcbbfcd-8bcd-4827-9bec-d90949b2ca7d
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: KZ JSC 01 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 104.168.115.227
+  skip-cert-verify: true
+  sni: 836902-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: LT Melbikomas 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 25357
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: LT GCSL 02 @SubscriptionShare
+  network: tcp
+  port: 51423
+  reality-opts:
+    public-key: MvjyJD_JDqDnDKSG2r8il6gSrEijZtdmlvXOOuvqO0w
+    short-id: a6b64b8c
+  server: 46.29.234.248
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d
+- cipher: aes-128-gcm
+  name: LU PONYNET 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 30197
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: LV ASNET 01 @SubscriptionShare
+  port: 26102
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: MD WorkTitans 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 25713
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: MK GCSL 01 @SubscriptionShare
+  network: tcp
+  port: 51423
+  reality-opts:
+    public-key: aTmRClRKFCvNi6aFQnmKt3CJ2hrLG3wQJ5WgrbWk1Xs
+    short-id: b8ee759f
+  server: 89.185.82.17
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+- auth: b8b00ee8-87e7-4ebb-a6c2-00073c6535c1
+  name: MU ACCK 01 @SubscriptionShare
+  obfs: salamander
+  obfs-password: fdrccJDGatdFDDRp
+  password: b8b00ee8-87e7-4ebb-a6c2-00073c6535c1
+  port: 20000
+  server: 45.196.218.155
+  skip-cert-verify: true
+  type: hysteria2
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: MX AS 01 @SubscriptionShare
+  port: 26148
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- alterId: 0
+  cipher: auto
+  name: MY STSB 01 @SubscriptionShare
+  port: 26137
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: MY PHDI 02 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 24511
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: NL Nerdscave 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 35418
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: NL DIGITALOCEAN 02 @SubscriptionShare
+  port: 26098
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: NL TIGB 03 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 2144
+  server: 119.36.154.205
+  type: ss
+  udp: true
+- auth: c232f411-96b5-4b07-b2f7-66a434725ffb
+  name: NL Hostshield 04 @SubscriptionShare
+  password: c232f411-96b5-4b07-b2f7-66a434725ffb
+  port: 23899
+  server: 193.142.59.41
+  skip-cert-verify: true
+  sni: hl01.mistea.top
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: NO ServeTheWorld 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 37155
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: OM Kaopu 01 @SubscriptionShare
+  port: 26133
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: PH CARRIERDOMAIN 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 22169
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: PH ZEN 02 @SubscriptionShare
+  port: 26080
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: PL Korbank 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 30592
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: PT GCSL 01 @SubscriptionShare
+  port: 26154
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- alterId: 0
+  cipher: auto
+  name: RO CFIS 01 @SubscriptionShare
+  port: 26146
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: RU Melbikomas 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 21171
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- auth: f31b0af4-8b46-4bb9-8141-8c66d156d3de
+  name: RU LLC 02 @SubscriptionShare
+  password: f31b0af4-8b46-4bb9-8141-8c66d156d3de
+  port: 11112
+  server: 195.133.5.91
+  skip-cert-verify: true
+  sni: wkl1.oxdtangx.top
+  type: hysteria2
+  udp: true
+- auth: f31b0af4-8b46-4bb9-8141-8c66d156d3de
+  name: RU LLC 03 @SubscriptionShare
+  password: f31b0af4-8b46-4bb9-8141-8c66d156d3de
+  port: 11112
+  server: 45.130.147.172
+  skip-cert-verify: true
+  sni: els1.oxdtangx.top
+  type: hysteria2
+  udp: true
+- auth: 80538b74-de70-4d95-90bf-5eb0a7785996
+  name: RU LLC 04 @SubscriptionShare
+  password: 80538b74-de70-4d95-90bf-5eb0a7785996
+  port: 11112
+  server: 45.8.159.146
+  skip-cert-verify: true
+  sni: yd1.oxdtangx.top
+  type: hysteria2
+  udp: true
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: RU Kviktel 05 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 192.3.219.86
+  skip-cert-verify: true
+  sni: ef6b4d-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: SC Kaopu 01 @SubscriptionShare
+  port: 26124
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- alterId: 0
+  cipher: auto
+  name: SC Kaopu 02 @SubscriptionShare
+  port: 26155
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: SE Yelles 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 41135
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: SE HOSTHATCH 02 @SubscriptionShare
+  port: 26141
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- auth: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d
+  name: SE AS 03 @SubscriptionShare
+  password: abf03bbd-ec5c-45d9-bf63-c1851a1f4c4d
+  port: 3000
+  server: 107.172.15.133
+  skip-cert-verify: true
+  sni: 8cc863-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- cipher: aes-128-gcm
+  name: TH SCC 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 30385
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: TH 4LJ 02 @SubscriptionShare
+  port: 26108
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: TH 4LJ 03 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 198.23.130.221
+  skip-cert-verify: true
+  sni: af01e9-330.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: TH 4LJ 04 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 198.23.130.221
+  skip-cert-verify: true
+  sni: af01e9-330.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: TH Kaopu 05 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 198.23.130.221
+  skip-cert-verify: true
+  sni: af01e9-330.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: a24c6851-2055-42c1-9c20-2d3bad97334f
+  name: TR IIHA 01 @SubscriptionShare
+  password: a24c6851-2055-42c1-9c20-2d3bad97334f
+  port: 3000
+  server: 172.245.174.166
+  skip-cert-verify: true
+  sni: a40dc7-20.9966661.xyz
+  type: hysteria2
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: TR ASNET 02 @SubscriptionShare
+  port: 26092
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- cipher: aes-128-gcm
+  name: TR BBVTHSVT 03 @SubscriptionShare
+  password: 7af26eae-63c7-43c8-b335-e3528f790459
+  port: 2123
+  server: 119.36.154.205
+  type: ss
+  udp: true
+- cipher: aes-128-gcm
+  name: UA F"SM 01 @SubscriptionShare
+  password: 2370e359-9775-40f7-bf2b-9e3bc9ff98ef
+  port: 35457
+  server: 125.78.88.248
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: UA ASNET 02 @SubscriptionShare
+  port: 26106
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- alterId: 0
+  cipher: auto
+  name: Unknown Datacamp 01 @SubscriptionShare
+  port: 21211
+  server: tls.05.node-for-bigairport.win
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 591d0321-53a9-4420-8148-6f2deb559b60
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: VN CLOUDFLARENET 01 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 103.137.185.46
+  skip-cert-verify: true
+  sni: vnvn-u-do-vn1.9966661.xyz
+  type: hysteria2
+  udp: true
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: VN Cloudflare 02 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 103.137.185.46
+  skip-cert-verify: true
+  sni: vnvn-u-do-vn1.9966661.xyz
+  type: hysteria2
+  udp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: VN VNPT 03 @SubscriptionShare
+  network: tcp
+  port: 20223
+  reality-opts:
+    public-key: WWuWxGdNTeiOpHqEkrHfv4sepTP9z-09ZtK4p71o-yM
+    short-id: 583d93a1
+  server: 103.15.91.97
+  servername: www.cloudflare.com
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: a24c6851-2055-42c1-9c20-2d3bad97334f
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: VN CLOUDFLARENET 04 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 103.137.185.212
+  skip-cert-verify: true
+  sni: vnvnnian-u-do-vn2.9966661.xyz
+  type: hysteria2
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: VN TQDTJSC 05 @SubscriptionShare
+  port: 26076
+  server: 103.181.165.243
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: aa15b97a-24b1-3a31-824a-bc52f5a15bac
+- auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  name: ZA Host 01 @SubscriptionShare
+  password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6
+  port: 3000
+  server: 107.175.77.55
+  skip-cert-verify: true
+  sni: c20d8f-20.9966661.xyz
+  type: hysteria2
+  udp: true
