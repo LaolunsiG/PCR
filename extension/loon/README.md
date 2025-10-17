@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-21 10:04
+Modified date: 2025-10-16 19:00
 ---
 # Loon 扩展资源整理
 
@@ -85,14 +85,14 @@ Modified date: 2025-08-21 10:04
 
 ## reference
 
-| 类型  | 作者/项目名称                                                                                  | 介绍                                                                                                                        |
-| --- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| 插件  | [插件中心](https://pluginhub.kelee.one/)                                                     |                                                                                                                           |
-| 插件  | [app2smile/rules](https://github.com/app2smile/rules)                                    | iOS App 去广告                                                                                                                |
-| 插件  | [chxm1023/Rewrite](https://github.com/chxm1023/Rewrite)                                  |                                                                                                                           |
-| 插件  | [I-am-R-E/Functional-Store-Hub](https://github.com/I-am-R-E/Functional-Store-Hub)        | Functional scripts, agent node, configurations for Surge, QuantumultX, Loon, Stash ,Egern , ShadowRocket and HTTPCatcher. |
-| 插件  | [loon-plugin](http://loon-plugin/)                                                       |                                                                                                                           |
-| 插件  | [luestr/ProxyResource](https://github.com/luestr/ProxyResource/blob/main/README.md/)<br> | 可莉的 Loon 资源库 \| 插件 \| 脚本 \| 规则                                                                                            |
-| 插件  | [Moli-X/Resources](https://github.com/Moli-X/Resources)                                  | 基于 QuantumultX，Loon，Surge 的配置重写，脚本，插件                                                                                       |
-| 插件  | [whatshub.top/loon](https://whatshub.top/loon)                                           | Loon 插件                                                                                                                    |
-| 脚本  | [Keywos/rule](https://github.com/Keywos/rule)                                            |                                                                                                                           |
+| 参考来源                                                                                     | 介绍                                                                                                                        |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [插件中心](https://pluginhub.kelee.one/)                                                     |                                                                                                                           |
+| [app2smile/rules](https://github.com/app2smile/rules)                                    | iOS App 去广告                                                                                                               |
+| [chxm1023/Rewrite](https://github.com/chxm1023/Rewrite)                                  |                                                                                                                           |
+| [I-am-R-E/Functional-Store-Hub](https://github.com/I-am-R-E/Functional-Store-Hub)        | Functional scripts, agent node, configurations for Surge, QuantumultX, Loon, Stash ,Egern , ShadowRocket and HTTPCatcher. |
+| [loon-plugin](http://loon-plugin/)                                                       |                                                                                                                           |
+| [luestr/ProxyResource](https://github.com/luestr/ProxyResource/blob/main/README.md/)<br> | 可莉的 Loon 资源库 \| 插件 \| 脚本 \| 规则                                                                                            |
+| [Moli-X/Resources](https://github.com/Moli-X/Resources)                                  | 基于 QuantumultX，Loon，Surge 的配置重写，脚本，插件                                                                                     |
+| [whatshub.top/loon](https://whatshub.top/loon)                                           | Loon 插件                                                                                                                   |
+| [Keywos/rule](https://github.com/Keywos/rule)                                            |                                                                                                                           |
