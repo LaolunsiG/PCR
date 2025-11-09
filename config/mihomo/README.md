@@ -1,8 +1,8 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-11-09 12:53
+Modified date: 2025-11-09 18:49
 ---
-# Clash.Meta 配置模板
+# mihomo 配置模板
 
 > [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/mihomo%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)，[代理规则](https://github.com/nekohalawrence/PCR/tree/main/rule/mihomo)
 

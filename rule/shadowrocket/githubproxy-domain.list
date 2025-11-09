@@ -1,10 +1,10 @@
 # name: githubproxy
+# content: 
 # update_date: 20251109
 # update_url: https://raw.githubusercontent.com/nekohalawrence/PCR/main/rule/shadowrocket/githubproxy/githubproxy-domain.yaml
-# repo: https://github.com/nekohalawrence/PCR/tree/main/rule/shadowrocket/githubproxy
-# content: 
-# DOMAIN: 
+# repo: https://github.com/nekohalawrence/PCR/tree/main/rule/shadowrocket
 
+# DOMAIN: 
 
 mirror.ghproxy.com
 cf.ghproxy.cc

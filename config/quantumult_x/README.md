@@ -1,8 +1,8 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-25 14:52
+Modified date: 2025-11-09 18:49
 ---
-# Quantumult_X 配置模板
+# quantumult_x 配置模板
 
 > [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/quantumult_x%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
 

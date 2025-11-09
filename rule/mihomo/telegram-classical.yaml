@@ -1,8 +1,14 @@
-# NAME: Telegram
-# updata: 2024-11-23
-# updata_log: 
-# updata_url: https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Clash.Meta/Telegram/Clash-Telegram-Classical.yaml
-# repo: https://github.com/LaolunsiG/XiaoE_PCR/blob/main/rules/Clash.Meta/Telegram/Clash-Telegram-Classical.yaml
+# name: telegram
+# update_date: 20251109
+# update_url: https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Clash.Meta/Telegram/Clash-Telegram-Classical.yaml
+# repo: https://github.com/nekohalawrence/PCR/tree/main/rule/mihomo
+
+# 参考规则
+# https://raw.githubusercontent.com/yuumimi/rules/release/clash/telegram.txt
+# https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/Telegram
+# https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo-lite/geosite/telegram.yaml
+# https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo-lite/geoip/telegram.yaml
+# https://github.com/xixu-me/RFM/blob/basic/yaml/telegramcidr.yaml
 
 # DOMAIN: 2
 # DOMAIN-KEYWORD: 1

@@ -1,21 +1,22 @@
-# name: GameGlobal
-# updata: 2025-04-22
-# updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Shadowrocket/GameGlobal/GameGlobal-Classical.list
-# repo: https://github.com/LaolunsiG/XiaoE_PCR/tree/main/rules/Shadowrocket/GameGlobal
+# name: gameglobal-classical
 # content: 
+# update_date: 20250422
+# update_url: https://raw.githubusercontent.com/LaolunsiG/PCR/main/Rules/Shadowrocket/GameGlobal/GameGlobal-Classical.list
+# repo: https://github.com/nekohalawrence/PCR/tree/main/rule/shadowrocket
+
+# 参考规则
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PlayStation/PlayStation.list
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sony/Sony.list
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Nintendo/Nintendo.list
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WanMeiShiJie/WanMeiShiJie.list
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Blizzard/Blizzard.list
+
 # DOMAIN
 # DOMAIN-SUFFIX
 # DOMAIN-KEYWORD
 # IP-CIDR
-
-# 规则分类
-# Blizzard
-# Epic
-# Nintendo
-# PlayStation
-# Sony
-# Steam
-# WanMeiShiJie
 
 # Blizzard
 DOMAIN-SUFFIX,battle.net
