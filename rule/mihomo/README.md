@@ -34,5 +34,6 @@ Modified date: 2025-11-09 12:54
 | _ 综合   | [whatshub.top](https://whatshub.top/strule)                                                         | Stash/Clash 代理规则                                                                                                                                                                                             |
 | 广告拦截规则 | [AdRules](https://github.com/Cats-Team/AdRules)                                                     | List for blocking ads in the Chinese region                                                                                                                                                                  |
 | 广告拦截规则 | [AWAvenue-Ads-Rule](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)                               | 众多优秀广告规则的上游、开源社区中最棒的广告过滤器之一。适配 AdGuard/Home/DNS、AdAway、hosts、Mosdns、ClashMeta、QuantumultX 等主流广告拦截工具/代理工具。                                                                                                    |
+|        |                                                                                                     |                                                                                                                                                                                                              |
 
 #mihomo #clash #stash #代理规则
