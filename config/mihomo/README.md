@@ -4,7 +4,7 @@ Modified date: 2025-11-05 11:48
 ---
 # Clash.Meta 配置模板
 
-> [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/mihomo%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
+> [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/mihomo%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)，[代理规则](https://github.com/nekohalawrence/PCR/tree/main/rule/mihomo)
 
 - 配置的是 mihomo 内核, 需要自己配置订阅链接。
 
