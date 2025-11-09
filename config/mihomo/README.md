@@ -1,6 +1,6 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-11-09 18:49
+Modified date: 2025-11-09 19:50
 ---
 # mihomo 配置模板
 
@@ -23,9 +23,9 @@ https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/mihomo/mihomo-test.y
 | As-Lucky                                                                      | https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-ClashVerge.yaml                                             | GitHub |
 | [dotfiles - s-theo](https://github.com/s-theo/dotfiles/tree/main/Proxy/Clash) | https://raw.githubusercontent.com/s-theo/dotfiles/main/Proxy/Clash/T-Smart.yaml                                         |        |
 | [dotfiles - s-theo](https://github.com/s-theo/dotfiles/tree/main/Proxy/Clash) | https://raw.githubusercontent.com/s-theo/dotfiles/main/Proxy/Clash/T-MihomoConfig.yaml                                  |        |
+| [META - xixu-me](https://github.com/xixu-me/META)                             | https://raw.githubusercontent.com/xixu-me/META/config/META.yaml                                                         | GitHub |
 | [mihomo - MetaCubeX](https://github.com/MetaCubeX/mihomo)                     | https://raw.githubusercontent.com/MetaCubeX/mihomo/Meta/docs/config.yaml                                                | GitHub |
 | Moli-X                                                                        | https://github.com/Moli-X/Resources/raw/main/Clash/Clash.yml                                                            | GitHub |
 | [ProxyResource - luestr](https://github.com/luestr/ProxyResource)             | https://raw.githubusercontent.com/luestr/ProxyResource/main/Tool/Clash/Config/Clash_Sample_Configuration_By_iKeLee.yaml | GitHub |
 | [Tool - Repcz](https://github.com/Repcz/Tool/tree/X/mihomo)                   | https://raw.githubusercontent.com/Repcz/Tool/X/mihomo/Client/config.yaml                                                |        |
 | [Tool - Repcz](https://github.com/Repcz/Tool/tree/X/mihomo)                   | https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Meta/Mihomo.yaml                                                   | GitHub |
-| [META - xixu-me](https://github.com/xixu-me/META)                             | https://raw.githubusercontent.com/xixu-me/META/config/META.yaml                                                         | GitHub |
