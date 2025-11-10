@@ -1,24 +1,24 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-11-09 19:50
+Modified date: 2025-11-10 19:46
 ---
-# mihomo 配置模板
+# mihomo
 
-> [配置教程](https://github.com/LaolunsiG/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/mihomo%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)，[代理规则](https://github.com/nekohalawrence/PCR/tree/main/rule/mihomo)
+> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/mihomo%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)，[代理规则](https://github.com/nekohalawrence/PCR/tree/main/rule/mihomo)
 
 - 配置的是 mihomo 内核, 需要自己配置订阅链接。
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/mihomo/mihomo-stable.yaml
+https://raw.githubusercontent.com/nekohalawrence/PCR/main/config/mihomo/mihomo-stable.yaml
 ```
 
 ```
-https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/mihomo/mihomo-test.yaml
+https://raw.githubusercontent.com/nekohalawrence/PCR/main/config/mihomo/mihomo-test.yaml
 ```
 
 ## reference
 
-| 作者/项目链接                                                                       | 配置链接                                                                                                                    | 来源     |
+| 项目名称                                                                          | 配置链接                                                                                                                    | 来源     |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------ |
 | As-Lucky                                                                      | https://raw.githubusercontent.com/As-Lucky/Lucky/main/Lucky-ClashVerge.yaml                                             | GitHub |
 | [dotfiles - s-theo](https://github.com/s-theo/dotfiles/tree/main/Proxy/Clash) | https://raw.githubusercontent.com/s-theo/dotfiles/main/Proxy/Clash/T-Smart.yaml                                         |        |

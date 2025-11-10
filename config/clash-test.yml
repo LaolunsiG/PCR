@@ -1,7 +1,7 @@
-# name: clash-stable
-# updata：20250807
-# updata_url: https://raw.githubusercontent.com/LaolunsiG/PCR/main/config/clash/clash-stable.yml
-# repo: https://github.com/LaolunsiG/PCR/tree/main/config/clash
+# name: clash-test
+# update_date: 20250807
+# updata_url: https://raw.githubusercontent.com/nekohalawrence/PCR/main/config/clash/clash-test.yml
+# repo: https://github.com/nekohalawrence/PCR/tree/main/config/clash
 # 图标备用: 📮✉️📪📬💫💬💥🔨🥼🚫🔰🙈🍎🎬📺🎱🍐🐝🦁💡🌵🐯🎸💻📽🌏🕹📡🦑🌟🐷🦒🐳🚦📵🎧💊🔓🚦🚥 🐼⛔️🈲🌐🎯🖲️🐦🔞🎵📱🚀💳♻️🙈🍱🔂📦🔀⏱ 
 
 
@@ -265,7 +265,7 @@ dns:
   # 支持 UDP，TCP，DoT，DoH，DoQ
   nameserver:
     - 'https://223.5.5.5/dns-query'
-    - 'https://1.12.12.12/dns-query' # 119.29.29.29
+    - 'https://1.12.12.12/dns-query'
   # 在 fake-ip 模式下不建议配置 fallback，来源 https://www.pupboss.com/post/2024/clash-tun-fake-ip-best-practice/
   # 当 fallback 存在时, DNS 服务器将向此部分中的服务器与 nameservers 中的服务器发送并发请求
   # 配置 fallback 后默认启用 fallback-filter,geoip-code为 cn
@@ -292,8 +292,8 @@ dns:
 # -------------------------------------
 proxy-groups:
   # ----------------节点选择策略组--------------------
-  - {name: 🚀 策略选择, type: select, proxies: [🛫 机场选择, 🗺 地区选择, 🎯 全球直连]}
   # 模块化选择
+  - {name: 🚀 策略选择, type: select, proxies: [🛫 机场选择, 🗺 地区选择, 🎯 全球直连]}
   - {name: 🗺 地区选择, type: select, proxies: [🇭🇰 香港, 🇨🇳 台湾, 🇯🇵 日本, 🇸🇬 新加坡, 🇨🇦 加拿大, 🇺🇸 美国, 🇬🇧 英国, 🇩🇪 德国, 🇮🇳 印度, 🎯 全球直连]}
   - {name: 🛫 机场选择, type: select, proxies: [机场1, 机场2, 机场3, 机场4, 机场5]}
   
@@ -327,7 +327,6 @@ proxy-groups:
   # 娱乐平台
   ## 游戏
   - {name: 🎮 游戏平台(Global), type: select, proxies: [🚀 策略选择, 🇭🇰 香港, 🇨🇳 台湾, 🇯🇵 日本, 🇸🇬 新加坡, 🇨🇦 加拿大, 🇺🇸 美国, 🇬🇧 英国, 🇩🇪 德国, 🇮🇳 印度]}
-  - {name: 🎮 游戏平台(CN), type: select, proxies: [🎯 全球直连, 🚀 策略选择, 🇭🇰 香港, 🇨🇳 台湾, 🇯🇵 日本, 🇸🇬 新加坡, 🇨🇦 加拿大, 🇺🇸 美国, 🇬🇧 英国, 🇩🇪 德国, 🇮🇳 印度]}
   ## 影视和短视频
   ### 国外
   - {name: 🍎 Apple TV+, type: select, proxies: [🚀 策略选择, 🇭🇰 香港, 🇨🇳 台湾, 🇯🇵 日本, 🇸🇬 新加坡, 🇨🇦 加拿大, 🇺🇸 美国, 🇬🇧 英国, 🇩🇪 德国, 🇮🇳 印度]}
@@ -413,7 +412,7 @@ rule-providers:
   AI_Global:
     behavior: classical
     type: http
-    url: "https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Clash.Meta/AI_Global/Clash-AI_Global-Classical.yaml"
+    url: "https://raw.githubusercontent.com/nekohalawrence/XiaoE_PCR/main/rules/Clash.Meta/AI_Global/Clash-AI_Global-Classical.yaml"
     interval: 86400
     path: ./ruleset/ai_global.yaml
   
@@ -462,7 +461,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./ruleset/paypal.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Clash.Meta/PayPal/Clash-PayPal-Classical.yaml"
+    url: "https://raw.githubusercontent.com/nekohalawrence/XiaoE_PCR/main/rules/Clash.Meta/PayPal/Clash-PayPal-Classical.yaml"
     interval: 86400
 
   # 社交通讯平台
@@ -477,21 +476,21 @@ rule-providers:
     type: http
     behavior: classical
     path: ./ruleset/facebook.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Clash.Meta/Facebook/Clash-Facebook-Classical.yaml"
+    url: "https://raw.githubusercontent.com/nekohalawrence/XiaoE_PCR/main/rules/Clash.Meta/Facebook/Clash-Facebook-Classical.yaml"
     interval: 86400
   
   Telegram:
     type: http
     behavior: classical
     path: ./ruleset/telegram.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Clash.Meta/Telegram/Clash-Telegram-Classical.yaml"
+    url: "https://raw.githubusercontent.com/nekohalawrence/XiaoE_PCR/main/rules/Clash.Meta/Telegram/Clash-Telegram-Classical.yaml"
     interval: 86400
   
   Twitter:
     type: http
     behavior: classical
     path: ./ruleset/Twitter.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Clash.Meta/Twitter/Clash-Twitter-Classical.yaml"
+    url: "https://raw.githubusercontent.com/nekohalawrence/XiaoE_PCR/main/rules/Clash.Meta/Twitter/Clash-Twitter-Classical.yaml"
     interval: 86400
   
   # 娱乐平台
@@ -590,7 +589,7 @@ rule-providers:
     type: http
     behavior: classical
     path: ./ruleset/chinamedia1.yaml
-    url: "https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Clash.Meta/ChinaMedia/ChinaMedia-Classical.yaml"
+    url: "https://raw.githubusercontent.com/nekohalawrence/XiaoE_PCR/main/rules/Clash.Meta/ChinaMedia/ChinaMedia-Classical.yaml"
     interval: 86400
   
   ChinaMedia2:
@@ -606,7 +605,7 @@ rule-providers:
   GFW-lite:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/LaolunsiG/XiaoE_PCR/main/rules/Clash.Meta/Proxy/GFW-lite-Classical.yaml"
+    url: "https://raw.githubusercontent.com/nekohalawrence/XiaoE_PCR/main/rules/Clash.Meta/Proxy/GFW-lite-Classical.yaml"
     path: ./ruleset/gfw-lite.yaml
     interval: 86400
   
