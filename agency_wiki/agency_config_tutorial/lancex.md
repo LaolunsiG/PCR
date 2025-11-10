@@ -1,8 +1,8 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-25 14:45
+Modified date: 2025-11-10 20:00
 ---
-# lancex 配置教程
+# lancex
 
 > [配置模板](https://github.com/LaolunsiG/PCR/tree/main/config/lancex)
 

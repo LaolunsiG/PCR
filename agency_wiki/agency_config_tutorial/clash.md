@@ -1,8 +1,8 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-09-08 12:39
+Modified date: 2025-11-10 20:00
 ---
-# clash 配置教程
+# clash
 
 > [配置模板](https://github.com/LaolunsiG/PCR/tree/main/config/clash)
 

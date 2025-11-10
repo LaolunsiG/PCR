@@ -1,8 +1,8 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-08-25 15:07
+Modified date: 2025-11-10 20:00
 ---
-# sing-box 配置教程
+# sing-box
 
 > [配置模板](https://github.com/LaolunsiG/PCR/tree/main/config/sing-box)
 
