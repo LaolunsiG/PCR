@@ -4,7 +4,7 @@ Modified date: 2025-11-10 20:00
 ---
 # lancex
 
-> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/lancex%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
+> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/agency_wiki/agency_config_tutorial/lancex.md)
 
 - 不推荐使用，规则无法修改顺序。界面类似 Shadowrocket；适配 Surge 的模块。
 - LanceX 适用 shadowrocket 的代理规则，且这个软件目前不支持过多规则，一下子导入会卡住，所以不推荐使用。（本人不会配置，只是在他人的配置上做出更改。）

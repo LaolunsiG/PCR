@@ -1,10 +1,10 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-11-10 19:44
+Modified date: 2025-11-10 20:01
 ---
 # quantumult_x
 
-> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/quantumult_x%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
+> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/agency_wiki/agency_config_tutorial/quantumult_x.md)
 
 - 类 INI 语法，注意！在配置文件中，带 “;” 和 “#” 的都是注释符号，去掉前面的符号，该行才有效。
 

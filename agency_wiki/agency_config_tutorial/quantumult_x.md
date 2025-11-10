@@ -4,7 +4,7 @@ Modified date: 2025-11-10 20:00
 ---
 # quantumult_x
 
-> [配置模板](https://github.com/LaolunsiG/PCR/tree/main/config/quantumult_x)
+> [配置模板](https://github.com/nekohalawrence/PCR/blob/main/agency_wiki/agency_config_template/quantumult_x.md)
 
 | 教程类型   | 教程链接                                                                                               | 教程来源 | 作者         |
 | ------ | -------------------------------------------------------------------------------------------------- | ---- | ---------- |

@@ -4,7 +4,7 @@ Modified date: 2025-11-10 19:51
 ---
 # [surfboard](https://github.com/getsurfboard/surfboard)
 
-> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/surfboard%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
+> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/agency_wiki/agency_config_tutorial/surfboard.md)
 >
 > 此软件遵循 Surge 的配置方式......
 

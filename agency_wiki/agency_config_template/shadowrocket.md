@@ -1,10 +1,10 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-11-10 19:49
+Modified date: 2025-11-10 20:01
 ---
 # shadowrocket
 
-> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/shadowrocket%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
+> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/agency_wiki/agency_config_tutorial/shadowrocket.md)
 
 - 在 IOS 支持加密协议最多的代理软件，适合小白使用，此配置文件需要自己配置订阅节点。
 

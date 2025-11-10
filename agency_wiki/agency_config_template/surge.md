@@ -4,7 +4,7 @@ Modified date: 2025-11-10 19:52
 ---
 # surge
 
-> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/surge%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
+> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/agency_wiki/agency_config_tutorial/surge.md)
 
 - 这个软件是订阅制的，很好用就是很贵。这个软件的官方文档也好奇怪。需自行配置订阅链接。
 

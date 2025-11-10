@@ -1,10 +1,10 @@
 ---
 Created date: 2025-02-07 00:41
-Modified date: 2025-11-10 20:00
+Modified date: 2025-11-10 20:01
 ---
 # clash
 
-> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/Agency_Wiki/Agency_Config_Tutorial/clash%20%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.md)
+> [配置教程](https://github.com/nekohalawrence/PCR/blob/main/agency_wiki/agency_config_tutorial/clash.md)
 
 - 配置的是 Clash_Premium 内核 (非开源已删库)，需要自己配置订阅链接。适合 CFA (Clash For Android) 使用。
 

@@ -4,7 +4,7 @@ Modified date: 2025-11-10 20:00
 ---
 # stash
 
-> [配置模板](https://github.com/LaolunsiG/PCR/tree/main/config/stash)
+> [配置模板](https://github.com/nekohalawrence/PCR/blob/main/agency_wiki/agency_config_template/stash.md)
 
 | 教程类型   | 教程链接                                                                                                                                          | 教程来源 | 作者  |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- | ---- | --- |
